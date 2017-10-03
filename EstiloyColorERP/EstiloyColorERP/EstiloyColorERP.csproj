@@ -67,11 +67,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ActualizarAgendaView.aspx" />
+    <Content Include="ActualizarCliente.aspx" />
     <Content Include="AgendaView.aspx" />
     <Content Include="EliminarAgendaView.aspx" />
     <Content Include="EliminarVentaView.aspx" />
+    <Content Include="InsertarCliente.aspx" />
     <Content Include="InventarioView.aspx" />
     <Content Include="ObtenerAgendaView.aspx" />
+    <Content Include="ObtenerCliente.aspx" />
     <Content Include="ObtenerVentaView.aspx" />
     <Content Include="packages.config" />
     <Content Include="Site.Master" />
@@ -94,6 +97,13 @@
     <Compile Include="ActualizarAgendaView.aspx.designer.cs">
       <DependentUpon>ActualizarAgendaView.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ActualizarCliente.aspx.cs">
+      <DependentUpon>ActualizarCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ActualizarCliente.aspx.designer.cs">
+      <DependentUpon>ActualizarCliente.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AgendaView.aspx.cs">
       <DependentUpon>AgendaView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -115,6 +125,13 @@
     <Compile Include="EliminarVentaView.aspx.designer.cs">
       <DependentUpon>EliminarVentaView.aspx</DependentUpon>
     </Compile>
+    <Compile Include="InsertarCliente.aspx.cs">
+      <DependentUpon>InsertarCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InsertarCliente.aspx.designer.cs">
+      <DependentUpon>InsertarCliente.aspx</DependentUpon>
+    </Compile>
     <Compile Include="InventarioView.aspx.cs">
       <DependentUpon>InventarioView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -128,6 +145,13 @@
     </Compile>
     <Compile Include="ObtenerAgendaView.aspx.designer.cs">
       <DependentUpon>ObtenerAgendaView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ObtenerCliente.aspx.cs">
+      <DependentUpon>ObtenerCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ObtenerCliente.aspx.designer.cs">
+      <DependentUpon>ObtenerCliente.aspx</DependentUpon>
     </Compile>
     <Compile Include="ObtenerVentaView.aspx.cs">
       <DependentUpon>ObtenerVentaView.aspx</DependentUpon>
