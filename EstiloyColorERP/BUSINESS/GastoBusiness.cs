@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DATA;
+using DOMAIN;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -17,27 +19,27 @@ namespace BUSINESS
 
         public Boolean insertarGasto(Gasto gasto, Vendedor venedor)
         {
-            this.gastoData.insertarGasto(gasto, venedor);
+            return this.gastoData.insertarGasto(gasto, venedor);
         }//insertarGasto
 
         public Boolean eliminarGasto(Gasto gasto)
         {
-            this.gastoData.eliminarGasto(gasto);
+            return this.gastoData.eliminarGasto(gasto);
         }//eliminarGasto
 
         public Boolean editarGasto(Gasto gasto)
         {
-            this.gastoData.editarGasto(gasto);          
+            return this.gastoData.editarGasto(gasto);          
         }//editarGasto
 
         public Gasto obtenerGasto()
         {
-            this.gastoData.obtenerGasto();
+            return this.gastoData.obtenerGasto();
         }//obtenerGasto
 
         public LinkedList<Gasto> obtenerGastos()
         {
-            this.gastoData.obtenerGastos();
+            return this.gastoData.obtenerGastos();
         }//obtenerGastos
 
     }//fin de la clase

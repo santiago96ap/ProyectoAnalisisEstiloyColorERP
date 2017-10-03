@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using DOMAIN;
+using DATA;
 
 namespace BUSINESS
 {
@@ -14,24 +16,24 @@ namespace BUSINESS
            this.ventaData = new VentaData();
         }//constructor
 
-        public boolean insertarVenta()
+        public boolean insertarVenta(Venta venta)
         {
-            this.ventaData.insertarVenta();
+            return this.ventaData.insertarVenta(venta);
         }//insertar venta
 
-        public boolean eliminarVenta()
+        public boolean eliminarVenta(Venta venta)
         {
-            this.ventaData.eliminarVenta();
+            return this.ventaData.eliminarVenta(venta);
         }//eliminar venta
 
         public LinkedList<Venta> obtenerVentas()
         {
-            this.ventaData.obtenerVentas();
+            return this.ventaData.obtenerVentas();
         }//obtener todas las ventas
 
-        public Venta obtenerVenta()
+        public Venta obtenerVenta(Venta venta)
         {
-            this.ventaData.obtenerVenta();
+            return this.ventaData.obtenerVenta(venta);
         }//obtener una venta
     }//class
 }//namespace

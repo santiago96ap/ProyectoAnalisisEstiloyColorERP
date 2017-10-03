@@ -12,32 +12,32 @@ namespace DOMAIN
         private String cliente;
         private String vendedor;
         private String tipoServicio;
-        private List<String> articuloComprado;
+        private LinkedList<int> articuloComprado;
         private float subTotal;
         private float total;
         private String tipoPago;
         public Venta(){
-            Fecha = "";
-            Hora= "";
-            Cliente = "";
-            Vendedor = "";
-            TipoServicio = "";
-            ArticuloComprado = new List<>();
-            SubTotal = 0;
-            Total = 0;
-            TipoPago = "";
+            this.fecha = "";
+            this.hora= "";
+            this.cliente = "";
+            this.vendedor = "";
+            this.tipoServicio = "";
+            this.articuloComprado = new LinkedList<int>();
+            this.subTotal = 0;
+            this.total = 0;
+            this.tipoPago = "";
         }//constructor
 
-        public Venta(String fecha, String hora, String cliente, String vendedor, String tipoServicio, List<String> articuloComprado, int subTotal, int total, String tipoPago){
-            fecha = fecha;
-            hora = hora;
-            cliente = cliente;
-            vendedor = vendedor;
-            tipoServicio = tipoServicio;
-            articuloComprado = articuloComprado;
-            subTotal = subTotal;
-            total = total;
-            tipoPago = tipoPago;
+        public Venta(String fecha, String hora, String cliente, String vendedor, String tipoServicio, LinkedList<int> articuloComprado, int subTotal, int total, String tipoPago){
+            this.fecha = fecha;
+            this.hora = hora;
+            this.cliente = cliente;
+            this.vendedor = vendedor;
+            this.tipoServicio = tipoServicio;
+            this.articuloComprado = articuloComprado;
+            this.subTotal = subTotal;
+            this.total = total;
+            this.tipoPago = tipoPago;
         }//constructor sobrecargado
         public string Fecha
         {
@@ -104,7 +104,7 @@ namespace DOMAIN
             }//set tipoServicio
         }//set y get tipoServicio
 
-        public List<String> ArticuloComprado
+        public LinkedList<int> ArticuloComprado
         {
             get
             {

@@ -11,23 +11,23 @@ namespace DOMAIN
         private String hora;
         private String actividad;
         private String direccion;
-        private int cliente;
- public Agenda()
+        private String cliente;
+        public Agenda()
         {
             Fecha = "";
             Hora = "";
             actividad = "";
             direccion= "";
-            cliente = 0;
+            cliente = "";
         }//constructor
 
-        public Agenda(String fecha, String hora,String actividad, String direccion, int cliente)
+        public Agenda(String fecha, String hora,String actividad, String direccion, String cliente)
         {
-            fecha = fecha;
-            hora = hora;
-            actividad = actividad;
-            direccion = direccion;
-            cliente = cliente;
+            this.fecha = fecha;
+            this.hora = hora;
+            this.actividad = actividad;
+            this.direccion = direccion;
+            this.cliente = cliente;
         }//constructor sobrecargado
         public string Fecha
         {
@@ -81,7 +81,7 @@ namespace DOMAIN
             }//set direccion
         }//set y get direccion
 
-        public int Cliente
+        public String Cliente
         {
             get
             {

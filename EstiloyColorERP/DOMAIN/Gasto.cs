@@ -17,22 +17,22 @@ namespace DOMAIN
         public Gasto()
         {
 
-            this.fecha = "";
-            this.hora = "";
-            this.concepto = "";
-            this.total = "";
-            this.vendedor = "";
+            this.Fecha = "";
+            this.Hora = "";
+            this.Concepto = "";
+            this.Total = 0;
+            this.Vendedor = "";
 
         }//constructor por defecto
 
         public Gasto(String fecha, String hora, String concepto, float total, String vendedor)
         {
 
-            this.fecha = fecha;
-            this.hora = hora;
-            this.concepto = concepto;
-            this.total = total;
-            this.vendedor = vendedor;
+            this.Fecha = fecha;
+            this.Hora = hora;
+            this.Concepto = concepto;
+            this.Total = total;
+            this.Vendedor = vendedor;
 
         }//constructor sobrecargado
 

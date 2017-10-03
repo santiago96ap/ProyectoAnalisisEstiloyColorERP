@@ -9,7 +9,7 @@ namespace DOMAIN
     {
 
         private String idCliente;
-        private List<String> productos;
+        private LinkedList<String> productos;
         private float monto;
         private float abono;
         private String fechaInicio;
@@ -18,14 +18,14 @@ namespace DOMAIN
         public Apartado()
         {
             this.idCliente = "";
-            this.productos = new List<>();
+            this.productos = new LinkedList<String>();
             this.monto = 0;
             this.abono= 0;
             this.fechaInicio = "";
             this.fechaFinal = "";
         }//constructor
 
-        public Apartado(String idCliente, List<String> productos, float monto, float abono, String fechaInicio, String fechaFinal)
+        public Apartado(String idCliente, LinkedList<String> productos, float monto, float abono, String fechaInicio, String fechaFinal)
         {
             this.idCliente = idCliente;
             this.productos = productos;
@@ -49,7 +49,7 @@ namespace DOMAIN
             }//set idCliente
         }//IdCliente
 
-        public List<string> Productos
+        public LinkedList<string> Productos
         {
             get
             {

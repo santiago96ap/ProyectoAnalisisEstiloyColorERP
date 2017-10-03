@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DOMAIN;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,6 +14,7 @@ namespace DATA
             /**
              * CÓDIGO AQUÍ
              * **/
+            return false;
         }//insertarGasto
 
         public Boolean eliminarGasto(Gasto gasto)
@@ -20,6 +22,7 @@ namespace DATA
             /**
              * CÓDIGO AQUÍ
              * **/
+            return false;
         }//eliminarGasto
 
         public Boolean editarGasto(Gasto gasto)
@@ -27,6 +30,7 @@ namespace DATA
             /**
              * CÓDIGO AQUÍ
              * **/
+            return false;
         }//editarGasto
 
         public Gasto obtenerGasto()
@@ -34,6 +38,7 @@ namespace DATA
             /**
              * CÓDIGO AQUÍ
              * **/
+            return null;
         }//obtenerGasto
 
         public LinkedList<Gasto> obtenerGastos()
@@ -41,6 +46,8 @@ namespace DATA
             /**
              * CÓDIGO AQUÍ
              * **/
+
+            return null;
         }//obtenerGastos
 
     }//fin de clase
