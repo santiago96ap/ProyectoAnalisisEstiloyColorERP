@@ -76,6 +76,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="VentaView.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -85,6 +86,13 @@
     </Compile>
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="VentaView.aspx.cs">
+      <DependentUpon>VentaView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VentaView.aspx.designer.cs">
+      <DependentUpon>VentaView.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
