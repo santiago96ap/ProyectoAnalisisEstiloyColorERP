@@ -16,7 +16,7 @@ namespace DOMAIN
         private float subTotal;
         private float total;
         private String tipoPago;
-        public void Venta(){
+        public Venta(){
             Fecha = "";
             Hora= "";
             Cliente = "";
@@ -28,7 +28,7 @@ namespace DOMAIN
             TipoPago = "";
         }//constructor
 
-        public void Venta(String fecha, String hora, String cliente, String vendedor, String tipoServicio, List<String> articuloComprado, int subTotal, int total, String tipoPago){
+        public Venta(String fecha, String hora, String cliente, String vendedor, String tipoServicio, List<String> articuloComprado, int subTotal, int total, String tipoPago){
             fecha = fecha;
             hora = hora;
             cliente = cliente;

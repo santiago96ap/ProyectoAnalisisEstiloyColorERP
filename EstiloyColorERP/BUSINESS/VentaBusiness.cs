@@ -9,7 +9,7 @@ namespace BUSINESS
     {
         public VentaData ventaData;
 
-        public void VentaBusiness()
+        public VentaBusiness()
         {
            this.ventaData = new VentaData();
         }//constructor

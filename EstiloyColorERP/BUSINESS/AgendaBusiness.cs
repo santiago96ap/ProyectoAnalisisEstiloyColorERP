@@ -9,7 +9,7 @@ namespace BUSINESS
     {
         public AgendaData agendaData;
 
-        public void AgendaBusiness() {
+        public AgendaBusiness() {
             this.agendaData = new AgendaData();
         }//constructor
         public boolean insertarAgenda()
