@@ -66,9 +66,14 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ActualizarAgendaView.aspx" />
     <Content Include="Agenda.aspx" />
     <Content Include="AgendaView.aspx" />
+    <Content Include="EliminarAgendaView.aspx" />
+    <Content Include="EliminarVentaView.aspx" />
     <Content Include="InventarioView.aspx" />
+    <Content Include="ObtenerAgendaView.aspx" />
+    <Content Include="ObtenerVentaView.aspx" />
     <Content Include="packages.config" />
     <Content Include="Site.Master" />
     <None Include="Web.Debug.config">
@@ -83,6 +88,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActualizarAgendaView.aspx.cs">
+      <DependentUpon>ActualizarAgendaView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ActualizarAgendaView.aspx.designer.cs">
+      <DependentUpon>ActualizarAgendaView.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AgendaView.aspx.cs">
       <DependentUpon>AgendaView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -90,12 +102,40 @@
     <Compile Include="AgendaView.aspx.designer.cs">
       <DependentUpon>AgendaView.aspx</DependentUpon>
     </Compile>
+    <Compile Include="EliminarAgendaView.aspx.cs">
+      <DependentUpon>EliminarAgendaView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EliminarAgendaView.aspx.designer.cs">
+      <DependentUpon>EliminarAgendaView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarVentaView.aspx.cs">
+      <DependentUpon>EliminarVentaView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EliminarVentaView.aspx.designer.cs">
+      <DependentUpon>EliminarVentaView.aspx</DependentUpon>
+    </Compile>
     <Compile Include="InventarioView.aspx.cs">
       <DependentUpon>InventarioView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InventarioView.aspx.designer.cs">
       <DependentUpon>InventarioView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ObtenerAgendaView.aspx.cs">
+      <DependentUpon>ObtenerAgendaView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ObtenerAgendaView.aspx.designer.cs">
+      <DependentUpon>ObtenerAgendaView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ObtenerVentaView.aspx.cs">
+      <DependentUpon>ObtenerVentaView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ObtenerVentaView.aspx.designer.cs">
+      <DependentUpon>ObtenerVentaView.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
