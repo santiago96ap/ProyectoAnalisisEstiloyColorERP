@@ -67,7 +67,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ActualizarAgendaView.aspx" />
-    <Content Include="Agenda.aspx" />
     <Content Include="AgendaView.aspx" />
     <Content Include="EliminarAgendaView.aspx" />
     <Content Include="EliminarVentaView.aspx" />
