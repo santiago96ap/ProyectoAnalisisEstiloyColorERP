@@ -9,6 +9,13 @@ namespace DATA
     public class ClienteData
     {
 
+        private String stringConeccion;
+
+        public ClienteData(string stringConeccion)
+        {
+            this.stringConeccion = stringConeccion;
+        }//constructor
+
         public Boolean insertarCliente(Cliente cliente)
         {
             return false;

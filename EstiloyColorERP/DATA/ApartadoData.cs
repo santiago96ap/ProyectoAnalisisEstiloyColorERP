@@ -9,6 +9,13 @@ namespace DATA
     public class ApartadoData
     {
 
+        private String stringConeccion;
+
+        public ApartadoData(string stringConeccion)
+        {
+            this.stringConeccion = stringConeccion;
+        }//constructor
+
         public Boolean insertarApartado(Apartado apartado)
         {
             return false;

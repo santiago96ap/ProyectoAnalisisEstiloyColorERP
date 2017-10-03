@@ -11,9 +11,9 @@ namespace BUSINESS
     {
         private ApartadoData apartadoData;
 
-        public ApartadoBusiness()
+        public ApartadoBusiness(string stringConeccion)
         {
-            this.apartadoData = new ApartadoData();
+            this.apartadoData = new ApartadoData(stringConeccion);
         }//constructor
 
         public Boolean insertarApartado(Apartado apartado)
