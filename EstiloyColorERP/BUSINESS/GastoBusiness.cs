@@ -30,12 +30,12 @@ namespace BUSINESS
             this.gastoData.editarGasto(gasto);          
         }//editarGasto
 
-        public Boolean obtenerGasto()
+        public Gasto obtenerGasto()
         {
             this.gastoData.obtenerGasto();
         }//obtenerGasto
 
-        public Boolean obtenerGastos()
+        public LinkedList<Gasto> obtenerGastos()
         {
             this.gastoData.obtenerGastos();
         }//obtenerGastos
