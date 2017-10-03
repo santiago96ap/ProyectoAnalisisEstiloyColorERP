@@ -82,7 +82,7 @@
     <Compile Include="ApartadoData.cs" />
     <Compile Include="ClienteData.cs" />
     <Compile Include="GastoData.cs" />
-    <Compile Include="IngresoData.cs" />
+    <Compile Include="OfertaData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VentaData.cs" />
   </ItemGroup>

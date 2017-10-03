@@ -37,7 +37,7 @@ namespace BUSINESS
             return this.gastoData.obtenerGasto();
         }//obtenerGasto
 
-        public LinkedList<Gasto> obtenerGastos()
+        public LinkedList<Gasto> obtenerGastos(String fechaFin, String fechaInicio)
         {
             return this.gastoData.obtenerGastos();
         }//obtenerGastos
