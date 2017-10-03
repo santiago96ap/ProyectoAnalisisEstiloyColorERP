@@ -12,7 +12,7 @@ namespace DOMAIN
         private String cliente;
         private String vendedor;
         private String tipoServicio;
-        private List<String> articuloComprado;
+        private LinkedList<String> articuloComprado;
         private float subTotal;
         private float total;
         private String tipoPago;
@@ -22,13 +22,13 @@ namespace DOMAIN
             Cliente = "";
             Vendedor = "";
             TipoServicio = "";
-            ArticuloComprado = new List<>();
+            ArticuloComprado = new LinkedList<>();
             SubTotal = 0;
             Total = 0;
             TipoPago = "";
         }//constructor
 
-        public Venta(String fecha, String hora, String cliente, String vendedor, String tipoServicio, List<String> articuloComprado, int subTotal, int total, String tipoPago){
+        public Venta(String fecha, String hora, String cliente, String vendedor, String tipoServicio, LinkedList<String> articuloComprado, int subTotal, int total, String tipoPago){
             fecha = fecha;
             hora = hora;
             cliente = cliente;
@@ -104,7 +104,7 @@ namespace DOMAIN
             }//set tipoServicio
         }//set y get tipoServicio
 
-        public List<String> ArticuloComprado
+        public LinkedList<String> ArticuloComprado
         {
             get
             {

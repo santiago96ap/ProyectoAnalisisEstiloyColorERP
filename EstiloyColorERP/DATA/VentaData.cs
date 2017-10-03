@@ -2,25 +2,30 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using DOMAIN;
 
 namespace DATA
 {
     public class VentaData
     {
 
-        public boolean insertarVenta(){
+        public Boolean insertarVenta(Venta venta){
+            return false;
         }//insertar venta
 
-        public boolean eliminarVenta()
+        public Boolean eliminarVenta(Venta venta)
         {
+            return false;
         }//eliminar venta
 
         public LinkedList<Venta> obtenerVentas()
         {
+            return null;
         }//obtener todas las ventas
 
-        public Venta obtenerVenta()
+        public Venta obtenerVenta(Venta venta)
         {
+            return null;
         }//obtener una venta
     }//class
 }//namespace
