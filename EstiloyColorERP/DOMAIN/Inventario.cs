@@ -7,5 +7,6 @@ namespace DOMAIN
 {
     public class Inventario
     {
+
     }
 }
