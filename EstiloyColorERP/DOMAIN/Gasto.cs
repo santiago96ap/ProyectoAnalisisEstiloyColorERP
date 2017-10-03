@@ -20,7 +20,7 @@ namespace DOMAIN
             this.Fecha = "";
             this.Hora = "";
             this.Concepto = "";
-            this.Total = "";
+            this.Total = 0;
             this.Vendedor = "";
 
         }//constructor por defecto

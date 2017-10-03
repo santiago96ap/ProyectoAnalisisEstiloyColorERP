@@ -18,7 +18,7 @@ namespace DOMAIN
         public Apartado()
         {
             this.idCliente = "";
-            this.productos = new LinkedList<>();
+            this.productos = new LinkedList<String>();
             this.monto = 0;
             this.abono= 0;
             this.fechaInicio = "";
