@@ -29,14 +29,14 @@ namespace DATA
              * **/
         }//editarGasto
 
-        public Boolean obtenerGasto()
+        public Gasto obtenerGasto()
         {
             /**
              * CÓDIGO AQUÍ
              * **/
         }//obtenerGasto
 
-        public Boolean obtenerGastos()
+        public LinkedList<Gasto> obtenerGastos()
         {
             /**
              * CÓDIGO AQUÍ
