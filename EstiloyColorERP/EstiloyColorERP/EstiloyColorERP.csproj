@@ -66,6 +66,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Agenda.aspx" />
+    <Content Include="AgendaView.aspx" />
     <Content Include="InventarioView.aspx" />
     <Content Include="packages.config" />
     <Content Include="Site.Master" />
@@ -81,6 +83,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgendaView.aspx.cs">
+      <DependentUpon>AgendaView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgendaView.aspx.designer.cs">
+      <DependentUpon>AgendaView.aspx</DependentUpon>
+    </Compile>
     <Compile Include="InventarioView.aspx.cs">
       <DependentUpon>InventarioView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -124,7 +133,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>64305</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>

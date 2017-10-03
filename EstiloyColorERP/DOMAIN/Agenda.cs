@@ -12,7 +12,7 @@ namespace DOMAIN
         private String actividad;
         private String direccion;
         private int cliente;
- public void Agenda()
+ public Agenda()
         {
             Fecha = "";
             Hora = "";
@@ -21,7 +21,7 @@ namespace DOMAIN
             cliente = 0;
         }//constructor
 
-        public void Agenda(String fecha, String hora,String actividad, String direccion, int cliente)
+        public Agenda(String fecha, String hora,String actividad, String direccion, int cliente)
         {
             fecha = fecha;
             hora = hora;
