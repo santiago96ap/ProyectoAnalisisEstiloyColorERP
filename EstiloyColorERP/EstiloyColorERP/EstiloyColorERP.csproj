@@ -66,6 +66,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="InventarioView.aspx" />
     <Content Include="packages.config" />
     <Content Include="Site.Master" />
     <None Include="Web.Debug.config">
@@ -76,15 +77,30 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="VentaView.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="InventarioView.aspx.cs">
+      <DependentUpon>InventarioView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InventarioView.aspx.designer.cs">
+      <DependentUpon>InventarioView.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="VentaView.aspx.cs">
+      <DependentUpon>VentaView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VentaView.aspx.designer.cs">
+      <DependentUpon>VentaView.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
