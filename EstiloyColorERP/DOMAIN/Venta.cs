@@ -9,8 +9,8 @@ namespace DOMAIN
     {
         private String fecha;
         private String hora;
-        private int cliente;
-        private int vendedor;
+        private String cliente;
+        private String vendedor;
         private String tipoServicio;
         private List<String> articuloComprado;
         private float subTotal;
@@ -19,8 +19,8 @@ namespace DOMAIN
         public void Venta(){
             Fecha = "";
             Hora= "";
-            Cliente = 0;
-            Vendedor = 0;
+            Cliente = "";
+            Vendedor = "";
             TipoServicio = "";
             ArticuloComprado = new List<>();
             SubTotal = 0;
@@ -28,7 +28,7 @@ namespace DOMAIN
             TipoPago = "";
         }//constructor
 
-        public void Venta(String fecha, String hora, int cliente, int vendedor, String tipoServicio, List<String> articuloComprado, int subTotal, int total, String tipoPago){
+        public void Venta(String fecha, String hora, String cliente, String vendedor, String tipoServicio, List<String> articuloComprado, int subTotal, int total, String tipoPago){
             fecha = fecha;
             hora = hora;
             cliente = cliente;
@@ -65,7 +65,7 @@ namespace DOMAIN
             }//set hora
         }//set y get hora
 
-        public int Cliente
+        public String Cliente
         {
             get
             {
@@ -78,7 +78,7 @@ namespace DOMAIN
             }//set cliente
         }//set y get cliente
 
-        public int Vendedor
+        public String Vendedor
         {
             get
             {
