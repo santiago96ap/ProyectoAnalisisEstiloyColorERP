@@ -29,7 +29,7 @@ namespace DATA
         public Oferta(int idCategoria, String fechainicio, String fechaFinal, float descuento)
         {
             this.idCategoria = idCategoria;
-            this.fechaInicio = fechaInicio;
+            this.fechaInicio = fechainicio;
             this.fechaFinal = fechaFinal;
             this.descuento = descuento;
         }//constructor sobrecargado Categoria
