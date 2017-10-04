@@ -10,25 +10,16 @@
 namespace EstiloyColorERP {
     
     
-    public partial class EliminarAgendaView {
+    public partial class EliminarVentaView {
         
         /// <summary>
-        /// UpdatePanel1 control.
+        /// lblTituloVenta control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
-        
-        /// <summary>
-        /// lblTitulo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTitulo;
+        protected global::System.Web.UI.WebControls.Label lblTituloVenta;
         
         /// <summary>
         /// tbDatos control.
@@ -94,30 +85,21 @@ namespace EstiloyColorERP {
         protected global::System.Web.UI.WebControls.Button btnBuscar;
         
         /// <summary>
-        /// tbResultados control.
+        /// tbResultadosVenta control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Table tbResultados;
+        protected global::System.Web.UI.WebControls.Table tbResultadosVenta;
         
         /// <summary>
-        /// btnEliminar control.
+        /// btnEliminarVenta control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnEliminar;
-        
-        /// <summary>
-        /// ScriptManager1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.ScriptManager ScriptManager1;
+        protected global::System.Web.UI.WebControls.Button btnEliminarVenta;
     }
 }

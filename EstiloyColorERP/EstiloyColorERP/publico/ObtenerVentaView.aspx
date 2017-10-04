@@ -1,8 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ObtenerVentaView.aspx.cs" Inherits="EstiloyColorERP.ObtenerVentaView" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-</asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>
             <asp:Label ID="lblTitulo" runat="server" Text="Obtener Ventas"></asp:Label>
             <br />
@@ -31,8 +28,5 @@
             </asp:Table>
             <br />
             <br />
-            <asp:ScriptManager ID="ScriptManager1" runat="server">
-            </asp:ScriptManager>
         </ContentTemplate>
-    </asp:UpdatePanel>
 </asp:Content>
