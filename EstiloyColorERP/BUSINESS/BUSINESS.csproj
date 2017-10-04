@@ -80,6 +80,7 @@
   <ItemGroup>
     <Compile Include="AgendaBusiness.cs" />
     <Compile Include="ApartadoBusiness.cs" />
+    <Compile Include="CategoriaBusiness.cs" />
     <Compile Include="ClienteBusiness.cs" />
     <Compile Include="GastoBusiness.cs" />
     <Compile Include="InventarioBusiness.cs" />

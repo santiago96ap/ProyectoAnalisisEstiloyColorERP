@@ -26,7 +26,7 @@ namespace BUSINESS {
         }//obtenerProveedores
 
         public Proveedor obtenerProveedor(Proveedor proveedor) {
-            return this.proveedorData.obtenerCliente(cliente);
+            return this.proveedorData.obtenerProveedor(proveedor);
         }//obtenerProveedor
 
         public Boolean eliminarProveedor(Proveedor proveedor) {

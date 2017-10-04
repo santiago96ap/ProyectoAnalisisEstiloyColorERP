@@ -24,7 +24,7 @@ namespace DATA {
             return null;
         }//obtenerProveedores
 
-        public Proveedor obtenerProveedor(ProveedorData proveedor) {
+        public Proveedor obtenerProveedor(Proveedor proveedor) {
             return null;
         }//obtenerProveedor
 
