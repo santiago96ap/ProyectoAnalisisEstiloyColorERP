@@ -31,7 +31,7 @@ namespace BUSINESS
             return this.apartadoData.obtenerApartados();
         }//obtenerApartados
 
-        public Agenda obtenerApartado(Apartado apartado)
+        public Apartado obtenerApartado(Apartado apartado)
         {
             return this.apartadoData.obtenerApartado(apartado);
         }//obtenerApartado

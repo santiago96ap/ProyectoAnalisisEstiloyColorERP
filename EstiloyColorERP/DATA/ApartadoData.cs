@@ -31,7 +31,7 @@ namespace DATA
             return null;
         }//obtenerApartados
 
-        public Agenda obtenerApartado(Apartado apartado)
+        public Apartado obtenerApartado(Apartado apartado)
         {
             return null;
         }//obtenerApartado
