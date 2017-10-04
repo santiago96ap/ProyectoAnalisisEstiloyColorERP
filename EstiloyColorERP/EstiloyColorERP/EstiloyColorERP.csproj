@@ -63,21 +63,65 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ActualizarAgendaView.aspx" />
-    <Content Include="ActualizarCliente.aspx" />
-    <Content Include="ActualizarInventarioView.aspx" />
-    <Content Include="AgendaView.aspx" />
-    <Content Include="EliminarAgendaView.aspx" />
-    <Content Include="EliminarInventarioView.aspx" />
-    <Content Include="EliminarVentaView.aspx" />
-    <Content Include="InsertarCliente.aspx" />
-    <Content Include="InventarioView.aspx" />
-    <Content Include="ObtenerAgendaView.aspx" />
-    <Content Include="ObtenerCliente.aspx" />
-    <Content Include="ObtenerInventarioView.aspx" />
-    <Content Include="ObtenerVentaView.aspx" />
+    <Content Include="publico\ActualizarAgendaView.aspx" />
+    <Content Include="publico\ActualizarCliente.aspx" />
+    <Content Include="publico\ActualizarInventarioView.aspx" />
+    <Content Include="publico\AgendaView.aspx" />
+    <Content Include="publico\Default.aspx" />
+    <Content Include="publico\EliminarAgendaView.aspx" />
+    <Content Include="publico\EliminarInventarioView.aspx" />
+    <Content Include="publico\EliminarVentaView.aspx" />
+    <Content Include="publico\InsertarCliente.aspx" />
+    <Content Include="publico\InventarioView.aspx" />
+    <Content Include="publico\ObtenerAgendaView.aspx" />
+    <Content Include="publico\ObtenerCliente.aspx" />
+    <Content Include="publico\ObtenerInventarioView.aspx" />
+    <Content Include="publico\ObtenerVentaView.aspx" />
     <Content Include="packages.config" />
+    <Content Include="publico\css\bootstrap.css" />
+    <Content Include="publico\css\font-awesome.css" />
+    <Content Include="publico\css\lightbox.css" />
+    <Content Include="publico\css\style.css" />
+    <Content Include="publico\fonts\fontawesome-webfont.svg" />
+    <Content Include="publico\images\1.jpg" />
+    <Content Include="publico\images\6.jpg" />
+    <Content Include="publico\images\arrow.png" />
+    <Content Include="publico\images\close.png" />
+    <Content Include="publico\images\img-sprite-left-right.png" />
+    <Content Include="publico\images\next.png" />
+    <Content Include="publico\images\prev.png" />
+    <Content Include="publico\images\s1.jpg" />
+    <Content Include="publico\images\s2.jpg" />
+    <Content Include="publico\images\s3.jpg" />
+    <Content Include="publico\images\s4.jpg" />
+    <Content Include="publico\images\s5.jpg" />
+    <Content Include="publico\images\s6.jpg" />
+    <Content Include="publico\images\s7.jpg" />
+    <Content Include="publico\images\search.png" />
+    <Content Include="publico\images\t1.jpg" />
+    <Content Include="publico\images\t2.jpg" />
+    <Content Include="publico\images\t3.jpg" />
+    <Content Include="publico\images\t4.jpg" />
+    <Content Include="publico\images\up-arrow.png" />
+    <Content Include="publico\images\user1.jpg" />
+    <Content Include="publico\images\user2.jpg" />
+    <Content Include="publico\images\user3.jpg" />
+    <Content Include="publico\js\bootstrap.js" />
+    <Content Include="publico\js\easing.js" />
+    <Content Include="publico\js\jquery-1.11.1.min.js" />
+    <Content Include="publico\js\jquery.flexisel.js" />
+    <Content Include="publico\js\lightbox-plus-jquery.min.js" />
+    <Content Include="publico\js\menu_jquery.js" />
+    <Content Include="publico\js\move-top.js" />
+    <Content Include="publico\js\responsiveslides.min.js" />
     <Content Include="Site.Master" />
+    <Content Include="publico\fonts\fontawesome-webfont.eot" />
+    <Content Include="publico\fonts\fontawesome-webfont.ttf" />
+    <Content Include="publico\fonts\fontawesome-webfont.woff" />
+    <Content Include="publico\fonts\fontawesome-webfont.woff2" />
+    <Content Include="publico\fonts\FontAwesome.otf" />
+    <Content Include="publico\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="publico\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -86,99 +130,106 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="VentaView.aspx" />
+    <Content Include="publico\VentaView.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ActualizarAgendaView.aspx.cs">
+    <Compile Include="publico\ActualizarAgendaView.aspx.cs">
       <DependentUpon>ActualizarAgendaView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ActualizarAgendaView.aspx.designer.cs">
+    <Compile Include="publico\ActualizarAgendaView.aspx.designer.cs">
       <DependentUpon>ActualizarAgendaView.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ActualizarCliente.aspx.cs">
+    <Compile Include="publico\ActualizarCliente.aspx.cs">
       <DependentUpon>ActualizarCliente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ActualizarCliente.aspx.designer.cs">
+    <Compile Include="publico\ActualizarCliente.aspx.designer.cs">
       <DependentUpon>ActualizarCliente.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ActualizarInventarioView.aspx.cs">
+    <Compile Include="publico\ActualizarInventarioView.aspx.cs">
       <DependentUpon>ActualizarInventarioView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ActualizarInventarioView.aspx.designer.cs">
+    <Compile Include="publico\ActualizarInventarioView.aspx.designer.cs">
       <DependentUpon>ActualizarInventarioView.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AgendaView.aspx.cs">
+    <Compile Include="publico\AgendaView.aspx.cs">
       <DependentUpon>AgendaView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AgendaView.aspx.designer.cs">
+    <Compile Include="publico\AgendaView.aspx.designer.cs">
       <DependentUpon>AgendaView.aspx</DependentUpon>
     </Compile>
-    <Compile Include="EliminarAgendaView.aspx.cs">
+    <Compile Include="publico\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="publico\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="publico\EliminarAgendaView.aspx.cs">
       <DependentUpon>EliminarAgendaView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="EliminarAgendaView.aspx.designer.cs">
+    <Compile Include="publico\EliminarAgendaView.aspx.designer.cs">
       <DependentUpon>EliminarAgendaView.aspx</DependentUpon>
     </Compile>
-    <Compile Include="EliminarInventarioView.aspx.cs">
+    <Compile Include="publico\EliminarInventarioView.aspx.cs">
       <DependentUpon>EliminarInventarioView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="EliminarInventarioView.aspx.designer.cs">
+    <Compile Include="publico\EliminarInventarioView.aspx.designer.cs">
       <DependentUpon>EliminarInventarioView.aspx</DependentUpon>
     </Compile>
-    <Compile Include="EliminarVentaView.aspx.cs">
+    <Compile Include="publico\EliminarVentaView.aspx.cs">
       <DependentUpon>EliminarVentaView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="EliminarVentaView.aspx.designer.cs">
+    <Compile Include="publico\EliminarVentaView.aspx.designer.cs">
       <DependentUpon>EliminarVentaView.aspx</DependentUpon>
     </Compile>
-    <Compile Include="InsertarCliente.aspx.cs">
+    <Compile Include="publico\InsertarCliente.aspx.cs">
       <DependentUpon>InsertarCliente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="InsertarCliente.aspx.designer.cs">
+    <Compile Include="publico\InsertarCliente.aspx.designer.cs">
       <DependentUpon>InsertarCliente.aspx</DependentUpon>
     </Compile>
-    <Compile Include="InventarioView.aspx.cs">
+    <Compile Include="publico\InventarioView.aspx.cs">
       <DependentUpon>InventarioView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="InventarioView.aspx.designer.cs">
+    <Compile Include="publico\InventarioView.aspx.designer.cs">
       <DependentUpon>InventarioView.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ObtenerAgendaView.aspx.cs">
+    <Compile Include="publico\ObtenerAgendaView.aspx.cs">
       <DependentUpon>ObtenerAgendaView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ObtenerAgendaView.aspx.designer.cs">
+    <Compile Include="publico\ObtenerAgendaView.aspx.designer.cs">
       <DependentUpon>ObtenerAgendaView.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ObtenerCliente.aspx.cs">
+    <Compile Include="publico\ObtenerCliente.aspx.cs">
       <DependentUpon>ObtenerCliente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ObtenerCliente.aspx.designer.cs">
+    <Compile Include="publico\ObtenerCliente.aspx.designer.cs">
       <DependentUpon>ObtenerCliente.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ObtenerInventarioView.aspx.cs">
+    <Compile Include="publico\ObtenerInventarioView.aspx.cs">
       <DependentUpon>ObtenerInventarioView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ObtenerInventarioView.aspx.designer.cs">
+    <Compile Include="publico\ObtenerInventarioView.aspx.designer.cs">
       <DependentUpon>ObtenerInventarioView.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ObtenerVentaView.aspx.cs">
+    <Compile Include="publico\ObtenerVentaView.aspx.cs">
       <DependentUpon>ObtenerVentaView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ObtenerVentaView.aspx.designer.cs">
+    <Compile Include="publico\ObtenerVentaView.aspx.designer.cs">
       <DependentUpon>ObtenerVentaView.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -189,11 +240,11 @@
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
-    <Compile Include="VentaView.aspx.cs">
+    <Compile Include="publico\VentaView.aspx.cs">
       <DependentUpon>VentaView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="VentaView.aspx.designer.cs">
+    <Compile Include="publico\VentaView.aspx.designer.cs">
       <DependentUpon>VentaView.aspx</DependentUpon>
     </Compile>
   </ItemGroup>

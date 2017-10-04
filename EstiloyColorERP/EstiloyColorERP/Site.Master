@@ -4,11 +4,198 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
-    <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
+    <title>Estilo y Color ERP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Fuel Serve Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+	    SmartPhone Compatible web template, free web designs  for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- Custom Theme files -->
+    <link href="publico/css/bootstrap.css" rel='stylesheet' type='text/css' />  
+    <link href="publico/css/style.css" rel='stylesheet' type='text/css' />
+    <link href="publico/css/font-awesome.css" rel="stylesheet"> 			<!-- font-awesome icons -->
+    <!-- //Custom Theme files -->
+    <!-- fonts -->
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
+    <!-- //fonts -->
+    <!-- js -->
+    <script src="publico/js/jquery-1.11.1.min.js"> </script>	
+    <script src="publico/js/bootstrap.js"></script>
+    <script type="text/javascript">
+	    jQuery(document).ready(function($) {
+		    $(".scroll").click(function(event){		
+			    event.preventDefault();
+			    $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		    });
+	    });
+    </script>	 
+    <script src="publico/js/menu_jquery.js"></script> <!-- pop-up -->	
+    <!-- //js -->
 </head>
 <body>
+    <!-- header-top -->
+	<div class="header-top">
+		<!-- container -->
+		<div class="container">
+			<div class="social w3-agileitsicons"> 
+				<ul>
+					<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+					<li><a class="twt" href="#"><i class="fa fa-twitter" aria-hidden="true"></i> </a></li>
+					<li><a class="drbl" href="#"><i class="fa fa-linkedin" aria-hidden="true"></i> </a></li>
+					<li><a class="be" href="#"><i class="fa fa-dribbble" aria-hidden="true"></i> </a></li>
+				</ul>  
+			</div>
+			<div class="w3layouts-details">
+				<ul>
+					<li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>estiloycolorcr@gmail.com</li>
+					<li><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>(+556) 8995 6312</li>
+				</ul>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+		<!-- //container -->
+	</div>
+	<!-- //header-top -->
+	<!-- header -->
+	<div class="header">
+		<!-- container -->
+		<div class="container">
+			<div class="header-bottom">
+				<div class="w3ls-logo">
+					<h1><a href="index.html">Estilo y Color <span>ERP</span></a></h1>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="top-nav">
+				<nav class="navbar navbar-default">
+					<div class="container">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">Menú						
+						</button>
+					</div>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li class="home-icon"><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+							<li><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Agenda<span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a class="hvr-bounce-to-bottom" href="icons.html">Web Icons</a></li>
+									<li class="dropdown-submenu">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown-submenu" role="button" aria-haspopup="true" aria-expanded="false">Short Codes <span class="caret"></span></a>
+										<ul class="dropdown-menu">
+											<li><a tabindex="-1" href="codes.html">Navbar</a></li>
+											<li><a href="codes.html">Tabs</a></li>
+											 <li><a href="codes.html">Forms</a></li>
+										</ul>
+									</li>          
+								</ul>
+							</li>	 
+							<li><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Clientes<span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a class="hvr-bounce-to-bottom" href="icons.html">Web Icons</a></li>
+									<li class="dropdown-submenu">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown-submenu" role="button" aria-haspopup="true" aria-expanded="false">Short Codes <span class="caret"></span></a>
+										<ul class="dropdown-menu">
+											<li><a tabindex="-1" href="codes.html">Navbar</a></li>
+											<li><a href="codes.html">Tabs</a></li>
+											 <li><a href="codes.html">Forms</a></li>
+										</ul>
+									</li>          
+								</ul>
+							</li>	 
+							<li><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contabilidad<span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li class="dropdown-submenu">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown-submenu" role="button" aria-haspopup="true" aria-expanded="false">Ingresos<span class="caret"></span></a>
+										<ul class="dropdown-menu">
+											<li><a tabindex="-1" href="codes.html">Navbar</a></li>
+											<li><a href="codes.html">Tabs</a></li>
+											 <li><a href="codes.html">Forms</a></li>
+										</ul>
+									</li>   
+									<li class="dropdown-submenu">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown-submenu" role="button" aria-haspopup="true" aria-expanded="false">Gastos<span class="caret"></span></a>
+										<ul class="dropdown-menu">
+											<li><a tabindex="-1" href="codes.html">Navbar</a></li>
+											<li><a href="codes.html">Tabs</a></li>
+											 <li><a href="codes.html">Forms</a></li>
+										</ul>
+									</li> 
+									<li class="dropdown-submenu">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown-submenu" role="button" aria-haspopup="true" aria-expanded="false">Ventas<span class="caret"></span></a>
+										<ul class="dropdown-menu">
+											<li><a tabindex="-1" href="codes.html">Navbar</a></li>
+											<li><a href="codes.html">Tabs</a></li>
+											 <li><a href="codes.html">Forms</a></li>
+										</ul>
+									</li>              
+								</ul>
+							</li>	
+							<li><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Productos<span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li class="dropdown-submenu">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown-submenu" role="button" aria-haspopup="true" aria-expanded="false">Apartados<span class="caret"></span></a>
+										<ul class="dropdown-menu">
+											<li><a tabindex="-1" href="codes.html">Navbar</a></li>
+											<li><a href="codes.html">Tabs</a></li>
+											 <li><a href="codes.html">Forms</a></li>
+										</ul>
+									</li>
+									<li class="dropdown-submenu">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown-submenu" role="button" aria-haspopup="true" aria-expanded="false">Ofertas<span class="caret"></span></a>
+										<ul class="dropdown-menu">
+											<li><a tabindex="-1" href="codes.html">Navbar</a></li>
+											<li><a href="codes.html">Tabs</a></li>
+											 <li><a href="codes.html">Forms</a></li>
+										</ul>
+									</li>
+									<li class="dropdown-submenu">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown-submenu" role="button" aria-haspopup="true" aria-expanded="false">Proveedores<span class="caret"></span></a>
+										<ul class="dropdown-menu">
+											<li><a tabindex="-1" href="codes.html">Navbar</a></li>
+											<li><a href="codes.html">Tabs</a></li>
+											 <li><a href="codes.html">Forms</a></li>
+										</ul>
+									</li>   
+									<li class="dropdown-submenu">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown-submenu" role="button" aria-haspopup="true" aria-expanded="false">Inventarios<span class="caret"></span></a>
+										<ul class="dropdown-menu">
+											<li><a tabindex="-1" href="codes.html">Navbar</a></li>
+											<li><a href="codes.html">Tabs</a></li>
+											 <li><a href="codes.html">Forms</a></li>
+										</ul>
+									</li>              
+								</ul>
+							</li>
+
+							<li class="login w3">
+								<div id="loginContainer"><a href="#" id="loginButton"><span>Login</span></a>
+									<div id="loginBox">      
+										<form id="loginForm" action="#" method="post">
+											<fieldset id="body">
+												<fieldset>
+													<label for="email">Correo electrónico</label>
+													<input type="text" name="email" id="email" required="">
+												</fieldset>
+												<fieldset>
+													<label for="password">Contraseña</label>
+													<input type="password" name="password" id="password" required="">
+												</fieldset>
+												<input type="submit" id="login" value="Iniciar Sesión">
+											</fieldset>
+										</form>
+									</div>
+								</div>
+							</li>
+						</ul>	
+						<div class="clearfix"> </div>
+					</div>	
+				</nav>	
+			</div>
+		</div>
+		<!-- //container -->
+	</div>
+	<!-- //header -->
     <form id="form1" runat="server">
     <div>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
@@ -16,5 +203,55 @@
         </asp:ContentPlaceHolder>
     </div>
     </form>
+    <!-- footer -->
+	<div class="footer"> 
+		<div class="container">
+			<div class="footer-agileinfo">
+				<div class="col-md-6 footer-right">
+					<h5>Ubicación</h5>
+					<div class="footer-right-map">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3771907.975236311!2d-2.09480472072984!3d39.07355564363949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1436857347604"></iframe>
+					</div>
+				</div>
+				<div class="col-md-6 footer-left"> 
+					<div class="w3-agileitsicons">
+						<ul>
+							<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+							<li><a class="twt" href="#"><i class="fa fa-twitter" aria-hidden="true"></i> </a></li>
+							<li><a class="drbl" href="#"><i class="fa fa-linkedin" aria-hidden="true"></i> </a></li>
+							<li><a class="be" href="#"><i class="fa fa-dribbble" aria-hidden="true"></i> </a></li>
+						</ul> 
+					</div>
+					<div class="f-address">
+						<p class="number">(+556) 8995 6312</p>
+					</div>
+					<div class="copyright">
+						<p>© 2017 Estilo y Color ERP.  Todos los derechos Reservados <br> Desarrollado por Grupo MAAB, Universidad de Costa Rica</p>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div> 
+	</div>
+	<!-- //footer -->
+	<!-- smooth-scrolling-of-move-up --> 
+	<script type="text/javascript" src="publico/js/move-top.js"></script>
+	<script type="text/javascript" src="publico/js/easing.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+			};
+			*/
+			
+			$().UItoTop({ easingType: 'easeOutQuart' });
+			
+		});
+	</script> 
+	<!-- //smooth-scrolling-of-move-up -->
 </body>
 </html>
