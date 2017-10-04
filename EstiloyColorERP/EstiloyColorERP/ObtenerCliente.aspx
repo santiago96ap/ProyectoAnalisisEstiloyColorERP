@@ -15,7 +15,7 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="btnBuscar" runat="server" Text="Buscar" />
             <br />
             <br />
-            <asp:Table ID="tblCliente" runat="server">
+            <asp:Table ID="tblCliente" runat="server" Height="25px">
             </asp:Table>
             <br />
             <br />
