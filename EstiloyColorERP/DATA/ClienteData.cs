@@ -9,6 +9,13 @@ namespace DATA
     public class ClienteData
     {
 
+        private String stringConeccion;
+
+        public ClienteData(string stringConeccion)
+        {
+            this.stringConeccion = stringConeccion;
+        }//constructor
+
         public Boolean insertarCliente(Cliente cliente)
         {
             return false;
@@ -24,7 +31,7 @@ namespace DATA
             return null;
         }//obtenerClientes
 
-        public Venta obtenerCliente(Cliente cliente)
+        public Cliente obtenerCliente(Cliente cliente)
         {
             return null;
         }//obtenerCliente

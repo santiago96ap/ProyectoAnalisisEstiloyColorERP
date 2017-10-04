@@ -11,9 +11,9 @@ namespace BUSINESS
     {
         private ApartadoData apartadoData;
 
-        public ApartadoBusiness()
+        public ApartadoBusiness(string stringConeccion)
         {
-            this.apartadoData = new ApartadoData();
+            this.apartadoData = new ApartadoData(stringConeccion);
         }//constructor
 
         public Boolean insertarApartado(Apartado apartado)
@@ -31,7 +31,7 @@ namespace BUSINESS
             return this.apartadoData.obtenerApartados();
         }//obtenerApartados
 
-        public Agenda obtenerApartado(Apartado apartado)
+        public Apartado obtenerApartado(Apartado apartado)
         {
             return this.apartadoData.obtenerApartado(apartado);
         }//obtenerApartado

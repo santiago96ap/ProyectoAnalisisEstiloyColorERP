@@ -15,7 +15,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>EstiloyColorERP</RootNamespace>
     <AssemblyName>EstiloyColorERP</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -54,10 +55,6 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
@@ -67,11 +64,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ActualizarAgendaView.aspx" />
+    <Content Include="ActualizarCliente.aspx" />
+    <Content Include="ActualizarInventarioView.aspx" />
     <Content Include="AgendaView.aspx" />
     <Content Include="EliminarAgendaView.aspx" />
+    <Content Include="EliminarInventarioView.aspx" />
     <Content Include="EliminarVentaView.aspx" />
+    <Content Include="InsertarCliente.aspx" />
     <Content Include="InventarioView.aspx" />
     <Content Include="ObtenerAgendaView.aspx" />
+    <Content Include="ObtenerCliente.aspx" />
+    <Content Include="ObtenerInventarioView.aspx" />
     <Content Include="ObtenerVentaView.aspx" />
     <Content Include="packages.config" />
     <Content Include="Site.Master" />
@@ -94,6 +97,20 @@
     <Compile Include="ActualizarAgendaView.aspx.designer.cs">
       <DependentUpon>ActualizarAgendaView.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ActualizarCliente.aspx.cs">
+      <DependentUpon>ActualizarCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ActualizarCliente.aspx.designer.cs">
+      <DependentUpon>ActualizarCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ActualizarInventarioView.aspx.cs">
+      <DependentUpon>ActualizarInventarioView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ActualizarInventarioView.aspx.designer.cs">
+      <DependentUpon>ActualizarInventarioView.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AgendaView.aspx.cs">
       <DependentUpon>AgendaView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -108,12 +125,26 @@
     <Compile Include="EliminarAgendaView.aspx.designer.cs">
       <DependentUpon>EliminarAgendaView.aspx</DependentUpon>
     </Compile>
+    <Compile Include="EliminarInventarioView.aspx.cs">
+      <DependentUpon>EliminarInventarioView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EliminarInventarioView.aspx.designer.cs">
+      <DependentUpon>EliminarInventarioView.aspx</DependentUpon>
+    </Compile>
     <Compile Include="EliminarVentaView.aspx.cs">
       <DependentUpon>EliminarVentaView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="EliminarVentaView.aspx.designer.cs">
       <DependentUpon>EliminarVentaView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InsertarCliente.aspx.cs">
+      <DependentUpon>InsertarCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InsertarCliente.aspx.designer.cs">
+      <DependentUpon>InsertarCliente.aspx</DependentUpon>
     </Compile>
     <Compile Include="InventarioView.aspx.cs">
       <DependentUpon>InventarioView.aspx</DependentUpon>
@@ -128,6 +159,20 @@
     </Compile>
     <Compile Include="ObtenerAgendaView.aspx.designer.cs">
       <DependentUpon>ObtenerAgendaView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ObtenerCliente.aspx.cs">
+      <DependentUpon>ObtenerCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ObtenerCliente.aspx.designer.cs">
+      <DependentUpon>ObtenerCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ObtenerInventarioView.aspx.cs">
+      <DependentUpon>ObtenerInventarioView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ObtenerInventarioView.aspx.designer.cs">
+      <DependentUpon>ObtenerInventarioView.aspx</DependentUpon>
     </Compile>
     <Compile Include="ObtenerVentaView.aspx.cs">
       <DependentUpon>ObtenerVentaView.aspx</DependentUpon>
