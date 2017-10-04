@@ -9,14 +9,14 @@ namespace DOMAIN {
         private String telefono;
         private String direccion;
         private String email;
-        public void Proveedor() {
+        public Proveedor() {
             this.nombre = "";
             this.telefono = "";
             this.direccion = "";
             this.email = "";
         }//constructor
 
-        public void proveedor(String nombre, String telefono, String direccion, String email) {
+        public Proveedor(String nombre, String telefono, String direccion, String email) {
             this.nombre = nombre;
             this.telefono = telefono;
             this.direccion = direccion;

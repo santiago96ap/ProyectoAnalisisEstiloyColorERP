@@ -20,7 +20,6 @@ namespace DATA
 
             this.idProducto = 0;
             this.idCategoria = 0;
-
             this.fechaInicio = "";
             this.fechaFinal = "";
             this.descuento = 0;
@@ -35,13 +34,13 @@ namespace DATA
             this.descuento = descuento;
         }//constructor sobrecargado Categoria
 
-        public Oferta(int idProducto, String fechainicio, String fechaFinal, float descuento)
+        /*public Oferta(int idProducto, String fechainicio, String fechaFinal, float descuento)
         {
             this.idProducto = idProducto;
             this.fechaInicio = fechaInicio;
             this.fechaFinal = fechaFinal;
             this.descuento = descuento;
         }//constructor sobrecargado Producto
-
+        */
     }//fin de la clase
 }//fin de namespace
