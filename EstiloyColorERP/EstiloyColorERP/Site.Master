@@ -20,8 +20,8 @@
     <link href='//fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
     <!-- //fonts -->
     <!-- js -->
-    <script src="publico/js/jquery-1.11.1.min.js"> </script>	
-    <script src="publico/js/bootstrap.js"></script>
+    <script src="js/jquery-1.11.1.min.js"> </script>	
+    <script src="js/bootstrap.js"></script>
     <script type="text/javascript">
 	    jQuery(document).ready(function($) {
 		    $(".scroll").click(function(event){		
@@ -30,7 +30,7 @@
 		    });
 	    });
     </script>	 
-    <script src="publico/js/menu_jquery.js"></script> <!-- pop-up -->	
+    <script src="js/menu_jquery.js"></script> <!-- pop-up -->	
     <!-- //js -->
 </head>
 <body>
@@ -63,7 +63,7 @@
 		<div class="container">
 			<div class="header-bottom">
 				<div class="w3ls-logo">
-					<h1><a href="index.html">Estilo y Color <span>ERP</span></a></h1>
+					<h1><a href="Default.aspx">Estilo y Color <span>ERP</span></a></h1>
 				</div>
 				<div class="clearfix"> </div>
 			</div>
@@ -76,7 +76,7 @@
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav">
-							<li class="home-icon"><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+							<li class="home-icon"><a href="Default.aspx"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
 							<li><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Agenda<span class="caret"></span></a>
 								<ul class="dropdown-menu">
 									<li><a class="hvr-bounce-to-bottom" href="icons.html">Web Icons</a></li>
@@ -210,7 +210,7 @@
 				<div class="col-md-6 footer-right">
 					<h5>Ubicación</h5>
 					<div class="footer-right-map">
-						<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3771907.975236311!2d-2.09480472072984!3d39.07355564363949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1436857347604"></iframe>
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d580.9567222332092!2d-83.68444986856223!3d9.902558844939465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x28f9a428372f687!2sEstilo+Y+Color!5e1!3m2!1ses!2sin!4v1507156749106" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 					</div>
 				</div>
 				<div class="col-md-6 footer-left"> 
@@ -235,8 +235,8 @@
 	</div>
 	<!-- //footer -->
 	<!-- smooth-scrolling-of-move-up --> 
-	<script type="text/javascript" src="publico/js/move-top.js"></script>
-	<script type="text/javascript" src="publico/js/easing.js"></script>
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
 			/*
