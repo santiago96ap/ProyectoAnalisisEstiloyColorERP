@@ -68,6 +68,7 @@
   <ItemGroup>
     <Content Include="ActualizarAgendaView.aspx" />
     <Content Include="ActualizarCliente.aspx" />
+    <Content Include="ActualizarInventarioView.aspx" />
     <Content Include="AgendaView.aspx" />
     <Content Include="EliminarAgendaView.aspx" />
     <Content Include="EliminarVentaView.aspx" />
@@ -103,6 +104,13 @@
     </Compile>
     <Compile Include="ActualizarCliente.aspx.designer.cs">
       <DependentUpon>ActualizarCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ActualizarInventarioView.aspx.cs">
+      <DependentUpon>ActualizarInventarioView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ActualizarInventarioView.aspx.designer.cs">
+      <DependentUpon>ActualizarInventarioView.aspx</DependentUpon>
     </Compile>
     <Compile Include="AgendaView.aspx.cs">
       <DependentUpon>AgendaView.aspx</DependentUpon>
