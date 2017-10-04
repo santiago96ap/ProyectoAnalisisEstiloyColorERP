@@ -16,12 +16,12 @@ namespace BUSINESS
            this.ventaData = new VentaData();
         }//constructor
 
-        public boolean insertarVenta(Venta venta)
+        public Boolean insertarVenta(Venta venta)
         {
             return this.ventaData.insertarVenta(venta);
         }//insertar venta
 
-        public boolean eliminarVenta(Venta venta)
+        public Boolean eliminarVenta(Venta venta)
         {
             return this.ventaData.eliminarVenta(venta);
         }//eliminar venta

@@ -14,12 +14,12 @@ namespace BUSINESS
         public AgendaBusiness() {
             this.agendaData = new AgendaData();
         }//constructor
-        public boolean insertarAgenda(Agenda agenda)
+        public Boolean insertarAgenda(Agenda agenda)
         {
             return this.agendaData.insertarAgenda(agenda);
         }//insertar agenda
 
-        public boolean eliminarAgenda(Agenda agenda)
+        public Boolean eliminarAgenda(Agenda agenda)
         {
             return this.agendaData.eliminarAgenda(agenda);
         }//eliminar venta
@@ -34,7 +34,7 @@ namespace BUSINESS
             return this.agendaData.obtenerAgenda(agenda);
         }//obtener una cita en la agenda
 
-        public boolean actualizarAgenda(Agenda agenda)
+        public Boolean actualizarAgenda(Agenda agenda)
         {
             return this.agendaData.actualizarAgenda(agenda);
         }//actualizar una cita en la agenda

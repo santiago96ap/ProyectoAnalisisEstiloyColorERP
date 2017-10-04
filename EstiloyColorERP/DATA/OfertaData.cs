@@ -17,7 +17,7 @@ namespace DATA
             return false;
         }//insertarOfertaCategoria
 
-        public Boolean insertarOfertaProducto(Producto producto, Oferta oferta)
+        public Boolean insertarOfertaProducto(Oferta oferta)//Producto producto, 
         {
             /**
              * CÓDIGO AQUÍ

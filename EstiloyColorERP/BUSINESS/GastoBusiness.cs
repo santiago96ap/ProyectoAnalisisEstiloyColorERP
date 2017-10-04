@@ -17,9 +17,9 @@ namespace BUSINESS
             gastoData = new GastoData();
         }//constructor
 
-        public Boolean insertarGasto(Gasto gasto, Vendedor venedor)
+        public Boolean insertarGasto(Gasto gasto)//, Vendedor venedor
         {
-            return this.gastoData.insertarGasto(gasto, venedor);
+            return this.gastoData.insertarGasto(gasto);//, venedor
         }//insertarGasto
 
         public Boolean eliminarGasto(Gasto gasto)

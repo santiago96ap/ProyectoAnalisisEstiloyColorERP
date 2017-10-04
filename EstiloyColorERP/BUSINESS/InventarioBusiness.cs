@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using DATA;
+using DOMAIN;
 
 namespace BUSINESS {
     public class InventarioBusiness {
@@ -13,7 +15,7 @@ namespace BUSINESS {
         }
 
         public Boolean actualizarInventario(Inventario inventario) {
-            this.inventarioData.actualizarInventario(inventario);
+            return this.inventarioData.actualizarInventario(inventario);
         }//actualizarInventario
 
         public Boolean eliminarInventario(Inventario inventario) {

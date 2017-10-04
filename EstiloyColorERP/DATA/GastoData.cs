@@ -9,7 +9,7 @@ namespace DATA
     public class GastoData
     {
 
-        public Boolean insertarGasto(Gasto gasto, Vendedor venedor)
+        public Boolean insertarGasto(Gasto gasto)//, Vendedor venedor
         {
             /**
              * CÓDIGO AQUÍ

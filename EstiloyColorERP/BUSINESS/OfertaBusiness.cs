@@ -22,9 +22,9 @@ namespace BUSINESS
             return this.ofertaData.insertarOfertaCategoria(categoria, oferta);
         }//insertarOfertaCategoria
 
-        public Boolean insertarOfertaProducto(Producto producto, Oferta oferta)
+        public Boolean insertarOfertaProducto(Oferta oferta)//Producto producto,
         {
-            return this.ofertaData.insertarOfertaProducto(producto, oferta);
+            return this.ofertaData.insertarOfertaProducto(oferta);//producto,
         }//insertarOfertaProducto
 
         public Boolean eliminarOferta(Oferta oferta)
@@ -34,7 +34,7 @@ namespace BUSINESS
 
         public Boolean editarOferta(Oferta oferta)
         {
-            return this.ofertaData.editaroferta(oferta);
+            return this.ofertaData.editarOferta(oferta);
         }//editarOferta
 
         public Oferta obtenerOferta()
@@ -44,7 +44,7 @@ namespace BUSINESS
 
         public LinkedList<Oferta> obtenerOfertas()
         {
-            return this.ofertaData.obtenerOferta();
+            return this.ofertaData.obtenerOfertas();
         }//obtenerOfertas
 
     }//fin de clase OfertaBusiness
