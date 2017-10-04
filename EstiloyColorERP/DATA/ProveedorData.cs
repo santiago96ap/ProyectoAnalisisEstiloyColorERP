@@ -9,7 +9,7 @@ namespace DATA {
         private String stringConnection;
 
         public ProveedorData(String stringConection) {
-            this.stringConeccion = stringConeccion;
+            this.stringConnection = stringConection;
         }//constructor
 
         public Boolean insertarProveedor(Proveedor proveedor) {
