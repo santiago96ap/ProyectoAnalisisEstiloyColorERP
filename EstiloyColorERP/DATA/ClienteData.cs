@@ -31,7 +31,7 @@ namespace DATA
             return null;
         }//obtenerClientes
 
-        public Venta obtenerCliente(Cliente cliente)
+        public Cliente obtenerCliente(Cliente cliente)
         {
             return null;
         }//obtenerCliente
