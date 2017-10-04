@@ -9,7 +9,7 @@ namespace DATA {
         private String stringConnection;
 
         public CategoriaData(String stringConection) {
-            this.stringConeccion = stringConeccion;
+            this.stringConnection = stringConection;
         }//constructor
 
         public Boolean insertarCategoria(Categoria categoria) {
