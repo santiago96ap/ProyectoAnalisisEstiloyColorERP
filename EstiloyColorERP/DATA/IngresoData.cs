@@ -8,12 +8,11 @@ namespace DATA
 {
     public class IngresoData
     {
-        private String stringConeccion;
-
-        public IngresoData(string stringConeccion)
+        private String conectionString;
+        public IngresoData(String conectionString)
         {
-            this.stringConeccion = stringConeccion;
-        }//constructor sobreCargado
+            this.conectionString = conectionString;
+        }//constructor
 
 
         public Boolean insertarIngreso(Ingreso ingreso)
@@ -24,19 +23,16 @@ namespace DATA
         public Boolean actualizarIngreso(Ingreso ingreso)
         {
             return false;
-        }//actualizarIngreso
+        }//actualiazarIngreso
 
         public Boolean eliminarIngreso(Ingreso ingreso)
         {
             return false;
         }//eliminarIngreso
 
-        public LinkedList<Ingreso> obtenerIngresos(String fechaInicial, String fechaFinal)
+        public LinkedList<Ingreso> obtenerIngreso(String fechaI, String fechaF)
         {
             return null;
-        }//obtnerIngresos
-
-
-
+        }//obtenerIngreso
     }//class
 }//namespace
