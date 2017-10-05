@@ -64,18 +64,22 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="publico\ActualizarApartadoView.aspx" />
     <Content Include="publico\ActualizarAgendaView.aspx" />
     <Content Include="publico\ActualizarCliente.aspx" />
     <Content Include="publico\ActualizarInventarioView.aspx" />
     <Content Include="publico\AgendaView.aspx" />
     <Content Include="publico\Default.aspx" />
     <Content Include="publico\EliminarAgendaView.aspx" />
+    <Content Include="publico\EliminarApartadoView.aspx" />
     <Content Include="publico\EliminarInventarioView.aspx" />
     <Content Include="publico\EliminarVentaView.aspx" />
+    <Content Include="publico\InsertarApartadoView.aspx" />
     <Content Include="publico\InsertarCliente.aspx" />
     <Content Include="publico\InsertarIngresoView.aspx" />
     <Content Include="publico\InventarioView.aspx" />
     <Content Include="publico\ObtenerAgendaView.aspx" />
+    <Content Include="publico\ObtenerApartadoView.aspx" />
     <Content Include="publico\ObtenerCliente.aspx" />
     <Content Include="publico\ObtenerInventarioView.aspx" />
     <Content Include="publico\ObtenerVentaView.aspx" />
@@ -136,6 +140,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="publico\ActualizarApartadoView.aspx.cs">
+      <DependentUpon>ActualizarApartadoView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="publico\ActualizarApartadoView.aspx.designer.cs">
+      <DependentUpon>ActualizarApartadoView.aspx</DependentUpon>
+    </Compile>
     <Compile Include="publico\ActualizarAgendaView.aspx.cs">
       <DependentUpon>ActualizarAgendaView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -178,6 +189,13 @@
     <Compile Include="publico\EliminarAgendaView.aspx.designer.cs">
       <DependentUpon>EliminarAgendaView.aspx</DependentUpon>
     </Compile>
+    <Compile Include="publico\EliminarApartadoView.aspx.cs">
+      <DependentUpon>EliminarApartadoView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="publico\EliminarApartadoView.aspx.designer.cs">
+      <DependentUpon>EliminarApartadoView.aspx</DependentUpon>
+    </Compile>
     <Compile Include="publico\EliminarInventarioView.aspx.cs">
       <DependentUpon>EliminarInventarioView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -191,6 +209,13 @@
     </Compile>
     <Compile Include="publico\EliminarVentaView.aspx.designer.cs">
       <DependentUpon>EliminarVentaView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="publico\InsertarApartadoView.aspx.cs">
+      <DependentUpon>InsertarApartadoView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="publico\InsertarApartadoView.aspx.designer.cs">
+      <DependentUpon>InsertarApartadoView.aspx</DependentUpon>
     </Compile>
     <Compile Include="publico\InsertarCliente.aspx.cs">
       <DependentUpon>InsertarCliente.aspx</DependentUpon>
@@ -219,6 +244,13 @@
     </Compile>
     <Compile Include="publico\ObtenerAgendaView.aspx.designer.cs">
       <DependentUpon>ObtenerAgendaView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="publico\ObtenerApartadoView.aspx.cs">
+      <DependentUpon>ObtenerApartadoView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="publico\ObtenerApartadoView.aspx.designer.cs">
+      <DependentUpon>ObtenerApartadoView.aspx</DependentUpon>
     </Compile>
     <Compile Include="publico\ObtenerCliente.aspx.cs">
       <DependentUpon>ObtenerCliente.aspx</DependentUpon>
