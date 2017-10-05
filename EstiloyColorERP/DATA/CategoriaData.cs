@@ -6,10 +6,10 @@ using DOMAIN;
 
 namespace DATA {
     public class CategoriaData {
-        private String stringConnection;
+        private String conectionString;
 
         public CategoriaData(String stringConection) {
-            this.stringConnection = stringConection;
+            this.conectionString = stringConection;
         }//constructor
 
         public Boolean insertarCategoria(Categoria categoria) {
