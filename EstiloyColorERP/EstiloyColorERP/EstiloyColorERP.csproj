@@ -73,6 +73,7 @@
     <Content Include="publico\EliminarInventarioView.aspx" />
     <Content Include="publico\EliminarVentaView.aspx" />
     <Content Include="publico\InsertarCliente.aspx" />
+    <Content Include="publico\InsertarIngresoView.aspx" />
     <Content Include="publico\InventarioView.aspx" />
     <Content Include="publico\ObtenerAgendaView.aspx" />
     <Content Include="publico\ObtenerCliente.aspx" />
@@ -197,6 +198,13 @@
     </Compile>
     <Compile Include="publico\InsertarCliente.aspx.designer.cs">
       <DependentUpon>InsertarCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="publico\InsertarIngresoView.aspx.cs">
+      <DependentUpon>InsertarIngresoView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="publico\InsertarIngresoView.aspx.designer.cs">
+      <DependentUpon>InsertarIngresoView.aspx</DependentUpon>
     </Compile>
     <Compile Include="publico\InventarioView.aspx.cs">
       <DependentUpon>InventarioView.aspx</DependentUpon>
