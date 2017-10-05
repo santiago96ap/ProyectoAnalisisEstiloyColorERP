@@ -91,9 +91,9 @@
                             <li><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Clientes<span class="caret"></span></a>
                                 <ul class="dropdown-menu">
 
-                                    <li><a class="hvr-bounce-to-bottom" href="icons.html">Agregar Cliente</a></li>
-                                    <li><a class="hvr-bounce-to-bottom" href="icons.html">Editar Cliente</a></li>
-                                    <li><a class="hvr-bounce-to-bottom" href="icons.html">Buscar Clientes</a></li>
+                                    <li><a class="hvr-bounce-to-bottom" href="InsertarCliente.aspx">Insertar Cliente</a></li>
+                                    <li><a class="hvr-bounce-to-bottom" href="ActualizarCliente.aspx">Actualizar Cliente</a></li>
+                                    <li><a class="hvr-bounce-to-bottom" href="ObtenerCliente.aspx">Obtener Clientes</a></li>
                                 </ul>
                             </li>
                             <li><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contabilidad<span class="caret"></span></a>
@@ -132,10 +132,10 @@
                                     <li class="dropdown-submenu">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown-submenu" role="button" aria-haspopup="true" aria-expanded="false">Apartados<span class="caret"></span></a>
                                         <ul class="dropdown-menu">
-                                            <li><a class="hvr-bounce-to-bottom" href="icons.html">Agregar apartado</a></li>
-                                            <li><a class="hvr-bounce-to-bottom" href="icons.html">Editar apartado</a></li>
-                                            <li><a class="hvr-bounce-to-bottom" href="icons.html">Eliminar apartado</a></li>
-                                            <li><a class="hvr-bounce-to-bottom" href="icons.html">Ver apartado</a></li>
+                                            <li><a class="hvr-bounce-to-bottom" href="InsertarApartadoView.aspx">Insertar Apartado</a></li>
+                                            <li><a class="hvr-bounce-to-bottom" href="ActualizarApartadoView.aspx">Actualizar Apartado</a></li>
+                                            <li><a class="hvr-bounce-to-bottom" href="EliminarApartadoView.aspx">Eliminar Apartado</a></li>
+                                            <li><a class="hvr-bounce-to-bottom" href="ObtenerApartadoView.aspx">Obtener Apartados</a></li>
                                         </ul>
                                     </li>
                                     <li class="dropdown-submenu">
