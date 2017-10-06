@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EstiloyColorERP.publico {
+namespace EstiloyColorERP {
     
     
-    public partial class ObtenerGastoView {
+    public partial class ObtenerOferta {
         
         /// <summary>
         /// lblTitulo control.
@@ -22,22 +22,13 @@ namespace EstiloyColorERP.publico {
         protected global::System.Web.UI.WebControls.Label lblTitulo;
         
         /// <summary>
-        /// tbFechaInicio control.
+        /// tbProducto control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbFechaInicio;
-        
-        /// <summary>
-        /// tbFechaFin control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbFechaFin;
+        protected global::System.Web.UI.WebControls.TextBox tbProducto;
         
         /// <summary>
         /// btnBuscar control.

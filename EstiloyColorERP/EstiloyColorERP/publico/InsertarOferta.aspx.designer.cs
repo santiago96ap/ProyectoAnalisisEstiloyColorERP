@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EstiloyColorERP.publico {
+namespace EstiloyColorERP {
     
     
-    public partial class EditarGastoView {
+    public partial class InsertarOferta {
         
         /// <summary>
         /// lblTitulo control.
@@ -22,31 +22,22 @@ namespace EstiloyColorERP.publico {
         protected global::System.Web.UI.WebControls.Label lblTitulo;
         
         /// <summary>
-        /// tbFecha control.
+        /// lblProducto control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbFecha;
+        protected global::System.Web.UI.WebControls.Label lblProducto;
         
         /// <summary>
-        /// tbHora control.
+        /// tbBuscar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbHora;
-        
-        /// <summary>
-        /// tbFechaInicio control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbFechaInicio;
+        protected global::System.Web.UI.WebControls.TextBox tbBuscar;
         
         /// <summary>
         /// btnBuscar control.
@@ -58,6 +49,60 @@ namespace EstiloyColorERP.publico {
         protected global::System.Web.UI.WebControls.Button btnBuscar;
         
         /// <summary>
+        /// tbResultados control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Table tbResultados;
+        
+        /// <summary>
+        /// lblFechaInicio control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblFechaInicio;
+        
+        /// <summary>
+        /// tbFecha control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbFecha;
+        
+        /// <summary>
+        /// lblFechaFinal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblFechaFinal;
+        
+        /// <summary>
+        /// tbHora control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbHora;
+        
+        /// <summary>
+        /// lblDescuento control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblDescuento;
+        
+        /// <summary>
         /// tbConcepto control.
         /// </summary>
         /// <remarks>
@@ -67,21 +112,12 @@ namespace EstiloyColorERP.publico {
         protected global::System.Web.UI.WebControls.TextBox tbConcepto;
         
         /// <summary>
-        /// tbTotal control.
+        /// btnInsertar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbTotal;
-        
-        /// <summary>
-        /// btnActualizar control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnActualizar;
+        protected global::System.Web.UI.WebControls.Button btnInsertar;
     }
 }

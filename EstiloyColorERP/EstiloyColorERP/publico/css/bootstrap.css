@@ -130,8 +130,7 @@ input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer;
-    height: 28px;
-}
+    }
 button[disabled],
 html input[disabled] {
   cursor: default;
@@ -2246,6 +2245,7 @@ pre code {
 table {
   background-color: transparent;
     margin-left: 68px;
+    margin-bottom: 0px;
 }
 caption {
   padding-top: 8px;
