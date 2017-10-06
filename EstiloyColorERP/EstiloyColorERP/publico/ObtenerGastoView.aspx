@@ -5,6 +5,7 @@
 
     <ContentTemplate>
     <br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <asp:Label ID="lblTitulo" runat="server" Text="Obtener Gastos"></asp:Label>
     <br />
     <br />&nbsp;&nbsp;
