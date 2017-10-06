@@ -101,7 +101,7 @@
                                     <li class="dropdown-submenu">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown-submenu" role="button" aria-haspopup="true" aria-expanded="false">Ingresos<span class="caret"></span></a>
                                         <ul class="dropdown-menu">
-                                            <li><a class="hvr-bounce-to-bottom" href="icons.html">Insertar Ingreso</a></li>
+                                            <li><a class="hvr-bounce-to-bottom" href="InsertarIngresoView.aspx">Insertar Ingreso</a></li>
                                             <li><a class="hvr-bounce-to-bottom" href="icons.html">Actualizar Ingreso</a></li>
                                             <li><a class="hvr-bounce-to-bottom" href="icons.html">Eliminar Ingreso</a></li>
                                             <li><a class="hvr-bounce-to-bottom" href="icons.html">Obtener Ingresos</a></li>
@@ -167,10 +167,10 @@
                                     <li class="dropdown-submenu">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown-submenu" role="button" aria-haspopup="true" aria-expanded="false">Inventarios<span class="caret"></span></a>
                                         <ul class="dropdown-menu">
-                                            <li><a class="hvr-bounce-to-bottom" href="icons.html">Insertar Inventario</a></li>
-                                            <li><a class="hvr-bounce-to-bottom" href="icons.html">Actualizar Inventario</a></li>
-                                            <li><a class="hvr-bounce-to-bottom" href="icons.html">Eliminar Inventario</a></li>
-                                            <li><a class="hvr-bounce-to-bottom" href="icons.html">Obtener Inventario</a></li>
+                                            <li><a class="hvr-bounce-to-bottom" href="InventarioView.aspx">Insertar Inventario</a></li>
+                                            <li><a class="hvr-bounce-to-bottom" href="ActualizarInventarioView.aspx">Actualizar Inventario</a></li>
+                                            <li><a class="hvr-bounce-to-bottom" href="EliminarInventarioView.aspx">Eliminar Inventario</a></li>
+                                            <li><a class="hvr-bounce-to-bottom" href="ObtenerInventarioView.aspx">Obtener Inventario</a></li>
                                         </ul>
                                     </li>
 
