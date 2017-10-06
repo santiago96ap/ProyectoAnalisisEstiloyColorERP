@@ -102,9 +102,9 @@
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown-submenu" role="button" aria-haspopup="true" aria-expanded="false">Ingresos<span class="caret"></span></a>
                                         <ul class="dropdown-menu">
                                             <li><a class="hvr-bounce-to-bottom" href="InsertarIngresoView.aspx">Insertar Ingreso</a></li>
-                                            <li><a class="hvr-bounce-to-bottom" href="icons.html">Actualizar Ingreso</a></li>
-                                            <li><a class="hvr-bounce-to-bottom" href="icons.html">Eliminar Ingreso</a></li>
-                                            <li><a class="hvr-bounce-to-bottom" href="icons.html">Obtener Ingresos</a></li>
+                                            <li><a class="hvr-bounce-to-bottom" href="ActualizarIngresoView.aspx">Actualizar Ingreso</a></li>
+                                            <li><a class="hvr-bounce-to-bottom" href="EliminarIngresoView.aspx">Eliminar Ingreso</a></li>
+                                            <li><a class="hvr-bounce-to-bottom" href="ObtenerIngresoView.aspx">Obtener Ingresos</a></li>
                                         </ul>
                                     </li>
                                     <li class="dropdown-submenu">

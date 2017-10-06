@@ -80,6 +80,7 @@
     <Content Include="publico\EliminarApartadoView.aspx" />
     <Content Include="publico\EliminarCategoriaView.aspx" />
     <Content Include="publico\EliminarGastoView.aspx" />
+    <Content Include="publico\EliminarIngresoView.aspx" />
     <Content Include="publico\EliminarInventarioView.aspx" />
     <Content Include="publico\EliminarProveedorView.aspx" />
     <Content Include="publico\EliminarVentaView.aspx" />
@@ -93,6 +94,7 @@
     <Content Include="publico\ObtenerCategoria.aspx" />
     <Content Include="publico\ObtenerCliente.aspx" />
     <Content Include="publico\ObtenerGastoView.aspx" />
+    <Content Include="publico\ObtenerIngresoView.aspx" />
     <Content Include="publico\ObtenerInventarioView.aspx" />
     <Content Include="publico\ObtenerProveedorView.aspx" />
     <Content Include="publico\ObtenerVentaView.aspx" />
@@ -259,6 +261,13 @@
     <Compile Include="publico\EliminarGastoView.aspx.designer.cs">
       <DependentUpon>EliminarGastoView.aspx</DependentUpon>
     </Compile>
+    <Compile Include="publico\EliminarIngresoView.aspx.cs">
+      <DependentUpon>EliminarIngresoView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="publico\EliminarIngresoView.aspx.designer.cs">
+      <DependentUpon>EliminarIngresoView.aspx</DependentUpon>
+    </Compile>
     <Compile Include="publico\EliminarInventarioView.aspx.cs">
       <DependentUpon>EliminarInventarioView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -349,6 +358,13 @@
     </Compile>
     <Compile Include="publico\ObtenerGastoView.aspx.designer.cs">
       <DependentUpon>ObtenerGastoView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="publico\ObtenerIngresoView.aspx.cs">
+      <DependentUpon>ObtenerIngresoView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="publico\ObtenerIngresoView.aspx.designer.cs">
+      <DependentUpon>ObtenerIngresoView.aspx</DependentUpon>
     </Compile>
     <Compile Include="publico\ObtenerInventarioView.aspx.cs">
       <DependentUpon>ObtenerInventarioView.aspx</DependentUpon>
