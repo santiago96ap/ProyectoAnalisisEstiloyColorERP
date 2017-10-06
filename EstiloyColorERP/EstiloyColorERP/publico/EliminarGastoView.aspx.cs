@@ -13,5 +13,10 @@ namespace EstiloyColorERP.publico
         {
 
         }
+
+        protected void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
