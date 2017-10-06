@@ -198,7 +198,7 @@
                                         <form id="loginForm" action="#" method="post">
                                             <fieldset id="body">
                                                 <fieldset>
-                                                    <label for="email">Correo electrónico</label>
+                                                    <label for="email">Nombre de usuario</label>
                                                     <input type="text" name="email" id="email" required="">
                                                 </fieldset>
                                                 <fieldset>
