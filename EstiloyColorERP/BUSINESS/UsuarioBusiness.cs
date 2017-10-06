@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DATA;
+using DOMAIN;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,7 +14,7 @@ namespace BUSINESS
 
         public UsuarioBusiness(String connectionString)
         {
-            this.uausrioData = new UsuarioData(connectionString);
+            this.usuarioData = new UsuarioData(connectionString);
         }//constructor
 
         public Boolean registrarUsuario(Usuario usuario)
@@ -27,7 +29,7 @@ namespace BUSINESS
 
         public Boolean editarUsuario(Usuario usuario, Usuario nuevoUsuario)
         {
-            return this.usuarioData.editarusuario(usuario, nuevoUsuario);
+            return this.usuarioData.editarUsuario(usuario, nuevoUsuario);
         }//editarusuario
 
         public LinkedList<Usuario> obtenerUsuarios()

@@ -28,7 +28,7 @@ namespace DOMAIN
             this.nombre = nombre;
             this.correo = correo;
             this.rol = rol;
-            this.contrsena = contrsena;
+            this.contrsena = contrasena;
             this.telefono = telefono;
         }//constructor sobrecargado
 
