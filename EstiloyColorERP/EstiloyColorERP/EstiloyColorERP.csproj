@@ -74,9 +74,11 @@
     <Content Include="publico\AgendaView.aspx" />
     <Content Include="publico\AgregarProveedorView.aspx" />
     <Content Include="publico\Default.aspx" />
+    <Content Include="publico\EditarGastoView.aspx" />
     <Content Include="publico\EliminarAgendaView.aspx" />
     <Content Include="publico\EliminarApartadoView.aspx" />
     <Content Include="publico\EliminarCategoriaView.aspx" />
+    <Content Include="publico\EliminarGastoView.aspx" />
     <Content Include="publico\EliminarInventarioView.aspx" />
     <Content Include="publico\EliminarProveedorView.aspx" />
     <Content Include="publico\EliminarVentaView.aspx" />
@@ -89,6 +91,7 @@
     <Content Include="publico\ObtenerApartadoView.aspx" />
     <Content Include="publico\ObtenerCategoria.aspx" />
     <Content Include="publico\ObtenerCliente.aspx" />
+    <Content Include="publico\ObtenerGastoView.aspx" />
     <Content Include="publico\ObtenerInventarioView.aspx" />
     <Content Include="publico\ObtenerProveedorView.aspx" />
     <Content Include="publico\ObtenerVentaView.aspx" />
@@ -129,6 +132,7 @@
     <Content Include="publico\js\menu_jquery.js" />
     <Content Include="publico\js\move-top.js" />
     <Content Include="publico\js\responsiveslides.min.js" />
+    <Content Include="publico\RegistrarGastoView.aspx" />
     <Content Include="Site.Master" />
     <Content Include="publico\fonts\fontawesome-webfont.eot" />
     <Content Include="publico\fonts\fontawesome-webfont.ttf" />
@@ -212,6 +216,13 @@
     <Compile Include="publico\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="publico\EditarGastoView.aspx.cs">
+      <DependentUpon>EditarGastoView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="publico\EditarGastoView.aspx.designer.cs">
+      <DependentUpon>EditarGastoView.aspx</DependentUpon>
+    </Compile>
     <Compile Include="publico\EliminarAgendaView.aspx.cs">
       <DependentUpon>EliminarAgendaView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -232,6 +243,13 @@
     </Compile>
     <Compile Include="publico\EliminarCategoriaView.aspx.designer.cs">
       <DependentUpon>EliminarCategoriaView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="publico\EliminarGastoView.aspx.cs">
+      <DependentUpon>EliminarGastoView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="publico\EliminarGastoView.aspx.designer.cs">
+      <DependentUpon>EliminarGastoView.aspx</DependentUpon>
     </Compile>
     <Compile Include="publico\EliminarInventarioView.aspx.cs">
       <DependentUpon>EliminarInventarioView.aspx</DependentUpon>
@@ -317,6 +335,13 @@
     <Compile Include="publico\ObtenerCliente.aspx.designer.cs">
       <DependentUpon>ObtenerCliente.aspx</DependentUpon>
     </Compile>
+    <Compile Include="publico\ObtenerGastoView.aspx.cs">
+      <DependentUpon>ObtenerGastoView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="publico\ObtenerGastoView.aspx.designer.cs">
+      <DependentUpon>ObtenerGastoView.aspx</DependentUpon>
+    </Compile>
     <Compile Include="publico\ObtenerInventarioView.aspx.cs">
       <DependentUpon>ObtenerInventarioView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -339,6 +364,13 @@
       <DependentUpon>ObtenerVentaView.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="publico\RegistrarGastoView.aspx.cs">
+      <DependentUpon>RegistrarGastoView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="publico\RegistrarGastoView.aspx.designer.cs">
+      <DependentUpon>RegistrarGastoView.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
