@@ -67,12 +67,14 @@
   <ItemGroup>
     <Content Include="publico\ActualizarApartadoView.aspx" />
     <Content Include="publico\ActualizarAgendaView.aspx" />
+    <Content Include="publico\ActualizarCategoriaView.aspx" />
     <Content Include="publico\ActualizarCliente.aspx" />
     <Content Include="publico\ActualizarInventarioView.aspx" />
     <Content Include="publico\AgendaView.aspx" />
     <Content Include="publico\Default.aspx" />
     <Content Include="publico\EliminarAgendaView.aspx" />
     <Content Include="publico\EliminarApartadoView.aspx" />
+    <Content Include="publico\EliminarCategoriaView.aspx" />
     <Content Include="publico\EliminarInventarioView.aspx" />
     <Content Include="publico\EliminarVentaView.aspx" />
     <Content Include="publico\InsertarApartadoView.aspx" />
@@ -157,6 +159,13 @@
     <Compile Include="publico\ActualizarAgendaView.aspx.designer.cs">
       <DependentUpon>ActualizarAgendaView.aspx</DependentUpon>
     </Compile>
+    <Compile Include="publico\ActualizarCategoriaView.aspx.cs">
+      <DependentUpon>ActualizarCategoriaView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="publico\ActualizarCategoriaView.aspx.designer.cs">
+      <DependentUpon>ActualizarCategoriaView.aspx</DependentUpon>
+    </Compile>
     <Compile Include="publico\ActualizarCliente.aspx.cs">
       <DependentUpon>ActualizarCliente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -198,6 +207,13 @@
     </Compile>
     <Compile Include="publico\EliminarApartadoView.aspx.designer.cs">
       <DependentUpon>EliminarApartadoView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="publico\EliminarCategoriaView.aspx.cs">
+      <DependentUpon>EliminarCategoriaView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="publico\EliminarCategoriaView.aspx.designer.cs">
+      <DependentUpon>EliminarCategoriaView.aspx</DependentUpon>
     </Compile>
     <Compile Include="publico\EliminarInventarioView.aspx.cs">
       <DependentUpon>EliminarInventarioView.aspx</DependentUpon>

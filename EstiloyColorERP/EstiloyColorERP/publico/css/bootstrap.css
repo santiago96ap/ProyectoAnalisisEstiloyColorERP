@@ -130,6 +130,7 @@ input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer;
+    height: 28px;
 }
 button[disabled],
 html input[disabled] {
@@ -2244,7 +2245,7 @@ pre code {
 }
 table {
   background-color: transparent;
-    margin-left: 157px;
+    margin-left: 68px;
 }
 caption {
   padding-top: 8px;
