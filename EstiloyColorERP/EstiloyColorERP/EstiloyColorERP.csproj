@@ -25,6 +25,7 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <TargetFrameworkProfile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -75,11 +76,13 @@
     <Content Include="publico\EliminarInventarioView.aspx" />
     <Content Include="publico\EliminarVentaView.aspx" />
     <Content Include="publico\InsertarApartadoView.aspx" />
+    <Content Include="publico\InsertarCategoria.aspx" />
     <Content Include="publico\InsertarCliente.aspx" />
     <Content Include="publico\InsertarIngresoView.aspx" />
     <Content Include="publico\InventarioView.aspx" />
     <Content Include="publico\ObtenerAgendaView.aspx" />
     <Content Include="publico\ObtenerApartadoView.aspx" />
+    <Content Include="publico\ObtenerCategoria.aspx" />
     <Content Include="publico\ObtenerCliente.aspx" />
     <Content Include="publico\ObtenerInventarioView.aspx" />
     <Content Include="publico\ObtenerVentaView.aspx" />
@@ -217,6 +220,13 @@
     <Compile Include="publico\InsertarApartadoView.aspx.designer.cs">
       <DependentUpon>InsertarApartadoView.aspx</DependentUpon>
     </Compile>
+    <Compile Include="publico\InsertarCategoria.aspx.cs">
+      <DependentUpon>InsertarCategoria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="publico\InsertarCategoria.aspx.designer.cs">
+      <DependentUpon>InsertarCategoria.aspx</DependentUpon>
+    </Compile>
     <Compile Include="publico\InsertarCliente.aspx.cs">
       <DependentUpon>InsertarCliente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -251,6 +261,13 @@
     </Compile>
     <Compile Include="publico\ObtenerApartadoView.aspx.designer.cs">
       <DependentUpon>ObtenerApartadoView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="publico\ObtenerCategoria.aspx.cs">
+      <DependentUpon>ObtenerCategoria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="publico\ObtenerCategoria.aspx.designer.cs">
+      <DependentUpon>ObtenerCategoria.aspx</DependentUpon>
     </Compile>
     <Compile Include="publico\ObtenerCliente.aspx.cs">
       <DependentUpon>ObtenerCliente.aspx</DependentUpon>
