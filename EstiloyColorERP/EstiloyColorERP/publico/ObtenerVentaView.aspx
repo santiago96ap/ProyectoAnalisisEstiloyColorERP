@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ObtenerVentaView.aspx.cs" Inherits="EstiloyColorERP.ObtenerVentaView" %>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
         <ContentTemplate>
+            <br />
             <asp:Label ID="lblTitulo" runat="server" Text="Obtener Ventas"></asp:Label>
             <br />
             <br />

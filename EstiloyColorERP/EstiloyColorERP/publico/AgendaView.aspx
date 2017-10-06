@@ -1,7 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AgendaView.aspx.cs" Inherits="EstiloyColorERP.AgendaView" %>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
         <ContentTemplate>
-            <asp:Label ID="lblTitulo" runat="server" Text="Insertar Agenda"></asp:Label>
+            <br />
+            <asp:Label ID="lblTitulo" runat="server" Text="Insertar Actividad"></asp:Label>
             <br />
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

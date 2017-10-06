@@ -2,8 +2,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
         <ContentTemplate>
             <br />
-            <br />
-            <asp:Label ID="lblTitulo" runat="server" Text="Agenda"></asp:Label>
+            <asp:Label ID="lblTitulo" runat="server" Text="Obtener Actividades"></asp:Label>
             <br />
             <br />
             &nbsp;<asp:Calendar ID="calendario" runat="server"></asp:Calendar>
