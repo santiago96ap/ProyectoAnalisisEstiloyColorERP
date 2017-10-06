@@ -69,6 +69,7 @@
     <Content Include="publico\ActualizarAgendaView.aspx" />
     <Content Include="publico\ActualizarCategoriaView.aspx" />
     <Content Include="publico\ActualizarCliente.aspx" />
+    <Content Include="publico\ActualizarIngresoView.aspx" />
     <Content Include="publico\ActualizarInventarioView.aspx" />
     <Content Include="publico\ActualizarProveedorView.aspx" />
     <Content Include="publico\AgendaView.aspx" />
@@ -180,6 +181,13 @@
     </Compile>
     <Compile Include="publico\ActualizarCliente.aspx.designer.cs">
       <DependentUpon>ActualizarCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="publico\ActualizarIngresoView.aspx.cs">
+      <DependentUpon>ActualizarIngresoView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="publico\ActualizarIngresoView.aspx.designer.cs">
+      <DependentUpon>ActualizarIngresoView.aspx</DependentUpon>
     </Compile>
     <Compile Include="publico\ActualizarInventarioView.aspx.cs">
       <DependentUpon>ActualizarInventarioView.aspx</DependentUpon>
