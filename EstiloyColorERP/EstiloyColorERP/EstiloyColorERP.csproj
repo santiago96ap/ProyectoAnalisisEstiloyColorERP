@@ -76,7 +76,7 @@
     <Content Include="publico\ActualizarApartadoView.aspx" />
     <Content Include="publico\ActualizarAgendaView.aspx" />
     <Content Include="publico\ActualizarCategoriaView.aspx" />
-    <Content Include="publico\ActualizarCliente.aspx" />
+    <Content Include="publico\ActualizarClienteView.aspx" />
     <Content Include="publico\ActualizarIngresoView.aspx" />
     <Content Include="publico\ActualizarInventarioView.aspx" />
     <Content Include="publico\ActualizarProveedorView.aspx" />
@@ -93,13 +93,13 @@
     <Content Include="publico\EliminarVentaView.aspx" />
     <Content Include="publico\InsertarApartadoView.aspx" />
     <Content Include="publico\InsertarCategoria.aspx" />
-    <Content Include="publico\InsertarCliente.aspx" />
+    <Content Include="publico\InsertarClienteView.aspx" />
     <Content Include="publico\InsertarIngresoView.aspx" />
     <Content Include="publico\InventarioView.aspx" />
     <Content Include="publico\ObtenerAgendaView.aspx" />
     <Content Include="publico\ObtenerApartadoView.aspx" />
     <Content Include="publico\ObtenerCategoria.aspx" />
-    <Content Include="publico\ObtenerCliente.aspx" />
+    <Content Include="publico\ObtenerClienteView.aspx" />
     <Content Include="publico\ObtenerGastoView.aspx" />
     <Content Include="publico\ObtenerInventarioView.aspx" />
     <Content Include="publico\ObtenerProveedorView.aspx" />
@@ -239,12 +239,12 @@
     <Compile Include="publico\ActualizarCategoriaView.aspx.designer.cs">
       <DependentUpon>ActualizarCategoriaView.aspx</DependentUpon>
     </Compile>
-    <Compile Include="publico\ActualizarCliente.aspx.cs">
-      <DependentUpon>ActualizarCliente.aspx</DependentUpon>
+    <Compile Include="publico\ActualizarClienteView.aspx.cs">
+      <DependentUpon>ActualizarClienteView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="publico\ActualizarCliente.aspx.designer.cs">
-      <DependentUpon>ActualizarCliente.aspx</DependentUpon>
+    <Compile Include="publico\ActualizarClienteView.aspx.designer.cs">
+      <DependentUpon>ActualizarClienteView.aspx</DependentUpon>
     </Compile>
     <Compile Include="publico\ActualizarIngresoView.aspx.cs">
       <DependentUpon>ActualizarIngresoView.aspx</DependentUpon>
@@ -358,12 +358,12 @@
     <Compile Include="publico\InsertarCategoria.aspx.designer.cs">
       <DependentUpon>InsertarCategoria.aspx</DependentUpon>
     </Compile>
-    <Compile Include="publico\InsertarCliente.aspx.cs">
-      <DependentUpon>InsertarCliente.aspx</DependentUpon>
+    <Compile Include="publico\InsertarClienteView.aspx.cs">
+      <DependentUpon>InsertarClienteView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="publico\InsertarCliente.aspx.designer.cs">
-      <DependentUpon>InsertarCliente.aspx</DependentUpon>
+    <Compile Include="publico\InsertarClienteView.aspx.designer.cs">
+      <DependentUpon>InsertarClienteView.aspx</DependentUpon>
     </Compile>
     <Compile Include="publico\InsertarIngresoView.aspx.cs">
       <DependentUpon>InsertarIngresoView.aspx</DependentUpon>
@@ -400,12 +400,12 @@
     <Compile Include="publico\ObtenerCategoria.aspx.designer.cs">
       <DependentUpon>ObtenerCategoria.aspx</DependentUpon>
     </Compile>
-    <Compile Include="publico\ObtenerCliente.aspx.cs">
-      <DependentUpon>ObtenerCliente.aspx</DependentUpon>
+    <Compile Include="publico\ObtenerClienteView.aspx.cs">
+      <DependentUpon>ObtenerClienteView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="publico\ObtenerCliente.aspx.designer.cs">
-      <DependentUpon>ObtenerCliente.aspx</DependentUpon>
+    <Compile Include="publico\ObtenerClienteView.aspx.designer.cs">
+      <DependentUpon>ObtenerClienteView.aspx</DependentUpon>
     </Compile>
     <Compile Include="publico\ObtenerGastoView.aspx.cs">
       <DependentUpon>ObtenerGastoView.aspx</DependentUpon>
