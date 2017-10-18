@@ -11,9 +11,9 @@ namespace BUSINESS
     {
         public VentaData ventaData;
 
-        public VentaBusiness()
+        public VentaBusiness(string stringConeccion)
         {
-           this.ventaData = new VentaData();
+            this.ventaData = new VentaData(stringConeccion);
         }//constructor
 
         public Boolean insertarVenta(Venta venta)

@@ -8,6 +8,11 @@ namespace DATA
 {
     public class VentaData
     {
+        private String stringConeccion;
+        public VentaData(string stringConeccion)
+        {
+            this.stringConeccion = stringConeccion;
+        }//constructor
 
         public Boolean insertarVenta(Venta venta){
             return false;
