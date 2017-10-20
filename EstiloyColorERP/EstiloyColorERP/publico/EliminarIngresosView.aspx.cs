@@ -7,9 +7,14 @@ using System.Web.UI.WebControls;
 
 namespace EstiloyColorERP.publico
 {
-    public partial class EliminarIngresoView : System.Web.UI.Page
+    public partial class EliminarGastoView : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnEliminar_Click(object sender, EventArgs e)
         {
 
         }

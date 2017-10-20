@@ -67,10 +67,12 @@
   <ItemGroup>
     <Content Include="publico\ActualizarOfertaView.aspx" />
     <Content Include="publico\ActualizarUsuarioView.aspx" />
+    <Content Include="publico\EliminarIngresosView.aspx" />
     <Content Include="publico\EliminarUsuarioView.aspx" />
     <Content Include="publico\EliminarOfertaView.aspx" />
     <Content Include="publico\InsertarOfertaView.aspx" />
     <Content Include="publico\InsertarUsuarioView.aspx" />
+    <Content Include="publico\ObtenerIngresosView.aspx" />
     <Content Include="publico\ObtenerUsuarioView.aspx" />
     <Content Include="publico\ObtenerOfertaView.aspx" />
     <Content Include="publico\ActualizarApartadoView.aspx" />
@@ -176,6 +178,13 @@
     <Compile Include="publico\ActualizarUsuarioView.aspx.designer.cs">
       <DependentUpon>ActualizarUsuarioView.aspx</DependentUpon>
     </Compile>
+    <Compile Include="publico\EliminarIngresosView.aspx.cs">
+      <DependentUpon>EliminarIngresosView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="publico\EliminarIngresosView.aspx.designer.cs">
+      <DependentUpon>EliminarIngresosView.aspx</DependentUpon>
+    </Compile>
     <Compile Include="publico\EliminarUsuarioView.aspx.cs">
       <DependentUpon>EliminarUsuarioView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -203,6 +212,13 @@
     </Compile>
     <Compile Include="publico\InsertarUsuarioView.aspx.designer.cs">
       <DependentUpon>InsertarUsuarioView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="publico\ObtenerIngresosView.aspx.cs">
+      <DependentUpon>ObtenerIngresosView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="publico\ObtenerIngresosView.aspx.designer.cs">
+      <DependentUpon>ObtenerIngresosView.aspx</DependentUpon>
     </Compile>
     <Compile Include="publico\ObtenerUsuarioView.aspx.cs">
       <DependentUpon>ObtenerUsuarioView.aspx</DependentUpon>
