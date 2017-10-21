@@ -10,7 +10,8 @@
 namespace EstiloyColorERP.publico {
     
     
-    public partial class ObtenerGastoView {
+    public partial class ObtenerIngresosView
+    {
         
         /// <summary>
         /// lblTitulo control.
