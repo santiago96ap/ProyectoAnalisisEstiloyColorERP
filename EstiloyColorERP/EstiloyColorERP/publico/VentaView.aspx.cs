@@ -20,14 +20,14 @@ namespace EstiloyColorERP
         {
             categoriaBusiness = new CategoriaBusiness();
             categorias= categoriaBusiness.obtenerCategorias();
-            for (int i = 0; i < categorias.Count; i++)
+            foreach (Categoria categoria in categorias)
             {
                 lbCategoria.items.Add(categorias[i].Nombre);
             }
             
              productoBusiness = new ProductoBusiness();
             productos.obtenerTodosProductos();
-            for (int i = 0; i < productos.Count; i++)
+            foreach (Producto producto in productos)
             {
                 if (categorias[0].Codigo.equals(productos[i].idCategoria))
                 {
@@ -49,12 +49,15 @@ namespace EstiloyColorERP
 
         protected void lbCategoria_SelectedIndexChanged(object sender, EventArgs e)
         {
+            foreach(Categoria categoria in categorias)
+            {
 
-        }
+            }
+        }//categoria seleccionada
 
         protected void lbArticulos_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-        }
+        }//articulo seleccionado
     }
 }
