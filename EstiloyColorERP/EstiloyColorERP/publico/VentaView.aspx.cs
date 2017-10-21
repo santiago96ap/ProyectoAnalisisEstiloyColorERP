@@ -12,6 +12,16 @@ namespace EstiloyColorERP
         protected void Page_Load(object sender, EventArgs e)
         {
 
-        }//load
-    }//class
-}// namespace
+        }
+
+        protected void btnInsertar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnAgregar_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
