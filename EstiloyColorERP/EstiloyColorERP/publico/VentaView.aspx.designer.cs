@@ -130,24 +130,6 @@ namespace EstiloyColorERP {
         protected global::System.Web.UI.WebControls.TextBox tbTelefono;
         
         /// <summary>
-        /// lblTipoServicio control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTipoServicio;
-        
-        /// <summary>
-        /// lbTipoServicio control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox lbTipoServicio;
-        
-        /// <summary>
         /// lblTipoPago control.
         /// </summary>
         /// <remarks>
@@ -166,24 +148,6 @@ namespace EstiloyColorERP {
         protected global::System.Web.UI.WebControls.ListBox lbTipoPago;
         
         /// <summary>
-        /// lblVendedor control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblVendedor;
-        
-        /// <summary>
-        /// tbVendedor control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbVendedor;
-        
-        /// <summary>
         /// lblSubTotal control.
         /// </summary>
         /// <remarks>
@@ -200,6 +164,42 @@ namespace EstiloyColorERP {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tbSubtotal;
+        
+        /// <summary>
+        /// lblTipoServicio control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTipoServicio;
+        
+        /// <summary>
+        /// lbTipoServicio control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListBox lbTipoServicio;
+        
+        /// <summary>
+        /// lblVendedor control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblVendedor;
+        
+        /// <summary>
+        /// tbVendedor control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbVendedor;
         
         /// <summary>
         /// lblTotal control.
