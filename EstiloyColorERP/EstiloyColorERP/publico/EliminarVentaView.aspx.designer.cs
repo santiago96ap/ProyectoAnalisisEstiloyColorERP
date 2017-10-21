@@ -10,7 +10,7 @@
 namespace EstiloyColorERP {
     
     
-    public partial class EliminarVentaView {
+    public partial class EliminarAgendaView {
         
         /// <summary>
         /// lblTituloVenta control.

@@ -2,11 +2,11 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
         <ContentTemplate>
             <br />
-            <asp:Label ID="lblTitulo" runat="server" Text="Obtener Ventas"></asp:Label>
+            <asp:Label ID="lblTitulo" CssClass="col-sm-2 control-label" runat="server" Text="Obtener Ventas"></asp:Label>
             <br />
             <br />
             &nbsp;&nbsp;
-            <asp:TextBox ID="tbDatos" runat="server"></asp:TextBox>
+            <asp:TextBox ID="tbDatos" CssClass="form-control1" runat="server"></asp:TextBox>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:CheckBox ID="cbVendedor" runat="server" Text="Vendedor" />
             &nbsp;&nbsp;&nbsp;
@@ -17,15 +17,15 @@
             <br />
             <br />
             &nbsp;&nbsp;
-            <asp:TextBox ID="tbFechaInicio" runat="server">Fecha de Inicio</asp:TextBox>
+            <asp:TextBox ID="tbFechaInicio" CssClass="form-control1" runat="server">Fecha de Inicio</asp:TextBox>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="tbFechaFin" runat="server">Fecha Fin</asp:TextBox>
+            <asp:TextBox ID="tbFechaFin" CssClass="form-control1" runat="server">Fecha Fin</asp:TextBox>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Button ID="btnBuscar" runat="server" Text="Buscar" />
+            <asp:Button ID="btnBuscar" CssClass="btn btn-info" runat="server" Text="Buscar" />
             <br />
             <br />
             <br />
-            <asp:Table ID="tbResultados" runat="server" Width="407px">
+            <asp:Table ID="tbResultados" CssClass="table table-hover" runat="server" Width="407px">
             </asp:Table>
             <br />
             <br />
