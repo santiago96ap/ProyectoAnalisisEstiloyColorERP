@@ -19,7 +19,7 @@
             <section id="formulario1">
                 <div id="divi7">
                     <asp:Label ID="lblArticulos"  CssClass="col-sm-2 control-label" runat="server" Text="Articulos"></asp:Label>
-                    <asp:TextBox ID="tbArticulos" CssClass="form-control1" runat="server"></asp:TextBox>
+                    <asp:ListBox ID="lbArticulos"  CssClass="form-control1" runat="server" ></asp:ListBox>
                 </div>
                 <div id="divi8">
                     <asp:Label ID="lblCategoria"  CssClass="col-sm-2 control-label" runat="server" Text="Categoria"></asp:Label>
