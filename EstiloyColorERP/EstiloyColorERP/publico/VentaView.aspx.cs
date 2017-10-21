@@ -13,25 +13,25 @@ namespace EstiloyColorERP
     {
         private CategoriaBusiness categoriaBusiness;
         private ProductoBusiness productoBusiness;
-        private List<Categoria> categorias;
-        private List<Producto> productos;
+        private LinkedList<Categoria> categorias;
+        private LinkedList<Producto> productos;
 
         protected void Page_Load(object sender, EventArgs e)
         {
             categoriaBusiness = new CategoriaBusiness();
-            categorias= categoriaBusiness.obtenerCategorias();
+            categorias = categoriaBusiness.obtenerCategorias();
             foreach (Categoria categoria in categorias)
             {
-                lbCategoria.items.Add(categorias[i].Nombre);
+                lbCategoria.Items.Add(categoria.Nombre);
             }
             
-             productoBusiness = new ProductoBusiness();
-            productos.obtenerTodosProductos();
+            productoBusiness = new ProductoBusiness();
+            productos = productoBusiness.obtenerTodosProductos();
             foreach (Producto producto in productos)
             {
-                if (categorias[0].Codigo.equals(productos[i].idCategoria))
+                if (categorias.First.Value.Codigo.Equals(producto.IdCategoria))
                 {
-                    lbArticulos.items.Add(productos[i]);
+                    lbArticulos.Items.Add(producto.Nombre);
                 }
             }
 
@@ -49,15 +49,12 @@ namespace EstiloyColorERP
 
         protected void lbCategoria_SelectedIndexChanged(object sender, EventArgs e)
         {
-            foreach(Categoria categoria in categorias)
-            {
 
-            }
-        }//categoria seleccionada
+        }
 
         protected void lbArticulos_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-        }//articulo seleccionado
+        }
     }
 }
