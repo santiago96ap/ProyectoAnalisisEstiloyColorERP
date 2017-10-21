@@ -36,7 +36,8 @@
                 <div id="divi5">
                     <asp:Label ID="lblTelefono" CssClass="col-sm-2 control-label" runat="server" Text="Numero deTelefono"></asp:Label>
                     <asp:TextBox ID="tbTelefono" CssClass="form-control1" runat="server"></asp:TextBox>
-
+                    <br />
+                    <br />
                     <asp:Label ID="lblTipoPago"  CssClass="col-sm-2 control-label" runat="server" Text="Tipo de Pago"></asp:Label>
                     <asp:ListBox ID="lbTipoPago"  CssClass="form-control1" runat="server" Height="24px" Width="114px"></asp:ListBox>
                     <br />
@@ -47,9 +48,13 @@
                 <div id="divi6">
                     <asp:Label ID="lblTipoServicio"  CssClass="col-sm-2 control-label" runat="server" Text="Tipo de servicio"></asp:Label>
                     <asp:ListBox ID="lbTipoServicio"  CssClass="form-control1" runat="server" Height="26px" Width="103px"></asp:ListBox>
+                    <br />
+                    <br />
                     <asp:Label ID="lblVendedor" CssClass="col-sm-2 control-label" runat="server" Text="Vendedor"></asp:Label>
                     <asp:TextBox ID="tbVendedor" CssClass="form-control1" runat="server"></asp:TextBox>
-                    <asp:Label ID="lblTotal" CssClass="col-sm-2 control-label" runat="server" Text="Total"></asp:Label>
+                   <br />
+                    <br />
+                     <asp:Label ID="lblTotal" CssClass="col-sm-2 control-label" runat="server" Text="Total"></asp:Label>
                     <asp:TextBox ID="tbTotal" CssClass="form-control1" runat="server"></asp:TextBox>
                 </div>
            </section>
