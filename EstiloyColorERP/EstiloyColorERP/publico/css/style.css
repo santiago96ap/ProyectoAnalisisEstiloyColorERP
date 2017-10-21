@@ -130,6 +130,21 @@ body a:hover{
     margin: 1.2em 0 0 0;
 	width: 20%;
 }
+section#formulario, section#formulario1, section#formulario2{
+    display: block;
+    max-width: 95%;
+    text-align: center;
+}
+div#divi, div#divi1, div#divi2, div#divi3, div#divi4, div#divi5{
+    display: inline-block;
+    width: 40%;
+}
+div#divi4 .control-label{
+    width: 20%;
+}
+div#divi .form-control1, div#divi1 .form-control1, div#divi2 .form-control1, div#divi3 .form-control1, div#divi4 .form-control1, div#divi5 .form-control1{
+    width: 50%;
+}
 .header-top-right form input[type="text"] {
     font-size: .9em;
     color: #2b2b2b;

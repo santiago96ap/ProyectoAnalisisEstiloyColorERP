@@ -15,10 +15,16 @@
             </asp:Table>
             <br />
             <br />
-            <asp:Label ID="lblAbono" CssClass="col-sm-2 control-label" runat="server" Text="Abono:"></asp:Label>
-            <asp:TextBox ID="tbAbono" CssClass="form-control1" runat="server"></asp:TextBox>
-            <asp:Label ID="lblSaldo" CssClass="col-sm-2 control-label" runat="server" Text="Saldo:"></asp:Label>
-            <asp:TextBox ID="tbSaldo" CssClass="form-control1" runat="server"></asp:TextBox>
+            <section id="formulario">
+                <div id="divi">
+                    <asp:Label ID="lblAbono" CssClass="col-sm-2 control-label" runat="server" Text="Abono:"></asp:Label>
+                    <asp:TextBox ID="tbAbono" CssClass="form-control1" runat="server"></asp:TextBox>
+                </div>
+                <div id="divi1">
+                    <asp:Label ID="lblSaldo" CssClass="col-sm-2 control-label" runat="server" Text="Saldo:"></asp:Label>
+                    <asp:TextBox ID="tbSaldo" CssClass="form-control1" runat="server"></asp:TextBox>
+                </div>
+            </section>
             <br />
             <br />
             <br />

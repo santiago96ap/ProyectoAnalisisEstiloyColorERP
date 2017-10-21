@@ -11,26 +11,44 @@
             <asp:TextBox ID="tbCliente" CssClass="form-control1" runat="server"></asp:TextBox>
             <br />
             <br />
-            <asp:Label ID="lblProducto" CssClass="col-sm-2 control-label" runat="server" Text="Producto"></asp:Label>
-            <asp:TextBox ID="tbProducto" CssClass="form-control1" runat="server"></asp:TextBox>
-            <asp:Label ID="lblCategoria" CssClass="col-sm-2 control-label" runat="server" Text="Categoría"></asp:Label>
-            <asp:ListBox ID="lbCategoria" CssClass="form-control1" runat="server"></asp:ListBox>
+            <section id="formulario">
+                <div id="divi">
+                    <asp:Label ID="lblProducto" CssClass="col-sm-2 control-label" runat="server" Text="Producto"></asp:Label>
+                    <asp:TextBox ID="tbProducto" CssClass="form-control1" runat="server"></asp:TextBox>
+                </div>
+                <div id="divi1">
+                    <asp:Label ID="lblCategoria" CssClass="col-sm-2 control-label" runat="server" Text="Categoría"></asp:Label>
+                    <asp:ListBox ID="lbCategoria" CssClass="form-control1" runat="server"></asp:ListBox>
+                </div>
+            </section>
             <br />
             <br />
             <asp:Table ID="tblProducto" CssClass="table table-hover" runat="server">
             </asp:Table>
             <br />
             <br />
-            <asp:Label ID="lblMonto" CssClass="col-sm-2 control-label" runat="server" Text="Monto"></asp:Label>
-            <asp:TextBox ID="tbMonto" CssClass="form-control1" runat="server"></asp:TextBox>
-            <asp:Label ID="lblAbono" CssClass="col-sm-2 control-label" runat="server" Text="Abono"></asp:Label>
-            <asp:TextBox ID="tbAbono" CssClass="form-control1" runat="server"></asp:TextBox>
+            <section id="formulario1">
+                <div id="divi2">
+                    <asp:Label ID="lblMonto" CssClass="col-sm-2 control-label" runat="server" Text="Monto"></asp:Label>
+                    <asp:TextBox ID="tbMonto" CssClass="form-control1" runat="server"></asp:TextBox>
+                </div>
+                <div id="divi3">
+                    <asp:Label ID="lblAbono" CssClass="col-sm-2 control-label" runat="server" Text="Abono"></asp:Label>
+                    <asp:TextBox ID="tbAbono" CssClass="form-control1" runat="server"></asp:TextBox>
+                </div>
+            </section>
             <br />
             <br />
-            <asp:Label ID="lblFechaInicio" CssClass="col-sm-2 control-label" runat="server" Text="Fecha inicio"></asp:Label>
-            <asp:TextBox ID="tbTelefono" CssClass="form-control1" runat="server"></asp:TextBox>
-            <asp:Label ID="lblFechaFinal" CssClass="col-sm-2 control-label" runat="server" Text="Fecha final"></asp:Label>
-            <asp:TextBox ID="tbCorreo" CssClass="form-control1" runat="server"></asp:TextBox>
+            <section id="formulario2">
+                <div id="divi4">
+                    <asp:Label ID="lblFechaInicio" CssClass="col-sm-2 control-label" runat="server" Text="F. Inicio"></asp:Label>
+                    <asp:TextBox ID="tbTelefono" CssClass="form-control1" runat="server"></asp:TextBox>
+                </div>
+                <div id="divi5">
+                     <asp:Label ID="lblFechaFinal" CssClass="col-sm-2 control-label" runat="server" Text="F. Final"></asp:Label>
+                    <asp:TextBox ID="tbCorreo" CssClass="form-control1" runat="server"></asp:TextBox>
+                </div>
+            </section>
             <br />
             <br />
             <br />
