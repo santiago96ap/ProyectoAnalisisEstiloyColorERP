@@ -7,7 +7,7 @@
             <br />
             <asp:Label ID="lblFecha" CssClass="col-sm-2 control-label" runat="server" Text="Fecha"></asp:Label>
             &nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="tbFecha" runat="server"></asp:TextBox>
+            <asp:TextBox ID="tbFecha"  CssClass="form-control1" runat="server"></asp:TextBox>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Label ID="lblHora" runat="server" Text="Hora"></asp:Label>
             &nbsp;&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="tbHora" CssClass="form-control1" runat="server"></asp:TextBox>
@@ -28,12 +28,12 @@
             <asp:TextBox ID="tbTelefono" runat="server"></asp:TextBox>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="lblTipoServicio" runat="server" Text="Tipo de servicio"></asp:Label>
             &nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:ListBox ID="lbTipoServicio" runat="server" Height="26px" Width="103px"></asp:ListBox>
+            <asp:ListBox ID="lbTipoServicio"  CssClass="form-control1" runat="server" Height="26px" Width="103px"></asp:ListBox>
             <br />
             <br />
             <asp:Label ID="lblTipoPago"  CssClass="col-sm-2 control-label" runat="server" Text="Tipo de Pago"></asp:Label>
             &nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:ListBox ID="lbTipoPago" runat="server" Height="24px" Width="114px"></asp:ListBox>
+            <asp:ListBox ID="lbTipoPago"  CssClass="form-control1" runat="server" Height="24px" Width="114px"></asp:ListBox>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="lblVendedor" runat="server" Text="Vendedor"></asp:Label>
             &nbsp;&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="tbVendedor" CssClass="form-control1" runat="server"></asp:TextBox>

@@ -5,7 +5,7 @@
             <asp:Label ID="lblTitulo" CssClass="col-sm-2 control-label" runat="server" Text="Obtener Actividades"></asp:Label>
             <br />
             <br />
-            &nbsp;<asp:Calendar ID="calendario" runat="server"></asp:Calendar>
+            &nbsp;<asp:Calendar ID="calendario" runat="server" Height="250px" Width="631px"></asp:Calendar>
             &nbsp;
         </ContentTemplate>
 </asp:Content>
