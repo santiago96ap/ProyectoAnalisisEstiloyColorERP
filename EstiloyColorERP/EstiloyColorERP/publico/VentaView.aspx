@@ -15,6 +15,7 @@
                         <asp:TextBox ID="tbHora" CssClass="form-control1" runat="server"></asp:TextBox>
                     </div>
            </section>
+            <br />
             <section id="formulario1">
                 <div id="divi7">
                     <asp:Label ID="lblArticulos"  CssClass="col-sm-2 control-label" runat="server" Text="Articulos"></asp:Label>
@@ -22,10 +23,10 @@
                 </div>
                 <div id="divi8">
                     <asp:Label ID="lblCategoria"  CssClass="col-sm-2 control-label" runat="server" Text="Categoria"></asp:Label>
-                    <asp:ListBox ID="lbCategoria" CssClass="form-control1" runat="server" Height="27px" Width="112px"></asp:ListBox>
-                 </div>
-                   
+                    <asp:ListBox ID="lbCategoria" CssClass="form-control1" runat="server"></asp:ListBox>
+                 </div>    
              </section>
+            <br />
               <asp:Button ID="btnAgregar" CssClass="btn btn-info" runat="server" Text="Agregar" />
                     <br />
             <asp:Table ID="tbInsertarProducto"  CssClass="table table-hover" runat="server" Width="640px">
@@ -38,7 +39,7 @@
                     <br />
                     <br />
                     <asp:Label ID="lblTipoPago"  CssClass="col-sm-2 control-label" runat="server" Text="Tipo de Pago"></asp:Label>
-                    <asp:ListBox ID="lbTipoPago"  CssClass="form-control1" runat="server" Height="24px" Width="114px"></asp:ListBox>
+                    <asp:ListBox ID="lbTipoPago"  CssClass="form-control1" runat="server" ></asp:ListBox>
                     <br />
                     <br />
                     <asp:Label ID="lblSubTotal" CssClass="col-sm-2 control-label" runat="server" Text="Sub total"></asp:Label>
@@ -46,7 +47,7 @@
                 </div>
                 <div id="divi6">
                     <asp:Label ID="lblTipoServicio"  CssClass="col-sm-2 control-label" runat="server" Text="Tipo de servicio"></asp:Label>
-                    <asp:ListBox ID="lbTipoServicio"  CssClass="form-control1" runat="server" Height="26px" Width="103px"></asp:ListBox>
+                    <asp:ListBox ID="lbTipoServicio"  CssClass="form-control1" runat="server" ></asp:ListBox>
                     <br />
                     <br />
                     <asp:Label ID="lblVendedor" CssClass="col-sm-2 control-label" runat="server" Text="Vendedor"></asp:Label>
