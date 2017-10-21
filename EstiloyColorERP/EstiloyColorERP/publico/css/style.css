@@ -1303,7 +1303,7 @@ h2.typoh2{
 	color: #616161;
 	background: #fff;
 	box-shadow: none !important;
-	width: 100%;
+	width: 50%;
 	font-size: 0.85em;
 	font-weight: 300;
 	height: 40px;
@@ -1493,7 +1493,7 @@ h2.typoh2{
 	color: #616161;
 	background: #fff;
 	box-shadow: none !important;
-	width: 100%;
+	width: 15%;
 	font-size: 0.85em;
 	font-weight: 300;
 	height: 40px;
@@ -2017,6 +2017,10 @@ button.btn1.btn-1.btn-1b:hover {
 	opacity: 0;
 	-moz-opacity: 0;
 	filter: alpha(opacity=0);
+}
+/*-- responsive-start-here --*/
+@media (max-width:1080px){
+	margin-top: 20px;
 }
 /*-- responsive-start-here --*/
 @media (max-width:1080px){

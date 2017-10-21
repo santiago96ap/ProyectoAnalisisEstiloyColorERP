@@ -91,9 +91,9 @@
                             <li><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Clientes<span class="caret"></span></a>
                                 <ul class="dropdown-menu">
 
-                                    <li><a class="hvr-bounce-to-bottom" href="InsertarCliente.aspx">Insertar Cliente</a></li>
-                                    <li><a class="hvr-bounce-to-bottom" href="ActualizarCliente.aspx">Actualizar Cliente</a></li>
-                                    <li><a class="hvr-bounce-to-bottom" href="ObtenerCliente.aspx">Obtener Clientes</a></li>
+                                    <li><a class="hvr-bounce-to-bottom" href="InsertarClienteView.aspx">Insertar Cliente</a></li>
+                                    <li><a class="hvr-bounce-to-bottom" href="ActualizarClienteView.aspx">Actualizar Cliente</a></li>
+                                    <li><a class="hvr-bounce-to-bottom" href="ObtenerClienteView.aspx">Obtener Clientes</a></li>
                                 </ul>
                             </li>
                             <li><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contabilidad<span class="caret"></span></a>
@@ -229,7 +229,7 @@
         <!-- //container -->
     </div>
     <!-- //header -->
-    <form id="form1" runat="server">
+    <form id="form1" class="form-horizontal" runat="server">
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
