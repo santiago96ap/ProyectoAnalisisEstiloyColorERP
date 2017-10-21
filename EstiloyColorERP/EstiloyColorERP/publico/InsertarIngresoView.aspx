@@ -3,8 +3,6 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <contenttemplate>
-    &nbsp;
-    
     <br />
     <br />
         <section id="formulario">
