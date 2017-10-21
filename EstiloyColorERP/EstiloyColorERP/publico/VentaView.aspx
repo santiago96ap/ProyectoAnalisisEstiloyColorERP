@@ -24,12 +24,10 @@
                     <asp:Label ID="lblCategoria"  CssClass="col-sm-2 control-label" runat="server" Text="Categoria"></asp:Label>
                     <asp:ListBox ID="lbCategoria" CssClass="form-control1" runat="server" Height="27px" Width="112px"></asp:ListBox>
                  </div>
-                <div id="divi9">
-                    <asp:Button ID="btnAgregar" CssClass="btn btn-info" runat="server" Text="Agregar" />
-                </div>
-                    <br />
+                   
              </section>
-
+              <asp:Button ID="btnAgregar" CssClass="btn btn-info" runat="server" Text="Agregar" />
+                    <br />
             <asp:Table ID="tbInsertarProducto"  CssClass="table table-hover" runat="server" Width="640px">
             </asp:Table>
 
