@@ -21,7 +21,7 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="tbFechaFin" CssClass="form-control1" runat="server">Fecha Fin</asp:TextBox>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Button ID="btnBuscar" CssClass="btn btn-info" runat="server" Text="Buscar" />
+            <asp:Button ID="btnBuscar" CssClass="btn btn-info" runat="server" Text="Buscar" OnClick="btnBuscar_Click" />
             <br />
             <br />
             <br />

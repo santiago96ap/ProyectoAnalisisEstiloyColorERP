@@ -139,10 +139,17 @@ div#divi, div#divi1, div#divi2, div#divi3, div#divi4, div#divi5, div#divi6{
     display: inline-block;
     width: 40%;
 }
+div#divi7, div#divi8{
+    display: inline-block;
+    width: 40%;
+}
 div#divi4 .control-label{
     width: 20%;
 }
 div#divi .form-control1, div#divi1 .form-control1, div#divi2 .form-control1, div#divi3 .form-control1, div#divi4 .form-control1, div#divi5 .form-control1{
+    width: 50%;
+}
+div#divi6 .form-control1, div#divi7 .form-control1, div#divi8 .form-control1, div#divi9 .form-control1{
     width: 50%;
 }
 .header-top-right form input[type="text"] {

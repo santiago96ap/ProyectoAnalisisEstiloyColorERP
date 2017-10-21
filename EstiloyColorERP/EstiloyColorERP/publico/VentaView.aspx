@@ -27,7 +27,7 @@
                  </div>    
              </section>
             <br />
-              <asp:Button ID="btnAgregar" CssClass="btn btn-info" runat="server" Text="Agregar" />
+              <asp:Button ID="btnAgregar" CssClass="btn btn-info" runat="server" Text="Agregar" OnClick="btnAgregar_Click" />
                     <br />
             <asp:Table ID="tbInsertarProducto"  CssClass="table table-hover" runat="server" Width="640px">
             </asp:Table>
@@ -60,7 +60,7 @@
            </section>
                     <br />
                     <br />
-                    <asp:Button ID="btnInsertar" CssClass="btn btn-info" runat="server" Text="Insertar" />
+                    <asp:Button ID="btnInsertar" CssClass="btn btn-info" runat="server" Text="Insertar" OnClick="btnInsertar_Click" />
             <br />
             <br />
         </ContentTemplate>

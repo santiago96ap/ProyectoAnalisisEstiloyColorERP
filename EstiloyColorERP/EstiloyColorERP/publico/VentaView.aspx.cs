@@ -13,5 +13,15 @@ namespace EstiloyColorERP
         {
 
         }
+
+        protected void btnInsertar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnAgregar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
