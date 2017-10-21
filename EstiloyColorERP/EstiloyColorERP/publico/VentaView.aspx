@@ -13,19 +13,18 @@
                    <div id="divi1">
                         <asp:Label ID="lblHora" CssClass="col-sm-2 control-label" runat="server" Text="Hora"></asp:Label>
                         <asp:TextBox ID="tbHora" CssClass="form-control1" runat="server"></asp:TextBox>
-                        <br />
                     </div>
            </section>
             <section id="formulario1">
-                <div id="div2">
+                <div id="div7">
                     <asp:Label ID="lblArticulos"  CssClass="col-sm-2 control-label" runat="server" Text="Articulos"></asp:Label>
                     <asp:TextBox ID="tbArticulos" CssClass="form-control1" runat="server"></asp:TextBox>
                 </div>
-                <div id="div3">
+                <div id="div8">
                     <asp:Label ID="lblCategoria"  CssClass="col-sm-2 control-label" runat="server" Text="Categoria"></asp:Label>
                     <asp:ListBox ID="lbCategoria" CssClass="form-control1" runat="server" Height="27px" Width="112px"></asp:ListBox>
                  </div>
-                <div id="div4">
+                <div id="div9">
                     <asp:Button ID="btnAgregar" CssClass="btn btn-info" runat="server" Text="Agregar" />
                 </div>
                     <br />
@@ -40,7 +39,8 @@
 
                     <asp:Label ID="lblTipoPago"  CssClass="col-sm-2 control-label" runat="server" Text="Tipo de Pago"></asp:Label>
                     <asp:ListBox ID="lbTipoPago"  CssClass="form-control1" runat="server" Height="24px" Width="114px"></asp:ListBox>
-
+                    <br />
+                    <br />
                     <asp:Label ID="lblSubTotal" CssClass="col-sm-2 control-label" runat="server" Text="Sub total"></asp:Label>
                     <asp:TextBox ID="tbSubtotal" CssClass="form-control1" runat="server"></asp:TextBox>
                 </div>
