@@ -16,19 +16,20 @@
                     </div>
            </section>
             <section id="formulario1">
-                <div id="div7">
+                <div id="divi7">
                     <asp:Label ID="lblArticulos"  CssClass="col-sm-2 control-label" runat="server" Text="Articulos"></asp:Label>
                     <asp:TextBox ID="tbArticulos" CssClass="form-control1" runat="server"></asp:TextBox>
                 </div>
-                <div id="div8">
+                <div id="divi8">
                     <asp:Label ID="lblCategoria"  CssClass="col-sm-2 control-label" runat="server" Text="Categoria"></asp:Label>
                     <asp:ListBox ID="lbCategoria" CssClass="form-control1" runat="server" Height="27px" Width="112px"></asp:ListBox>
                  </div>
-                <div id="div9">
+                <div id="divi9">
                     <asp:Button ID="btnAgregar" CssClass="btn btn-info" runat="server" Text="Agregar" />
                 </div>
                     <br />
              </section>
+
             <asp:Table ID="tbInsertarProducto"  CssClass="table table-hover" runat="server" Width="640px">
             </asp:Table>
 
@@ -60,7 +61,6 @@
            </section>
                     <br />
                     <br />
-                 
                     <asp:Button ID="btnInsertar" CssClass="btn btn-info" runat="server" Text="Insertar" />
             <br />
             <br />
