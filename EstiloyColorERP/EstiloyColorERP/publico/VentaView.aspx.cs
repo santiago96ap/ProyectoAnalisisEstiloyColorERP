@@ -46,5 +46,15 @@ namespace EstiloyColorERP
         {
             
         }//accion agregar articulo
+
+        protected void lbCategoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void lbArticulos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

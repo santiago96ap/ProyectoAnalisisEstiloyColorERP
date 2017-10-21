@@ -11,9 +11,9 @@ namespace BUSINESS
     {
         private ClienteData clienteData;
 
-        public ClienteBusiness(string stringConeccion)
+        public ClienteBusiness()
         {
-            this.clienteData = new ClienteData(stringConeccion);
+            this.clienteData = new ClienteData(baseDatos);
         }//constructor
 
         public Boolean insertarCliente(Cliente cliente)
