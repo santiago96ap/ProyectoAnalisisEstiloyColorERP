@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using DOMAIN;
+using System.Data.SqlClient;
 
 namespace DATA {
     public class InventarioData {
@@ -20,7 +21,7 @@ namespace DATA {
             cmdInventario.Parameters.Add(new SqlParameter("@productos", inventario.Productos));
             cmdInventario.Parameters.Add(new SqlParameter("@cantidad", inventario.Cantidad));
 
-            SqlConnection connection = new SqlConnection(connectionString);
+            SqlConnection connection = new SqlConnection(stringConeccion);
             SqlTransaction transaction = null;
             try
             {
@@ -29,7 +30,7 @@ namespace DATA {
                 cmdInventario.Connection = connection;
                 cmdInventario.Transaction = transaction;
                 cmdInventario.ExecuteNonQuery();
-                inventario.Productos = Int32.Parse(cmdInventario.Parameters["@productos"].Value.ToString());
+                //inventario.Productos = Int32.Parse(cmdInventario.Parameters["@productos"].Value.ToString());
 
                 transaction.Commit();
             }
@@ -55,7 +56,7 @@ namespace DATA {
             cmdInventario.Parameters.Add(new SqlParameter("@productos", inventario.Productos));
             cmdInventario.Parameters.Add(new SqlParameter("@cantidad", inventario.Cantidad));
 
-            SqlConnection connection = new SqlConnection(connectionString);
+            SqlConnection connection = new SqlConnection(stringConeccion);
             SqlTransaction transaction = null;
             try
             {
@@ -64,7 +65,7 @@ namespace DATA {
                 cmdInventario.Connection = connection;
                 cmdInventario.Transaction = transaction;
                 cmdInventario.ExecuteNonQuery();
-                inventario.Productos = Int32.Parse(cmdInventario.Parameters["@productos"].Value.ToString());
+                //inventario.Productos = Int32.Parse(cmdInventario.Parameters["@productos"].Value.ToString());
 
                 transaction.Commit();
             }
@@ -84,7 +85,7 @@ namespace DATA {
         }//eliminarInventario
 
         public Inventario obtenerInventario(Inventario inventario) {
-            SqlConnection connection = new SqlConnection(connectionString);
+            SqlConnection connection = new SqlConnection(stringConeccion);
             string sqlProcedureObtenerInventario = "obtener_inventario";
             SqlCommand comandoObtenerInventario = new SqlCommand(sqlProcedureObtenerInventario, connection);
             comandoObtenerInventario.CommandType = System.Data.CommandType.StoredProcedure;

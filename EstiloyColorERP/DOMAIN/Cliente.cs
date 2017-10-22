@@ -35,6 +35,16 @@ namespace DOMAIN
             this.correo = correo;
         }//constructor sobrecargado
 
+        public Cliente(String nombre, String apellidos, String telefono, String direccion, String correo)
+        {
+            this.id = "";
+            this.nombre = nombre;
+            this.apellidos = apellidos;
+            this.telefono = telefono;
+            this.direccion = direccion;
+            this.correo = correo;
+        }//constructor sobrecargado
+
         public string Id
         {
             get

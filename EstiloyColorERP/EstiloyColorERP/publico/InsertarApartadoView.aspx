@@ -52,7 +52,7 @@
             <br />
             <br />
             <br />
-            <asp:Button ID="btnInsertar" CssClass="btn btn-info" runat="server" Text="Insertar" OnClick="btnInsertar_Click" />
+            <asp:Button ID="btnInsertar" CssClass="btn btn-info" runat="server" Text="Insertar"/>
             <br />
             <br />
             <br />

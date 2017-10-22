@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Web.Configuration;
 using System.Linq;
 using System.Web;
 using DOMAIN;
@@ -9,11 +10,13 @@ namespace BUSINESS
 {
     public class VentaBusiness
     {
-        public VentaData ventaData;
+        private VentaData ventaData;
+        private string stringConeccion;
 
-        public VentaBusiness(string stringConeccion)
+        public VentaBusiness()
         {
-            this.ventaData = new VentaData(stringConeccion);
+            this.stringConeccion = WebConfigurationManager.ConnectionStrings["BaseDatos"].ToString();
+            this.ventaData = new VentaData(this.stringConeccion);
         }//constructor
 
         public Boolean insertarVenta(Venta venta)

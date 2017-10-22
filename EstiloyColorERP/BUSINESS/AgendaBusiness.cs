@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Web.Configuration;
 using System.Linq;
 using System.Web;
 using DOMAIN;
@@ -9,10 +10,12 @@ namespace BUSINESS
 {
     public class AgendaBusiness
     {
-        public AgendaData agendaData;
+        private AgendaData agendaData;
+        private string stringConeccion;
 
         public AgendaBusiness() {
-            this.agendaData = new AgendaData();
+            this.stringConeccion = WebConfigurationManager.ConnectionStrings["BaseDatos"].ToString();
+            this.agendaData = new AgendaData(this.stringConeccion);
         }//constructor
         public Boolean insertarAgenda(Agenda agenda)
         {

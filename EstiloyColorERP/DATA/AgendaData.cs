@@ -8,6 +8,12 @@ namespace DATA
 {
     public class AgendaData
     {
+        private String stringConeccion;
+        public AgendaData(string stringConeccion)
+        {
+            this.stringConeccion = stringConeccion;
+        }//constructor
+
         public Boolean insertarAgenda(Agenda agenda)
         {
             return false;
