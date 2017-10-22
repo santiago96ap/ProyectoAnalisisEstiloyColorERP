@@ -1,6 +1,7 @@
 ﻿using DOMAIN;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 
@@ -18,7 +19,22 @@ namespace DATA
 
         public Boolean registrarUsuario(Usuario usuario)
         {
-            return false;
+            SqlConnection connection = new SqlConnection(this.conectionString);
+            String sqlStoreProcedure = "sp_insertarUsuario";
+            SqlCommand cmdInsertar = new SqlCommand(sqlStoreProcedure, connection);
+            cmdInsertar.CommandType = System.Data.CommandType.StoredProcedure;
+
+            cmdInsertar.Parameters.Add(new SqlParameter("@nombre", usuario.Nombre));
+            cmdInsertar.Parameters.Add(new SqlParameter("@apellido", usuario.Telefono));
+            cmdInsertar.Parameters.Add(new SqlParameter("@tipo_Usuario", usuario.Rol));
+            cmdInsertar.Parameters.Add(new SqlParameter("@contrasenia", usuario.Contrsena));
+            cmdInsertar.Parameters.Add(new SqlParameter("@email", usuario.Correo));
+
+            cmdInsertar.Connection.Open();
+            cmdInsertar.ExecuteNonQuery();
+            cmdInsertar.Connection.Close();
+
+            return true;
         }//registrarUsuario
 
         public Boolean eliminarUsuario(Usuario usuario)
