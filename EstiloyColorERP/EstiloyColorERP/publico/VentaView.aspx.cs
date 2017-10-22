@@ -49,12 +49,30 @@ namespace EstiloyColorERP
 
         protected void lbCategoria_SelectedIndexChanged(object sender, EventArgs e)
         {
+            String nombreCategoria = lbCategoria.SelectedItem.Value;
+            String codigoCategoria = "";
 
-        }
+            foreach (Categoria categoria in categorias)
+            {
+                if (categoria.Nombre.Equals(nombreCategoria)){
+                    codigoCategoria = categoria.Codigo;
+                }
+            }//obtiene el codigo de la categoria seleccionada
+
+            lbArticulos.Items.Clear;
+
+            foreach (Producto producto in productos)
+            {
+                if (codigoCategoria.Equals(producto.IdCategoria))
+                {
+                    lbArticulos.Items.Add(producto.Nombre);
+                }
+            }// carga los articulos de acuerdo a la categoria
+        }//categoria seleccionada
 
         protected void lbArticulos_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-        }
+        }//articulo seleccionado
     }
 }

@@ -1,5 +1,22 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="VentaView.aspx.cs" Inherits="EstiloyColorERP.VentaView" %>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+        <table style="width:100%;">
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
         <ContentTemplate>
             <br />
           <asp:Label ID="titulo" CssClass="col-sm-2 control-label" runat="server" Text="Insertar Venta"></asp:Label>
@@ -29,7 +46,7 @@
             <br />
               <asp:Button ID="btnAgregar" CssClass="btn btn-info" runat="server" Text="Agregar" OnClick="btnAgregar_Click" />
                     <br />
-            <asp:Table ID="tbInsertarProducto"  CssClass="table table-hover" runat="server" Width="640px">
+            <asp:Table ID="tbInsertarProducto"  CssClass="table table-hover" runat="server" Width="640px" BackColor="#CCCCCC">
             </asp:Table>
 
             <section id="formulario2">
