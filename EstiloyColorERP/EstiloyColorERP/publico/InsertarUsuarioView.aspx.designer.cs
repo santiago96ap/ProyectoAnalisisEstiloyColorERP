@@ -31,13 +31,13 @@ namespace EstiloyColorERP.publico {
         protected global::System.Web.UI.WebControls.Label lblRol;
         
         /// <summary>
-        /// LbRol control.
+        /// lbRol control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox LbRol;
+        protected global::System.Web.UI.WebControls.ListBox lbRol;
         
         /// <summary>
         /// lblNombre control.
@@ -130,12 +130,21 @@ namespace EstiloyColorERP.publico {
         protected global::System.Web.UI.WebControls.TextBox tbContrasena;
         
         /// <summary>
-        /// btnInsertar control.
+        /// mensaje control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnInsertar;
+        protected global::System.Web.UI.WebControls.Label mensaje;
+        
+        /// <summary>
+        /// btnAceptar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAceptar;
     }
 }
