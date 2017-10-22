@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using DOMAIN;
@@ -18,7 +20,7 @@ namespace DATA
 
         public Boolean insertarCliente(Cliente cliente)
         {
-            SqlConnection connection = new SqlConnection(this.conectionString);
+            SqlConnection connection = new SqlConnection(this.stringConeccion);
             String sqlStoreProcedure = "sp_insertarCliente";
             SqlCommand cmdInsertar = new SqlCommand(sqlStoreProcedure, connection);
             cmdInsertar.CommandType = System.Data.CommandType.StoredProcedure;
@@ -37,7 +39,7 @@ namespace DATA
 
         public Boolean actualizarCliente(Cliente cliente)
         {
-            SqlConnection connection = new SqlConnection(this.conectionString);
+            SqlConnection connection = new SqlConnection(this.stringConeccion);
             String sqlStoreProcedure = "sp_actualizarCliente";
             SqlCommand cmdActualizar = new SqlCommand(sqlStoreProcedure, connection);
             cmdActualizar.CommandType = System.Data.CommandType.StoredProcedure;
@@ -56,7 +58,7 @@ namespace DATA
 
         public LinkedList<Cliente> obtenerClientes()
         {
-            SqlConnection connection = new SqlConnection(this.conectionString);
+            SqlConnection connection = new SqlConnection(this.stringConeccion);
 
             String sqlSelect = "sp_obtenerTodosCliente;";
 
