@@ -12,8 +12,27 @@
             <asp:Button ID="btnBuscar" CssClass="btn btn-info" runat="server" Text="Buscar" />
             <br />
             <br />
-            <asp:Table ID="tblCliente" CssClass="table table-hover" runat="server" Height="25px">
-            </asp:Table>
+            <asp:gridview id="clientes" CssClass="table table-hover" runat="server" AutoGenerateColumns="False">   
+                <Columns>  
+                    <asp:BoundField DataField="Nombre" HeaderText="Nombre" ItemStyle-Width="100">
+                        <ItemStyle Width="100px"></ItemStyle>
+                    </asp:BoundField>
+                    <asp:BoundField DataField="Apellidos" HeaderText="Apellidos" ItemStyle-Width="100" >      
+                        <ItemStyle Width="100px"></ItemStyle>
+                    </asp:BoundField>
+                    <asp:BoundField DataField="Telefono" HeaderText="Teléfono" ItemStyle-Width="100" >      
+                        <ItemStyle Width="100px"></ItemStyle>
+                    </asp:BoundField>
+                    <asp:BoundField DataField="Direccion" HeaderText="Dirección" ItemStyle-Width="100" >      
+                        <ItemStyle Width="100px"></ItemStyle>
+                    </asp:BoundField>
+                    <asp:BoundField DataField="Correo" HeaderText="Correo" ItemStyle-Width="100" >      
+                        <ItemStyle Width="100px"></ItemStyle>
+                    </asp:BoundField>
+                </Columns>  
+                    <HeaderStyle BackColor="#3399ff" ForeColor="White"></HeaderStyle>
+                    <RowStyle HorizontalAlign="Center" />
+            </asp:gridview>
             <br />
             <br />
             <br />

@@ -19,7 +19,10 @@ namespace EstiloyColorERP
 
         protected void btnInsertar_Click(object sender, EventArgs e)
         {
-            clienteBusiness = new ClienteBusiness();
+            //clienteBusiness = new ClienteBusiness();
+            //Cliente cliente = new Cliente(tbNombre.Text, tbApellidos.Text, tbTelefono.Text, tbDireccion.Text, tbCorreo.Text);
+            //clienteBusiness.insertarCliente(cliente);
+            lblNombre.Text = tbNombre.Text;
         }
     }
 }//namespace

@@ -49,12 +49,12 @@ namespace EstiloyColorERP {
         protected global::System.Web.UI.WebControls.Button btnBuscar;
         
         /// <summary>
-        /// tblCliente control.
+        /// clientes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Table tblCliente;
+        protected global::System.Web.UI.WebControls.GridView clientes;
     }
 }
