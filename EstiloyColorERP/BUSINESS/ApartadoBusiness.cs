@@ -10,10 +10,12 @@ namespace BUSINESS
     public class ApartadoBusiness
     {
         private ApartadoData apartadoData;
+        private string stringConeccion;
 
-        public ApartadoBusiness(string stringConeccion)
+        public ApartadoBusiness()
         {
-            this.apartadoData = new ApartadoData(stringConeccion);
+            this.stringConeccion = WebConfigurationManager.ConnectionStrings["BaseDatos"].ToString();
+            this.apartadoData = new ApartadoData(this.stringConeccion);
         }//constructor
 
         public Boolean insertarApartado(Apartado apartado)
