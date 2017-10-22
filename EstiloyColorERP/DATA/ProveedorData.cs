@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using DOMAIN;
+using System.Data.SqlClient;
 
 namespace DATA {
     public class ProveedorData {
@@ -123,7 +124,7 @@ namespace DATA {
         }//obtenerProveedor
 
         public Boolean eliminarProveedor(Proveedor proveedor) {
-            retuSqlCommand cmdProveedor = new SqlCommand();
+            SqlCommand cmdProveedor = new SqlCommand();
             cmdProveedor.CommandText = "eliminar_proveedor";
             cmdProveedor.CommandType = System.Data.CommandType.StoredProcedure;
             cmdProveedor.Parameters.Add(new SqlParameter("@nombre", proveedor.Nombre));

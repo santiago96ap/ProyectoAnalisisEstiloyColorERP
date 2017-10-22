@@ -7,6 +7,7 @@ namespace DOMAIN
 {
     public class Ingreso
     {
+        private int id;
         private String fecha;
         private String hora;
         private String concepto;
@@ -21,9 +22,19 @@ namespace DOMAIN
             this.total = total;
             this.usuario = usuario;
         }//constructor sobreCargado
+        public Ingreso(int id,string fecha, string hora, string concepto, float total, string usuario)
+        {
+            this.id = id;
+            this.fecha = fecha;
+            this.hora = hora;
+            this.concepto = concepto;
+            this.total = total;
+            this.usuario = usuario;
+        }
 
         public Ingreso()
         {
+            this.id = 0;
             this.fecha = "";
             this.hora = "";
             this.concepto = "";
@@ -94,6 +105,19 @@ namespace DOMAIN
             set
             {
                 usuario = value;
+            }
+        }
+
+        public int Id
+        {
+            get
+            {
+                return id;
+            }
+
+            set
+            {
+                id = value;
             }
         }
     }//class
