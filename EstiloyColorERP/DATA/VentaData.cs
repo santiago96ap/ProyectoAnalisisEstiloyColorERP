@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using DOMAIN;
@@ -20,15 +22,15 @@ namespace DATA
             SqlCommand cmdInsertar = new SqlCommand(sqlStoreProcedure, connection);
             cmdInsertar.CommandType = System.Data.CommandType.StoredProcedure;
 
-            cmdInsertar.Parameters.Add(new SqlParameter("@fecha", venta.fecha));
-            cmdInsertar.Parameters.Add(new SqlParameter("@hora", venta.hora));
-            cmdInsertar.Parameters.Add(new SqlParameter("@cliente", venta.cliente));
-            cmdInsertar.Parameters.Add(new SqlParameter("@vendedor", venta.vendedor));
-            cmdInsertar.Parameters.Add(new SqlParameter("@tipoServicio", venta.tipoServicio));
-            cmdInsertar.Parameters.Add(new SqlParameter("@articuloComprado", venta.articuloComprado));
-            cmdInsertar.Parameters.Add(new SqlParameter("@subTotal", venta.subTotal));
-            cmdInsertar.Parameters.Add(new SqlParameter("@total", venta.total));
-            cmdInsertar.Parameters.Add(new SqlParameter("@tipoPago", venta.tipoPago));
+            cmdInsertar.Parameters.Add(new SqlParameter("@fecha", venta.Fecha));
+            cmdInsertar.Parameters.Add(new SqlParameter("@hora", venta.Hora));
+            cmdInsertar.Parameters.Add(new SqlParameter("@cliente", venta.Cliente));
+            cmdInsertar.Parameters.Add(new SqlParameter("@vendedor", venta.Vendedor));
+            cmdInsertar.Parameters.Add(new SqlParameter("@tipoServicio", venta.TipoServicio));
+            cmdInsertar.Parameters.Add(new SqlParameter("@articuloComprado", venta.ArticuloComprado));
+            cmdInsertar.Parameters.Add(new SqlParameter("@subTotal", venta.SubTotal));
+            cmdInsertar.Parameters.Add(new SqlParameter("@total", venta.Total));
+            cmdInsertar.Parameters.Add(new SqlParameter("@tipoPago", venta.TipoPago));
 
             cmdInsertar.Connection.Open();
             cmdInsertar.ExecuteNonQuery();
@@ -68,9 +70,9 @@ namespace DATA
                 ventaActual.Cliente = currentRow["cliente"].ToString();
                 ventaActual.Vendedor = currentRow["vendedor"].ToString();
                 ventaActual.TipoServicio = currentRow["tipoServicio"].ToString();
-                ventaActual.ArticuloComprado = currentRow["articuloComprado"].ToString();
-                ventaActual.SubTotal = currentRow["subTotal"].ToString();
-                ventaActual.Total = currentRow["total"].ToString();
+                //ventaActual.ArticuloComprado = currentRow["articuloComprado"].ToString(); Hay que hacer una consulta de los productos relacionados con la venta
+                ventaActual.SubTotal = float.Parse(currentRow["subTotal"].ToString());
+                ventaActual.Total = float.Parse(currentRow["total"].ToString());
                 ventaActual.TipoPago = currentRow["tipoPago"].ToString();
                 ventas.AddLast(ventaActual);
             }//foreach
