@@ -40,12 +40,12 @@ namespace DATA
 
         public Boolean eliminarVenta(Venta venta)
         {
-            SqlConnection connection = new SqlConnection(this.conectionString);
+            SqlConnection connection = new SqlConnection(this.stringConeccion);
             String sqlStoreProcedure = "sp_eliminarVenta";
             SqlCommand cmdEliminar = new SqlCommand(sqlStoreProcedure, connection);
             cmdEliminar.CommandType = System.Data.CommandType.StoredProcedure;
 
-            cmdEliminar.Parameters.Add(new SqlParameter("@id", ingreso.Id));
+            cmdEliminar.Parameters.Add(new SqlParameter("@id", venta.Id));
             cmdEliminar.Connection.Open();
             cmdEliminar.ExecuteNonQuery();
             cmdEliminar.Connection.Close();
