@@ -40,7 +40,16 @@ namespace DATA
 
         public Boolean eliminarVenta(Venta venta)
         {
-            return false;
+            SqlConnection connection = new SqlConnection(this.conectionString);
+            String sqlStoreProcedure = "sp_eliminarVenta";
+            SqlCommand cmdEliminar = new SqlCommand(sqlStoreProcedure, connection);
+            cmdEliminar.CommandType = System.Data.CommandType.StoredProcedure;
+
+            cmdEliminar.Parameters.Add(new SqlParameter("@id", ingreso.Id));
+            cmdEliminar.Connection.Open();
+            cmdEliminar.ExecuteNonQuery();
+            cmdEliminar.Connection.Close();
+            return true;
         }//eliminar venta
 
         public LinkedList<Venta> obtenerVentas()
@@ -58,7 +67,7 @@ namespace DATA
             sqlDataAdapterClient.Fill(dataSetVentas, "tb_Venta");
             sqlDataAdapterClient.SelectCommand.Connection.Close();
 
-            DataRowCollection dataRow = dataSetVentas.Tables["tb_Cliente"].Rows;
+            DataRowCollection dataRow = dataSetVentas.Tables["tb_Venta"].Rows;
 
             LinkedList<Venta> ventas = new LinkedList<Venta>();
 
@@ -84,7 +93,7 @@ namespace DATA
             LinkedList<Venta> ventas = obtenerVentas();
             foreach (Venta ventaActual in ventas)
             {
-                if (venta.Hora.Equals(ventaActual.Hora))
+                if (venta.Id.Equals(ventaActual.Id))
                 {
                     return ventaActual;
                 }
