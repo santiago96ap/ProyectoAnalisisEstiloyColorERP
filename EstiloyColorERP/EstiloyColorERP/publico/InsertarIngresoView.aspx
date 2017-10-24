@@ -27,7 +27,7 @@
                 <asp:TextBox ID="tbTotal" type="number" CssClass="form-control1"  runat="server"></asp:TextBox>
                 <br />
                 <br />
-                <asp:Button ID="btnInsertar" runat="server"  CssClass="btn btn-info" Text="Insertar" OnClick="btnInsertar_Click1"  />
+                <asp:Button ID="btnInsertar" runat="server"  CssClass="btn btn-info" Text="Insertar" OnClick="btnInsertar_Click"  />
                 <br />
                 <br />
                 </div>
