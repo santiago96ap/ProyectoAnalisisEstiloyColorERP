@@ -5,158 +5,94 @@ using System.Web;
 using DOMAIN;
 using System.Data.SqlClient;
 
-namespace DATA {
-    public class ProveedorData {
+namespace DATA
+{
+    public class ProveedorData
+    {
         private String stringConnection;
 
-        public ProveedorData(String stringConection) {
+        public ProveedorData(String stringConection)
+        {
             this.stringConnection = stringConection;
         }//constructor
 
-        public Boolean insertarProveedor(Proveedor proveedor) {
-            SqlCommand cmdProveedor = new SqlCommand();
-            cmdProveedor.CommandText = "insertar_proveedor";
-            cmdProveedor.CommandType = System.Data.CommandType.StoredProcedure;
-            cmdProveedor.Parameters.Add(new SqlParameter("@nombre", proveedor.Nombre));
-            cmdProveedor.Parameters.Add(new SqlParameter("@telefono", proveedor.Telefono));
-            cmdProveedor.Parameters.Add(new SqlParameter("@direccion", proveedor.Direccion));
-            cmdProveedor.Parameters.Add(new SqlParameter("@email", proveedor.Email));
+        public Boolean insertarProveedor(Proveedor proveedor)
+        {
+            SqlConnection connection = new SqlConnection(this.conectionString);
+            String sqlStoreProcedure = "sp_insertarProveedor";
+            SqlCommand cmdInsertar = new SqlCommand(sqlStoreProcedure, connection);
+            cmdInsertar.CommandType = System.Data.CommandType.StoredProcedure;
 
-            SqlConnection connection = new SqlConnection(connectionString);
-            SqlTransaction transaction = null;
-            try
-            {
-                connection.Open();
-                transaction = connection.BeginTransaction();
-                cmdProveedor.Connection = connection;
-                cmdProveedor.Transaction = transaction;
-                cmdProveedor.ExecuteNonQuery();
-                proveedor.email = Int32.Parse(cmdProveedor.Parameters["@proveedor"].Value.ToString());
+            cmdInsertar.Parameters.Add(new SqlParameter("@email", proveedor.Email));
+            cmdInsertar.Parameters.Add(new SqlParameter("@nombre", proveedor.Nombre));
+            cmdInsertar.Parameters.Add(new SqlParameter("@telefono", proveedor.Telefono));
+            cmdInsertar.Parameters.Add(new SqlParameter("@direccion", proveedor.Direccion));
 
-                transaction.Commit();
-            }
-            catch (SqlException ex)
-            {
-                if (transaction != null)
-                    transaction.Rollback();
-                throw ex;
-            }
-            finally
-            {
-                if (connection != null)
-                    connection.Close();
-            }//finally
-
+            cmdInsertar.Connection.Open();
+            cmdInsertar.ExecuteNonQuery();
+            cmdInsertar.Connection.Close();
             return true;
         }//insertarProveedor
 
-        public Boolean actualizarProveedor(Proveedor proveedor) {
-            SqlCommand cmdProveedor = new SqlCommand();
-            cmdProveedor.CommandText = "actualizar_proveedor";
-            cmdProveedor.CommandType = System.Data.CommandType.StoredProcedure;
-            cmdProveedor.Parameters.Add(new SqlParameter("@nombre", proveedor.Nombre));
-            cmdProveedor.Parameters.Add(new SqlParameter("@telefono", proveedor.Telefono));
-            cmdProveedor.Parameters.Add(new SqlParameter("@direccion", proveedor.Direccion));
-            cmdProveedor.Parameters.Add(new SqlParameter("@email", proveedor.Email));
+        public Boolean actualizarProveedor(Proveedor proveedor)
+        {
+            SqlConnection connection = new SqlConnection(this.conectionString);
+            String sqlStoreProcedure = "sp_actualizarProveedor";
+            SqlCommand cmdActualizar = new SqlCommand(sqlStoreProcedure, connection);
+            cmdActualizar.CommandType = System.Data.CommandType.StoredProcedure;
+            cmdActualizar.Parameters.Add(new SqlParameter("@email", proveedor.Email));
+            cmdActualizar.Parameters.Add(new SqlParameter("@nombre", proveedor.Nombre));
+            cmdActualizar.Parameters.Add(new SqlParameter("@telefono", proveedor.Telefono));
+            cmdActualizar.Parameters.Add(new SqlParameter("@direccion", proveedor.Direccion));
 
-            SqlConnection connection = new SqlConnection(connectionString);
-            SqlTransaction transaction = null;
-            try
-            {
-                connection.Open();
-                transaction = connection.BeginTransaction();
-                cmdProveedor.Connection = connection;
-                cmdProveedor.Transaction = transaction;
-                cmdProveedor.ExecuteNonQuery();
-                proveedor.Email = Int32.Parse(cmdProveedor.Parameters["@email"].Value.ToString());
-
-                transaction.Commit();
-            }
-            catch (SqlException ex)
-            {
-                if (transaction != null)
-                    transaction.Rollback();
-                throw ex;
-            }
-            finally
-            {
-                if (connection != null)
-                    connection.Close();
-            }//finally
-
-            return true;
+            cmdActualizar.Connection.Open();
+            cmdActualizar.ExecuteNonQuery();
+            cmdActualizar.Connection.Close();
+            return false;
         }//actualizarProveedor
 
-        public LinkedList<Proveedor> obtenerProveedores() {
-            return null;
+        public LinkedList<Proveedor> obtenerProveedores(String fechaI, String fechaF)
+        {
+            SqlConnection connection = new SqlConnection(this.conectionString);
+
+            String sqlSelect = "sp_obtenerTodoProveedor;";
+
+            SqlDataAdapter sqlDataAdapterClient = new SqlDataAdapter();
+            sqlDataAdapterClient.SelectCommand = new SqlCommand();
+            sqlDataAdapterClient.SelectCommand.CommandText = sqlSelect;
+            sqlDataAdapterClient.SelectCommand.Connection = connection;
+
+            DataSet dataSetProveedores = new DataSet();
+            sqlDataAdapterClient.Fill(dataSetProveedores, "tb_Proveedor");
+            sqlDataAdapterClient.SelectCommand.Connection.Close();
+
+            DataRowCollection dataRow = dataSetProveedores.Tables["tb_Proveedor"].Rows;
+
+            LinkedList<Proveedor> proveedor = new LinkedList<Proveedor>();
+
+            foreach (DataRow currentRow in dataRow)
+            {
+                Proveedor provActual = new Proveedor();
+                provActual.Email = int.Parse(currentRow["email"].ToString());
+                provActual.Nombre = currentRow["nombre"].ToString();
+                provActual.Telefono = currentRow["telefono"].ToString();
+                provActual.Direccion = currentRow["direccion"].ToString();
+                proveedor.AddLast(provActual);
+            }//foreach
+            return proveedor;
         }//obtenerProveedores
 
-        public Proveedor obtenerProveedor(Proveedor proveedor) {
-            SqlConnection connection = new SqlConnection(connectionString);
-            string sqlProcedureObtenerProveedor = "obtener_proveedor";
-            SqlCommand comandoObtenerProveedor = new SqlCommand(sqlProcedureObtenerProveedor, connection);
-            comandoObtenerProveedor.CommandType = System.Data.CommandType.StoredProcedure;
-            comandoObtenerProveedor.Parameters.Add(new SqlParameter("@email", proveedor.Email));
-            try
-            {
-                connection.Open();
-                transaction = connection.BeginTransaction();
-                cmdProveedor.Connection = connection;
-                cmdProveedor.Transaction = transaction;
-                cmdProveedor.ExecuteNonQuery();
-                proveedor.email = Int32.Parse(cmdProveedor.Parameters["@email"].Value.ToString());
+        public Boolean eliminarProveedor(Proveedor proveedor)
+        {
+            SqlConnection connection = new SqlConnection(this.conectionString);
+            String sqlStoreProcedure = "sp_eliminarProveedor";
+            SqlCommand cmdEliminar = new SqlCommand(sqlStoreProcedure, connection);
+            cmdEliminar.CommandType = System.Data.CommandType.StoredProcedure;
 
-                transaction.Commit();
-            }
-            catch (SqlException ex)
-            {
-                if (transaction != null)
-                    transaction.Rollback();
-                throw ex;
-            }
-            finally
-            {
-                if (connection != null)
-                    connection.Close();
-            }//finally
-
-            return proveedor;
-        }//obtenerProveedor
-
-        public Boolean eliminarProveedor(Proveedor proveedor) {
-            SqlCommand cmdProveedor = new SqlCommand();
-            cmdProveedor.CommandText = "eliminar_proveedor";
-            cmdProveedor.CommandType = System.Data.CommandType.StoredProcedure;
-            cmdProveedor.Parameters.Add(new SqlParameter("@nombre", proveedor.Nombre));
-            cmdProveedor.Parameters.Add(new SqlParameter("@telefono", proveedor.Telefono));
-            cmdProveedor.Parameters.Add(new SqlParameter("@direccion", proveedor.Direccion));
-            cmdProveedor.Parameters.Add(new SqlParameter("@email", proveedor.Email));
-
-            SqlConnection connection = new SqlConnection(connectionString);
-            SqlTransaction transaction = null;
-            try
-            {
-                connection.Open();
-                transaction = connection.BeginTransaction();
-                cmdProveedor.Connection = connection;
-                cmdProveedor.Transaction = transaction;
-                cmdProveedor.ExecuteNonQuery();
-                proveedor.Email = Int32.Parse(cmdProveedor.Parameters["@email"].Value.ToString());
-
-                transaction.Commit();
-            }
-            catch (SqlException ex)
-            {
-                if (transaction != null)
-                    transaction.Rollback();
-                throw ex;
-            }
-            finally
-            {
-                if (connection != null)
-                    connection.Close();
-            }//finally
-
+            cmdEliminar.Parameters.Add(new SqlParameter("@email", proveedor.Email));
+            cmdEliminar.Connection.Open();
+            cmdEliminar.ExecuteNonQuery();
+            cmdEliminar.Connection.Close();
             return true;
         }//eliminarProveedor
     }//clase

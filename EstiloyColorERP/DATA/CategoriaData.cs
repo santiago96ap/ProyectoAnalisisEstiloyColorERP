@@ -14,143 +14,76 @@ namespace DATA {
         }//constructor
 
         public Boolean insertarCategoria(Categoria categoria) {
-            SqlCommand cmdCategoria = new SqlCommand();
-            cmdCategoria.CommandText = "insertar_categoria";
-            cmdCategoria.CommandType = System.Data.CommandType.StoredProcedure;
-            cmdCategoria.Parameters.Add(new SqlParameter("@codigo", categoria.Codigo));
-            cmdCategoria.Parameters.Add(new SqlParameter("@nombre", categoria.Nombre));
+            SqlConnection connection = new SqlConnection(this.conectionString);
+            String sqlStoreProcedure = "sp_insertarCategoria";
+            SqlCommand cmdInsertar = new SqlCommand(sqlStoreProcedure, connection);
+            cmdInsertar.CommandType = System.Data.CommandType.StoredProcedure;
 
-            SqlConnection connection = new SqlConnection(connectionString);
-            SqlTransaction transaction = null;
-            try
-            {
-                connection.Open();
-                transaction = connection.BeginTransaction();
-                cmdCategoria.Connection = connection;
-                cmdCategoria.Transaction = transaction;
-                cmdCategoria.ExecuteNonQuery();
-                categoria.Codigo = Int32.Parse(cmdCategoria.Parameters["@categoria"].Value.ToString());
+            cmdInsertar.Parameters.Add(new SqlParameter("@nombre", categoria.Nombre));
 
-                transaction.Commit();
-            }
-            catch (SqlException ex)
-            {
-                if (transaction != null)
-                    transaction.Rollback();
-                throw ex;
-            }
-            finally
-            {
-                if (connection != null)
-                    connection.Close();
-            }//finally
-
+            cmdInsertar.Connection.Open();
+            cmdInsertar.ExecuteNonQuery();
+            cmdInsertar.Connection.Close();
             return true;
         }//insertarCategoria
 
         public Boolean actualizarCategoria(Categoria categoria) {
-            SqlCommand cmdCategoria = new SqlCommand();
-            cmdCategoria.CommandText = "actualizar_categoria";
-            cmdCategoria.CommandType = System.Data.CommandType.StoredProcedure;
-            cmdCategoria.Parameters.Add(new SqlParameter("@codigo", categoria.Codigo));
-            cmdCategoria.Parameters.Add(new SqlParameter("@nombre", categoria.Nombre));
+            SqlConnection connection = new SqlConnection(this.conectionString);
+            String sqlStoreProcedure = "sp_actualizarCategoria";
+            SqlCommand cmdActualizar = new SqlCommand(sqlStoreProcedure, connection);
+            cmdActualizar.CommandType = System.Data.CommandType.StoredProcedure;
+            cmdActualizar.Parameters.Add(new SqlParameter("@id", categoria.Id));
+            cmdActualizar.Parameters.Add(new SqlParameter("@nombre", categoria.Nombre));
 
 
-            SqlConnection connection = new SqlConnection(connectionString);
-            SqlTransaction transaction = null;
-            try
-            {
-                connection.Open();
-                transaction = connection.BeginTransaction();
-                cmdCategoria.Connection = connection;
-                cmdCategoria.Transaction = transaction;
-                cmdCategoria.ExecuteNonQuery();
-                categoria.Codigo = Int32.Parse(cmdCategoria.Parameters["@codigo"].Value.ToString());
-
-                transaction.Commit();
-            }
-            catch (SqlException ex)
-            {
-                if (transaction != null)
-                    transaction.Rollback();
-                throw ex;
-            }
-            finally
-            {
-                if (connection != null)
-                    connection.Close();
-            }//finally
-
-            return true;
+            cmdActualizar.Connection.Open();
+            cmdActualizar.ExecuteNonQuery();
+            cmdActualizar.Connection.Close();
+            return false;
         }//actualizarCategoria
 
-        public LinkedList<Categoria> obtenerCategorias() {
-            return null;
+        public LinkedList<Categoria> obtenerCategorias(String fechaI, String fechaF) {
+            SqlConnection connection = new SqlConnection(this.conectionString);
+
+            String sqlSelect = "sp_obtenerTodaCategoria;";
+
+            SqlDataAdapter sqlDataAdapterClient = new SqlDataAdapter();
+            sqlDataAdapterClient.SelectCommand = new SqlCommand();
+            sqlDataAdapterClient.SelectCommand.CommandText = sqlSelect;
+            sqlDataAdapterClient.SelectCommand.Connection = connection;
+
+            DataSet dataSetCategoria = new DataSet();
+            sqlDataAdapterClient.Fill(dataSetCategoria, "tb_Categoria");
+            sqlDataAdapterClient.SelectCommand.Connection.Close();
+
+            DataRowCollection dataRow = dataSetCategoria.Tables["tb_Categoria"].Rows;
+
+            LinkedList<Categoria> categorias = new LinkedList<Categoria>();
+
+            foreach (DataRow currentRow in dataRow)
+            {
+                Ingreso eActual = new Categoria();
+                eActual.Id = int.Parse(currentRow["id"].ToString());
+                eActual.Nombre = currentRow["nombre"].ToString();
+                categorias.AddLast(eActual);
+            }//foreach
+            return categorias;
         }//obtenerCategorias
 
         public Categoria obtenerCategoria(Categoria categoria) {
-            SqlConnection connection = new SqlConnection(connectionString);
-            string sqlProcedureObtenerCategoria = "obtener_categoria";
-            SqlCommand comandoObtenerInventario = new SqlCommand(sqlProcedureObtenerCategoria, connection);
-            comandoObtenerInventario.CommandType = System.Data.CommandType.StoredProcedure;
-            comandoObtenerInventario.Parameters.Add(new SqlParameter("@pemails", inventario.Productos));
-            try
-            {
-                connection.Open();
-                transaction = connection.BeginTransaction();
-                cmdCategoria.Connection = connection;
-                cmdCategoria.Transaction = transaction;
-                cmdCategoria.ExecuteNonQuery();
-                categoria.Codigo = Int32.Parse(cmdCategoria.Parameters["@codigo"].Value.ToString());
-
-                transaction.Commit();
-            }
-            catch (SqlException ex)
-            {
-                if (transaction != null)
-                    transaction.Rollback();
-                throw ex;
-            }
-            finally
-            {
-                if (connection != null)
-                    connection.Close();
-            }//finally
-            return categoria;
+            return null;
         }//obtenerCategoria
 
         public Boolean eliminarCategoria(Categoria categoria) {
-            SqlCommand cmdCategoria = new SqlCommand();
-            cmdCategoria.CommandText = "eliminar_categoria";
-            cmdCategoria.CommandType = System.Data.CommandType.StoredProcedure;
-            cmdCategoria.Parameters.Add(new SqlParameter("@codigo", categoria.Codigo));
-            cmdCategoria.Parameters.Add(new SqlParameter("@nombre", categoria.Nombre));
+            SqlConnection connection = new SqlConnection(this.conectionString);
+            String sqlStoreProcedure = "sp_eliminarCategoria";
+            SqlCommand cmdEliminar = new SqlCommand(sqlStoreProcedure, connection);
+            cmdEliminar.CommandType = System.Data.CommandType.StoredProcedure;
 
-            SqlConnection connection = new SqlConnection(connectionString);
-            SqlTransaction transaction = null;
-            try
-            {
-                connection.Open();
-                transaction = connection.BeginTransaction();
-                cmdCategoria.Connection = connection;
-                cmdCategoria.Transaction = transaction;
-                cmdCategoria.ExecuteNonQuery();
-                categoria.Codigo = Int32.Parse(cmdCategoria.Parameters["@categoria"].Value.ToString());
-
-                transaction.Commit();
-            }
-            catch (SqlException ex)
-            {
-                if (transaction != null)
-                    transaction.Rollback();
-                throw ex;
-            }
-            finally
-            {
-                if (connection != null)
-                    connection.Close();
-            }//finally
-
+            cmdEliminar.Parameters.Add(new SqlParameter("@id", categoia.Id));
+            cmdEliminar.Connection.Open();
+            cmdEliminar.ExecuteNonQuery();
+            cmdEliminar.Connection.Close();
             return true;
         }//eliminarCategoria
     }//clase
