@@ -7,6 +7,7 @@ namespace DOMAIN
 {
     public class Venta
     {
+        private int id;
         private String fecha;
         private String hora;
         private String cliente;
@@ -39,6 +40,21 @@ namespace DOMAIN
             this.total = total;
             this.tipoPago = tipoPago;
         }//constructor sobrecargado
+
+        public Venta(String fecha, String hora, String cliente, String vendedor, String tipoServicio, LinkedList<int> articuloComprado, int subTotal, int total, String tipoPago, int id)
+        {
+            this.fecha = fecha;
+            this.hora = hora;
+            this.cliente = cliente;
+            this.vendedor = vendedor;
+            this.tipoServicio = tipoServicio;
+            this.articuloComprado = articuloComprado;
+            this.subTotal = subTotal;
+            this.total = total;
+            this.tipoPago = tipoPago;
+            this.Id = id;
+        }//constructor sobrecargado
+
         public string Fecha
         {
             get
@@ -155,5 +171,18 @@ namespace DOMAIN
                 tipoPago = value;
             }//set tipo de pago
         }//set y get tipo de pago
+
+        public int Id
+        {
+            get
+            {
+                return id;
+            }//get id
+
+            set
+            {
+                id = value;
+            }//set id
+        }
     }//class
 }//namespace
