@@ -81,7 +81,7 @@ namespace DATA {
             SqlCommand cmdEliminar = new SqlCommand(sqlStoreProcedure, connection);
             cmdEliminar.CommandType = System.Data.CommandType.StoredProcedure;
 
-            cmdEliminar.Parameters.Add(new SqlParameter("@id", categoia.Id));
+            cmdEliminar.Parameters.Add(new SqlParameter("@id", categoria.Id));
             cmdEliminar.Connection.Open();
             cmdEliminar.ExecuteNonQuery();
             cmdEliminar.Connection.Close();

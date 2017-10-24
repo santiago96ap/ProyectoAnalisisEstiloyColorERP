@@ -28,7 +28,7 @@ namespace DATA
             cmdInsertar.Parameters.Add(new SqlParameter("@hora", gasto.Hora));
             cmdInsertar.Parameters.Add(new SqlParameter("@concepto", gasto.Concepto));
             cmdInsertar.Parameters.Add(new SqlParameter("@total", gasto.Total));
-            cmdInsertar.Parameters.Add(new SqlParameter("@id_usuario", gasto.Usuario));
+            cmdInsertar.Parameters.Add(new SqlParameter("@id_usuario", gasto.Vendedor));
 
             cmdInsertar.Connection.Open();
             cmdInsertar.ExecuteNonQuery();
@@ -61,7 +61,7 @@ namespace DATA
             cmdActualizar.Parameters.Add(new SqlParameter("@hora", gasto.Hora));
             cmdActualizar.Parameters.Add(new SqlParameter("@concepto", gasto.Concepto));
             cmdActualizar.Parameters.Add(new SqlParameter("@total", gasto.Total));
-            cmdActualizar.Parameters.Add(new SqlParameter("@id_usuario", gasto.Usuario));
+            cmdActualizar.Parameters.Add(new SqlParameter("@id_usuario", gasto.Vendedor));
 
 
             cmdActualizar.Connection.Open();
@@ -101,7 +101,7 @@ namespace DATA
                 eActual.Fecha = currentRow["fecha"].ToString();
                 eActual.Hora = currentRow["hora"].ToString();
                 eActual.Concepto = currentRow["concepto"].ToString();
-                eActual.Usuario = currentRow["usuario"].ToString();
+                eActual.Vendedor = currentRow["usuario"].ToString();
                 gastos.AddLast(eActual);
             }//foreach
             return gastos;

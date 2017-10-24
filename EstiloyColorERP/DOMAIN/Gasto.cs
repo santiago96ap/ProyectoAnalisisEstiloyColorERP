@@ -8,6 +8,7 @@ namespace DOMAIN
     public class Gasto
     {
         //Atributos
+        private int id;
         private String fecha;
         private String hora;
         private String concepto;
@@ -36,7 +37,32 @@ namespace DOMAIN
 
         }//constructor sobrecargado
 
+        public Gasto(int id, String fecha, String hora, String concepto, float total, String vendedor)
+        {
+            this.id = id;
+            this.fecha = fecha;
+            this.hora = hora;
+            this.concepto = concepto;
+            this.total = total;
+            this.vendedor = vendedor;
+
+        }//constructor sobrecargado
+
         //OBTENER e INSERTAR
+
+        public int Id
+        {
+            get
+            {
+                return this.id;
+            }
+
+            set
+            {
+                this.id = value;
+            }
+        }
+
         public string Fecha
         {
             get

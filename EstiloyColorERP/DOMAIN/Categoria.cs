@@ -6,6 +6,7 @@ using System.Web;
 namespace DOMAIN {
     public class Categoria {
 
+        private int id;
         private int codigo;
         private String nombre;
 
@@ -17,6 +18,26 @@ namespace DOMAIN {
         public Categoria(int codigo, String nombre) {
             this.codigo = codigo;
             this.nombre = nombre;
+        }
+
+        public Categoria(int id, int codigo, String nombre)
+        {
+            this.id = id;
+            this.codigo = codigo;
+            this.nombre = nombre;
+        }
+
+        public int Id
+        {
+            get
+            {
+                return id;
+            }
+
+            set
+            {
+                id = value;
+            }
         }
 
         public int Codigo {
