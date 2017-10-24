@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using DOMAIN;
+using System.Data;
 using System.Data.SqlClient;
+using DOMAIN;
 
 namespace DATA
 {
@@ -18,7 +19,7 @@ namespace DATA
 
         public Boolean insertarProveedor(Proveedor proveedor)
         {
-            SqlConnection connection = new SqlConnection(this.conectionString);
+            SqlConnection connection = new SqlConnection(this.stringConnection);
             String sqlStoreProcedure = "sp_insertarProveedor";
             SqlCommand cmdInsertar = new SqlCommand(sqlStoreProcedure, connection);
             cmdInsertar.CommandType = System.Data.CommandType.StoredProcedure;
@@ -36,7 +37,7 @@ namespace DATA
 
         public Boolean actualizarProveedor(Proveedor proveedor)
         {
-            SqlConnection connection = new SqlConnection(this.conectionString);
+            SqlConnection connection = new SqlConnection(this.stringConnection);
             String sqlStoreProcedure = "sp_actualizarProveedor";
             SqlCommand cmdActualizar = new SqlCommand(sqlStoreProcedure, connection);
             cmdActualizar.CommandType = System.Data.CommandType.StoredProcedure;
@@ -53,7 +54,7 @@ namespace DATA
 
         public LinkedList<Proveedor> obtenerProveedores(String fechaI, String fechaF)
         {
-            SqlConnection connection = new SqlConnection(this.conectionString);
+            SqlConnection connection = new SqlConnection(this.stringConnection);
 
             String sqlSelect = "sp_obtenerTodoProveedor;";
 
@@ -73,7 +74,7 @@ namespace DATA
             foreach (DataRow currentRow in dataRow)
             {
                 Proveedor provActual = new Proveedor();
-                provActual.Email = int.Parse(currentRow["email"].ToString());
+                provActual.Email = currentRow["email"].ToString();
                 provActual.Nombre = currentRow["nombre"].ToString();
                 provActual.Telefono = currentRow["telefono"].ToString();
                 provActual.Direccion = currentRow["direccion"].ToString();
@@ -84,7 +85,7 @@ namespace DATA
 
         public Boolean eliminarProveedor(Proveedor proveedor)
         {
-            SqlConnection connection = new SqlConnection(this.conectionString);
+            SqlConnection connection = new SqlConnection(this.stringConnection);
             String sqlStoreProcedure = "sp_eliminarProveedor";
             SqlCommand cmdEliminar = new SqlCommand(sqlStoreProcedure, connection);
             cmdEliminar.CommandType = System.Data.CommandType.StoredProcedure;

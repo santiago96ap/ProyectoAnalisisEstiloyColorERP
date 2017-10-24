@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using DOMAIN;
+using System.Data;
 using System.Data.SqlClient;
+using DOMAIN;
 
 namespace DATA {
     public class CategoriaData {
@@ -62,10 +63,10 @@ namespace DATA {
 
             foreach (DataRow currentRow in dataRow)
             {
-                Ingreso eActual = new Categoria();
-                eActual.Id = int.Parse(currentRow["id"].ToString());
-                eActual.Nombre = currentRow["nombre"].ToString();
-                categorias.AddLast(eActual);
+                Categoria categoriaActual = new Categoria();
+                categoriaActual.Id = int.Parse(currentRow["id"].ToString());
+                categoriaActual.Nombre = currentRow["nombre"].ToString();
+                categorias.AddLast(categoriaActual);
             }//foreach
             return categorias;
         }//obtenerCategorias
