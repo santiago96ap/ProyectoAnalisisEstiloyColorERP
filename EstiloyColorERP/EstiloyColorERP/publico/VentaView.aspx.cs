@@ -50,7 +50,7 @@ namespace EstiloyColorERP
         protected void lbCategoria_SelectedIndexChanged(object sender, EventArgs e)
         {
             String nombreCategoria = lbCategoria.SelectedItem.Value;
-            String codigoCategoria = "";
+            int codigoCategoria = 0;
 
             foreach (Categoria categoria in categorias)
             {
@@ -59,7 +59,7 @@ namespace EstiloyColorERP
                 }
             }//obtiene el codigo de la categoria seleccionada
 
-            lbArticulos.Items.Clear;
+            lbArticulos.Items.Clear();
 
             foreach (Producto producto in productos)
             {
