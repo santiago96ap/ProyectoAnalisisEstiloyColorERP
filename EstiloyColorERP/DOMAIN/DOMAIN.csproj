@@ -81,7 +81,6 @@
     <Compile Include="Cliente.cs" />
     <Compile Include="Gasto.cs" />
     <Compile Include="Ingreso.cs" />
-    <Compile Include="Inventario.cs" />
     <Compile Include="Oferta.cs" />
     <Compile Include="Producto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

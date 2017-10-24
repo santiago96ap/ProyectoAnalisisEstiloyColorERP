@@ -43,7 +43,7 @@ namespace DATA {
             return false;
         }//actualizarCategoria
 
-        public LinkedList<Categoria> obtenerCategorias(String fechaI, String fechaF) {
+        public LinkedList<Categoria> obtenerCategorias() {
             SqlConnection connection = new SqlConnection(this.conectionString);
 
             String sqlSelect = "sp_obtenerTodaCategoria;";

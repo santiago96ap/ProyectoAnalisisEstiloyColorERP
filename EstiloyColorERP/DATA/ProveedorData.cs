@@ -52,7 +52,7 @@ namespace DATA
             return false;
         }//actualizarProveedor
 
-        public LinkedList<Proveedor> obtenerProveedores(String fechaI, String fechaF)
+        public LinkedList<Proveedor> obtenerProveedores()
         {
             SqlConnection connection = new SqlConnection(this.stringConnection);
 
@@ -82,6 +82,19 @@ namespace DATA
             }//foreach
             return proveedor;
         }//obtenerProveedores
+
+        public Proveedor obtenerProveedor(Proveedor proveedor)
+        {
+            LinkedList<Proveedor> proveedores = obtenerProveedores();
+            foreach (Proveedor proveedorActual in proveedores)
+            {
+                if (proveedor.Telefono.Equals(proveedorActual.Telefono))
+                {
+                    return proveedorActual;
+                }
+            }
+            return null;
+        }//obtenerCliente
 
         public Boolean eliminarProveedor(Proveedor proveedor)
         {
