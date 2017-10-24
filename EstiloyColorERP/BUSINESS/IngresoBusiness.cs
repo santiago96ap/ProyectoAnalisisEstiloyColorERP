@@ -4,17 +4,18 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Configuration;
 
 namespace BUSINESS
 {
     public class IngresoBusiness
     {
         private IngresoData id;
+        private String connString = WebConfigurationManager.ConnectionStrings["baseDatos"].ToString();
 
-
-        public IngresoBusiness(String conectionString)
+        public IngresoBusiness()
         {
-            this.id = new IngresoData(conectionString);
+            this.id = new IngresoData(connString);
         }//constructor
 
         public Boolean insertarIngreso(Ingreso ingreso)

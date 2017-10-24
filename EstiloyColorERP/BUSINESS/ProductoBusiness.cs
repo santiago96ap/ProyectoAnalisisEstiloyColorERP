@@ -4,16 +4,18 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Configuration;
 
 namespace BUSINESS
 {
     public class ProductoBusiness
     {
         private ProductoData pd;
+        private String connString = WebConfigurationManager.ConnectionStrings["baseDatos"].ToString();
 
-        public ProductoBusiness(String conectionString)
+        public ProductoBusiness()
         {
-            this.pd = new ProductoData(conectionString);
+            this.pd = new ProductoData(connString);
         }//constructor
 
         public Boolean insertarProducto(Producto producto)
