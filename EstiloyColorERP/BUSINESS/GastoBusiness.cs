@@ -2,6 +2,7 @@
 using DOMAIN;
 using System;
 using System.Collections.Generic;
+using System.Web.Configuration;
 using System.Linq;
 using System.Web;
 
@@ -10,11 +11,13 @@ namespace BUSINESS
     public class GastoBusiness
     {
         //Atributos
-        GastoData gastoData;
+        private GastoData gastoData;
+        private string stringConeccion;
 
         public GastoBusiness()
         {
-            gastoData = new GastoData();
+            this.stringConeccion = WebConfigurationManager.ConnectionStrings["BaseDatos"].ToString();
+            this.gastoData = new GastoData(this.stringConeccion);
         }//constructor
 
         public Boolean insertarGasto(Gasto gasto)//, Vendedor venedor
@@ -39,7 +42,7 @@ namespace BUSINESS
 
         public LinkedList<Gasto> obtenerGastos(String fechaFin, String fechaInicio)
         {
-            return this.gastoData.obtenerGastos();
+            return this.gastoData.obtenerGastos(fechaFin, fechaInicio);
         }//obtenerGastos
 
     }//fin de la clase

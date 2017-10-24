@@ -2,14 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Configuration;
 using DOMAIN;
 using DATA;
 
 namespace BUSINESS {
     public class CategoriaBusiness {
         private CategoriaData categoriaData;
+        private string stringConeccion;
 
-        public CategoriaBusiness(string stringConeccion) {
+        public CategoriaBusiness() {
+            this.stringConeccion = WebConfigurationManager.ConnectionStrings["BaseDatos"].ToString();
             this.categoriaData = new CategoriaData(stringConeccion);
         }//constructor
 

@@ -3,11 +3,19 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace DATA
 {
     public class GastoData
     {
+        private String conectionString;
+
+        public GastoData(String stringConection)
+        {
+            this.conectionString = stringConection;
+        }//constructor
 
         public Boolean insertarGasto(Gasto gasto)//, Vendedor venedor
         {
@@ -64,7 +72,7 @@ namespace DATA
 
         public Gasto obtenerGasto()
         {
-            
+            return null;
         }//obtenerGasto
 
         public LinkedList<Gasto> obtenerGastos(String fechaI, String fechaF)

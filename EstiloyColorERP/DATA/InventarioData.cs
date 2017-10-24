@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using DOMAIN;
+using System.Data;
 using System.Data.SqlClient;
+using DOMAIN;
 
 namespace DATA {
     public class InventarioData {

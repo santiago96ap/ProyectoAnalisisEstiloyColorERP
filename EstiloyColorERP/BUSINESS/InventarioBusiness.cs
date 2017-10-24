@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Web.Configuration;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,9 +10,11 @@ namespace BUSINESS {
     public class InventarioBusiness {
 
         private InventarioData inventarioData;
+        private string stringConeccion;
 
-        public InventarioBusiness(string stringConeccion) {
-            this.inventarioData = new InventarioData(stringConeccion);
+        public InventarioBusiness() {
+            this.stringConeccion = WebConfigurationManager.ConnectionStrings["BaseDatos"].ToString();
+            this.inventarioData = new InventarioData(this.stringConeccion);
         }
 
         public Boolean actualizarInventario(Inventario inventario) {
