@@ -31,13 +31,13 @@ namespace EstiloyColorERP {
         protected global::System.Web.UI.WebControls.TextBox tbBuscar;
         
         /// <summary>
-        /// lbBuscar control.
+        /// lbClientes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox lbBuscar;
+        protected global::System.Web.UI.WebControls.DropDownList lbClientes;
         
         /// <summary>
         /// btnBuscar control.

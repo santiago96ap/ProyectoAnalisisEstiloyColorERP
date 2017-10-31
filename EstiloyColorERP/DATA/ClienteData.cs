@@ -6,20 +6,16 @@ using System.Linq;
 using System.Web;
 using DOMAIN;
 
-namespace DATA
-{
-    public class ClienteData
-    {
+namespace DATA{
+    public class ClienteData{
 
         private String stringConeccion;
 
-        public ClienteData(string stringConeccion)
-        {
+        public ClienteData(string stringConeccion){
             this.stringConeccion = stringConeccion;
         }//constructor
 
-        public Boolean insertarCliente(Cliente cliente)
-        {
+        public Boolean insertarCliente(Cliente cliente){
             SqlConnection connection = new SqlConnection(this.stringConeccion);
             String sqlStoreProcedure = "sp_insertarCliente";
             SqlCommand cmdInsertar = new SqlCommand(sqlStoreProcedure, connection);
@@ -37,8 +33,7 @@ namespace DATA
             return true;
         }//insertarCliente
 
-        public Boolean actualizarCliente(Cliente cliente)
-        {
+        public Boolean actualizarCliente(Cliente cliente){
             SqlConnection connection = new SqlConnection(this.stringConeccion);
             String sqlStoreProcedure = "sp_actualizarCliente";
             SqlCommand cmdActualizar = new SqlCommand(sqlStoreProcedure, connection);
@@ -56,8 +51,7 @@ namespace DATA
             return true;
         }//actualizarCliente
 
-        public LinkedList<Cliente> obtenerClientes()
-        {
+        public LinkedList<Cliente> obtenerClientes(){
             SqlConnection connection = new SqlConnection(this.stringConeccion);
 
             String sqlSelect = "sp_obtenerTodosCliente;";
@@ -75,8 +69,7 @@ namespace DATA
 
             LinkedList<Cliente> clientes = new LinkedList<Cliente>();
 
-            foreach (DataRow currentRow in dataRow)
-            {
+            foreach (DataRow currentRow in dataRow){
                 Cliente clienteActual = new Cliente();
                 clienteActual.Telefono = currentRow["telefono"].ToString();
                 clienteActual.Nombre = currentRow["nombre"].ToString();
@@ -84,22 +77,18 @@ namespace DATA
                 clienteActual.Direccion = currentRow["direccion"].ToString();
                 clienteActual.Correo = currentRow["email"].ToString();
                 clientes.AddLast(clienteActual);
-            }//foreach
+            }//recorrer todos los clientes que vienen de la DB
             return clientes;
         }//obtenerClientes
 
-        public Cliente obtenerCliente(Cliente cliente)
-        {
+        public Cliente obtenerCliente(Cliente cliente){
             LinkedList<Cliente> clientes = obtenerClientes();
-            foreach (Cliente clienteActual in clientes)
-            {
-                if (cliente.Telefono.Equals(clienteActual.Telefono))
-                {
+            foreach (Cliente clienteActual in clientes){
+                if (cliente.Telefono.Equals(clienteActual.Telefono)){
                     return clienteActual;
-                }
-            }
+                }//validar el cliente
+            }//recorrer todos los clientes
             return null;
         }//obtenerCliente
-
     }//class
 }//namespace
