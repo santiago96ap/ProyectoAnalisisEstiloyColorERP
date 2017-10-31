@@ -12,15 +12,16 @@ namespace EstiloyColorERP.publico
 {
     public partial class InsertarIngresoView : System.Web.UI.Page
     {
-        private IngresoBusiness ib;
+        private IngresoBusiness ib=  new IngresoBusiness();
     
         protected void Page_Load(object sender, EventArgs e)
         {
-            this.ib = new IngresoBusiness();
         }//Page_Load
         protected void btnInsertar_Click(object sender, EventArgs e)
         {
-            this.ib.insertarIngreso(new Ingreso(this.tbFecha.Text, this.tbHora.Text, this.tbConcepto.Text, float.Parse(this.tbTotal.Text), "usuario"));
+           Boolean p;
+           p=  this.ib.insertarIngreso(new Ingreso(this.tbFecha.Text, this.tbHora.Text,this.tbConcepto.Text, float.Parse(this.tbTotal.Text), "u"));
+
         }//btnInsertar_Click
     }//class
 }//namespace

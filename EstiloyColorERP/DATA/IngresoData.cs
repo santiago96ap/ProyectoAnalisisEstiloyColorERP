@@ -66,6 +66,7 @@ namespace DATA
             cmdEliminar.Connection.Open();
             cmdEliminar.ExecuteNonQuery();
             cmdEliminar.Connection.Close();
+
             return true;
         }//eliminarIngreso
 
@@ -73,18 +74,21 @@ namespace DATA
         {
             SqlConnection connection = new SqlConnection(this.conectionString);
 
-            String sqlSelect = "sp_obtenerTodoIngreso;";
+            String sqlSelect = "sp_obtenerTodoIngreso";
 
-            SqlDataAdapter sqlDataAdapterClient = new SqlDataAdapter();
-            sqlDataAdapterClient.SelectCommand = new SqlCommand();
-            sqlDataAdapterClient.SelectCommand.CommandText = sqlSelect;
-            sqlDataAdapterClient.SelectCommand.Connection = connection;
+            SqlDataAdapter sqladapterIngresos = new SqlDataAdapter();
 
-            DataSet dataSetPersonas = new DataSet();
-            sqlDataAdapterClient.Fill(dataSetPersonas, "tb_Ingresos");
-            sqlDataAdapterClient.SelectCommand.Connection.Close();
+            sqladapterIngresos.SelectCommand = new SqlCommand(sqlSelect, connection);
+            sqladapterIngresos.SelectCommand.CommandType = System.Data.CommandType.StoredProcedure;
+            sqladapterIngresos.SelectCommand.Parameters.Add(new SqlParameter("@fechaI", fechaI));
+            sqladapterIngresos.SelectCommand.Parameters.Add(new SqlParameter("@fechaF", fechaF));
 
-            DataRowCollection dataRow = dataSetPersonas.Tables["tb_Ingresos"].Rows;
+            DataSet dataIngresos = new DataSet();
+            sqladapterIngresos.Fill(dataIngresos, "tb_Ingresos");
+            sqladapterIngresos.SelectCommand.Connection.Close();
+
+            DataRowCollection dataRow = dataIngresos.Tables["tb_Ingresos"].Rows;
+
 
             LinkedList<Ingreso> ingresos = new LinkedList<Ingreso>();
 
@@ -95,9 +99,10 @@ namespace DATA
                 eActual.Fecha = currentRow["fecha"].ToString();
                 eActual.Hora = currentRow["hora"].ToString();
                 eActual.Concepto = currentRow["concepto"].ToString();
-                eActual.Usuario = currentRow["usuario"].ToString();
+                eActual.Usuario = currentRow["id_usuario"].ToString();
                 ingresos.AddLast(eActual);
             }//foreach
+
             return ingresos;
         }//obtenerIngreso
     }//class

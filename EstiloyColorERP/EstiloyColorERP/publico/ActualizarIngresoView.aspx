@@ -11,18 +11,17 @@
                 <br />
                 <br />
                 <asp:Label ID="Label2" CssClass="col-sm-2 control-label" runat="server" Text="Fecha Inicio"></asp:Label>
-                <asp:TextBox ID="TbFechaInicio" CssClass="form-control1" runat="server"></asp:TextBox>
+                <asp:TextBox ID="TbFechaInicio"  type="date" CssClass="form-control1" runat="server"></asp:TextBox>
                 <br />
                 <br />
                 <asp:Label ID="Label1" CssClass="col-sm-2 control-label" runat="server" Text="Fecha Final"></asp:Label>
-                <asp:TextBox ID="TbFechaFinal" CssClass="form-control1" runat="server"></asp:TextBox>
+                <asp:TextBox ID="TbFechaFinal"  type="date" CssClass="form-control1" runat="server"></asp:TextBox>
                  <br />
-            <br />
-                <asp:Button ID="Button1" runat="server"  CssClass="btn btn-info" Text="Buscar" />
+                  <br />
+                <asp:Button ID="Button1" runat="server"  CssClass="btn btn-info" Text="Buscar" OnClick="Button1_Click" />
                 <br />
                 <br />
-            <asp:Table ID="tblIngresos" CssClass="table table-hover" runat="server" Height="25px">
-            </asp:Table>
+                    <asp:GridView ID="GridView1" CssClass="table table-hover" runat="server" OnSelectedIndexChanged="GridView1_SelectedIndexChanged"> </asp:GridView>
               </div>
              <br />
             <br />
@@ -40,6 +39,7 @@
                 <asp:TextBox ID="tbHora" CssClass="form-control1" runat="server"></asp:TextBox>
                 <br />
                 <br />
+            
                 <asp:Label ID="LblConcepto" CssClass="col-sm-2 control-label" runat="server" Text="Concepto"></asp:Label>
                 <asp:TextBox ID="tbConcepto" CssClass="form-control1" runat="server"></asp:TextBox>
                 <br />
