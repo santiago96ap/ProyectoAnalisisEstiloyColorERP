@@ -68,6 +68,9 @@
   <ItemGroup>
     <Content Include="publico\ActualizarOfertaView.aspx" />
     <Content Include="publico\ActualizarUsuarioView.aspx" />
+    <Content Include="publico\css\alertify.bootstrap.css" />
+    <Content Include="publico\css\alertify.core.css" />
+    <Content Include="publico\css\alertify.default.css" />
     <Content Include="publico\EliminarIngresosView.aspx" />
     <Content Include="publico\EliminarUsuarioView.aspx" />
     <Content Include="publico\EliminarOfertaView.aspx" />
