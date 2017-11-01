@@ -13,23 +13,18 @@ namespace EstiloyColorERP.publico
     public partial class InsertarUsuario : System.Web.UI.Page
     {
 
-        private string connectionString = WebConfigurationManager.ConnectionStrings["EstiloyColorERP"].ToString();
+        //private string connectionString = WebConfigurationManager.ConnectionStrings["EstiloyColorERP"].ToString();
 
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }//pageload
+        
 
-        protected void btnAceptar_Click(object sender, EventArgs e)
-        {
+        //Usuario usuario = new Usuario(tbNombre.Text, tbCorreo.Text, ddlRol.SelectedItem.Text, tbContrasena.Text, tbTelefono.Text);
 
-        }
-
-        /**
-            Usuario usuario = new Usuario(tbNombre.Text,tbCorreo.Text, lbRol.Text, tbContrasena.Text, tbTelefono.Text);
-
-            UsuarioBusiness ub = new UsuarioBusiness(connectionString);
-            mensaje.Text = ub.registrarUsuario(usuario).ToString();**/
+        //UsuarioBusiness ub = new UsuarioBusiness(connectionString);
+        //mensaje.Text = ub.registrarUsuario(usuario).ToString();
 
     }//end class
 }//namespace
