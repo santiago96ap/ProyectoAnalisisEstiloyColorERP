@@ -50,7 +50,7 @@ namespace EstiloyColorERP{
                     }//if para ver si se encontro el cliente
                 }//buscar el cliente a actualizar
             }else{
-                //mensaje de que tiene que seleccionar algo del listbox o ingreasar en el textbox
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Seleccione un cliente para actualizar')", true);
             }//opciones de busqueda
         }//btnBuscar_Click
 
@@ -65,10 +65,10 @@ namespace EstiloyColorERP{
                 this.tbCorreo.Text = "";
                 this.tbBuscar.Text = "";
                 this.ddlClientes.SelectedIndex = 0;
-                //mensaje de exito
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('El cliente se insertó exitosamente')", true);
             }
             else {
-                //mensaje de error
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Error en los datos ingresados')", true);
             }//if validacion
         }//btnInsertar_Click
     }//class

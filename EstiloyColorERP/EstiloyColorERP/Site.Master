@@ -202,9 +202,9 @@
 
                             <li class="login w3">
                                 <div id="loginContainer">
-                                    <a href="ActualizarUsuarioView.aspx" id="editButton"><span>Perfil</span></a>
-                                    <!--<a href="#" id="logOutButton"><span>Salir</span></a>
-                                    <a href="#" id="loginButton"><span>Entrar</span></a>-->
+                                    <%--<a href="ActualizarUsuarioView.aspx" id="editButton"><span>Perfil</span></a>--%>
+                                    <%--<a href="#" id="logOutButton"><span>Salir</span></a>--%>
+                                    <a href="#" id="loginButton"><span>Entrar</span></a>
                                     <div id="loginBox">
                                         <form id="loginForm" action="#" method="post">
                                             <fieldset id="body">
