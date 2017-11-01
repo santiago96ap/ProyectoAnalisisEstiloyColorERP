@@ -9,12 +9,12 @@
                 <br />
                 <br />
                 <div id="divi10">
-                    <asp:dropdownlist ID="ddlBuscar" CssClass="form-dropdownlist" runat="server"></asp:dropdownlist>
+                    <asp:dropdownlist ID="ddlClientes" CssClass="form-dropdownlist" runat="server"></asp:dropdownlist>
                     <asp:TextBox ID="tbBuscar" CssClass="form-control1" runat="server"></asp:TextBox>
-                    <asp:Button ID="btnBuscar" CssClass="btn btn-info" runat="server" Text="Buscar" />
+                    <asp:Button ID="btnBuscar" CssClass="btn btn-info" runat="server" Text="Buscar" OnClick="btnBuscar_Click" />
                     <br />
                     <br />
-                    <asp:GridView ID="gvClientes" CssClass="table table-hover" runat="server"> </asp:GridView>
+                    <asp:GridView ID="gvClientes" CssClass="table table-hover" runat="server"></asp:GridView>
                     <br />
                     <br />
                     <br />
