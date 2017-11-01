@@ -13,6 +13,9 @@
     <!-- Custom Theme files -->
     <link href="publico/css/bootstrap.css" rel='stylesheet' type='text/css' />
     <link href="publico/css/style.css" rel='stylesheet' type='text/css' />
+    <link href="publico/css/alertify.bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href="publico/css/alertify.core.css" rel='stylesheet' type='text/css' />
+    <link href="publico/css/alertify.default.css" rel='stylesheet' type='text/css' />
     <link href="publico/css/font-awesome.css" rel="stylesheet">
     <!-- font-awesome icons -->
     <!-- //Custom Theme files -->
@@ -23,6 +26,8 @@
     <!-- js -->
     <script src="js/jquery-1.11.1.min.js"> </script>
     <script src="js/bootstrap.js"></script>
+    <script src="js/alertify.js"></script>
+    <script src="js/alertify.min.js"></script>
     <script type="text/javascript">
         jQuery(document).ready(function ($) {
             $(".scroll").click(function (event) {
