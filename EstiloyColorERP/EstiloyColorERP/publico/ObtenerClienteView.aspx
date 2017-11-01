@@ -8,35 +8,17 @@
                 <br />
                 <br />
                 <br />
-                <asp:DropDownList ID="ddlBuscar" CssClass="from-dropdownlist" runat="server"></asp:DropDownList>
-                <asp:TextBox ID="tbBuscar" CssClass="form-control1" runat="server"></asp:TextBox>
-                <asp:Button ID="btnBuscar" CssClass="btn btn-info" runat="server" Text="Buscar" />
-                <br />
-                <br />
-                <asp:gridview id="clientes" CssClass="table table-hover" runat="server" AutoGenerateColumns="False">   
-                    <Columns>  
-                        <asp:BoundField DataField="Nombre" HeaderText="Nombre" ItemStyle-Width="100">
-                            <ItemStyle Width="100px"></ItemStyle>
-                        </asp:BoundField>
-                        <asp:BoundField DataField="Apellidos" HeaderText="Apellidos" ItemStyle-Width="100" >      
-                            <ItemStyle Width="100px"></ItemStyle>
-                        </asp:BoundField>
-                        <asp:BoundField DataField="Telefono" HeaderText="Teléfono" ItemStyle-Width="100" >      
-                            <ItemStyle Width="100px"></ItemStyle>
-                        </asp:BoundField>
-                        <asp:BoundField DataField="Direccion" HeaderText="Dirección" ItemStyle-Width="100" >      
-                            <ItemStyle Width="100px"></ItemStyle>
-                        </asp:BoundField>
-                        <asp:BoundField DataField="Correo" HeaderText="Correo" ItemStyle-Width="100" >      
-                            <ItemStyle Width="100px"></ItemStyle>
-                        </asp:BoundField>
-                    </Columns>  
-                        <HeaderStyle BackColor="#3399ff" ForeColor="White"></HeaderStyle>
-                        <RowStyle HorizontalAlign="Center" />
-                </asp:gridview>
-                <br />
-                <br />
-                <br />
+                <div id="divi10">
+                    <asp:dropdownlist ID="ddlBuscar" CssClass="form-dropdownlist" runat="server"></asp:dropdownlist>
+                    <asp:TextBox ID="tbBuscar" CssClass="form-control1" runat="server"></asp:TextBox>
+                    <asp:Button ID="btnBuscar" CssClass="btn btn-info" runat="server" Text="Buscar" />
+                    <br />
+                    <br />
+                    <asp:GridView ID="gvClientes" CssClass="table table-hover" runat="server"> </asp:GridView>
+                    <br />
+                    <br />
+                    <br />
+                </div>
             </section>
         </ContentTemplate>
 </asp:Content>
