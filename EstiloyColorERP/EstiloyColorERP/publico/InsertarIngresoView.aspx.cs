@@ -19,9 +19,15 @@ namespace EstiloyColorERP.publico
         }//Page_Load
         protected void btnInsertar_Click(object sender, EventArgs e)
         {
-           Boolean p;
-           p=  this.ib.insertarIngreso(new Ingreso(this.tbFecha.Text, this.tbHora.Text,this.tbConcepto.Text, float.Parse(this.tbTotal.Text), "u"));
+           
+            if (this.ib.insertarIngreso(new Ingreso(this.tbFecha.Text, this.tbHora.Text, this.tbConcepto.Text, float.Parse(this.tbTotal.Text), "u"))== true)
+            {
+                this.lblTitulo.Text = "Existoso";
+            }else
+            {
+                this.lblTitulo.Text = "Error";
 
+            }
         }//btnInsertar_Click
     }//class
 }//namespace

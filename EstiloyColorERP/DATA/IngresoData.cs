@@ -22,17 +22,25 @@ namespace DATA
             String sqlStoreProcedure = "sp_insertarIngresos";
             SqlCommand cmdInsertar = new SqlCommand(sqlStoreProcedure, connection);
             cmdInsertar.CommandType = System.Data.CommandType.StoredProcedure;
-            //@fecha date , @hora time ,@concepto varchar(100), @total float, @id_usuario varchar(30)
             cmdInsertar.Parameters.Add(new SqlParameter("@fecha", ingreso.Fecha));
             cmdInsertar.Parameters.Add(new SqlParameter("@hora", ingreso.Hora));
             cmdInsertar.Parameters.Add(new SqlParameter("@concepto", ingreso.Concepto));
             cmdInsertar.Parameters.Add(new SqlParameter("@total", ingreso.Total));
             cmdInsertar.Parameters.Add(new SqlParameter("@id_usuario", ingreso.Usuario));
-
+ 
             cmdInsertar.Connection.Open();
             cmdInsertar.ExecuteNonQuery();
-            cmdInsertar.Connection.Close();
-            return true;
+            if (cmdInsertar.ExecuteNonQuery() > 0)
+            {
+                cmdInsertar.Connection.Close();
+                return true;
+            }
+            else
+            {
+                cmdInsertar.Connection.Close();
+                return false;
+            }
+
         }//insertarIngreso
 
         public Boolean actualizarIngreso(Ingreso ingreso)
@@ -51,8 +59,16 @@ namespace DATA
 
             cmdActualizar.Connection.Open();
             cmdActualizar.ExecuteNonQuery();
-            cmdActualizar.Connection.Close();
-            return false;
+            if (cmdActualizar.ExecuteNonQuery() > 0)
+            {
+                cmdActualizar.Connection.Close();
+                return true;
+            }
+            else
+            {
+                cmdActualizar.Connection.Close();
+                return false;
+            }
         }//actualiazarIngreso
 
         public Boolean eliminarIngreso(Ingreso ingreso)
@@ -65,9 +81,16 @@ namespace DATA
             cmdEliminar.Parameters.Add(new SqlParameter("@id", ingreso.Id));
             cmdEliminar.Connection.Open();
             cmdEliminar.ExecuteNonQuery();
-            cmdEliminar.Connection.Close();
-
-            return true;
+            if (cmdEliminar.ExecuteNonQuery() > 0)
+            {
+                cmdEliminar.Connection.Close();
+                return true;
+            }
+            else
+            {
+                cmdEliminar.Connection.Close();
+                return false;
+            }
         }//eliminarIngreso
 
         public LinkedList<Ingreso> obtenerIngreso(String fechaI, String fechaF)
