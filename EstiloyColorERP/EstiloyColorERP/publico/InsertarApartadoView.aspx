@@ -18,7 +18,7 @@
                 </div>
                 <div id="divi1">
                     <asp:Label ID="lblCategoria" CssClass="col-sm-2 control-label" runat="server" Text="Categoría"></asp:Label>
-                    <asp:ListBox ID="lbCategoria" CssClass="form-control1" runat="server"></asp:ListBox>
+                    <asp:DropDownList ID="ddlCategoria" CssClass="from-dropdownlist" runat="server"></asp:DropDownList>
                 </div>
             </section>
             <br />

@@ -15,11 +15,11 @@ namespace EstiloyColorERP{
         protected void Page_Load(object sender, EventArgs e){
             this.clienteBusiness = new ClienteBusiness();
             this.clientes = this.clienteBusiness.obtenerClientes();
-            if (this.lbClientes != null){
+            if (this.ddlClientes != null){
                 if (!IsPostBack){
-                    this.lbClientes.Items.Add("---Clientes---");
+                    this.ddlClientes.Items.Add("---Clientes---");
                     foreach (Cliente clienteActual in this.clientes){
-                        this.lbClientes.Items.Add(new ListItem(clienteActual.Nombre+" "+ clienteActual.Apellidos, clienteActual.Telefono));
+                        this.ddlClientes.Items.Add(new ListItem(clienteActual.Nombre+" "+ clienteActual.Apellidos, clienteActual.Telefono));
                     }//llenar el listbox con los clientes de la DB
                 }//if para ver si es la primera vez que se carga el modula
             }//if para ver si el listbox esta vacio
@@ -37,10 +37,10 @@ namespace EstiloyColorERP{
                         this.tbCorreo.Text = clienteActual.Correo;
                     }//if para ver si se encontro el cliente
                 }//buscar el cliente a actualizar
-            }else if (!this.lbClientes.SelectedItem.Text.Equals("---Clientes---")){
+            }else if (!this.ddlClientes.SelectedItem.Text.Equals("---Clientes---")){
                 foreach (Cliente clienteActual in this.clientes)
                 {
-                    if (clienteActual.Telefono.Equals(this.lbClientes.SelectedItem.Value))
+                    if (clienteActual.Telefono.Equals(this.ddlClientes.SelectedItem.Value))
                     {
                         this.tbNombre.Text = clienteActual.Nombre;
                         this.tbApellidos.Text = clienteActual.Apellidos;
@@ -64,7 +64,7 @@ namespace EstiloyColorERP{
                 this.tbDireccion.Text = "";
                 this.tbCorreo.Text = "";
                 this.tbBuscar.Text = "";
-                this.lbClientes.SelectedIndex = 0;
+                this.ddlClientes.SelectedIndex = 0;
                 //mensaje de exito
             }
             else {

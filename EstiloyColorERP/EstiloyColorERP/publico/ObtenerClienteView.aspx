@@ -8,7 +8,7 @@
                 <br />
                 <br />
                 <br />
-                <asp:ListBox ID="lbBuscar" CssClass="form-control1" runat="server"></asp:ListBox>
+                <asp:DropDownList ID="ddlBuscar" CssClass="from-dropdownlist" runat="server"></asp:DropDownList>
                 <asp:TextBox ID="tbBuscar" CssClass="form-control1" runat="server"></asp:TextBox>
                 <asp:Button ID="btnBuscar" CssClass="btn btn-info" runat="server" Text="Buscar" />
                 <br />

@@ -13,7 +13,7 @@
                         <asp:TextBox ID="tbBuscar" CssClass="form-control1" runat="server"></asp:TextBox>
                         <br />
                         <br />
-                        <asp:dropdownlist ID="lbClientes" CssClass="from-dropdownlist" runat="server"></asp:dropdownlist>
+                        <asp:dropdownlist ID="ddlClientes" CssClass="from-dropdownlist" runat="server"></asp:dropdownlist>
                         <br />
                         <br />
                         <asp:Button ID="btnBuscar" CssClass="btn btn-info" runat="server" Text="Buscar" OnClick="btnBuscar_Click" />
