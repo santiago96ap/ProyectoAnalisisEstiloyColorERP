@@ -73,6 +73,8 @@
     <Content Include="publico\EliminarOfertaView.aspx" />
     <Content Include="publico\InsertarOfertaView.aspx" />
     <Content Include="publico\InsertarUsuarioView.aspx" />
+    <Content Include="publico\js\alertify.js" />
+    <Content Include="publico\js\alertify.min.js" />
     <Content Include="publico\ObtenerIngresosView.aspx" />
     <Content Include="publico\ObtenerUsuarioView.aspx" />
     <Content Include="publico\ObtenerOfertaView.aspx" />
