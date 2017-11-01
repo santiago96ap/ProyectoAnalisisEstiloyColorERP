@@ -31,8 +31,17 @@ namespace DATA
 
             cmdInsertar.Connection.Open();
             cmdInsertar.ExecuteNonQuery();
-            cmdInsertar.Connection.Close();
-            return true;
+            if (cmdInsertar.ExecuteNonQuery() > 0)
+            {
+                cmdInsertar.Connection.Close();
+                return true;
+            }
+            else
+            {
+                cmdInsertar.Connection.Close();
+                return false;
+            }//if-else
+
         }//insertarProveedor
 
         public Boolean actualizarProveedor(Proveedor proveedor)
@@ -48,8 +57,17 @@ namespace DATA
 
             cmdActualizar.Connection.Open();
             cmdActualizar.ExecuteNonQuery();
-            cmdActualizar.Connection.Close();
-            return false;
+            if (cmdActualizar.ExecuteNonQuery() > 0)
+            {
+                cmdActualizar.Connection.Close();
+                return true;
+            }
+            else
+            {
+                cmdActualizar.Connection.Close();
+                return false;
+            }//if-else
+
         }//actualizarProveedor
 
         public LinkedList<Proveedor> obtenerProveedores()
@@ -106,8 +124,16 @@ namespace DATA
             cmdEliminar.Parameters.Add(new SqlParameter("@email", proveedor.Email));
             cmdEliminar.Connection.Open();
             cmdEliminar.ExecuteNonQuery();
-            cmdEliminar.Connection.Close();
-            return true;
+            if (cmdEliminar.ExecuteNonQuery() > 0)
+            {
+                cmdEliminar.Connection.Close();
+                return true;
+            }
+            else
+            {
+                cmdEliminar.Connection.Close();
+                return false;
+            }//if-else
         }//eliminarProveedor
     }//clase
 }

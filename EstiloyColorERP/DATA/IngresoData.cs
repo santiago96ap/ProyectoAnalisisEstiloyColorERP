@@ -39,7 +39,7 @@ namespace DATA
             {
                 cmdInsertar.Connection.Close();
                 return false;
-            }
+            }//if-else
 
         }//insertarIngreso
 

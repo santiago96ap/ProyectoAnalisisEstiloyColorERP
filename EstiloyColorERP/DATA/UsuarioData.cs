@@ -32,9 +32,17 @@ namespace DATA
 
             cmdInsertar.Connection.Open();
             cmdInsertar.ExecuteNonQuery();
-            cmdInsertar.Connection.Close();
+            if (cmdInsertar.ExecuteNonQuery() > 0)
+            {
+                cmdInsertar.Connection.Close();
+                return true;
+            }
+            else
+            {
+                cmdInsertar.Connection.Close();
+                return false;
+            }//if-else
 
-            return true;
         }//registrarUsuario
 
         public Boolean eliminarUsuario(Usuario usuario)
