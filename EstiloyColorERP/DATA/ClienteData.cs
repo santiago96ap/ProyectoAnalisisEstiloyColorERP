@@ -39,7 +39,6 @@ namespace DATA{
                 cmdInsertar.Connection.Close();
                 return false;
             }//if-else
-
         }//insertarCliente
 
         public Boolean actualizarCliente(Cliente cliente){
