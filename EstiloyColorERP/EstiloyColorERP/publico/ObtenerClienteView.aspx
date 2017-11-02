@@ -14,7 +14,7 @@
                     <asp:Button ID="btnBuscar" CssClass="btn btn-info" runat="server" Text="Buscar" />
                     <br />
                     <br />
-                    <asp:GridView ID="gvClientes" CssClass="table table-hover" runat="server"> </asp:GridView>
+                    <asp:GridView ID="gvClientes" CssClass="table table-hover" runat="server" Width="855px"> </asp:GridView>
                     <br />
                     <br />
                     <br />

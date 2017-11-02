@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Configuration;
 
 namespace BUSINESS
 {
@@ -11,10 +12,12 @@ namespace BUSINESS
     {
 
         private UsuarioData usuarioData;
+        private string stringConeccion;
 
-        public UsuarioBusiness(String connectionString)
+        public UsuarioBusiness()
         {
-            this.usuarioData = new UsuarioData(connectionString);
+            this.stringConeccion = WebConfigurationManager.ConnectionStrings["BaseDatos"].ToString();
+            this.usuarioData = new UsuarioData(this.stringConeccion);
         }//constructor
 
         public Boolean registrarUsuario(Usuario usuario)

@@ -1,23 +1,30 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ObtenerUsuarioView.aspx.cs" Inherits="EstiloyColorERP.publico.MostrarUsuario" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
 
 
-    <ContentTemplate>
-    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <asp:Label ID="lblTitulo" runat="server" Text="Obtener Usuarios"></asp:Label>
+    <Contenttemplate>
+            <section id="formulario1">
     <br />
-    <br />&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="tbRol" runat="server">Rol</asp:TextBox>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Button ID="btnBuscar" runat="server" Text="Buscar" />
+    <asp:Label ID="lblTitulo" CssClass="agileits-icons-title" runat="server" Text="Obtener Usuarios"></asp:Label>
     <br />
     <br />
-    <asp:Table ID="tbResultados" runat="server" Width="407px">
-    </asp:Table>
+                 <div id="divi10">
+            <asp:DropDownList ID="ddlRol" runat="server" CssClass="form-dropdownlist" Width="176px">
+                <asp:ListItem Value="todos">Todos</asp:ListItem>
+                <asp:ListItem Value="adm">Administrador</asp:ListItem>
+                <asp:ListItem Value="vendedor">Vendedor</asp:ListItem>
+    </asp:DropDownList>
+            <asp:Button ID="btnBuscar" CssClass="btn btn-info" runat="server" Text="Mostrar" OnClick="btnBuscar_Click" />
     <br />
-    </ContentTemplate>
+    <br />
+                    <asp:GridView ID="gvUsuarios" CssClass="table table-hover" runat="server" HorizontalAlign="Center" Width="838px"> </asp:GridView>
+    <br />
+    <br />
+                      </div>
+                </section>
+    </Contenttemplate>
 
 
 
