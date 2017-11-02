@@ -28,7 +28,7 @@ namespace EstiloyColorERP{
                     }//llenar el listbox con los clientes de la DB
                 }//if para ver si es la primera vez que se carga el modula
             }//if para ver si el listbox esta vacio
-            
+            this.btnExportar.Visible = false;
         }//cargar el modulo de obtener
 
         protected void btnBuscar_Click(object sender, EventArgs e){
@@ -42,6 +42,7 @@ namespace EstiloyColorERP{
             }//opciones de busqueda
             this.tbBuscar.Text = "";
             this.ddlClientes.SelectedIndex = 0;
+            this.btnExportar.Visible = true;
         }//btnBuscar_Click
 
         protected void cargarTabla(String cliente){
@@ -84,5 +85,9 @@ namespace EstiloyColorERP{
             this.gvClientes.DataSource = table;
             this.gvClientes.DataBind();
         }//cargarTodos
+
+        protected void btnExportar_Click(object sender, EventArgs e){
+
+        }//btnExportar_Click
     }//class
 }//namespace

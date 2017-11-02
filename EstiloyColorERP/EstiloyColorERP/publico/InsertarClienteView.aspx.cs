@@ -25,11 +25,10 @@ namespace EstiloyColorERP{
                 this.tbTelefono.Text = "";
                 this.tbDireccion.Text = "";
                 this.tbCorreo.Text = "";
-                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('El cliente se insertó exitosamente')", true);
+                ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.success('El cliente se insertó exitosamente')", true);
             }
             else {
-                
-                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Error en los datos ingresados')", true);
+                ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.error('Error en los datos ingresados')", true);
             }//if validacion
         }//btnInsertar_Click
     }//class
