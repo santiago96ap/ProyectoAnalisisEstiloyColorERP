@@ -16,6 +16,8 @@
                     <br />
                     <asp:GridView ID="gvClientes" CssClass="table table-hover" runat="server"></asp:GridView>
                     <br />
+                    <asp:Button ID="btnExportar" CssClass="btn btn-info" runat="server" Text="Exportar" OnClick="btnExportar_Click"/>
+                    <br />
                     <br />
                     <br />
                 </div>
