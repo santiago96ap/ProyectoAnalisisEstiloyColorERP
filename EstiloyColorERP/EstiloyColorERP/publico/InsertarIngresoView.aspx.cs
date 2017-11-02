@@ -22,11 +22,11 @@ namespace EstiloyColorERP.publico
            
             if (this.ib.insertarIngreso(new Ingreso(this.tbFecha.Text, this.tbHora.Text, this.tbConcepto.Text, float.Parse(this.tbTotal.Text), "u"))== true)
             {
-                this.lblTitulo.Text = "Existoso";
-            }else
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('El ingreso se insertó exitosamente')", true);
+            }
+            else
             {
-                this.lblTitulo.Text = "Error";
-
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Ocurrió un error al insertar el ingreso')", true);
             }
         }//btnInsertar_Click
     }//class

@@ -28,7 +28,7 @@ namespace EstiloyColorERP{
                 ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('El cliente se insertó exitosamente')", true);
             }
             else {
-                ale
+                
                 ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Error en los datos ingresados')", true);
             }//if validacion
         }//btnInsertar_Click
