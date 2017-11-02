@@ -19,7 +19,7 @@
             <asp:Button ID="btnBuscar" CssClass="btn btn-info" runat="server" Text="Mostrar" OnClick="btnBuscar_Click" />
     <br />
     <br />
-                    <asp:GridView ID="gvUsuarios" CssClass="table table-hover" runat="server" HorizontalAlign="Center" Width="838px"> </asp:GridView>
+                    <asp:GridView ID="gvUsuarios" CssClass="table table-hover" runat="server" > </asp:GridView>
     <br />
     <br />
                       </div>
