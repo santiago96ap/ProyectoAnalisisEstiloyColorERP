@@ -34,8 +34,17 @@ namespace DATA
 
             cmdInsertar.Connection.Open();
             cmdInsertar.ExecuteNonQuery();
-            cmdInsertar.Connection.Close();
-            return true;
+            if (cmdInsertar.ExecuteNonQuery() > 0)
+            {
+                cmdInsertar.Connection.Close();
+                return true;
+            }
+            else
+            {
+                cmdInsertar.Connection.Close();
+                return false;
+            }//if-else
+
         }//insertar venta
 
         public Boolean eliminarVenta(Venta venta)
@@ -48,8 +57,16 @@ namespace DATA
             cmdEliminar.Parameters.Add(new SqlParameter("@id", venta.Id));
             cmdEliminar.Connection.Open();
             cmdEliminar.ExecuteNonQuery();
-            cmdEliminar.Connection.Close();
-            return true;
+            if (cmdEliminar.ExecuteNonQuery() > 0)
+            {
+                cmdEliminar.Connection.Close();
+                return true;
+            }
+            else
+            {
+                cmdEliminar.Connection.Close();
+                return false;
+            }//if-else
         }//eliminar venta
 
         public LinkedList<Venta> obtenerVentas()

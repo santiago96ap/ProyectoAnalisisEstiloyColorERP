@@ -23,6 +23,12 @@ namespace EstiloyColorERP{
                     }//llenar el listbox con los clientes de la DB
                 }//if para ver si es la primera vez que se carga el modula
             }//if para ver si el listbox esta vacio
+            this.tbNombre.Enabled = false;
+            this.tbApellidos.Enabled = false;
+            this.tbTelefono.Enabled = false;
+            this.tbDireccion.Enabled = false;
+            this.tbCorreo.Enabled = false;
+            this.btnInsertar.Enabled = false;
         }//cargar el modulo de actualizar
 
         protected void btnBuscar_Click(object sender, EventArgs e){
@@ -37,7 +43,14 @@ namespace EstiloyColorERP{
                         this.tbCorreo.Text = clienteActual.Correo;
                     }//if para ver si se encontro el cliente
                 }//buscar el cliente a actualizar
-            }else if (!this.ddlClientes.SelectedItem.Text.Equals("---Clientes---")){
+                this.tbNombre.Enabled = true;
+                this.tbApellidos.Enabled = true;
+                this.tbTelefono.Enabled = true;
+                this.tbDireccion.Enabled = true;
+                this.tbCorreo.Enabled = true;
+                this.btnInsertar.Enabled = true;
+            }
+            else if (!this.ddlClientes.SelectedItem.Text.Equals("---Clientes---")){
                 foreach (Cliente clienteActual in this.clientes)
                 {
                     if (clienteActual.Telefono.Equals(this.ddlClientes.SelectedItem.Value))
@@ -48,9 +61,15 @@ namespace EstiloyColorERP{
                         this.tbDireccion.Text = clienteActual.Direccion;
                         this.tbCorreo.Text = clienteActual.Correo;
                     }//if para ver si se encontro el cliente
+                    this.tbNombre.Enabled = true;
+                    this.tbApellidos.Enabled = true;
+                    this.tbTelefono.Enabled = true;
+                    this.tbDireccion.Enabled = true;
+                    this.tbCorreo.Enabled = true;
+                    this.btnInsertar.Enabled = true;
                 }//buscar el cliente a actualizar
             }else{
-                //mensaje de que tiene que seleccionar algo del listbox o ingreasar en el textbox
+                ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.error('Debe indicar el cliente')", true);
             }//opciones de busqueda
         }//btnBuscar_Click
 
@@ -65,10 +84,10 @@ namespace EstiloyColorERP{
                 this.tbCorreo.Text = "";
                 this.tbBuscar.Text = "";
                 this.ddlClientes.SelectedIndex = 0;
-                //mensaje de exito
+                ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.success('El cliente se actualizó exitosamente')", true);
             }
             else {
-                //mensaje de error
+                ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.error('Error en los datos ingresados')", true);
             }//if validacion
         }//btnInsertar_Click
     }//class

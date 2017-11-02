@@ -32,8 +32,17 @@ namespace DATA
 
             cmdInsertar.Connection.Open();
             cmdInsertar.ExecuteNonQuery();
-            cmdInsertar.Connection.Close();
-            return true;
+            if (cmdInsertar.ExecuteNonQuery() > 0)
+            {
+                cmdInsertar.Connection.Close();
+                return true;
+            }
+            else
+            {
+                cmdInsertar.Connection.Close();
+                return false;
+            }//if-else
+
         }//insertarGasto
 
         public Boolean eliminarGasto(Gasto gasto)
@@ -46,8 +55,17 @@ namespace DATA
             cmdEliminar.Parameters.Add(new SqlParameter("@id", gasto.Id));
             cmdEliminar.Connection.Open();
             cmdEliminar.ExecuteNonQuery();
-            cmdEliminar.Connection.Close();
-            return true;
+            if (cmdEliminar.ExecuteNonQuery() > 0)
+            {
+                cmdEliminar.Connection.Close();
+                return true;
+            }
+            else
+            {
+                cmdEliminar.Connection.Close();
+                return false;
+            }//if-else;
+
         }//eliminarGasto
 
         public Boolean editarGasto(Gasto gasto)
@@ -66,8 +84,16 @@ namespace DATA
 
             cmdActualizar.Connection.Open();
             cmdActualizar.ExecuteNonQuery();
-            cmdActualizar.Connection.Close();
-            return false;
+            if (cmdActualizar.ExecuteNonQuery() > 0)
+            {
+                cmdActualizar.Connection.Close();
+                return true;
+            }
+            else
+            {
+                cmdActualizar.Connection.Close();
+                return false;
+            }//if-else
         }//editarGasto
 
         public Gasto obtenerGasto()

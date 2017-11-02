@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Estilo y Color ERP</title>
+    <title>Estilo y Color</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="Fuel Serve Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -13,6 +13,9 @@
     <!-- Custom Theme files -->
     <link href="publico/css/bootstrap.css" rel='stylesheet' type='text/css' />
     <link href="publico/css/style.css" rel='stylesheet' type='text/css' />
+    <link href="publico/css/alertify.bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href="publico/css/alertify.core.css" rel='stylesheet' type='text/css' />
+    <link href="publico/css/alertify.default.css" rel='stylesheet' type='text/css' />
     <link href="publico/css/font-awesome.css" rel="stylesheet">
     <!-- font-awesome icons -->
     <!-- //Custom Theme files -->
@@ -23,6 +26,8 @@
     <!-- js -->
     <script src="js/jquery-1.11.1.min.js"> </script>
     <script src="js/bootstrap.js"></script>
+    <script src="js/alertify.js"></script>
+    <script src="js/alertify.min.js"></script>
     <script type="text/javascript">
         jQuery(document).ready(function ($) {
             $(".scroll").click(function (event) {
@@ -42,10 +47,8 @@
         <div class="container">
             <div class="social w3-agileitsicons">
                 <ul>
-                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                    <li><a class="twt" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                    <li><a class="drbl" href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                    <li><a class="be" href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.facebook.com/estiloycolorcr/?ref=br_rs"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a class="drbl" href="https://cr.linkedin.com/in/estilo-y-color-0b6074b7"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
                 </ul>
             </div>
             <div class="w3layouts-details">
@@ -65,7 +68,7 @@
         <div class="container">
             <div class="header-bottom">
                 <div class="w3ls-logo">
-                    <h1><a href="Default.aspx">Estilo y Color <span>ERP</span></a></h1>
+                    <h1><a href="Default.aspx">Estilo y Color <span></span></a></h1>
                 </div>
                 <div class="clearfix"></div>
             </div>
@@ -202,9 +205,9 @@
 
                             <li class="login w3">
                                 <div id="loginContainer">
-                                    <a href="ActualizarUsuarioView.aspx" id="editButton"><span>Perfil</span></a>
-                                    <!--<a href="#" id="logOutButton"><span>Salir</span></a>
-                                    <a href="#" id="loginButton"><span>Entrar</span></a>-->
+                                    <%--<a href="ActualizarUsuarioView.aspx" id="editButton"><span>Perfil</span></a>--%>
+                                    <%--<a href="#" id="logOutButton"><span>Salir</span></a>--%>
+                                    <a href="#" id="loginButton"><span>Entrar</span></a>
                                     <div id="loginBox">
                                         <form id="loginForm" action="#" method="post">
                                             <fieldset id="body">
@@ -250,10 +253,8 @@
                 <div class="col-md-6 footer-left">
                     <div class="w3-agileitsicons">
                         <ul>
-                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                            <li><a class="twt" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                            <li><a class="drbl" href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                            <li><a class="be" href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+                            <li><a href="https://www.facebook.com/estiloycolorcr/?ref=br_rs"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a class="drbl" href="https://cr.linkedin.com/in/estilo-y-color-0b6074b7"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
                         </ul>
                     </div>
                     <div class="f-address">
