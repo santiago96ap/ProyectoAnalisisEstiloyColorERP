@@ -8,29 +8,32 @@ namespace DOMAIN
     public class Usuario
     {
         //Atributos
-        private String id;
+        private String nombreUsuario;
         private String nombre;
+        private String apellido;
         private String correo;
-        private String rol;
+        private String tipoUsuario;
         private String contrsena;
         private String telefono;
 
         public Usuario()
         {
-            this.id = "";
+            this.nombreUsuario = "";
             this.nombre = "";
+            this.apellido = "";
             this.correo = "";
-            this.rol = "";
+            this.tipoUsuario = "";
             this.contrsena = "";
             this.telefono = "";
         }//constructor por defecto
 
-        public Usuario(String id, String nombre, String correo, String rol, String contrasena, String telefono)
+        public Usuario(String id, String nombre, string apellido, String correo, String rol, String contrasena, String telefono)
         {
-            this.id = id;
+            this.nombreUsuario = id;
             this.nombre = nombre;
+            this.apellido = apellido;
             this.correo = correo;
-            this.rol = rol;
+            this.tipoUsuario = rol;
             this.contrsena = contrasena;
             this.telefono = telefono;
         }//constructor sobrecargado
@@ -39,12 +42,12 @@ namespace DOMAIN
         {
             get
             {
-                return id;
+                return nombreUsuario;
             }
 
             set
             {
-                id = value;
+                nombreUsuario = value;
             }
         }
 
@@ -78,12 +81,12 @@ namespace DOMAIN
         {
             get
             {
-                return rol;
+                return tipoUsuario;
             }
 
             set
             {
-                rol = value;
+                tipoUsuario = value;
             }
         }
 
@@ -113,6 +116,18 @@ namespace DOMAIN
             }
         }
 
+        public string Apellido
+        {
+            get
+            {
+                return apellido;
+            }
+
+            set
+            {
+                apellido = value;
+            }
+        }
     }//fin de clase
 
 }//fin del namespace

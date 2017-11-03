@@ -20,7 +20,7 @@ namespace DATA
         public Boolean insertarProducto(Producto producto)
         {
             SqlConnection connection = new SqlConnection(this.conectionString);
-            String sqlStoreProcedure = " sp_insertarProducto";
+            String sqlStoreProcedure = "sp_insertarProducto";
             SqlCommand cmdInsertar = new SqlCommand(sqlStoreProcedure, connection);
             cmdInsertar.CommandType = System.Data.CommandType.StoredProcedure;
             cmdInsertar.Parameters.Add(new SqlParameter("@id_Proct", producto.IdProct));
