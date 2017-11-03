@@ -213,7 +213,7 @@
                                             <fieldset id="body">
                                                 <fieldset>
                                                     <asp:Label ID="lbCorreo"  CssClass="col-sm-2 control-label" runat="server" Text="Correo"></asp:Label>
-                                                    <asp:TextBox ID="tbNombre" CssClass="form-control1" runat="server" TextMode="Email" required=""></asp:TextBox>
+                                                    <asp:TextBox ID="tbCorreo" CssClass="form-control1" runat="server" TextMode="Email" required=""></asp:TextBox>
                                                 </fieldset>
                                                 <fieldset>
                                                     <asp:Label ID="lbContraseña"  CssClass="col-sm-2 control-label" runat="server" Text="Contraseña"></asp:Label>
