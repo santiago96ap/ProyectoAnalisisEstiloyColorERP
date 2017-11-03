@@ -22,12 +22,16 @@ namespace EstiloyColorERP.publico
            
             if (this.ib.insertarIngreso(new Ingreso(this.tbFecha.Text, this.tbHora.Text, this.tbConcepto.Text, float.Parse(this.tbTotal.Text), "u"))== true)
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('El ingreso se insertó exitosamente')", true);
+                ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.success('¡Los datos se han  ingresado correctamente!')", true);
+                this.tbFecha.Text = "";
+                this.tbHora.Text = "";
+                this.tbConcepto.Text = "";
+                this.tbTotal.Text = "";
             }
             else
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Ocurrió un error al insertar el ingreso')", true);
-            }
+                ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.error('Error en los datos ingresados')", true);
+            }//if-else
         }//btnInsertar_Click
     }//class
 }//namespace
