@@ -7,11 +7,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EstiloyColorERP.publico
-{
-
-
-    public partial class InsertarProductoView
-    {
+namespace EstiloyColorERP.publico {
+    
+    
+    public partial class InsertarProductoView {
     }
 }

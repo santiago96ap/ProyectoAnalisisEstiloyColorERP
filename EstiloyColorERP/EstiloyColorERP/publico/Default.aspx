@@ -47,7 +47,7 @@
 										•	Honestidad<br>
 										•	Comunicación <br>
 										•	Innovación <br>
-										•	Trabajo de equipo 
+										•	Trabajo de equipo <br>
 										•	Amor <br>
 										•	Compromiso y entrega <br></p>
 							</div>
@@ -93,11 +93,15 @@
 					 </a>
 				 </li>
 				 <li>
-					 <a href="single.html"><img src="images/s1.jpg" alt=""/>
+					 <a href="single.html"><img src="images/s5.jpg" alt=""/>
 					 </a>
 				 </li>
 				 <li>
-					 <a href="single.html"><img src="images/s2.jpg" alt=""/>
+					 <a href="single.html"><img src="images/s6.jpg" alt=""/>
+					 </a>
+				 </li>
+                 <li>
+					 <a href="single.html"><img src="images/s7.jpg" alt=""/>
 					 </a>
 				 </li>
 				</ul>
@@ -105,9 +109,9 @@
 				 $(window).load(function() {			
 				  $("#flexiselDemo1").flexisel({
 					visibleItems: 4,
-					animationSpeed: 1000,
+					animationSpeed: 1500,
 					autoPlay: true,
-					autoPlaySpeed: 3000,    		
+					autoPlaySpeed: 2500,    		
 					pauseOnHover:true,
 					enableResponsiveBreakpoints: true,
 					responsiveBreakpoints: { 

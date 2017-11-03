@@ -19,11 +19,9 @@ namespace DATA {
             String sqlStoreProcedure = "sp_insertarCategoria";
             SqlCommand cmdInsertar = new SqlCommand(sqlStoreProcedure, connection);
             cmdInsertar.CommandType = System.Data.CommandType.StoredProcedure;
-
             cmdInsertar.Parameters.Add(new SqlParameter("@nombre", categoria.Nombre));
 
             cmdInsertar.Connection.Open();
-            cmdInsertar.ExecuteNonQuery();
             if (cmdInsertar.ExecuteNonQuery() > 0)
             {
                 cmdInsertar.Connection.Close();
@@ -41,12 +39,10 @@ namespace DATA {
             String sqlStoreProcedure = "sp_actualizarCategoria";
             SqlCommand cmdActualizar = new SqlCommand(sqlStoreProcedure, connection);
             cmdActualizar.CommandType = System.Data.CommandType.StoredProcedure;
-            cmdActualizar.Parameters.Add(new SqlParameter("@id", categoria.Id));
+            cmdActualizar.Parameters.Add(new SqlParameter("@id", categoria.Codigo));
             cmdActualizar.Parameters.Add(new SqlParameter("@nombre", categoria.Nombre));
 
-
             cmdActualizar.Connection.Open();
-            cmdActualizar.ExecuteNonQuery();
             if (cmdActualizar.ExecuteNonQuery() > 0)
             {
                 cmdActualizar.Connection.Close();
@@ -80,26 +76,20 @@ namespace DATA {
             foreach (DataRow currentRow in dataRow)
             {
                 Categoria categoriaActual = new Categoria();
-                categoriaActual.Id = int.Parse(currentRow["id"].ToString());
+                categoriaActual.Codigo = int.Parse(currentRow["id"].ToString());
                 categoriaActual.Nombre = currentRow["nombre"].ToString();
                 categorias.AddLast(categoriaActual);
             }//foreach
             return categorias;
         }//obtenerCategorias
-
-        public Categoria obtenerCategoria(Categoria categoria) {
-            return null;
-        }//obtenerCategoria
-
         public Boolean eliminarCategoria(Categoria categoria) {
             SqlConnection connection = new SqlConnection(this.conectionString);
             String sqlStoreProcedure = "sp_eliminarCategoria";
             SqlCommand cmdEliminar = new SqlCommand(sqlStoreProcedure, connection);
             cmdEliminar.CommandType = System.Data.CommandType.StoredProcedure;
 
-            cmdEliminar.Parameters.Add(new SqlParameter("@id", categoria.Id));
+            cmdEliminar.Parameters.Add(new SqlParameter("@id", categoria.Codigo));
             cmdEliminar.Connection.Open();
-            cmdEliminar.ExecuteNonQuery();
             if (cmdEliminar.ExecuteNonQuery() > 0)
             {
                 cmdEliminar.Connection.Close();
@@ -111,5 +101,5 @@ namespace DATA {
                 return false;
             }//if-else
         }//eliminarCategoria
-    }//clase
-}
+    }//class
+}//namespace

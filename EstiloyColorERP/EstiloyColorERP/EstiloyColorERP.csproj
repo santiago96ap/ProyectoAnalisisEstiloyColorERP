@@ -74,7 +74,15 @@
     <Content Include="publico\EliminarIngresosView.aspx" />
     <Content Include="publico\EliminarUsuarioView.aspx" />
     <Content Include="publico\EliminarOfertaView.aspx" />
+    <Content Include="publico\images\s1.jpg" />
+    <Content Include="publico\images\s2.jpg" />
+    <Content Include="publico\images\s3.jpg" />
+    <Content Include="publico\images\s4.jpg" />
+    <Content Include="publico\images\s5.jpg" />
+    <Content Include="publico\images\s6.jpg" />
+    <Content Include="publico\images\s7.jpg" />
     <Content Include="publico\InsertarOfertaView.aspx" />
+    <Content Include="publico\InsertarProductoView.aspx" />
     <Content Include="publico\InsertarUsuarioView.aspx" />
     <Content Include="publico\js\alertify.js" />
     <Content Include="publico\js\alertify.min.js" />
@@ -88,7 +96,7 @@
     <Content Include="publico\ActualizarIngresoView.aspx" />
     <Content Include="publico\ActualizarProveedorView.aspx" />
     <Content Include="publico\AgendaView.aspx" />
-    <Content Include="publico\AgregarProveedorView.aspx" />
+    <Content Include="publico\InsertarProveedorView.aspx" />
     <Content Include="publico\Default.aspx" />
     <Content Include="publico\ActualizarGastoView.aspx" />
     <Content Include="publico\EliminarAgendaView.aspx" />
@@ -121,13 +129,6 @@
     <Content Include="publico\images\img-sprite-left-right.png" />
     <Content Include="publico\images\next.png" />
     <Content Include="publico\images\prev.png" />
-    <Content Include="publico\images\s1.jpg" />
-    <Content Include="publico\images\s2.jpg" />
-    <Content Include="publico\images\s3.jpg" />
-    <Content Include="publico\images\s4.jpg" />
-    <Content Include="publico\images\s5.jpg" />
-    <Content Include="publico\images\s6.jpg" />
-    <Content Include="publico\images\s7.jpg" />
     <Content Include="publico\images\search.png" />
     <Content Include="publico\images\t1.jpg" />
     <Content Include="publico\images\t2.jpg" />
@@ -208,6 +209,13 @@
     <Compile Include="publico\InsertarOfertaView.aspx.designer.cs">
       <DependentUpon>InsertarOfertaView.aspx</DependentUpon>
     </Compile>
+    <Compile Include="publico\InsertarProductoView.aspx.cs">
+      <DependentUpon>InsertarProductoView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="publico\InsertarProductoView.aspx.designer.cs">
+      <DependentUpon>InsertarProductoView.aspx</DependentUpon>
+    </Compile>
     <Compile Include="publico\InsertarUsuarioView.aspx.cs">
       <DependentUpon>InsertarUsuarioView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -285,12 +293,12 @@
     <Compile Include="publico\AgendaView.aspx.designer.cs">
       <DependentUpon>AgendaView.aspx</DependentUpon>
     </Compile>
-    <Compile Include="publico\AgregarProveedorView.aspx.cs">
-      <DependentUpon>AgregarProveedorView.aspx</DependentUpon>
+    <Compile Include="publico\InsertarProveedorView.aspx.cs">
+      <DependentUpon>InsertarProveedorView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="publico\AgregarProveedorView.aspx.designer.cs">
-      <DependentUpon>AgregarProveedorView.aspx</DependentUpon>
+    <Compile Include="publico\InsertarProveedorView.aspx.designer.cs">
+      <DependentUpon>InsertarProveedorView.aspx</DependentUpon>
     </Compile>
     <Compile Include="publico\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

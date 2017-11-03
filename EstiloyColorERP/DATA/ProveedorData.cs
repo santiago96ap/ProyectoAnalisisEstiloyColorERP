@@ -30,7 +30,6 @@ namespace DATA
             cmdInsertar.Parameters.Add(new SqlParameter("@direccion", proveedor.Direccion));
 
             cmdInsertar.Connection.Open();
-            cmdInsertar.ExecuteNonQuery();
             if (cmdInsertar.ExecuteNonQuery() > 0)
             {
                 cmdInsertar.Connection.Close();
@@ -56,7 +55,6 @@ namespace DATA
             cmdActualizar.Parameters.Add(new SqlParameter("@direccion", proveedor.Direccion));
 
             cmdActualizar.Connection.Open();
-            cmdActualizar.ExecuteNonQuery();
             if (cmdActualizar.ExecuteNonQuery() > 0)
             {
                 cmdActualizar.Connection.Close();
@@ -123,7 +121,6 @@ namespace DATA
 
             cmdEliminar.Parameters.Add(new SqlParameter("@email", proveedor.Email));
             cmdEliminar.Connection.Open();
-            cmdEliminar.ExecuteNonQuery();
             if (cmdEliminar.ExecuteNonQuery() > 0)
             {
                 cmdEliminar.Connection.Close();

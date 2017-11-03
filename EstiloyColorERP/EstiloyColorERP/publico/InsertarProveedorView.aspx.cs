@@ -9,25 +9,29 @@ using System.Web.UI.WebControls;
 
 namespace EstiloyColorERP.publico
 {
-    public partial class RegistrarGastoView : System.Web.UI.Page
+    public partial class AgregarProveedorView : System.Web.UI.Page
     {
-        private GastoBusiness gb = new GastoBusiness();
+        private ProveedorBusiness pb = new ProveedorBusiness();
         protected void Page_Load(object sender, EventArgs e)
         {
 
-        }//PageLoad
+        }//Page_load
         protected void btnInsertar_Click(object sender, EventArgs e)
         {
-            if ( this.gb.insertarGasto(new Gasto(tbFecha.Text, tbHora.Text, tbConcepto.Text, float.Parse(tbTotal.Text), "u")) == true)
+            if (this.pb.insertarProveedor(new Proveedor(tbNombre.Text, tbTelefono.Text, TbDireccion.Text, tbEmail.Text)) == true)
             {
-                tbFecha.Text = "";
-                tbHora.Text = "";
-                tbConcepto.Text = "";
-                tbTotal.Text= "";
+                this.tbNombre.Text = " ";
+                this.tbTelefono.Text = " ";
+                this.TbDireccion.Text = " ";
+                this.tbEmail.Text = " ";
                 ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.success('¡Los datos se han  ingresado correctamente!')", true);
             }
             else
-            {   
+            {
+                this.tbNombre.Text = " ";
+                this.tbTelefono.Text = " ";
+                this.TbDireccion.Text = " ";
+                this.tbEmail.Text = " ";
                 ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.error('Error en los datos ingresados')", true);
             }//else-if
 
