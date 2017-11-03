@@ -5,7 +5,7 @@
 
 
     <Contenttemplate>
-            <section id="formulario1">
+            <section id="formulario1" runat="server">
     <br />
     <asp:Label ID="lblTitulo" CssClass="agileits-icons-title" runat="server" Text="Obtener Usuarios"></asp:Label>
     <br />
@@ -17,9 +17,14 @@
                 <asp:ListItem Value="vendedor">Vendedor</asp:ListItem>
     </asp:DropDownList>
             <asp:Button ID="btnBuscar" CssClass="btn btn-info" runat="server" Text="Mostrar" OnClick="btnBuscar_Click" />
+                     <asp:Button ID="btnExcel" runat="server" OnClick="btnExcel_Click" Text="Excel" />
+                     <asp:Button ID="pdf" runat="server" OnClick="pdf_Click" Text="PDF" />
     <br />
     <br />
-                    <asp:GridView ID="gvUsuarios" CssClass="table table-hover" runat="server" > </asp:GridView>
+                    <asp:GridView ID="gvUsuarios" CssClass="table table-hover" runat="server" Height="154px" RowHeaderColumn="Usuarios" Width="640px" >
+                        <HeaderStyle BackColor="#10C7BF" />
+
+                     </asp:GridView>
     <br />
     <br />
                       </div>
