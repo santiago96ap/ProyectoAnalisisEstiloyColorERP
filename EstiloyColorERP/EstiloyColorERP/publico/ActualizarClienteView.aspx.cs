@@ -37,7 +37,8 @@ namespace EstiloyColorERP{
                     }//if para ver si se encontro el cliente
                 }//buscar el cliente a actualizar
                 habilitarModulo();
-            }else if (!this.ddlClientes.SelectedItem.Text.Equals("---Clientes---")){
+            }
+            else if (!this.ddlClientes.SelectedItem.Text.Equals("---Clientes---")){
                 foreach (Cliente clienteActual in this.clientes){
                     if (clienteActual.Telefono.Equals(this.ddlClientes.SelectedItem.Value)){
                         this.tbNombre.Text = clienteActual.Nombre;
@@ -55,6 +56,12 @@ namespace EstiloyColorERP{
         }//btnBuscar_Click
 
         protected void btnInsertar_Click(object sender, EventArgs e){
+            if (!String.IsNullOrWhiteSpace(this.tbBuscar.Text)){
+                this.clienteV = this.tbBuscar.Text;
+            }
+            else if (!this.ddlClientes.SelectedItem.Text.Equals("---Clientes---")){
+                        this.clienteV = this.ddlClientes.SelectedItem.Value;
+            }//if recuperar el cliente viejo
             if (!String.IsNullOrWhiteSpace(this.tbNombre.Text) || !String.IsNullOrWhiteSpace(this.tbApellidos.Text) || !String.IsNullOrWhiteSpace(this.tbTelefono.Text) || !String.IsNullOrWhiteSpace(this.tbDireccion.Text) || !String.IsNullOrWhiteSpace(this.tbCorreo.Text)){
                 Cliente cliente = new Cliente(this.tbNombre.Text, this.tbApellidos.Text, this.tbTelefono.Text, this.tbDireccion.Text, this.tbCorreo.Text);
                 if (this.clienteBusiness.actualizarCliente(cliente, this.clienteV)){
@@ -98,6 +105,7 @@ namespace EstiloyColorERP{
         }//deshabilitarModulo
 
         protected void cargarClientes(){
+            this.clientes = this.clienteBusiness.obtenerClientes();
             this.ddlClientes.Items.Clear();
             this.ddlClientes.Items.Add("---Clientes---");
             foreach (Cliente clienteActual in this.clientes)

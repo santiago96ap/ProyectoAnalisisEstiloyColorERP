@@ -74,6 +74,8 @@
     <Content Include="publico\EliminarIngresosView.aspx" />
     <Content Include="publico\EliminarUsuarioView.aspx" />
     <Content Include="publico\EliminarOfertaView.aspx" />
+    <Content Include="publico\images\icono-EXCEL.png" />
+    <Content Include="publico\images\icono-PDF.png" />
     <Content Include="publico\InsertarOfertaView.aspx" />
     <Content Include="publico\InsertarUsuarioView.aspx" />
     <Content Include="publico\js\alertify.js" />
