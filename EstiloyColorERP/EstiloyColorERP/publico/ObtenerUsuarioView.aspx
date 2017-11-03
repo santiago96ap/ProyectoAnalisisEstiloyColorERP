@@ -21,7 +21,7 @@
                      <asp:Button ID="pdf" runat="server" OnClick="pdf_Click" Text="PDF" />
     <br />
     <br />
-                    <asp:GridView ID="gvUsuarios" CssClass="table table-hover" runat="server" Height="154px" RowHeaderColumn="Usuarios" Width="640px" >
+                    <asp:GridView ID="gvUsuarios" CssClass="table table-hover" runat="server" Height="154px" RowHeaderColumn="Usuarios" Width="640px" OnSelectedIndexChanged="gvUsuarios_SelectedIndexChanged" >
                         <HeaderStyle BackColor="#10C7BF" />
 
                      </asp:GridView>
