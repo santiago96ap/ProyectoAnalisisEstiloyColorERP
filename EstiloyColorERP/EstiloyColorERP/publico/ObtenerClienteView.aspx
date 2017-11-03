@@ -4,7 +4,7 @@
             <section id="formulario1">
                 <br />
                 <br />
-                <asp:Label ID="lblTitulo" CssClass="agileits-icons-title" runat="server" Text="Obtener Cliente"></asp:Label>
+                <asp:Label ID="lblTitulo" CssClass="agileits-title" runat="server" Text="Obtener Cliente"></asp:Label>
                 <br />
                 <br />
                 <br />
@@ -16,7 +16,7 @@
                     <br />
                     <asp:GridView ID="gvClientes" CssClass="table table-hover" runat="server"></asp:GridView>
                     <br />
-                    <asp:Button ID="btnExportar" CssClass="btn btn-info" runat="server" Text="Exportar" OnClick="btnExportar_Click"/>
+                    <asp:Button ID="btnExportar" CssClass="btn btn-info" runat="server" Text="Exportar" OnClick="btnExportar_Click" />
                     <br />
                     <br />
                     <br />

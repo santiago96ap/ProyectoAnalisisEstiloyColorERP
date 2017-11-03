@@ -29,7 +29,7 @@ namespace BUSINESS
             return this.apartadoData.eliminarApartado(apartado);
         }//eliminarApartado
 
-        public LinkedList<Agenda> obtenerApartados()
+        public LinkedList<Apartado> obtenerApartados()
         {
             return this.apartadoData.obtenerApartados();
         }//obtenerApartados

@@ -39,16 +39,16 @@ namespace DATA{
                 cmdInsertar.Connection.Close();
                 return false;
             }//if-else
-
         }//insertarCliente
 
-        public Boolean actualizarCliente(Cliente cliente){
+        public Boolean actualizarCliente(Cliente cliente, String clienteV){
             SqlConnection connection = new SqlConnection(this.stringConeccion);
             String sqlStoreProcedure = "sp_actualizarCliente";
             SqlCommand cmdActualizar = new SqlCommand(sqlStoreProcedure, connection);
             cmdActualizar.CommandType = System.Data.CommandType.StoredProcedure;
 
-            cmdActualizar.Parameters.Add(new SqlParameter("@telefono", cliente.Telefono));
+            cmdActualizar.Parameters.Add(new SqlParameter("@telefonoN", cliente.Telefono));
+            cmdActualizar.Parameters.Add(new SqlParameter("@telefono", clienteV));
             cmdActualizar.Parameters.Add(new SqlParameter("@nombre", cliente.Nombre));
             cmdActualizar.Parameters.Add(new SqlParameter("@apellidos", cliente.Apellidos));
             cmdActualizar.Parameters.Add(new SqlParameter("@direccion", cliente.Direccion));

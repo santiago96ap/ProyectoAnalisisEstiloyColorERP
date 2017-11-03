@@ -8,6 +8,7 @@ namespace DOMAIN
     public class Usuario
     {
         //Atributos
+        private String id;
         private String nombre;
         private String correo;
         private String rol;
@@ -16,6 +17,7 @@ namespace DOMAIN
 
         public Usuario()
         {
+            this.id = "";
             this.nombre = "";
             this.correo = "";
             this.rol = "";
@@ -23,8 +25,9 @@ namespace DOMAIN
             this.telefono = "";
         }//constructor por defecto
 
-        public Usuario(String nombre, String correo, String rol, String contrasena, String telefono)
+        public Usuario(String id, String nombre, String correo, String rol, String contrasena, String telefono)
         {
+            this.id = id;
             this.nombre = nombre;
             this.correo = correo;
             this.rol = rol;
@@ -32,6 +35,18 @@ namespace DOMAIN
             this.telefono = telefono;
         }//constructor sobrecargado
 
+        public string Id
+        {
+            get
+            {
+                return id;
+            }
+
+            set
+            {
+                id = value;
+            }
+        }
 
         public string Nombre
         {
