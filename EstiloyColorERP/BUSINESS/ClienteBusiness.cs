@@ -21,8 +21,8 @@ namespace BUSINESS{
             return this.clienteData.insertarCliente(cliente);
         }//insertarCliente
 
-        public Boolean actualizarCliente(Cliente cliente){
-            return this.clienteData.actualizarCliente(cliente);
+        public Boolean actualizarCliente(Cliente cliente, String clienteV){
+            return this.clienteData.actualizarCliente(cliente, clienteV);
         }//actualizarCliente
 
         public LinkedList<Cliente> obtenerClientes(){

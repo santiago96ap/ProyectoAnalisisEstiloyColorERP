@@ -4,34 +4,37 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.Configuration;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace EstiloyColorERP.publico
 {
-    public partial class InsertarIngresoView : System.Web.UI.Page
+    public partial class AgregarProveedorView : System.Web.UI.Page
     {
-        private IngresoBusiness ib=  new IngresoBusiness();
-    
+        private ProveedorBusiness pb = new ProveedorBusiness();
         protected void Page_Load(object sender, EventArgs e)
         {
-        }//Page_Load
+
+        }//Page_load
         protected void btnInsertar_Click(object sender, EventArgs e)
         {
-           
-            if (this.ib.insertarIngreso(new Ingreso(this.tbFecha.Text, this.tbHora.Text, this.tbConcepto.Text, float.Parse(this.tbTotal.Text), "u"))== true)
+            if (this.pb.insertarProveedor(new Proveedor(tbNombre.Text, tbTelefono.Text, TbDireccion.Text, tbEmail.Text)) == true)
             {
+                this.tbNombre.Text = " ";
+                this.tbTelefono.Text = " ";
+                this.TbDireccion.Text = " ";
+                this.tbEmail.Text = " ";
                 ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.success('¡Los datos se han  ingresado correctamente!')", true);
-                this.tbFecha.Text = "";
-                this.tbHora.Text = "";
-                this.tbConcepto.Text = "";
-                this.tbTotal.Text = "";
             }
             else
             {
+                this.tbNombre.Text = " ";
+                this.tbTelefono.Text = " ";
+                this.TbDireccion.Text = " ";
+                this.tbEmail.Text = " ";
                 ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.error('Error en los datos ingresados')", true);
-            }//if-else
+            }//else-if
+
         }//btnInsertar_Click
     }//class
 }//namespace

@@ -26,9 +26,10 @@ namespace EstiloyColorERP{
                     {
                         this.ddlClientes.Items.Add(new ListItem(clienteActual.Nombre + " " + clienteActual.Apellidos, clienteActual.Telefono));
                     }//llenar el listbox con los clientes de la DB
-                }//if para ver si es la primera vez que se carga el modula
+                    this.btnExportarExcel.Visible = false;
+                    this.btnExportarPdf.Visible = false;
+                }//if para ver si es la primera vez que se carga el modulo
             }//if para ver si el listbox esta vacio
-            this.btnExportar.Visible = false;
         }//cargar el modulo de obtener
 
         protected void btnBuscar_Click(object sender, EventArgs e){
@@ -42,7 +43,8 @@ namespace EstiloyColorERP{
             }//opciones de busqueda
             this.tbBuscar.Text = "";
             this.ddlClientes.SelectedIndex = 0;
-            this.btnExportar.Visible = true;
+            this.btnExportarExcel.Visible = true;
+            this.btnExportarPdf.Visible = true;
         }//btnBuscar_Click
 
         protected void cargarTabla(String cliente){
@@ -86,8 +88,14 @@ namespace EstiloyColorERP{
             this.gvClientes.DataBind();
         }//cargarTodos
 
-        protected void btnExportar_Click(object sender, EventArgs e){
+        protected void btnExportarExcel_Click(object sender, ImageClickEventArgs e)
+        {
 
-        }//btnExportar_Click
+        }//btnExportarExcel_Click
+
+        protected void btnExportarPdf_Click(object sender, ImageClickEventArgs e)
+        {
+
+        }//btnExportarPdf_Click
     }//class
 }//namespace

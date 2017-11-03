@@ -22,6 +22,7 @@ namespace EstiloyColorERP.publico
         protected void Button1_Click(object sender, EventArgs e)
         {
             this.ingresos = this.ib.obtenerIngreso(TbFechaInicio.Text, TbFechaFinal.Text);
+            
             DataTable table = new DataTable("Tabla1");
             table.Columns.Add(new DataColumn("ID", typeof(int)));
             table.Columns.Add(new DataColumn("Fecha", typeof(string)));
@@ -42,7 +43,6 @@ namespace EstiloyColorERP.publico
             }//foreach
             GridView1.DataSource = table;
             GridView1.DataBind();
-
         }//Button1_Click
 
         protected void GridView1_SelectedIndexChanged1(object sender, EventArgs e)
