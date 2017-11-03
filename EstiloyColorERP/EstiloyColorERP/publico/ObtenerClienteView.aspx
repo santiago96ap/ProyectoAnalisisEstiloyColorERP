@@ -14,7 +14,7 @@
                     <asp:Button ID="btnBuscar" CssClass="btn btn-info" runat="server" Text="Buscar" OnClick="btnBuscar_Click" />
                     <br />
                     <br />
-                    <asp:GridView ID="gvClientes" CssClass="table table-hover" runat="server">
+                    <asp:GridView ID="gvClientes" CssClass="table table-hover" runat="server" RowHeaderColumn="Clientes">
                     </asp:GridView>
                     <br />
                     <asp:ImageButton ID="btnExportarExcel" runat="server" ImageUrl="images/icono-EXCEL.png" OnClick="btnExportarExcel_Click"/>
