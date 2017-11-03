@@ -26,13 +26,14 @@ namespace DATA
             cmdInsertar.CommandType = System.Data.CommandType.StoredProcedure;
 
             cmdInsertar.Parameters.Add(new SqlParameter("@nombre", usuario.Nombre));
-            cmdInsertar.Parameters.Add(new SqlParameter("@apellido", usuario.Telefono));
+            cmdInsertar.Parameters.Add(new SqlParameter("@nombre_usuario", usuario.Id));
+            cmdInsertar.Parameters.Add(new SqlParameter("@apellidos", usuario.Apellido));
             cmdInsertar.Parameters.Add(new SqlParameter("@tipo_Usuario", usuario.Rol));
-            cmdInsertar.Parameters.Add(new SqlParameter("@contrasenia", usuario.Contrsena));
+            cmdInsertar.Parameters.Add(new SqlParameter("@constrasenia", usuario.Contrsena));
             cmdInsertar.Parameters.Add(new SqlParameter("@email", usuario.Correo));
+            cmdInsertar.Parameters.Add(new SqlParameter("@telefono", usuario.Telefono));
 
             cmdInsertar.Connection.Open();
-            cmdInsertar.ExecuteNonQuery();
             if (cmdInsertar.ExecuteNonQuery() > 0)
             {
                 cmdInsertar.Connection.Close();
