@@ -18,10 +18,7 @@ namespace EstiloyColorERP{
             this.clientes = this.clienteBusiness.obtenerClientes();
             if (this.ddlClientes != null){
                 if (!IsPostBack){
-                    this.ddlClientes.Items.Add("---Clientes---");
-                    foreach (Cliente clienteActual in this.clientes){
-                        this.ddlClientes.Items.Add(new ListItem(clienteActual.Nombre+" "+ clienteActual.Apellidos, clienteActual.Telefono));
-                    }//llenar el listbox con los clientes de la DB
+                    cargarClientes();
                 }//if para ver si es la primera vez que se carga el modula
             }//if para ver si el listbox esta vacio
             deshabilitarModulo();
@@ -69,6 +66,7 @@ namespace EstiloyColorERP{
                     this.tbBuscar.Text = "";
                     this.ddlClientes.SelectedIndex = 0;
                     deshabilitarModulo();
+                    cargarClientes();
                     ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.success('El cliente se actualizó exitosamente')", true);
                 }
                 else{
@@ -98,5 +96,14 @@ namespace EstiloyColorERP{
             this.btnInsertar.Enabled = false;
             this.clienteV = "";
         }//deshabilitarModulo
+
+        protected void cargarClientes(){
+            this.ddlClientes.Items.Clear();
+            this.ddlClientes.Items.Add("---Clientes---");
+            foreach (Cliente clienteActual in this.clientes)
+            {
+                this.ddlClientes.Items.Add(new ListItem(clienteActual.Nombre + " " + clienteActual.Apellidos, clienteActual.Telefono));
+            }//llenar el listbox con los clientes de la DB
+        }//cargarClientes
     }//class
 }//namespace
