@@ -209,7 +209,7 @@
                                     <%--<a href="#" id="logOutButton"><span>Salir</span></a>--%>
                                     <a href="#" id="loginButton"><span>Entrar</span></a>
                                     <div id="loginBox">
-                                        <form id="loginForm" action="#" method="post">
+                                        <form id="loginForm" action="#" method="post" runat="server">
                                             <fieldset id="body">
                                                 <fieldset>
                                                     <asp:Label ID="lbCorreo"  CssClass="col-sm-2 control-label" runat="server" Text="Correo"></asp:Label>
