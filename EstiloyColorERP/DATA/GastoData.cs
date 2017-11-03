@@ -31,7 +31,6 @@ namespace DATA
             cmdInsertar.Parameters.Add(new SqlParameter("@id_usuario", gasto.Vendedor));
 
             cmdInsertar.Connection.Open();
-            cmdInsertar.ExecuteNonQuery();
             if (cmdInsertar.ExecuteNonQuery() > 0)
             {
                 cmdInsertar.Connection.Close();
@@ -54,7 +53,6 @@ namespace DATA
 
             cmdEliminar.Parameters.Add(new SqlParameter("@id", gasto.Id));
             cmdEliminar.Connection.Open();
-            cmdEliminar.ExecuteNonQuery();
             if (cmdEliminar.ExecuteNonQuery() > 0)
             {
                 cmdEliminar.Connection.Close();
@@ -80,10 +78,7 @@ namespace DATA
             cmdActualizar.Parameters.Add(new SqlParameter("@concepto", gasto.Concepto));
             cmdActualizar.Parameters.Add(new SqlParameter("@total", gasto.Total));
             cmdActualizar.Parameters.Add(new SqlParameter("@id_usuario", gasto.Vendedor));
-
-
             cmdActualizar.Connection.Open();
-            cmdActualizar.ExecuteNonQuery();
             if (cmdActualizar.ExecuteNonQuery() > 0)
             {
                 cmdActualizar.Connection.Close();

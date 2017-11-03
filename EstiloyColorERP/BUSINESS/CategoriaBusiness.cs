@@ -28,10 +28,6 @@ namespace BUSINESS {
             return this.categoriaData.obtenerCategorias();
         }//obtenerCategorias
 
-        public Categoria obtenerCategoria(Categoria categoria) {
-            return this.categoriaData.obtenerCategoria(categoria);
-        }//obtenerCategoria
-
         public Boolean eliminarCategoria(Categoria categoria) {
             return this.categoriaData.eliminarCategoria(categoria);
         }//eliminarCategoria

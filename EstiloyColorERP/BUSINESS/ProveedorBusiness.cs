@@ -4,13 +4,15 @@ using System.Linq;
 using System.Web;
 using DOMAIN;
 using DATA;
+using System.Web.Configuration;
 
 namespace BUSINESS {
     public class ProveedorBusiness {
         private ProveedorData proveedorData;
+        private String connString = WebConfigurationManager.ConnectionStrings["baseDatos"].ToString();
 
-        public ProveedorBusiness(string stringConeccion) {
-            this.proveedorData = new ProveedorData(stringConeccion);
+        public ProveedorBusiness() {
+            this.proveedorData = new ProveedorData(connString);
         }//constructor
 
         public Boolean insertarProveedor(Proveedor proveedor) {
