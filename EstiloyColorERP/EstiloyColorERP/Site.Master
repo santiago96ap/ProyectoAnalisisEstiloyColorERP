@@ -105,8 +105,8 @@
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown-submenu" role="button" aria-haspopup="true" aria-expanded="false">Ingresos<span class="caret"></span></a>
                                         <ul class="dropdown-menu">
                                             <li><a class="hvr-bounce-to-bottom" href="InsertarIngresoView.aspx">Insertar Ingreso</a></li>
-                                            <li><a class="hvr-bounce-to-bottom" href="ActualizarIngresoView.aspx">Actualizar Ingreso</a></li>
-                                            <li><a class="hvr-bounce-to-bottom" href="EliminarIngresoView.aspx">Eliminar Ingreso</a></li>
+                                            <li><a class="hvr-bounce-to-bottom" href="ActualizarIngresosView.aspx">Actualizar Ingreso</a></li>
+                                            <li><a class="hvr-bounce-to-bottom" href="EliminarIngresosView.aspx">Eliminar Ingreso</a></li>
                                             <li><a class="hvr-bounce-to-bottom" href="ObtenerIngresoView.aspx">Obtener Ingresos</a></li>
                                         </ul>
                                     </li>
@@ -212,14 +212,14 @@
                                         <form id="loginForm" action="#" method="post">
                                             <fieldset id="body">
                                                 <fieldset>
-                                                    <label for="email">Correo</label>
-                                                    <input type="text" name="email" id="email" required="">
+                                                    <asp:Label ID="lbCorreo"  CssClass="col-sm-2 control-label" runat="server" Text="Correo"></asp:Label>
+                                                    <asp:TextBox ID="tbNombre" CssClass="form-control1" runat="server" required=""></asp:TextBox>
                                                 </fieldset>
                                                 <fieldset>
-                                                    <label for="password">Contraseña</label>
-                                                    <input type="password" name="password" id="password" required="">
+                                                    <asp:Label ID="lbContraseña"  CssClass="col-sm-2 control-label" runat="server" Text="Contraseña"></asp:Label>
+                                                    <asp:TextBox ID="tbContraseña" CssClass="form-control1" runat="server" required=""></asp:TextBox>
                                                 </fieldset>
-                                                <input type="submit" id="login" value="Iniciar Sesión">
+                                                <asp:Button id="login" value="Iniciar Sesión">
                                             </fieldset>
                                         </form>
                                     </div>
