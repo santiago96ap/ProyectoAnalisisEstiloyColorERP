@@ -28,7 +28,6 @@ namespace DATA{
             cmdInsertar.Parameters.Add(new SqlParameter("@email", cliente.Correo));
 
             cmdInsertar.Connection.Open();
-            cmdInsertar.ExecuteNonQuery();
             if (cmdInsertar.ExecuteNonQuery() > 0)
             {
                 cmdInsertar.Connection.Close();
@@ -55,7 +54,6 @@ namespace DATA{
             cmdActualizar.Parameters.Add(new SqlParameter("@email", cliente.Correo));
 
             cmdActualizar.Connection.Open();
-            cmdActualizar.ExecuteNonQuery();
             if (cmdActualizar.ExecuteNonQuery() > 0)
             {
                 cmdActualizar.Connection.Close();
