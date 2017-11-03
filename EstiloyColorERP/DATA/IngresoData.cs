@@ -29,7 +29,6 @@ namespace DATA
             cmdInsertar.Parameters.Add(new SqlParameter("@id_usuario", ingreso.Usuario));
  
             cmdInsertar.Connection.Open();
-            cmdInsertar.ExecuteNonQuery();
             if (cmdInsertar.ExecuteNonQuery() > 0)
             {
                 cmdInsertar.Connection.Close();
@@ -58,7 +57,6 @@ namespace DATA
 
 
             cmdActualizar.Connection.Open();
-            cmdActualizar.ExecuteNonQuery();
             if (cmdActualizar.ExecuteNonQuery() > 0)
             {
                 cmdActualizar.Connection.Close();
@@ -80,7 +78,6 @@ namespace DATA
 
             cmdEliminar.Parameters.Add(new SqlParameter("@id", ingreso.Id));
             cmdEliminar.Connection.Open();
-            cmdEliminar.ExecuteNonQuery();
             if (cmdEliminar.ExecuteNonQuery() > 0)
             {
                 cmdEliminar.Connection.Close();

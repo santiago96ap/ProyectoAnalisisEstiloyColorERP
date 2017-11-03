@@ -13,10 +13,10 @@ namespace DOMAIN
         private float costo;
         private float precio;
         private int cantidad;
-        private int idProveedor;
+        private String idProveedor;
         private int idCategoria;
 
-        public Producto(int idProct, string nombre, string descripcion, float costo, float precio, int cantidad, int idProveedor, int idCategoria)
+        public Producto(int idProct, string nombre, string descripcion, float costo, float precio, int cantidad, string idProveedor, int idCategoria)
         {
             this.idProct = idProct;
             this.nombre = nombre;
@@ -36,7 +36,7 @@ namespace DOMAIN
             this.costo = 0;
             this.precio = 0;
             this.cantidad = 0;
-            this.idProveedor = 0;
+            this.idProveedor = "";
             this.idCategoria = 0;
         }//constructor default
 
@@ -120,7 +120,7 @@ namespace DOMAIN
             }
         }
 
-        public int IdProveedor
+        public string IdProveedor
         {
             get
             {
