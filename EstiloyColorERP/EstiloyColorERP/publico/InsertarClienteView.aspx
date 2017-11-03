@@ -4,7 +4,7 @@
             <section id="formulario1">
                 <br />
                 <br />
-                <asp:Label ID="lblTitulo" CssClass="agileits-icons-title" runat="server" Text="Insertar Cliente"></asp:Label>
+                <asp:Label ID="lblTitulo" CssClass="agileits-title" runat="server" Text="Insertar Cliente"></asp:Label>
                 <br />
                 <br />
                 <br />

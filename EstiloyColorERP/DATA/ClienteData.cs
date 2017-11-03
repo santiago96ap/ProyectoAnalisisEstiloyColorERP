@@ -47,8 +47,8 @@ namespace DATA{
             SqlCommand cmdActualizar = new SqlCommand(sqlStoreProcedure, connection);
             cmdActualizar.CommandType = System.Data.CommandType.StoredProcedure;
 
-            cmdActualizar.Parameters.Add(new SqlParameter("@telefono", clienteV));
             cmdActualizar.Parameters.Add(new SqlParameter("@telefonoN", cliente.Telefono));
+            cmdActualizar.Parameters.Add(new SqlParameter("@telefono", clienteV));
             cmdActualizar.Parameters.Add(new SqlParameter("@nombre", cliente.Nombre));
             cmdActualizar.Parameters.Add(new SqlParameter("@apellidos", cliente.Apellidos));
             cmdActualizar.Parameters.Add(new SqlParameter("@direccion", cliente.Direccion));

@@ -60,17 +60,21 @@ namespace EstiloyColorERP{
         protected void btnInsertar_Click(object sender, EventArgs e){
             if (!String.IsNullOrWhiteSpace(this.tbNombre.Text) || !String.IsNullOrWhiteSpace(this.tbApellidos.Text) || !String.IsNullOrWhiteSpace(this.tbTelefono.Text) || !String.IsNullOrWhiteSpace(this.tbDireccion.Text) || !String.IsNullOrWhiteSpace(this.tbCorreo.Text)){
                 Cliente cliente = new Cliente(this.tbNombre.Text, this.tbApellidos.Text, this.tbTelefono.Text, this.tbDireccion.Text, this.tbCorreo.Text);
-                this.clienteBusiness.actualizarCliente(cliente, this.clienteV);
-                this.tbNombre.Text = "";
-                this.tbApellidos.Text = "";
-                this.tbTelefono.Text = "";
-                this.tbDireccion.Text = "";
-                this.tbCorreo.Text = "";
-                this.tbBuscar.Text = "";
-                this.ddlClientes.SelectedIndex = 0;
-                deshabilitarModulo();
-                ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.success('El cliente se actualizó exitosamente')", true);
-            }else {
+                if (this.clienteBusiness.actualizarCliente(cliente, this.clienteV)){
+                    this.tbNombre.Text = "";
+                    this.tbApellidos.Text = "";
+                    this.tbTelefono.Text = "";
+                    this.tbDireccion.Text = "";
+                    this.tbCorreo.Text = "";
+                    this.tbBuscar.Text = "";
+                    this.ddlClientes.SelectedIndex = 0;
+                    deshabilitarModulo();
+                    ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.success('El cliente se actualizó exitosamente')", true);
+                }
+                else{
+                    ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.error('Se ha producido un error al procesar la solicitud')", true);
+                }//if si se actualizo correctamente
+            } else {
                 ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.error('Error en los datos ingresados')", true);
             }//if validacion
         }//btnInsertar_Click
