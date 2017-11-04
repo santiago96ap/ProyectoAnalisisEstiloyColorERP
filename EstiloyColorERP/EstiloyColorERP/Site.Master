@@ -85,7 +85,7 @@
                             <li class="home-icon"><a href="Default.aspx"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
                             <li><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Agenda<span class="caret"></span></a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="hvr-bounce-to-bottom" href="AgendaView.aspx">Insertar Actividad</a></li>
+                                    <li><a class="hvr-bounce-to-bottom" href="InsertarAgendaView.aspx">Insertar Actividad</a></li>
                                     <li><a class="hvr-bounce-to-bottom" href="ActualizarAgendaView.aspx">Actualizar Actividad</a></li>
                                     <li><a class="hvr-bounce-to-bottom" href="EliminarAgendaView.aspx">Eliminar Actividad</a></li>
                                     <li><a class="hvr-bounce-to-bottom" href="ObtenerAgendaView.aspx">Obtener Actividades</a></li>
