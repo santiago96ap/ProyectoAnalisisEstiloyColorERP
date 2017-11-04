@@ -23,13 +23,22 @@
                 <div id="divi7">
                      <br />
                      <br />
-                    <asp:Label ID="lblArticulos"  CssClass="col-sm-2 control-label" runat="server" Text="Articulos"></asp:Label>
-                    <asp:dropdownlist ID="ddArticulos" CssClass="form-control1" runat="server" ></asp:dropdownlist>
-                         <br />
+                    <asp:Label ID="lblArticulos"  CssClass="col-sm-2 control-label" runat="server" Text="Articulo"></asp:Label>
+                    <asp:TextBox ID="TbCodigoProducto" type="number" CssClass="form-control1" runat="server"></asp:TextBox>
+                        <br />
                          <br />
                     <asp:Button ID="btnAgregar" CssClass="btn btn-info" runat="server" Text="Agregar" OnClick="btnAgregar_Click" Width="193px" />
                     <br />
                     <br />
+
+                   <asp:GridView ID="gvProductos" CssClass="table table-hover" runat="server" RowHeaderColumn="Proveedores" DataKeyNames="Código" OnRowDeleting="DeleteRowButton_Click">
+                    <AlternatingRowStyle BackColor="#EFEFEF" />
+                    <Columns>
+                        <asp:CommandField HeaderText="Acción" ShowDeleteButton="True" DeleteText="Seleccionar"/>                
+                    </Columns>            
+                    <HeaderStyle BackColor="#10C7BF"/>            
+                    </asp:GridView>
+
                 </div>
              </section>
             <br />

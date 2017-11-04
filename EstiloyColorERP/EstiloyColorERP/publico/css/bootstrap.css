@@ -114,8 +114,10 @@ input,
 optgroup,
 select,
 textarea {
-  margin: 0 0 0 26px;
   color: inherit;
+    margin-left: 26px;
+    margin-right: 0;
+    margin-top: 0;
 }
 button {
   overflow: visible;
@@ -2988,7 +2990,6 @@ select[multiple].form-group-lg .form-control {
 .btn {
   display: inline-block;
   padding: 6px 12px;
-  margin-bottom: 0;
   font-size: 14px;
   font-weight: normal;
   line-height: 1.42857143;

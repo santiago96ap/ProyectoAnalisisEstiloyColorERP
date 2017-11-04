@@ -43,9 +43,9 @@ namespace BUSINESS
             return this.pd.obtenerProductoPorCategoria(categoria);
         }//obtenerProductoPorCategoria
 
-        public LinkedList<Producto> obtenerProductoPorID(Producto producto)
+        public Producto obtenerProductoPorID(int id )
         {
-            return this.pd.obtenerProductoPorID(producto);
+            return this.pd.obtenerProductoPorID(id);
         }// obtenerProductoPorID
 
 

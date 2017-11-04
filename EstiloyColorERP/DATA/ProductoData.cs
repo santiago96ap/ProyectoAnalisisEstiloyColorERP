@@ -97,9 +97,37 @@ namespace DATA
             return null;
         }//obtenerProductoPorCategoria
 
-        public LinkedList<Producto> obtenerProductoPorID(Producto producto)
+        public Producto obtenerProductoPorID(int id)
         {
-            return null;
+            SqlConnection connection = new SqlConnection(this.conectionString);
+
+            String sqlSelect = "sp_obtenerProducto";
+
+            SqlDataAdapter sqladapterProducto = new SqlDataAdapter();
+
+            sqladapterProducto.SelectCommand = new SqlCommand(sqlSelect, connection);
+            sqladapterProducto.SelectCommand.CommandType = System.Data.CommandType.StoredProcedure;
+            sqladapterProducto.SelectCommand.Parameters.Add(new SqlParameter("@ID",id));
+
+            DataSet dataIngresos = new DataSet();
+            sqladapterProducto.Fill(dataIngresos, "tb_Producto");
+            sqladapterProducto.SelectCommand.Connection.Close();
+
+            DataRowCollection dataRow = dataIngresos.Tables["tb_Producto"].Rows;
+            Producto pActual = new Producto();
+            foreach (DataRow currentRow in dataRow)
+            {
+                pActual.IdProct = int.Parse(currentRow["id_Proct"].ToString());
+                pActual.Nombre = currentRow["nombre"].ToString();
+                pActual.Descripcion = currentRow["descripcion"].ToString();
+                pActual.Costo = float.Parse(currentRow["costo"].ToString());
+                pActual.Precio = float.Parse(currentRow["precio"].ToString());
+                pActual.Cantidad = int.Parse(currentRow["precio"].ToString());
+                pActual.IdProveedor = currentRow["id_Prov"].ToString();
+                pActual.IdCategoria = int.Parse(currentRow["id_Cat"].ToString());
+
+            }
+            return pActual;
         }// obtenerProductoPorID
 
     }//class
