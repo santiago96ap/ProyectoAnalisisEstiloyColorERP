@@ -13,7 +13,7 @@
                  <div id="divi10">
             <asp:DropDownList ID="ddlRol" runat="server" CssClass="form-dropdownlist" Width="176px">
                 <asp:ListItem Value="todos">Todos</asp:ListItem>
-                <asp:ListItem Value="adm">Administrador</asp:ListItem>
+                <asp:ListItem Value="administrador">Administrador</asp:ListItem>
                 <asp:ListItem Value="vendedor">Vendedor</asp:ListItem>
     </asp:DropDownList>
             <asp:Button ID="btnBuscar" CssClass="btn btn-info" runat="server" Text="Mostrar" OnClick="btnBuscar_Click" />
@@ -21,7 +21,7 @@
                      <asp:Button ID="pdf" runat="server" OnClick="pdf_Click" Text="PDF" />
     <br />
     <br />
-                    <asp:GridView ID="gvUsuarios" CssClass="table table-hover" runat="server" Height="154px" RowHeaderColumn="Usuarios" Width="640px" >
+                    <asp:GridView ID="gvUsuarios" CssClass="table table-hover" runat="server" RowHeaderColumn="Usuarios">
                         <HeaderStyle BackColor="#10C7BF" />
 
                      </asp:GridView>

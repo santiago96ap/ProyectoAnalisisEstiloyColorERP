@@ -15,6 +15,7 @@
                     <br />
                     <br />
                     <asp:GridView ID="gvClientes" CssClass="table table-hover" runat="server" RowHeaderColumn="Clientes">
+                        <HeaderStyle BackColor="#10C7BF" />
                     </asp:GridView>
                     <br />
                     <asp:ImageButton ID="btnExportarExcel" runat="server" ImageUrl="images/icono-EXCEL.png" OnClick="btnExportarExcel_Click"/>

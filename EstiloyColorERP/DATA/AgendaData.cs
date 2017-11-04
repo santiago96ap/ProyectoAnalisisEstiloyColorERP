@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using DOMAIN;
@@ -42,12 +44,56 @@ namespace DATA
 
         public Boolean eliminarAgenda(Agenda agenda)
         {
-            return false;
+            SqlConnection connection = new SqlConnection(this.stringConeccion);
+            String sqlStoreProcedure = "sp_eliminarAgenda";
+            SqlCommand cmdEliminar = new SqlCommand(sqlStoreProcedure, connection);
+            cmdEliminar.CommandType = System.Data.CommandType.StoredProcedure;
+
+            cmdEliminar.Parameters.Add(new SqlParameter("@fecha", agenda.Fecha));
+            cmdEliminar.Parameters.Add(new SqlParameter("@hora", agenda.Hora));
+            cmdEliminar.Connection.Open();
+            if (cmdEliminar.ExecuteNonQuery() > 0)
+            {
+                cmdEliminar.Connection.Close();
+                return true;
+            }
+            else
+            {
+                cmdEliminar.Connection.Close();
+                return false;
+            }
         }//eliminar venta
 
         public LinkedList<Agenda> obtenerAgendas()
         {
-            return null;
+            SqlConnection connection = new SqlConnection(this.stringConeccion);
+
+            String sqlSelect = "sp_obtenerTodaAgenda;";
+
+            SqlDataAdapter sqlDataAdapterAgenda = new SqlDataAdapter();
+            sqlDataAdapterAgenda.SelectCommand = new SqlCommand();
+            sqlDataAdapterAgenda.SelectCommand.CommandText = sqlSelect;
+            sqlDataAdapterAgenda.SelectCommand.Connection = connection;
+
+            DataSet dataSetAgenda = new DataSet();
+            sqlDataAdapterAgenda.Fill(dataSetAgenda, "tb_Agenda");
+            sqlDataAdapterAgenda.SelectCommand.Connection.Close();
+
+            DataRowCollection dataRow = dataSetAgenda.Tables["tb_Agenda"].Rows;
+
+            LinkedList<Agenda> actividades = new LinkedList<Agenda>();
+
+            foreach (DataRow currentRow in dataRow)
+            {
+                Agenda agendaActual = new Agenda();
+                agendaActual.Fecha = currentRow["fecha"].ToString().Split(' ')[0];
+                agendaActual.Hora = currentRow["hora"].ToString();
+                agendaActual.Actividad = currentRow["actividad"].ToString();
+                agendaActual.Direccion = currentRow["direccion"].ToString();
+                agendaActual.Cliente = currentRow["id_cliente_tel"].ToString();
+                actividades.AddLast(agendaActual);
+            }//recorrer todos los clientes que vienen de la DB
+            return actividades;
         }//obtener todas las citas de la agenda
 
         public Agenda obtenerAgenda(Agenda agenda)

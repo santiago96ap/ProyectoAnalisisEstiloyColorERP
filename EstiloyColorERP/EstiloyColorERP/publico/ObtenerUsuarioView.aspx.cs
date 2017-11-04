@@ -70,7 +70,6 @@ namespace EstiloyColorERP.publico
             }//else
                 
             }//foreach
-            gvUsuarios.RowHeaderColumn = "Hola";
             this.gvUsuarios.DataSource = table;
             this.gvUsuarios.DataBind();
 
