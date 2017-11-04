@@ -170,7 +170,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="publico\VentaView.aspx" />
+    <Content Include="publico\InsertarVentaView.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -455,12 +455,12 @@
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
-    <Compile Include="publico\VentaView.aspx.cs">
-      <DependentUpon>VentaView.aspx</DependentUpon>
+    <Compile Include="publico\InsertarVentaView.aspx.cs">
+      <DependentUpon>InsertarVentaView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="publico\VentaView.aspx.designer.cs">
-      <DependentUpon>VentaView.aspx</DependentUpon>
+    <Compile Include="publico\InsertarVentaView.aspx.designer.cs">
+      <DependentUpon>InsertarVentaView.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

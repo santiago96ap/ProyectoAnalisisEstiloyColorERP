@@ -67,31 +67,13 @@ namespace EstiloyColorERP {
         protected global::System.Web.UI.WebControls.Label lblArticulos;
         
         /// <summary>
-        /// lbArticulos control.
+        /// ddArticulos control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox lbArticulos;
-        
-        /// <summary>
-        /// lblCategoria control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCategoria;
-        
-        /// <summary>
-        /// lbCategoria control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox lbCategoria;
+        protected global::System.Web.UI.WebControls.DropDownList ddArticulos;
         
         /// <summary>
         /// btnAgregar control.
@@ -101,15 +83,6 @@ namespace EstiloyColorERP {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnAgregar;
-        
-        /// <summary>
-        /// tbInsertarProducto control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Table tbInsertarProducto;
         
         /// <summary>
         /// lblTelefono control.
@@ -139,13 +112,13 @@ namespace EstiloyColorERP {
         protected global::System.Web.UI.WebControls.Label lblTipoPago;
         
         /// <summary>
-        /// lbTipoPago control.
+        /// ddTipoPago control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox lbTipoPago;
+        protected global::System.Web.UI.WebControls.DropDownList ddTipoPago;
         
         /// <summary>
         /// lblSubTotal control.
@@ -175,31 +148,13 @@ namespace EstiloyColorERP {
         protected global::System.Web.UI.WebControls.Label lblTipoServicio;
         
         /// <summary>
-        /// lbTipoServicio control.
+        /// ddTipoServicio control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox lbTipoServicio;
-        
-        /// <summary>
-        /// lblVendedor control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblVendedor;
-        
-        /// <summary>
-        /// tbVendedor control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbVendedor;
+        protected global::System.Web.UI.WebControls.DropDownList ddTipoServicio;
         
         /// <summary>
         /// lblTotal control.
@@ -220,12 +175,12 @@ namespace EstiloyColorERP {
         protected global::System.Web.UI.WebControls.TextBox tbTotal;
         
         /// <summary>
-        /// btnInsertar control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnInsertar;
+        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }
