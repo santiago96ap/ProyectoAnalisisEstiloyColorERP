@@ -9,7 +9,7 @@
                 <br />
                 <br />
                 <div id="divi10">
-                    <asp:GridView ID="gvActividades" CssClass="table table-hover" runat="server" DataKeyNames="Cliente" OnRowDeleting="DeleteRowButton_Click">
+                    <asp:GridView ID="gvActividades" CssClass="table table-hover" runat="server" DataKeyNames="Fecha y Hora" OnRowDeleting="DeleteRowButton_Click">
                         <Columns>
                             <asp:CommandField HeaderText="Acción" ShowDeleteButton="True"/>
                         </Columns>
