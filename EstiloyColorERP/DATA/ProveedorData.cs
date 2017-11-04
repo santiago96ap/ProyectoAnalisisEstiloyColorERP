@@ -50,6 +50,7 @@ namespace DATA
             SqlCommand cmdActualizar = new SqlCommand(sqlStoreProcedure, connection);
             cmdActualizar.CommandType = System.Data.CommandType.StoredProcedure;
             cmdActualizar.Parameters.Add(new SqlParameter("@email", proveedor.Email));
+            cmdActualizar.Parameters.Add(new SqlParameter("@emailN", proveedor.Email));
             cmdActualizar.Parameters.Add(new SqlParameter("@nombre", proveedor.Nombre));
             cmdActualizar.Parameters.Add(new SqlParameter("@telefono", proveedor.Telefono));
             cmdActualizar.Parameters.Add(new SqlParameter("@direccion", proveedor.Direccion));

@@ -3,13 +3,16 @@
                 
 
     <section id="formulario1">
+        <br />
+        <br />
     <asp:Label ID="lblTitulo" CssClass="agileits-title" runat="server" Text="Actualizar Proveedor"></asp:Label>    
                 <br />    <div id="divi">
         <asp:GridView ID="gvProveedores" CssClass="table table-hover" runat="server" RowHeaderColumn="Proveedores" DataKeyNames="Email" OnRowDeleting="DeleteRowButton_Click">
+            <AlternatingRowStyle BackColor="#EFEFEF" />
             <Columns>
                 <asp:CommandField HeaderText="Acción" ShowDeleteButton="True" DeleteText="Seleccionar"/>                
             </Columns>            
-            <HeaderStyle BackColor="#10C7BF"/>
+            <HeaderStyle BackColor="#10C7BF"/>            
         </asp:GridView>
     <br />
     <asp:Label ID="lbNombre" CssClass="col-sm-2 control-label" runat="server" Text="Nombre"></asp:Label>
@@ -29,7 +32,8 @@
     <br />
     <br />
     <asp:Button ID="btnActualizar" CssClass="btn btn-info" runat="server" Text="Actualizar" OnClick="btnActualizar_Click" />
-            <br />
+    <br />
+    <br />
     </div>
         </section>
 </asp:Content>
