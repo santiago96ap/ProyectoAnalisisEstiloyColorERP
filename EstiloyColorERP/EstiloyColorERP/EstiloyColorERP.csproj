@@ -102,7 +102,7 @@
     <Content Include="publico\ActualizarClienteView.aspx" />
     <Content Include="publico\ActualizarIngresoView.aspx" />
     <Content Include="publico\ActualizarProveedorView.aspx" />
-    <Content Include="publico\AgendaView.aspx" />
+    <Content Include="publico\InsertarAgendaView.aspx" />
     <Content Include="publico\InsertarProveedorView.aspx" />
     <Content Include="publico\Default.aspx" />
     <Content Include="publico\ActualizarGastoView.aspx" />
@@ -293,12 +293,12 @@
     <Compile Include="publico\ActualizarProveedorView.aspx.designer.cs">
       <DependentUpon>ActualizarProveedorView.aspx</DependentUpon>
     </Compile>
-    <Compile Include="publico\AgendaView.aspx.cs">
-      <DependentUpon>AgendaView.aspx</DependentUpon>
+    <Compile Include="publico\InsertarAgendaView.aspx.cs">
+      <DependentUpon>InsertarAgendaView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="publico\AgendaView.aspx.designer.cs">
-      <DependentUpon>AgendaView.aspx</DependentUpon>
+    <Compile Include="publico\InsertarAgendaView.aspx.designer.cs">
+      <DependentUpon>InsertarAgendaView.aspx</DependentUpon>
     </Compile>
     <Compile Include="publico\InsertarProveedorView.aspx.cs">
       <DependentUpon>InsertarProveedorView.aspx</DependentUpon>

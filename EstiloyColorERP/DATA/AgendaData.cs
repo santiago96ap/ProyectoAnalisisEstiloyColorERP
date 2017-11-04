@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using DOMAIN;
+using System.Data.SqlClient;
 
 namespace DATA
 {
@@ -16,7 +17,27 @@ namespace DATA
 
         public Boolean insertarAgenda(Agenda agenda)
         {
-            return false;
+            SqlConnection connection = new SqlConnection(this.stringConeccion);
+            String sqlStoreProcedure = "sp_insertarAgenda";
+            SqlCommand cmdInsertar = new SqlCommand(sqlStoreProcedure, connection);
+            cmdInsertar.CommandType = System.Data.CommandType.StoredProcedure;
+            cmdInsertar.Parameters.Add(new SqlParameter("@fecha", agenda.Fecha));
+            cmdInsertar.Parameters.Add(new SqlParameter("@hora", agenda.Hora));
+            cmdInsertar.Parameters.Add(new SqlParameter("@actividad", agenda.Actividad));
+            cmdInsertar.Parameters.Add(new SqlParameter("@direccion", agenda.Direccion));
+            cmdInsertar.Parameters.Add(new SqlParameter("@id_cliente_tel", agenda.Cliente));
+
+            cmdInsertar.Connection.Open();
+            if (cmdInsertar.ExecuteNonQuery() > 0)
+            {
+                cmdInsertar.Connection.Close();
+                return true;
+            }
+            else
+            {
+                cmdInsertar.Connection.Close();
+                return false;
+            }//if-else
         }//insertar agenda
 
         public Boolean eliminarAgenda(Agenda agenda)
