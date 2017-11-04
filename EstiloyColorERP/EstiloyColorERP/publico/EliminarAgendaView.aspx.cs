@@ -7,6 +7,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using DOMAIN;
 using BUSINESS;
+using System.Web.Services;
 
 namespace EstiloyColorERP
 {
@@ -22,13 +23,34 @@ namespace EstiloyColorERP
 
         protected void DeleteRowButton_Click(object sender, GridViewDeleteEventArgs e)
         {
-            String [] llave = this.gvActividades.DataKeys[e.RowIndex].Value.ToString().Split(' ');
-            String fecha = llave[0];
-            String hora = llave[1];
-            Agenda agenda = new Agenda(fecha,hora,"","","");
-            this.agendabusiness.eliminarAgenda(agenda);
-            cargarTodos();
+            this.myModal.Attributes["class"] = "modal fade in";
+            this.myModal.Attributes["style"] = "display: block;";
+            String[] llave = this.gvActividades.DataKeys[e.RowIndex].Value.ToString().Split(' ');
+            Session["fecha"] = llave[0];
+            Session["hora"] = llave[1];
         }//btnBuscar_Click
+        
+        protected void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.myModal.Attributes["class"] = "modal fade";
+            this.myModal.Attributes["style"] = "display: none;";
+            ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.error('Se canceló la eliminación')", true);
+        }//CancelarButton_Click
+
+        protected void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            this.myModal.Attributes["class"] = "modal fade";
+            this.myModal.Attributes["style"] = "display: none;";
+            Agenda agenda = new Agenda(Session["fecha"].ToString(), Session["hora"].ToString(), "", "", "");
+            if (this.agendabusiness.eliminarAgenda(agenda))
+            {
+                ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.success('La actividad se eliminó exitosamente')", true);
+            }
+            else {
+                ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.error('Se ha producido un error al procesar la solicitud')", true);
+            }//saber si se elimino correctamente
+            cargarTodos();
+        }//ConfirmarButton_Click
 
         protected void cargarTodos()
         {

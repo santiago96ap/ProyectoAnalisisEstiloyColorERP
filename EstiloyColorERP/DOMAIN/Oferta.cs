@@ -3,36 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace DATA
+namespace DOMAIN
 {
     public class Oferta
     {
-        //Atributos
         private int idProducto;
-        private int idCategoria;
-        //Atributos fijos
+        private int id;
         private String fechaInicio;
         private String fechaFinal;
         private float descuento;
 
+      
         public Oferta()
         {
-
             this.idProducto = 0;
-            this.idCategoria = 0;
+            this.id = 0;
             this.fechaInicio = "";
             this.fechaFinal = "";
             this.descuento = 0;
-
         }//constructor por defecto
-
-        public Oferta(int idCategoria, String fechainicio, String fechaFinal, float descuento)
-        {
-            this.idCategoria = idCategoria;
-            this.fechaInicio = fechainicio;
-            this.fechaFinal = fechaFinal;
-            this.descuento = descuento;
-        }//constructor sobrecargado Categoria
 
         public Oferta(String fechaInicio, String fechaFinal, float descuento, int idProducto)
         {
@@ -40,7 +29,82 @@ namespace DATA
             this.fechaInicio = fechaInicio;
             this.fechaFinal = fechaFinal;
             this.descuento = descuento;
-        }//constructor sobrecargado Producto
-        
+        }//constructor sobrecargado Oferta
+
+        public Oferta(int id, String fechaInicio, String fechaFinal, float descuento, int idProducto)
+        {
+            this.id = id;
+            this.idProducto = idProducto;
+            this.fechaInicio = fechaInicio;
+            this.fechaFinal = fechaFinal;
+            this.descuento = descuento;
+        }//constructor sobrecargado Oferta
+
+        public int IdProducto
+        {
+            get
+            {
+                return idProducto;
+            }
+
+            set
+            {
+                idProducto = value;
+            }
+        }
+
+        public int Id
+        {
+            get
+            {
+                return id;
+            }
+
+            set
+            {
+                id = value;
+            }
+        }
+
+        public string FechaInicio
+        {
+            get
+            {
+                return fechaInicio;
+            }
+
+            set
+            {
+                fechaInicio = value;
+            }
+        }
+
+        public string FechaFinal
+        {
+            get
+            {
+                return fechaFinal;
+            }
+
+            set
+            {
+                fechaFinal = value;
+            }
+        }
+
+        public float Descuento
+        {
+            get
+            {
+                return descuento;
+            }
+
+            set
+            {
+                descuento = value;
+            }
+        }
+
+
     }//fin de la clase
 }//fin de namespace

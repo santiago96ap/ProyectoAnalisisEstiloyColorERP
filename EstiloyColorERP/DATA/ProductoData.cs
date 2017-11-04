@@ -1,6 +1,7 @@
 ﻿using DOMAIN;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -57,7 +58,38 @@ namespace DATA
 
         public LinkedList<Producto> obtenerTodosProductos()
         {
-            return null;
+            SqlConnection connection = new SqlConnection(this.conectionString);
+
+            String sqlSelect = "sp_obtenerTodoProducto;";
+
+            SqlDataAdapter sqlDataAdapterClient = new SqlDataAdapter();
+            sqlDataAdapterClient.SelectCommand = new SqlCommand();
+            sqlDataAdapterClient.SelectCommand.CommandText = sqlSelect;
+            sqlDataAdapterClient.SelectCommand.Connection = connection;
+
+            DataSet dataSetCategoria = new DataSet();
+            sqlDataAdapterClient.Fill(dataSetCategoria, "tb_Producto");
+            sqlDataAdapterClient.SelectCommand.Connection.Close();
+
+            DataRowCollection dataRow = dataSetCategoria.Tables["tb_Producto"].Rows;
+
+            LinkedList<Producto> productos = new LinkedList<Producto>();
+
+            foreach (DataRow currentRow in dataRow)
+            {
+                Producto pa = new Producto();
+                pa.IdProct = int.Parse(currentRow["id_Proct"].ToString());
+                pa.Nombre = currentRow["nombre"].ToString();
+                pa.Descripcion = currentRow["descripcion"].ToString();
+                pa.Costo = float. Parse(currentRow["costo"].ToString());
+                pa.Precio = float.Parse(currentRow["precio"].ToString());
+                pa.Cantidad = int.Parse(currentRow["precio"].ToString());
+                pa.IdProveedor = currentRow["id_Prov"].ToString();
+                pa.IdCategoria = int.Parse(currentRow["id_Cat"].ToString());
+
+                productos.AddLast(pa);
+            }//foreach
+            return productos;
         }//obtenerTodosProductos
 
         public LinkedList<Producto> obtenerProductoPorCategoria(Categoria categoria)

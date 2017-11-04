@@ -22,94 +22,94 @@ namespace EstiloyColorERP {
         protected global::System.Web.UI.WebControls.Label lblTitulo;
         
         /// <summary>
-        /// lblProducto control.
+        /// Label2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblProducto;
+        protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// tbBuscar control.
+        /// ddProducto control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbBuscar;
+        protected global::System.Web.UI.WebControls.DropDownList ddProducto;
         
         /// <summary>
-        /// btnBuscar control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnBuscar;
+        protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// tbResultados control.
+        /// TbBuscarCodigo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Table tbResultados;
+        protected global::System.Web.UI.WebControls.TextBox TbBuscarCodigo;
         
         /// <summary>
-        /// lblFechaInicio control.
+        /// lblID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFechaInicio;
+        protected global::System.Web.UI.WebControls.Label lblID;
         
         /// <summary>
-        /// tbFecha control.
+        /// tbFechaI control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbFecha;
+        protected global::System.Web.UI.WebControls.TextBox tbFechaI;
         
         /// <summary>
-        /// lblFechaFinal control.
+        /// lblNombre control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFechaFinal;
+        protected global::System.Web.UI.WebControls.Label lblNombre;
         
         /// <summary>
-        /// tbHora control.
+        /// tbFechaF control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbHora;
+        protected global::System.Web.UI.WebControls.TextBox tbFechaF;
         
         /// <summary>
-        /// lblDescuento control.
+        /// LblDescripcion control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDescuento;
+        protected global::System.Web.UI.WebControls.Label LblDescripcion;
         
         /// <summary>
-        /// tbConcepto control.
+        /// tbDescuento control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbConcepto;
+        protected global::System.Web.UI.WebControls.TextBox tbDescuento;
         
         /// <summary>
         /// btnInsertar control.

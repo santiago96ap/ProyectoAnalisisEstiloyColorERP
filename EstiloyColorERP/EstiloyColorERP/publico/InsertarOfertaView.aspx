@@ -1,39 +1,38 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="InsertarOfertaView.aspx.cs" Inherits="EstiloyColorERP.InsertarOferta" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
-    <ContentTemplate>
-    <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;
-    <asp:Label ID="lblTitulo" runat="server" Text="Insertar Oferta"></asp:Label>
+<contenttemplate>
     <br />
     <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <asp:Label ID="lblProducto" runat="server" Text="Producto:"></asp:Label>
-    &nbsp;<asp:TextBox ID="tbBuscar" runat="server">Buscar</asp:TextBox>
-            <asp:Button ID="btnBuscar" runat="server" Text="Buscar" />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Table ID="tbResultados" runat="server" Width="407px">
-            </asp:Table>
-            <br />
-    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-    <asp:Label ID="lblFechaInicio" runat="server" Text="Fecha Inicio:"></asp:Label>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <asp:TextBox ID="tbFecha" runat="server"></asp:TextBox>
-    <br />
-    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-    <asp:Label ID="lblFechaFinal" runat="server" Text="Fecha Final:"></asp:Label>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <asp:TextBox ID="tbHora" runat="server"></asp:TextBox>
-    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <br />&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <asp:Label ID="lblDescuento" runat="server" Text="Descuento:"></asp:Label>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <asp:TextBox ID="tbConcepto" runat="server"></asp:TextBox>
-    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <br />
-    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="btnInsertar" runat="server" Text="Insertar" />
-    </ContentTemplate>
+        <section id="formulario">
+            <div id="divi">
+                <asp:Label ID="lblTitulo" CssClass="agileits-title" runat="server" Text="Registrar Oferta"></asp:Label>
+                <br />
+                <br />
+                <asp:Label ID="Label2" CssClass="col-sm-2 control-label" runat="server" Text="Producto"></asp:Label>
+                <asp:dropdownlist ID="ddProducto" CssClass="form-dropdownlist" runat="server" OnSelectedIndexChanged="ddProducto_SelectedIndexChanged"></asp:dropdownlist>
+                <br />
+                <br />
+                <asp:Label ID="Label1" CssClass="col-sm-2 control-label" runat="server" Text="Buscar"></asp:Label>
+                <asp:TextBox ID="TbBuscarCodigo" type="number" CssClass="form-control1" runat="server"></asp:TextBox>
+                <br /> 
+                <br /> 
+                <asp:Label ID="lblID" CssClass="col-sm-2 control-label" runat="server" Text="Fecha Inicio"></asp:Label>
+                <asp:TextBox ID="tbFechaI" type="date" CssClass="form-control1" runat="server" required=""></asp:TextBox>
+                <br />
+                <br />
+                <asp:Label ID="lblNombre" CssClass="col-sm-2 control-label" runat="server" Text="Fecha Fin"></asp:Label>
+                <asp:TextBox ID="tbFechaF" type="date" CssClass="form-control1" runat="server"></asp:TextBox>
+                <br />
+                <br />
+                <asp:Label ID="LblDescripcion" CssClass="col-sm-2 control-label" runat="server" Text="Descuento"></asp:Label>
+                <asp:TextBox ID="tbDescuento" type="number" CssClass="form-control1" runat="server" required=""></asp:TextBox>
+                <br />
+                <br />
+                <asp:Button ID="btnInsertar" runat="server"  CssClass="btn btn-info" Text="Insertar" OnClick="btnInsertar_Click"  />
+                <br />
+                <br />
+                </div>
+            </section>
+    </contenttemplate>
 
 </asp:Content>
