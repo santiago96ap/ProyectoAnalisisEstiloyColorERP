@@ -5,10 +5,10 @@
     <section id="formulario1">
     <asp:Label ID="lblTitulo" CssClass="agileits-title" runat="server" Text="Actualizar Proveedor"></asp:Label>    
                 <br />    <div id="divi">
-        <asp:GridView ID="gvProveedores" CssClass="table table-hover" runat="server" Height="154px" RowHeaderColumn="Usuarios" Width="640px" >
+        <asp:GridView ID="gvProveedores" CssClass="table table-hover" runat="server" RowHeaderColumn="Proveedores" DataKeyNames="Email" OnRowDeleting="DeleteRowButton_Click">
             <Columns>
-                <asp:ButtonField ButtonType="Button" CommandName="Update" HeaderText="Accion" ShowHeader="True" Text="Actualizar" />
-            </Columns>
+                <asp:CommandField HeaderText="Acción" ShowDeleteButton="True" DeleteText="Seleccionar"/>                
+            </Columns>            
             <HeaderStyle BackColor="#10C7BF"/>
         </asp:GridView>
     <br />
@@ -25,10 +25,11 @@
     <br />
     <br />
     <asp:Label ID="lbTelefono" CssClass="col-sm-2 control-label" runat="server" Text="Telefono"></asp:Label>
-    <asp:TextBox ID="tbDireccion0" CssClass="form-control1" runat="server"></asp:TextBox>
+    <asp:TextBox ID="tbTelefono" CssClass="form-control1" runat="server"></asp:TextBox>
     <br />
     <br />
     <asp:Button ID="btnActualizar" CssClass="btn btn-info" runat="server" Text="Actualizar" OnClick="btnActualizar_Click" />
+            <br />
     </div>
         </section>
 </asp:Content>

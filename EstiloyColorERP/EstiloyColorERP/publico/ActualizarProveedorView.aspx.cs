@@ -12,15 +12,15 @@ namespace EstiloyColorERP.publico
 {
     public partial class ActualizarProveedorView : System.Web.UI.Page
     {
+        
         private ProveedorBusiness proveedorBusiness;
         private LinkedList<Proveedor> proveedores;
 //        private String clienteV;
         protected void Page_Load(object sender, EventArgs e)
-        {
-            
+        {   
             if (!IsPostBack){
                 cargarInformacion();
-               }//if para ver si es la primera vez que se carga el modula
+               }//if para ver si es la primera vez que se carga el modulo
             }//pageload
 
         protected void btnActualizar_Click(object sender, EventArgs e)
@@ -57,6 +57,9 @@ namespace EstiloyColorERP.publico
             this.gvProveedores.DataBind();
         }//cargarInformacion
 
-        
+        protected void DeleteRowButton_Click(object sender, GridViewDeleteEventArgs e)
+        {
+            this.tbDireccion.Text = this.gvProveedores.DataKeys[e.RowIndex].Value.ToString();
+        }//btnBuscar_Click
     }//class
 }//namespace

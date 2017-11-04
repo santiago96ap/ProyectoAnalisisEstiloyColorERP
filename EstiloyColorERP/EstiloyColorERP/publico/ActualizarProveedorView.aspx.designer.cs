@@ -94,13 +94,13 @@ namespace EstiloyColorERP.publico {
         protected global::System.Web.UI.WebControls.Label lbTelefono;
         
         /// <summary>
-        /// tbDireccion0 control.
+        /// tbTelefono control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbDireccion0;
+        protected global::System.Web.UI.WebControls.TextBox tbTelefono;
         
         /// <summary>
         /// btnActualizar control.
