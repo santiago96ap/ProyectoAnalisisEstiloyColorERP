@@ -25,15 +25,19 @@ namespace EstiloyColorERP.publico
 
         protected void btnActualizar_Click(object sender, EventArgs e)
         {
-            if (!String.IsNullOrWhiteSpace(this.tbNombre.Text) || !String.IsNullOrWhiteSpace(this.tbDireccion.Text) || !String.IsNullOrWhiteSpace(this.tbTelefono.Text) || !String.IsNullOrWhiteSpace(this.tbDireccion.Text) || !String.IsNullOrWhiteSpace(this.tbEmail.Text))
-            {
+            if (String.IsNullOrWhiteSpace(this.tbNombre.Text) || String.IsNullOrWhiteSpace(this.tbDireccion.Text) || String.IsNullOrWhiteSpace(this.tbTelefono.Text) || String.IsNullOrWhiteSpace(this.tbDireccion.Text) || String.IsNullOrWhiteSpace(this.tbEmail.Text))
+            {//si existe un tb en blanco se indica al usuario y no se aplica ningún cambio
+                ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.error('Error en los datos ingresados')", true);
+            }
+            else
+            {   
                 this.proveedorBusiness = new ProveedorBusiness();
 
                 Proveedor proveedorNuevo = new Proveedor(tbNombre.Text.ToString(), tbTelefono.Text.ToString(), tbDireccion.Text.ToString(), tbEmail.Text.ToString());
 
                 bool respuesta = this.proveedorBusiness.actualizarProveedor(proveedorNuevo);
 
-                if (respuesta)
+                if (respuesta)// Si se actualiza el usuario se recargan los datos y se dejan los tb en blanco
                 {
                     ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.success('El proveedor se actualizó exitosamente')", true);
                     //dejar los campos de texto en blanco
@@ -49,11 +53,7 @@ namespace EstiloyColorERP.publico
                     ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.error('Se ha producido un error al procesar la solicitud')", true);
                 }//else
                 
-            }//if datos nulos
-            else
-            {
-                ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.error('Error en los datos ingresados')", true);
-            }//else datos nulos
+            }//else - no hay datos en blanco
 
         }//btnActualizar
 
@@ -67,6 +67,7 @@ namespace EstiloyColorERP.publico
             table.Columns.Add(new DataColumn("Nombre", typeof(string)));
             table.Columns.Add(new DataColumn("Telefono", typeof(string)));
             table.Columns.Add(new DataColumn("Direccion", typeof(string)));
+                        
             
             foreach (Proveedor proveedorActual in this.proveedores)
 
