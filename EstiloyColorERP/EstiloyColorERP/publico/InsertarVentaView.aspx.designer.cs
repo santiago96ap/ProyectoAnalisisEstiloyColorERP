@@ -10,7 +10,7 @@
 namespace EstiloyColorERP {
     
     
-    public partial class VentaView {
+    public partial class InsertarVentaView {
         
         /// <summary>
         /// titulo control.
