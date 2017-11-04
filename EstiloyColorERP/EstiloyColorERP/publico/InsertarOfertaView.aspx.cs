@@ -17,26 +17,44 @@ namespace EstiloyColorERP
         protected void Page_Load(object sender, EventArgs e)
         {
             cargarListaProducto();
-            if (this.ddProducto !=null)
-            {
-                if (!IsPostBack)
-                {
-                   cargarListaProducto();
-                }// if (!IsPostBack)
-
-            }//if (this.ddProducto !=null)
 
         }//Page_Load
 
         protected void btnInsertar_Click(object sender, EventArgs e)
         {
+            if (String.IsNullOrWhiteSpace(this.TbBuscarCodigo.Text))
+            {
+                if (this.ofertaBusiness.insertarOfertaProducto(new Oferta(tbFechaI.Text, tbFechaF.Text, float.Parse(tbDescuento.Text), int.Parse(ddProducto.SelectedItem.Value)))== true)
+                {
+                    ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.success('¡Se ha insertado con éxito!')", true);
+                }
+                else
+                {
+                    ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.error('¡Ha ocurrido un error!')", true);
 
-        }//btnInsertar_Click
+                }//if-else
+            }
+            else
+            {
+                if (this.ofertaBusiness.insertarOfertaProducto(new Oferta(tbFechaI.Text, tbFechaF.Text, float.Parse(tbDescuento.Text), int.Parse(TbBuscarCodigo.Text))) == true)
+                {
+                    ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.success('¡Se ha insertado con éxito!')", true);
+                }
+                else
+                {
+                    ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.error('¡Ha ocurrido un error!')", true);
+
+                }//if-else
+
+            }//else-if NULL Opción
+            
+       }//btnInsertar_Click
 
 
         private void cargarListaProducto()
         {
             this.productos = this.prodtBusiness.obtenerTodosProductos();
+            this.productos.Clear();
             foreach (Producto pActual in this.productos)
             {
                 this.ddProducto.Items.Add(new ListItem(pActual.IdProct + "-" + pActual.Nombre, pActual.IdProct.ToString()));
@@ -46,7 +64,6 @@ namespace EstiloyColorERP
 
         protected void ddProducto_SelectedIndexChanged(object sender, EventArgs e)
         {
-            this.TbBuscarCodigo.Enabled = false;
         }//ddProducto_SelectedIndexChanged
     }//class
 }//namespace

@@ -1,6 +1,7 @@
 ﻿using DOMAIN;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 
@@ -8,21 +9,33 @@ namespace DATA
 {
     public class OfertaData
     {
-
-        public Boolean insertarOfertaCategoria(Categoria categoria, Oferta oferta)
+        private String conectionString;
+        public OfertaData(string conectionString)
         {
-            /**
-             * CÓDIGO AQUÍ
-             * **/
-            return false;
-        }//insertarOfertaCategoria
+            this.conectionString = conectionString;
+        }//constructor
 
-        public Boolean insertarOfertaProducto(Oferta oferta)//Producto producto, 
-        {
-            /**
-             * CÓDIGO AQUÍ
-             * **/
-            return false;
+        public Boolean insertarOfertaProducto(Oferta oferta) {
+            SqlConnection connection = new SqlConnection(this.conectionString);
+            String sqlStoreProcedure = "sp_insertarOferta";
+            SqlCommand cmdInsertar = new SqlCommand(sqlStoreProcedure, connection);
+            cmdInsertar.CommandType = System.Data.CommandType.StoredProcedure;
+            cmdInsertar.Parameters.Add(new SqlParameter("@fecha_inicial", oferta.FechaInicio));
+            cmdInsertar.Parameters.Add(new SqlParameter("@fecha_fin", oferta.FechaInicio));
+            cmdInsertar.Parameters.Add(new SqlParameter("@descuento", oferta.Descuento));
+            cmdInsertar.Parameters.Add(new SqlParameter("@id_producto", oferta.IdProducto));
+
+            cmdInsertar.Connection.Open();
+            if (cmdInsertar.ExecuteNonQuery() > 0)
+            {
+                cmdInsertar.Connection.Close();
+                return true;
+            }
+            else
+            {
+                cmdInsertar.Connection.Close();
+                return false;
+            }//if-else
         }//insertarOfertaProducto
 
         public Boolean eliminarOferta(Oferta oferta)

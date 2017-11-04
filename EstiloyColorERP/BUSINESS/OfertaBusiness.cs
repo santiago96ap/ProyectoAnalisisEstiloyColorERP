@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Configuration;
 
 namespace BUSINESS
 {
@@ -11,16 +12,13 @@ namespace BUSINESS
     {
         //Atributos
         private OfertaData ofertaData;
+        private String stringConeccion;
 
         public OfertaBusiness()
         {
-            this.ofertaData = new OfertaData();
+            this.stringConeccion = WebConfigurationManager.ConnectionStrings["BaseDatos"].ToString();
+            this.ofertaData = new OfertaData(this.stringConeccion);
         }//constructor
-
-        public Boolean insertarOfertaCategoria(Categoria categoria, Oferta oferta)
-        {
-            return this.ofertaData.insertarOfertaCategoria(categoria, oferta);
-        }//insertarOfertaCategoria
 
         public Boolean insertarOfertaProducto(Oferta oferta)//Producto producto,
         {
