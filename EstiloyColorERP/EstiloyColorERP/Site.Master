@@ -292,11 +292,11 @@
                                         }
                                          if (Session["login"].ToString().Equals("N"))
                                          {%>
-                                            <a href="IniciarSessionView.aspx" id="entrar"><span>Entrar</span></a>
+                                            <a href="IniciarSessionVista.aspx" id="entrar"><span>Entrar</span></a>
                                          <%}
                                         else
                                         { %>
-                                            <a href="IniciarSessionView.aspx" id="logOutButton"><span>Salir</span></a>
+                                            <a href="IniciarSessionVista.aspx" id="logOutButton"><span>Salir</span></a>
                                         <%} %> 
                                 </div>
                             </li>
