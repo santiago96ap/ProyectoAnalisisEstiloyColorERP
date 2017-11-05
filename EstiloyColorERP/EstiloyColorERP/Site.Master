@@ -100,18 +100,18 @@
                                 { %>
                                     <li><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Agenda<span class="caret"></span></a>
                                         <ul class="dropdown-menu">
-                                            <li><a class="hvr-bounce-to-bottom" href="InsertarAgendaView.aspx">Insertar Actividad</a></li>
-                                            <li><a class="hvr-bounce-to-bottom" href="ActualizarAgendaView.aspx">Actualizar Actividad</a></li>
-                                            <li><a class="hvr-bounce-to-bottom" href="EliminarAgendaView.aspx">Eliminar Actividad</a></li>
-                                            <li><a class="hvr-bounce-to-bottom" href="ObtenerAgendaView.aspx">Obtener Actividades</a></li>
+                                            <li><a class="hvr-bounce-to-bottom" href="InsertarAgendaVista.aspx">Insertar Actividad</a></li>
+                                            <li><a class="hvr-bounce-to-bottom" href="ActualizarAgendaVista.aspx">Actualizar Actividad</a></li>
+                                            <li><a class="hvr-bounce-to-bottom" href="EliminarAgendaVista.aspx">Eliminar Actividad</a></li>
+                                            <li><a class="hvr-bounce-to-bottom" href="ObtenerAgendaVista.aspx">Obtener Actividades</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Clientes<span class="caret"></span></a>
                                         <ul class="dropdown-menu">
 
-                                            <li><a class="hvr-bounce-to-bottom" href="InsertarClienteView.aspx">Insertar Cliente</a></li>
-                                            <li><a class="hvr-bounce-to-bottom" href="ActualizarClienteView.aspx">Actualizar Cliente</a></li>
-                                            <li><a class="hvr-bounce-to-bottom" href="ObtenerClienteView.aspx">Obtener Clientes</a></li>
+                                            <li><a class="hvr-bounce-to-bottom" href="InsertarClienteVista.aspx">Insertar Cliente</a></li>
+                                            <li><a class="hvr-bounce-to-bottom" href="ActualizarClienteVista.aspx">Actualizar Cliente</a></li>
+                                            <li><a class="hvr-bounce-to-bottom" href="ObtenerClienteVista.aspx">Obtener Clientes</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contabilidad<span class="caret"></span></a>
@@ -119,27 +119,27 @@
                                             <li class="dropdown-submenu">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown-submenu" role="button" aria-haspopup="true" aria-expanded="false">Ingresos<span class="caret"></span></a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a class="hvr-bounce-to-bottom" href="InsertarIngresoView.aspx">Insertar Ingreso</a></li>
-                                                    <li><a class="hvr-bounce-to-bottom" href="ActualizarIngresosView.aspx">Actualizar Ingreso</a></li>
-                                                    <li><a class="hvr-bounce-to-bottom" href="EliminarIngresosView.aspx">Eliminar Ingreso</a></li>
-                                                    <li><a class="hvr-bounce-to-bottom" href="ObtenerIngresoView.aspx">Obtener Ingresos</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="InsertarIngresoVista.aspx">Insertar Ingreso</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="ActualizarIngresosVista.aspx">Actualizar Ingreso</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="EliminarIngresosVista.aspx">Eliminar Ingreso</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="ObtenerIngresoVista.aspx">Obtener Ingresos</a></li>
                                                 </ul>
                                             </li>
                                             <li class="dropdown-submenu">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown-submenu" role="button" aria-haspopup="true" aria-expanded="false">Gastos<span class="caret"></span></a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a class="hvr-bounce-to-bottom" href="icons.html">Insertar Gasto</a></li>
-                                                    <li><a class="hvr-bounce-to-bottom" href="icons.html">Actualizar Gasto</a></li>
-                                                    <li><a class="hvr-bounce-to-bottom" href="icons.html">Eliminar Gasto</a></li>
-                                                    <li><a class="hvr-bounce-to-bottom" href="icons.html">Obtener Gastos</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="InsertarGastoVista.aspx">Insertar Gasto</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="ActualizarGastoVista.aspx">Actualizar Gasto</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="EliminarGastoVista.aspx">Eliminar Gasto</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="ObtenerGastoVista.aspx">Obtener Gastos</a></li>
                                                 </ul>
                                             </li>
                                             <li class="dropdown-submenu">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown-submenu" role="button" aria-haspopup="true" aria-expanded="false">Ventas<span class="caret"></span></a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a class="hvr-bounce-to-bottom" href="VentaView.aspx">Insertar Venta</a></li>
-                                                    <li><a class="hvr-bounce-to-bottom" href="EliminarVentaView.aspx">Eliminar Venta</a></li>
-                                                    <li><a class="hvr-bounce-to-bottom" href="ObtenerVentaView.aspx">Obtener Ventas</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="InsertarVentaVista.aspx">Insertar Venta</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="EliminarVentaVista.aspx">Eliminar Venta</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="ObtenerVentaVista.aspx">Obtener Ventas</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
@@ -148,71 +148,61 @@
                                 
                                         <ul class="dropdown-menu">
                                             <li class="dropdown-submenu">
-                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown-submenu" role="button" aria-haspopup="true" aria-expanded="false">Opciones Productos<span class="caret"></span></a>
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown-submenu" role="button" aria-haspopup="true" aria-expanded="false">Inventario<span class="caret"></span></a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a class="hvr-bounce-to-bottom" href="InsertarProductoView.aspx">Insertar</a></li>
-                                                    <li><a class="hvr-bounce-to-bottom" href="ActualizarProductoView.aspx">Actualizar</a></li>
-                                                    <li><a class="hvr-bounce-to-bottom" href="EliminarProductoView.aspx">Eliminar</a></li>
-                                                    <li><a class="hvr-bounce-to-bottom" href="ObtenerProductosView.aspx">Obtener</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="InsertarProductoVista.aspx">Insertar</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="ActualizarProductoVista.aspx">Actualizar</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="EliminarProductoVista.aspx">Eliminar</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="ObtenerProductoVista.aspx">Obtener</a></li>
                                                 </ul>
                                             </li>
                                             <li class="dropdown-submenu">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown-submenu" role="button" aria-haspopup="true" aria-expanded="false">Apartados<span class="caret"></span></a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a class="hvr-bounce-to-bottom" href="InsertarApartadoView.aspx">Insertar Apartado</a></li>
-                                                    <li><a class="hvr-bounce-to-bottom" href="ActualizarApartadoView.aspx">Actualizar Apartado</a></li>
-                                                    <li><a class="hvr-bounce-to-bottom" href="EliminarApartadoView.aspx">Eliminar Apartado</a></li>
-                                                    <li><a class="hvr-bounce-to-bottom" href="ObtenerApartadoView.aspx">Obtener Apartados</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="InsertarApartadoVista.aspx">Insertar Apartado</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="ActualizarApartadoVista.aspx">Actualizar Apartado</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="EliminarApartadoVista.aspx">Eliminar Apartado</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="ObtenerApartadoVista.aspx">Obtener Apartados</a></li>
                                                 </ul>
                                             </li>
                                             <li class="dropdown-submenu">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown-submenu" role="button" aria-haspopup="true" aria-expanded="false">Categoría<span class="caret"></span></a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a class="hvr-bounce-to-bottom" href="icons.html">Insertar Categoría</a></li>
-                                                    <li><a class="hvr-bounce-to-bottom" href="icons.html">Actualizar Categoría</a></li>
-                                                    <li><a class="hvr-bounce-to-bottom" href="icons.html">Eliminar Categoría</a></li>
-                                                    <li><a class="hvr-bounce-to-bottom" href="icons.html">Obtener Categorías</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="InsertarCategoriaVista.aspx">Insertar Categoría</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="ActualizarCategoriaVista.aspx">Actualizar Categoría</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="EliminarCategoriaVista.aspx">Eliminar Categoría</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="ObtenerCategoriaVista.aspx">Obtener Categorías</a></li>
                                                 </ul>
                                             </li>
                                             <li class="dropdown-submenu">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown-submenu" role="button" aria-haspopup="true" aria-expanded="false">Ofertas<span class="caret"></span></a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a class="hvr-bounce-to-bottom" href="icons.html">Insertar Oferta</a></li>
-                                                    <li><a class="hvr-bounce-to-bottom" href="icons.html">Actualizar Oferta</a></li>
-                                                    <li><a class="hvr-bounce-to-bottom" href="icons.html">Eliminar Oferta</a></li>
-                                                    <li><a class="hvr-bounce-to-bottom" href="icons.html">Obtener Ofertas</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="InsertarOfertaVista.aspx">Insertar Oferta</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="ActualizarOfertaVista.aspx">Actualizar Oferta</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="EliminarOfertaVista.aspx">Eliminar Oferta</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="ObtenerOfertaVista.aspx">Obtener Ofertas</a></li>
                                                 </ul>
                                             </li>
                                             <li class="dropdown-submenu">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown-submenu" role="button" aria-haspopup="true" aria-expanded="false">Proveedores<span class="caret"></span></a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a class="hvr-bounce-to-bottom" href="icons.html">Insertar Proveedor</a></li>
-                                                    <li><a class="hvr-bounce-to-bottom" href="icons.html">Actualizar Proveedor</a></li>
-                                                    <li><a class="hvr-bounce-to-bottom" href="icons.html">Eliminar Proveedor</a></li>
-                                                    <li><a class="hvr-bounce-to-bottom" href="icons.html">Obtener Proveedor</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="InsertarProveedorVista.aspx">Insertar Proveedor</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="ActualizarProveedorVista.aspx">Actualizar Proveedor</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="EliminarProveedorVista.aspx">Eliminar Proveedor</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="ObtenerProveedorVista.aspx">Obtener Proveedor</a></li>
                                                 </ul>
                                             </li>
-                                            <li class="dropdown-submenu">
-                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown-submenu" role="button" aria-haspopup="true" aria-expanded="false">Inventarios<span class="caret"></span></a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a class="hvr-bounce-to-bottom" href="InventarioView.aspx">Insertar Inventario</a></li>
-                                                    <li><a class="hvr-bounce-to-bottom" href="ActualizarInventarioView.aspx">Actualizar Inventario</a></li>
-                                                    <li><a class="hvr-bounce-to-bottom" href="EliminarInventarioView.aspx">Eliminar Inventario</a></li>
-                                                    <li><a class="hvr-bounce-to-bottom" href="ObtenerInventarioView.aspx">Obtener Inventario</a></li>
-                                                </ul>
-                                            </li>
-
                                         </ul>
                                     </li>
-                                    <li><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">+ <span class="caret"></span></a>
+                                    <li><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">+<span class="caret"></span></a>
                                         <ul class="dropdown-menu">
                                             <li class="dropdown-submenu">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown-submenu" role="button" aria-haspopup="true" aria-expanded="false">Usuarios<span class="caret"></span></a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a class="hvr-bounce-to-bottom" href="InsertarUsuarioView.aspx">Insertar Usuario</a></li>
-                                                    <!--<li><a class="hvr-bounce-to-bottom" href="">Actualizar Usuario</a></li>-->
-                                                    <li><a class="hvr-bounce-to-bottom" href="EliminarUsuarioView.aspx">Eliminar Usuario</a></li>
-                                                    <li><a class="hvr-bounce-to-bottom" href="ObtenerUsuarioView.aspx">Obtener Usuarios</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="InsertarUsuarioVista.aspx">Insertar Usuario</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="ActualizarUsuarioVista.aspx">Actualizar Usuario</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="EliminarUsuarioVista.aspx">Eliminar Usuario</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="ObtenerUsuarioVista.aspx">Obtener Usuarios</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
@@ -222,18 +212,18 @@
                                 { %>
                                     <li><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Agenda<span class="caret"></span></a>
                                         <ul class="dropdown-menu">
-                                            <li><a class="hvr-bounce-to-bottom" href="InsertarAgendaView.aspx">Insertar Actividad</a></li>
-                                            <li><a class="hvr-bounce-to-bottom" href="ActualizarAgendaView.aspx">Actualizar Actividad</a></li>
-                                            <li><a class="hvr-bounce-to-bottom" href="EliminarAgendaView.aspx">Eliminar Actividad</a></li>
-                                            <li><a class="hvr-bounce-to-bottom" href="ObtenerAgendaView.aspx">Obtener Actividades</a></li>
+                                            <li><a class="hvr-bounce-to-bottom" href="InsertarAgendaVista.aspx">Insertar Actividad</a></li>
+                                            <li><a class="hvr-bounce-to-bottom" href="ActualizarAgendaVista.aspx">Actualizar Actividad</a></li>
+                                            <li><a class="hvr-bounce-to-bottom" href="EliminarAgendaVista.aspx">Eliminar Actividad</a></li>
+                                            <li><a class="hvr-bounce-to-bottom" href="ObtenerAgendaVista.aspx">Obtener Actividades</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Clientes<span class="caret"></span></a>
                                         <ul class="dropdown-menu">
 
-                                            <li><a class="hvr-bounce-to-bottom" href="InsertarClienteView.aspx">Insertar Cliente</a></li>
-                                            <li><a class="hvr-bounce-to-bottom" href="ActualizarClienteView.aspx">Actualizar Cliente</a></li>
-                                            <li><a class="hvr-bounce-to-bottom" href="ObtenerClienteView.aspx">Obtener Clientes</a></li>
+                                            <li><a class="hvr-bounce-to-bottom" href="InsertarClienteVista.aspx">Insertar Cliente</a></li>
+                                            <li><a class="hvr-bounce-to-bottom" href="ActualizarClienteVista.aspx">Actualizar Cliente</a></li>
+                                            <li><a class="hvr-bounce-to-bottom" href="ObtenerClienteVista.aspx">Obtener Clientes</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contabilidad<span class="caret"></span></a>
@@ -241,15 +231,15 @@
                                             <li class="dropdown-submenu">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown-submenu" role="button" aria-haspopup="true" aria-expanded="false">Gastos<span class="caret"></span></a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a class="hvr-bounce-to-bottom" href="icons.html">Insertar Gasto</a></li>
-                                                    <li><a class="hvr-bounce-to-bottom" href="icons.html">Obtener Gastos</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="InsertarGastoVista.aspx">Insertar Gasto</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="ObtenerGastoVista.aspx">Obtener Gastos</a></li>
                                                 </ul>
                                             </li>
                                             <li class="dropdown-submenu">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown-submenu" role="button" aria-haspopup="true" aria-expanded="false">Ventas<span class="caret"></span></a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a class="hvr-bounce-to-bottom" href="VentaView.aspx">Insertar Venta</a></li>
-                                                    <li><a class="hvr-bounce-to-bottom" href="ObtenerVentaView.aspx">Obtener Ventas</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="InsertarVentaVista.aspx">Insertar Venta</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="ObtenerVentaVista.aspx">Obtener Ventas</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
@@ -258,48 +248,38 @@
                                 
                                         <ul class="dropdown-menu">
                                             <li class="dropdown-submenu">
-                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown-submenu" role="button" aria-haspopup="true" aria-expanded="false">Opciones Productos<span class="caret"></span></a>
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown-submenu" role="button" aria-haspopup="true" aria-expanded="false">Inventario<span class="caret"></span></a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a class="hvr-bounce-to-bottom" href="InsertarProductoView.aspx">Insertar</a></li>
-                                                    <li><a class="hvr-bounce-to-bottom" href="ActualizarProductoView.aspx">Actualizar</a></li>
-                                                    <li><a class="hvr-bounce-to-bottom" href="EliminarProductoView.aspx">Eliminar</a></li>
-                                                    <li><a class="hvr-bounce-to-bottom" href="ObtenerProductosView.aspx">Obtener</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="InsertarProductoVista.aspx">Insertar</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="ActualizarProductoVista.aspx">Actualizar</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="EliminarProductoVista.aspx">Eliminar</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="ObtenerProductosVista.aspx">Obtener</a></li>
                                                 </ul>
                                             </li>
                                             <li class="dropdown-submenu">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown-submenu" role="button" aria-haspopup="true" aria-expanded="false">Apartados<span class="caret"></span></a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a class="hvr-bounce-to-bottom" href="InsertarApartadoView.aspx">Insertar Apartado</a></li> 
-                                                    <li><a class="hvr-bounce-to-bottom" href="ActualizarApartadoView.aspx">Actualizar Apartado</a></li>
-                                                    <li><a class="hvr-bounce-to-bottom" href="EliminarApartadoView.aspx">Eliminar Apartado</a></li>
-                                                    <li><a class="hvr-bounce-to-bottom" href="ObtenerApartadoView.aspx">Obtener Apartados</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="InsertarApartadoVista.aspx">Insertar Apartado</a></li> 
+                                                    <li><a class="hvr-bounce-to-bottom" href="ActualizarApartadoVista.aspx">Actualizar Apartado</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="EliminarApartadoVista.aspx">Eliminar Apartado</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="ObtenerApartadoVista.aspx">Obtener Apartados</a></li>
                                                 </ul>
                                             </li>
                                             <li class="dropdown-submenu">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown-submenu" role="button" aria-haspopup="true" aria-expanded="false">Categoría<span class="caret"></span></a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a class="hvr-bounce-to-bottom" href="icons.html">Insertar Categoría</a></li>
-                                                    <li><a class="hvr-bounce-to-bottom" href="icons.html">Actualizar Categoría</a></li>
-                                                    <li><a class="hvr-bounce-to-bottom" href="icons.html">Eliminar Categoría</a></li>
-                                                    <li><a class="hvr-bounce-to-bottom" href="icons.html">Obtener Categorías</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="InsertarCategoriaVista.aspx">Insertar Categoría</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="ActualizarCategoriaVista.aspx">Actualizar Categoría</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="EliminarCategoriaVista.aspx">Eliminar Categoría</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="ObtenerCategoriaVista.aspx">Obtener Categorías</a></li>
                                                 </ul>
                                             </li>
                                             <li class="dropdown-submenu">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown-submenu" role="button" aria-haspopup="true" aria-expanded="false">Ofertas<span class="caret"></span></a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a class="hvr-bounce-to-bottom" href="icons.html">Obtener Ofertas</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="ObtenerOfertaVista.aspx">Obtener Ofertas</a></li>
                                                 </ul>
                                             </li>
-                                            <li class="dropdown-submenu">
-                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown-submenu" role="button" aria-haspopup="true" aria-expanded="false">Inventarios<span class="caret"></span></a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a class="hvr-bounce-to-bottom" href="InventarioView.aspx">Insertar Inventario</a></li>
-                                                    <li><a class="hvr-bounce-to-bottom" href="ActualizarInventarioView.aspx">Actualizar Inventario</a></li>
-                                                    <li><a class="hvr-bounce-to-bottom" href="EliminarInventarioView.aspx">Eliminar Inventario</a></li>
-                                                    <li><a class="hvr-bounce-to-bottom" href="ObtenerInventarioView.aspx">Obtener Inventario</a></li>
-                                                </ul>
-                                            </li>
-
                                         </ul>
                                     </li>
                                 <%} %>
