@@ -88,6 +88,7 @@
     <Content Include="publico\images\s5.jpg" />
     <Content Include="publico\images\s6.jpg" />
     <Content Include="publico\images\s7.jpg" />
+    <Content Include="publico\IniciarSessionView.aspx" />
     <Content Include="publico\InsertarOfertaView.aspx" />
     <Content Include="publico\InsertarProductoView.aspx" />
     <Content Include="publico\InsertarUsuarioView.aspx" />
@@ -208,6 +209,13 @@
     </Compile>
     <Compile Include="publico\EliminarOfertaView.aspx.designer.cs">
       <DependentUpon>EliminarOfertaView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="publico\IniciarSessionView.aspx.cs">
+      <DependentUpon>IniciarSessionView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="publico\IniciarSessionView.aspx.designer.cs">
+      <DependentUpon>IniciarSessionView.aspx</DependentUpon>
     </Compile>
     <Compile Include="publico\InsertarOfertaView.aspx.cs">
       <DependentUpon>InsertarOfertaView.aspx</DependentUpon>

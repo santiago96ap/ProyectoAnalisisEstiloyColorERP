@@ -85,6 +85,7 @@ namespace DATA
                 usuarioActual.Rol = currentRow["tipo_Usuario"].ToString();
                 usuarioActual.Correo = currentRow["email"].ToString();
                 usuarioActual.Telefono = currentRow["telefono"].ToString();
+                usuarioActual.Contrsena = currentRow["constrasenia"].ToString();
                 usuarios.AddLast(usuarioActual);
             }//recorrer todos los clientes que vienen de la DB
             return usuarios;
