@@ -11,18 +11,11 @@ namespace EstiloyColorERP
     {
         private VentaBusiness ventaBuisiness = new VentaBusiness();
         private ProductoBusiness productoBusiness = new ProductoBusiness();
-        private LinkedList<Producto> productos = new LinkedList<Producto>();
-        private DataTable table = new DataTable("Producto");
+        private static LinkedList<Producto> productos = new LinkedList<Producto>();
+        private DataTable table;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            if (!IsPostBack)
-            {
-                cargarInfo();
-
-            }//if para ver si es la primera vez que se carga el modulo
-
         }//load
 
 
@@ -38,17 +31,13 @@ namespace EstiloyColorERP
             return total;
         }//sumarPrecios
 
-        private void cargarInfo()
+        private void agregarGridView()
         {
+            table = new DataTable("Producto");
             table.Columns.Add(new DataColumn("Código", typeof(int)));
             table.Columns.Add(new DataColumn("Nombre", typeof(string)));
             table.Columns.Add(new DataColumn("Precio", typeof(float)));
-        }//cargarInfo
-
-        private void agregarGridView()
-        {
-           
-            foreach (Producto p in this.productos)
+            foreach (Producto p in productos)
 
             {
                 DataRow row = table.NewRow();
@@ -70,7 +59,7 @@ namespace EstiloyColorERP
         protected void btnAgregar_Click(object sender, EventArgs e)
         {
             Producto p = obtenerproducto(int.Parse(TbCodigoProducto.Text));
-            this.productos.AddLast(p);
+            productos.AddLast(p);
             agregarGridView();
 
         }//btnAgregar_Click

@@ -32,11 +32,9 @@
                     <br />
 
                    <asp:GridView ID="gvProductos" CssClass="table table-hover" runat="server" RowHeaderColumn="Proveedores" DataKeyNames="Código" OnRowDeleting="DeleteRowButton_Click">
-                    <AlternatingRowStyle BackColor="#EFEFEF" />
                     <Columns>
                         <asp:CommandField HeaderText="Acción" ShowDeleteButton="True" DeleteText="Seleccionar"/>                
-                    </Columns>            
-                    <HeaderStyle BackColor="#10C7BF"/>            
+                    </Columns>         
                     </asp:GridView>
 
                 </div>
