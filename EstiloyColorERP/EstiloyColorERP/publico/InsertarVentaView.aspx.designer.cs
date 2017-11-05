@@ -10,7 +10,7 @@
 namespace EstiloyColorERP {
     
     
-    public partial class VentaView {
+    public partial class InsertarVentaView {
         
         /// <summary>
         /// titulo control.
@@ -67,13 +67,13 @@ namespace EstiloyColorERP {
         protected global::System.Web.UI.WebControls.Label lblArticulos;
         
         /// <summary>
-        /// ddArticulos control.
+        /// TbCodigoProducto control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddArticulos;
+        protected global::System.Web.UI.WebControls.TextBox TbCodigoProducto;
         
         /// <summary>
         /// btnAgregar control.
@@ -83,6 +83,15 @@ namespace EstiloyColorERP {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnAgregar;
+        
+        /// <summary>
+        /// gvProductos control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvProductos;
         
         /// <summary>
         /// lblTelefono control.
