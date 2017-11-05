@@ -22,13 +22,22 @@ namespace EstiloyColorERP {
         protected global::System.Web.UI.WebControls.Label lblTitulo;
         
         /// <summary>
-        /// tbProducto control.
+        /// tbFechaInicio control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbProducto;
+        protected global::System.Web.UI.WebControls.TextBox tbFechaInicio;
+        
+        /// <summary>
+        /// tbFechaFinal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbFechaFinal;
         
         /// <summary>
         /// btnBuscar control.
@@ -40,12 +49,30 @@ namespace EstiloyColorERP {
         protected global::System.Web.UI.WebControls.Button btnBuscar;
         
         /// <summary>
-        /// tbResultados control.
+        /// btnExportarExcel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Table tbResultados;
+        protected global::System.Web.UI.WebControls.ImageButton btnExportarExcel;
+        
+        /// <summary>
+        /// btnExportarPdf control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton btnExportarPdf;
+        
+        /// <summary>
+        /// gvOfertas control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvOfertas;
     }
 }
