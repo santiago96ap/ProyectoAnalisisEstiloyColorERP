@@ -10,7 +10,7 @@
 namespace EstiloyColorERP.publico {
     
     
-    public partial class EliminarGastoView {
+    public partial class EliminarIngresoView {
         
         /// <summary>
         /// lblTitulo control.
