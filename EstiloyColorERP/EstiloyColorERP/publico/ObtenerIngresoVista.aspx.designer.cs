@@ -13,66 +13,66 @@ namespace EstiloyColorERP.publico {
     public partial class ObtenerIngresosView {
         
         /// <summary>
-        /// Label3 control.
+        /// lblTitulo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
+        protected global::System.Web.UI.WebControls.Label lblTitulo;
         
         /// <summary>
-        /// Label2 control.
+        /// tbFechaInicio control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.TextBox tbFechaInicio;
         
         /// <summary>
-        /// TbFechaInicio control.
+        /// tbFechaFinal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TbFechaInicio;
+        protected global::System.Web.UI.WebControls.TextBox tbFechaFinal;
         
         /// <summary>
-        /// Label1 control.
+        /// btnBuscar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Button btnBuscar;
         
         /// <summary>
-        /// TbFechaFinal control.
+        /// btnExportarExcel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TbFechaFinal;
+        protected global::System.Web.UI.WebControls.ImageButton btnExportarExcel;
         
         /// <summary>
-        /// Button1 control.
+        /// btnExportarPdf control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.ImageButton btnExportarPdf;
         
         /// <summary>
-        /// GridView1 control.
+        /// gvIngresos control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.GridView gvIngresos;
     }
 }

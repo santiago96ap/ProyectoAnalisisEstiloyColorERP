@@ -100,20 +100,23 @@ namespace DATA
         {
             SqlConnection connection = new SqlConnection(this.conectionString);
 
-            String sqlSelect = "sp_obtenerTodoGasto;";
+            String sqlSelect = "sp_obtenerTodoGasto";
 
-            SqlDataAdapter sqlDataAdapterClient = new SqlDataAdapter();
-            sqlDataAdapterClient.SelectCommand = new SqlCommand();
-            sqlDataAdapterClient.SelectCommand.CommandText = sqlSelect;
-            sqlDataAdapterClient.SelectCommand.Connection = connection;
+            SqlDataAdapter sqladapterIngresos = new SqlDataAdapter();
 
-            DataSet dataSetGastos = new DataSet();
-            sqlDataAdapterClient.Fill(dataSetGastos, "tb_Gastos");
-            sqlDataAdapterClient.SelectCommand.Connection.Close();
+            sqladapterIngresos.SelectCommand = new SqlCommand(sqlSelect, connection);
+            sqladapterIngresos.SelectCommand.CommandType = System.Data.CommandType.StoredProcedure;
+            sqladapterIngresos.SelectCommand.Parameters.Add(new SqlParameter("@FechaI", fechaI));
+            sqladapterIngresos.SelectCommand.Parameters.Add(new SqlParameter("@FechaF", fechaF));
 
-            DataRowCollection dataRow = dataSetGastos.Tables["tb_Gastos"].Rows;
+            DataSet dataIngresos = new DataSet();
+            sqladapterIngresos.Fill(dataIngresos, "tb_Gastos");
+            sqladapterIngresos.SelectCommand.Connection.Close();
 
-            LinkedList<Gasto> gastos = new LinkedList<Gasto>();
+            DataRowCollection dataRow = dataIngresos.Tables["tb_Gastos"].Rows;
+
+
+            LinkedList<Gasto> gasto = new LinkedList<Gasto>();
 
             foreach (DataRow currentRow in dataRow)
             {
@@ -122,10 +125,12 @@ namespace DATA
                 eActual.Fecha = currentRow["fecha"].ToString();
                 eActual.Hora = currentRow["hora"].ToString();
                 eActual.Concepto = currentRow["concepto"].ToString();
-                eActual.Vendedor = currentRow["usuario"].ToString();
-                gastos.AddLast(eActual);
+                eActual.Total = float.Parse(currentRow["total"].ToString());
+                eActual.Vendedor = currentRow["id_usuario"].ToString();
+                gasto.AddLast(eActual);
             }//foreach
-            return gastos;
+
+            return gasto;
         }//obtenerGastos
 
     }//fin de clase

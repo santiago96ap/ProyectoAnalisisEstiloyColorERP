@@ -31,13 +31,13 @@ namespace EstiloyColorERP.publico {
         protected global::System.Web.UI.WebControls.TextBox tbFechaInicio;
         
         /// <summary>
-        /// tbFechaFin control.
+        /// tbFechaFinal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbFechaFin;
+        protected global::System.Web.UI.WebControls.TextBox tbFechaFinal;
         
         /// <summary>
         /// btnBuscar control.
@@ -49,12 +49,30 @@ namespace EstiloyColorERP.publico {
         protected global::System.Web.UI.WebControls.Button btnBuscar;
         
         /// <summary>
-        /// tbResultados control.
+        /// btnExportarExcel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Table tbResultados;
+        protected global::System.Web.UI.WebControls.ImageButton btnExportarExcel;
+        
+        /// <summary>
+        /// btnExportarPdf control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton btnExportarPdf;
+        
+        /// <summary>
+        /// gvGastos control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvGastos;
     }
 }
