@@ -7,7 +7,7 @@ namespace DOMAIN
 {
     public class Apartado
     {
-
+        private int id;
         private String idCliente;
         private LinkedList<String> productos;
         private float monto;
@@ -35,6 +35,29 @@ namespace DOMAIN
             this.fechaFinal = fechaFinal;
         }//constructor sobrecargado
 
+        public Apartado(int id, String idCliente, LinkedList<String> productos, float monto, float abono, String fechaInicio, String fechaFinal)
+        {
+            this.id = id;
+            this.idCliente = idCliente;
+            this.productos = productos;
+            this.monto = monto;
+            this.abono = abono;
+            this.fechaInicio = fechaInicio;
+            this.fechaFinal = fechaFinal;
+        }//constructor sobrecargado1
+
+        public int Id
+        {
+            get
+            {
+                return id;
+            }//get id
+
+            set
+            {
+                id = value;
+            }//set id
+        }//Id
 
         public string IdCliente
         {

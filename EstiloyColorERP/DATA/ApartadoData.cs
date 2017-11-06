@@ -47,7 +47,23 @@ namespace DATA
 
         public Boolean eliminarApartado(Apartado apartado)
         {
-            return false;
+            SqlConnection connection = new SqlConnection(this.stringConeccion);
+            String sqlStoreProcedure = "sp_eliminarApartado";
+            SqlCommand cmdEliminar = new SqlCommand(sqlStoreProcedure, connection);
+            cmdEliminar.CommandType = System.Data.CommandType.StoredProcedure;
+
+            cmdEliminar.Parameters.Add(new SqlParameter("@id", apartado.Id));
+            cmdEliminar.Connection.Open();
+            if (cmdEliminar.ExecuteNonQuery() > 0)
+            {
+                cmdEliminar.Connection.Close();
+                return true;
+            }
+            else
+            {
+                cmdEliminar.Connection.Close();
+                return false;
+            }
         }//eliminarApartado
 
         public LinkedList<Apartado> obtenerApartados()
