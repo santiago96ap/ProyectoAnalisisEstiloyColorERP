@@ -73,6 +73,7 @@
   <ItemGroup>
     <Content Include="publico\ActualizarOfertaVista.aspx" />
     <Content Include="publico\ActualizarUsuarioVista.aspx" />
+    <Content Include="publico\CatalogoVista.aspx" />
     <Content Include="publico\css\alertify.bootstrap.css" />
     <Content Include="publico\css\alertify.core.css" />
     <Content Include="publico\css\alertify.default.css" />
@@ -189,6 +190,13 @@
     </Compile>
     <Compile Include="publico\ActualizarUsuarioVista.aspx.designer.cs">
       <DependentUpon>ActualizarUsuarioVista.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="publico\CatalogoVista.aspx.cs">
+      <DependentUpon>CatalogoVista.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="publico\CatalogoVista.aspx.designer.cs">
+      <DependentUpon>CatalogoVista.aspx</DependentUpon>
     </Compile>
     <Compile Include="publico\EliminarIngresoVista.aspx.cs">
       <DependentUpon>EliminarIngresoVista.aspx</DependentUpon>
