@@ -95,7 +95,7 @@
                                 }
                                 if (Session["login"].ToString().Equals("N"))
                                 { %>
-                                    <li><a class="hvr-bounce-to-bottom" href="CatalogoVista.aspx">Catálogo<span></span></a></li>
+                                    <li><a class="hvr-bounce-to-bottom" href="CatalogoVista.aspx" target="_blank">Catálogo<span></span></a></li>
                             <%}
                                 else if (Session["login"].ToString().Equals("administrador"))
                                 { %>
