@@ -156,7 +156,7 @@ div#divi6 .form-control1, div#divi7 .form-control1, div#divi8 .form-control1, di
     width: 50%;
 }
 .table{
-    margin-left: auto;
+    margin-left: 0px;
     margin-right: auto;
 }
 .header-top-right form input[type="text"] {

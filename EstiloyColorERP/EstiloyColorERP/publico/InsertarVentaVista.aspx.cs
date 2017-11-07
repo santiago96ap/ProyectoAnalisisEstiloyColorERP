@@ -16,14 +16,20 @@ namespace EstiloyColorERP
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            this.ddTipoPago.Items.Add(new ListItem("Tarjeta de débito o crédito", "tarjeta" ));
+            this.ddTipoPago.Items.Add(new ListItem("Dinero en efectivo", "efectivo" ));
+
+            this.ddTipoServicio.Items.Add(new ListItem("Proyecto", "Proyecto"));
+            this.ddTipoServicio.Items.Add(new ListItem("Tienda", "Local"));
+
         }//load
 
 
-        private float sumarPrecios(LinkedList<Producto> p)
+        private float sumarPrecios()
         {
             float total = 0;
 
-            foreach (Producto pActual in p)
+            foreach (Producto pActual in productos)
             {
                 total += pActual.Precio;
             }//foreach
@@ -61,17 +67,57 @@ namespace EstiloyColorERP
             Producto p = obtenerproducto(int.Parse(TbCodigoProducto.Text));
             productos.AddLast(p);
             agregarGridView();
-
+            this.TbCodigoProducto.Text = " ";
+            this.tbTotal.Text = sumarPrecios().ToString();
+            this.tbSubtotal.Text = sumarPrecios().ToString();
         }//btnAgregar_Click
         protected void btnInsertar_Click(object sender, EventArgs e)
         {
+           
+            if(this.ventaBuisiness.insertarVenta(new Venta(tbFecha.Text, tbHora.Text, tbTelefono.Text, "u", ddTipoServicio.SelectedItem.Value,
+                float.Parse(tbSubtotal.Text), float.Parse(tbTotal.Text), ddTipoPago.SelectedItem.Value)) == true)
+            {
+                insertarProductos();
+                limpiarTexto();
+                ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.success('¡Se ha insertado correctamente!')", true);
+            }
+            else
+            {
+                ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.error('Ha ocurrido un error!')", true);
+
+            }//else-if
 
         }//btnAgregar_Click
 
         protected void DeleteRowButton_Click(object sender, GridViewDeleteEventArgs e)
         {
-        }
+        }//DeleteRowButton_Click
+
+        private void limpiarTexto()
+        {
+            this.TbCodigoProducto.Text = " ";
+            this.tbFecha.Text = " ";
+            this.tbHora.Text = " ";
+            this.tbSubtotal.Text = " ";
+            this.tbTelefono.Text = " ";
+            this.tbTotal.Text = " ";
+        }//limpiarTexto
+
+        private void insertarProductos()
+        {
+            foreach (Producto p in productos)
+
+            {
+                if(this.ventaBuisiness.insertarVentaProducto(new VentaProducto(p.IdProct, p.IdCategoria,
+                    float.Parse(tbTotal.Text), tbFecha.Text, tbHora.Text, tbTelefono.Text))== false)
+                {
+                    ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.error('Ha ocurrido un error en la inserción de los productos')", true);
+                }
+
+            }//for
+
+        }//insertarProductos
 
 
-        }//class
+    }//class
 }//class

@@ -31,9 +31,9 @@
                     <br />
                     <br />
 
-                   <asp:GridView ID="gvProductos" CssClass="table table-hover" runat="server" RowHeaderColumn="Proveedores" DataKeyNames="Código" OnRowDeleting="DeleteRowButton_Click">
+                   <asp:GridView ID="gvProductos" CssClass="table table-hover" runat="server" RowHeaderColumn="Proveedores" DataKeyNames="Código" OnRowDeleting="DeleteRowButton_Click" Width="441px">
                     <Columns>
-                        <asp:CommandField HeaderText="Acción" ShowDeleteButton="True" DeleteText="Seleccionar"/>                
+                        <asp:CommandField HeaderText="Acción" ShowDeleteButton="True" DeleteText="Eliminar"/>                
                     </Columns>         
                     </asp:GridView>
 
@@ -64,7 +64,7 @@
                 </div>
                     <br />
                     <br />
-                    <asp:Button ID="Button1" CssClass="btn btn-info" runat="server" Text="Insertar" OnClick="btnInsertar_Click" />
+                    <asp:Button ID="btnInsertar" CssClass="btn btn-info" runat="server" Text="Insertar" OnClick="btnInsertar_Click" />
                     <br />
                     <br />
            </section>
