@@ -6,7 +6,7 @@
 	<head>
 	  <title>Estilo y Color </title>
 	  <META name="description" content="Imaginese ese lugar especial de tu hogar decorado de una manera innovadora, elegante... En Estilo y Color, le ayudamos a volver ese sueno en realidad!"><META name="keywords" content="decoracion de interiores, vinilos decorativos, lamparas led">
-	  <link rel="shortcut icon" type="image/x-icon" href="publico/images/icono.ico">
+	  <link rel="shortcut icon" type="image/x-icon" href="images/icono.ico">
     </head>
 	<frameset rows="100%,*" border="0">
 	  <frame src="http://online.fliphtml5.com/tcyl/agru/" frameborder="0" />
