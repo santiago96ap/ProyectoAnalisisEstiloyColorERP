@@ -10,6 +10,6 @@
 namespace EstiloyColorERP.publico {
     
     
-    public partial class catalogoVista {
+    public partial class CatalogoVista {
     }
 }
