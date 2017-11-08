@@ -13,7 +13,6 @@ namespace DOMAIN
         private String cliente;
         private String vendedor;
         private String tipoServicio;
-        private LinkedList<int> articuloComprado;
         private float subTotal;
         private float total;
         private String tipoPago;
@@ -23,32 +22,29 @@ namespace DOMAIN
             this.cliente = "";
             this.vendedor = "";
             this.tipoServicio = "";
-            this.articuloComprado = new LinkedList<int>();
             this.subTotal = 0;
             this.total = 0;
             this.tipoPago = "";
         }//constructor
 
-        public Venta(String fecha, String hora, String cliente, String vendedor, String tipoServicio, LinkedList<int> articuloComprado, int subTotal, int total, String tipoPago){
+        public Venta(String fecha, String hora, String cliente, String vendedor, String tipoServicio,  float subTotal, float total, String tipoPago){
             this.fecha = fecha;
             this.hora = hora;
             this.cliente = cliente;
             this.vendedor = vendedor;
             this.tipoServicio = tipoServicio;
-            this.articuloComprado = articuloComprado;
             this.subTotal = subTotal;
             this.total = total;
             this.tipoPago = tipoPago;
         }//constructor sobrecargado
 
-        public Venta(String fecha, String hora, String cliente, String vendedor, String tipoServicio, LinkedList<int> articuloComprado, int subTotal, int total, String tipoPago, int id)
+        public Venta(String fecha, String hora, String cliente, String vendedor, String tipoServicio,float subTotal, float total, String tipoPago, int id)
         {
             this.fecha = fecha;
             this.hora = hora;
             this.cliente = cliente;
             this.vendedor = vendedor;
             this.tipoServicio = tipoServicio;
-            this.articuloComprado = articuloComprado;
             this.subTotal = subTotal;
             this.total = total;
             this.tipoPago = tipoPago;
@@ -119,19 +115,6 @@ namespace DOMAIN
                 tipoServicio = value;
             }//set tipoServicio
         }//set y get tipoServicio
-
-        public LinkedList<int> ArticuloComprado
-        {
-            get
-            {
-                return articuloComprado;
-            }//get articulo comprado
-
-            set
-            {
-                articuloComprado = value;
-            }//set articulo comprado
-        }//set y get articuloComprado
 
         public float SubTotal
         {

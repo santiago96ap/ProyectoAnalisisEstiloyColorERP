@@ -38,5 +38,10 @@ namespace BUSINESS
         {
             return this.ventaData.obtenerVenta(venta);
         }//obtener una venta
+
+        public Boolean insertarVentaProducto(VentaProducto vp)
+        {
+            return this.ventaData.insertarVentaProducto(vp);
+        }
     }//class
 }//namespace

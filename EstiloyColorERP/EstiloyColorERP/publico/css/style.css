@@ -156,9 +156,9 @@ div#divi6 .form-control1, div#divi7 .form-control1, div#divi8 .form-control1, di
     width: 50%;
 }
 .table{
-    margin-left: auto;
+    margin-left: 0px;
     margin-right: auto;
-    }
+}
 .header-top-right form input[type="text"] {
     font-size: .9em;
     color: #2b2b2b;
@@ -325,6 +325,7 @@ ul.dropdown-menu {
 /*--Login --*/
 #loginContainer {
     position:relative;
+    text-align: left;
 }
 /* Login Button */
 #loginButton {  
@@ -1268,8 +1269,17 @@ section#tables  p {
 }
 .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
 	font-size: 0.9em;
-	color: #999;
+	color: #000;
 	border-top: none !important;
+}
+tr:nth-child(odd) {
+    background-color:#f2f2f2;
+}
+tr:nth-child(even) {
+    background-color:#fbfbfb;
+}
+tr:first-child{
+    background-color: #10c7bf;
 }
 .tab-content > .active {
 	display: block;

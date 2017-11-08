@@ -71,16 +71,18 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="publico\ActualizarOfertaView.aspx" />
-    <Content Include="publico\ActualizarUsuarioView.aspx" />
+    <Content Include="publico\ActualizarOfertaVista.aspx" />
+    <Content Include="publico\ActualizarUsuarioVista.aspx" />
+    <Content Include="publico\CatalogoVista.aspx" />
     <Content Include="publico\css\alertify.bootstrap.css" />
     <Content Include="publico\css\alertify.core.css" />
     <Content Include="publico\css\alertify.default.css" />
-    <Content Include="publico\EliminarIngresosView.aspx" />
-    <Content Include="publico\EliminarUsuarioView.aspx" />
-    <Content Include="publico\EliminarOfertaView.aspx" />
+    <Content Include="publico\EliminarIngresoVista.aspx" />
+    <Content Include="publico\EliminarUsuarioVista.aspx" />
+    <Content Include="publico\EliminarOfertaVista.aspx" />
     <Content Include="publico\images\icono-EXCEL.png" />
     <Content Include="publico\images\icono-PDF.png" />
+    <Content Include="publico\images\icono.ico" />
     <Content Include="publico\images\s1.jpg" />
     <Content Include="publico\images\s2.jpg" />
     <Content Include="publico\images\s3.jpg" />
@@ -88,41 +90,42 @@
     <Content Include="publico\images\s5.jpg" />
     <Content Include="publico\images\s6.jpg" />
     <Content Include="publico\images\s7.jpg" />
-    <Content Include="publico\InsertarOfertaView.aspx" />
-    <Content Include="publico\InsertarProductoView.aspx" />
-    <Content Include="publico\InsertarUsuarioView.aspx" />
+    <Content Include="publico\IniciarSessionVista.aspx" />
+    <Content Include="publico\InsertarOfertaVista.aspx" />
+    <Content Include="publico\InsertarProductoVista.aspx" />
+    <Content Include="publico\InsertarUsuarioVista.aspx" />
     <Content Include="publico\js\alertify.js" />
     <Content Include="publico\js\alertify.min.js" />
-    <Content Include="publico\ObtenerIngresosView.aspx" />
-    <Content Include="publico\ObtenerUsuarioView.aspx" />
-    <Content Include="publico\ObtenerOfertaView.aspx" />
-    <Content Include="publico\ActualizarApartadoView.aspx" />
-    <Content Include="publico\ActualizarAgendaView.aspx" />
-    <Content Include="publico\ActualizarCategoriaView.aspx" />
-    <Content Include="publico\ActualizarClienteView.aspx" />
-    <Content Include="publico\ActualizarIngresoView.aspx" />
-    <Content Include="publico\ActualizarProveedorView.aspx" />
-    <Content Include="publico\InsertarAgendaView.aspx" />
-    <Content Include="publico\InsertarProveedorView.aspx" />
+    <Content Include="publico\ObtenerIngresoVista.aspx" />
+    <Content Include="publico\ObtenerUsuarioVista.aspx" />
+    <Content Include="publico\ObtenerOfertaVista.aspx" />
+    <Content Include="publico\ActualizarApartadoVista.aspx" />
+    <Content Include="publico\ActualizarAgendaVista.aspx" />
+    <Content Include="publico\ActualizarCategoriaVista.aspx" />
+    <Content Include="publico\ActualizarClienteVista.aspx" />
+    <Content Include="publico\ActualizarIngresoVista.aspx" />
+    <Content Include="publico\ActualizarProveedorVista.aspx" />
+    <Content Include="publico\InsertarAgendaVista.aspx" />
+    <Content Include="publico\InsertarProveedorVista.aspx" />
     <Content Include="publico\Default.aspx" />
-    <Content Include="publico\ActualizarGastoView.aspx" />
-    <Content Include="publico\EliminarAgendaView.aspx" />
-    <Content Include="publico\EliminarApartadoView.aspx" />
-    <Content Include="publico\EliminarCategoriaView.aspx" />
-    <Content Include="publico\EliminarGastoView.aspx" />
-    <Content Include="publico\EliminarProveedorView.aspx" />
-    <Content Include="publico\EliminarVentaView.aspx" />
-    <Content Include="publico\InsertarApartadoView.aspx" />
-    <Content Include="publico\InsertarCategoria.aspx" />
-    <Content Include="publico\InsertarClienteView.aspx" />
-    <Content Include="publico\InsertarIngresoView.aspx" />
-    <Content Include="publico\ObtenerAgendaView.aspx" />
-    <Content Include="publico\ObtenerApartadoView.aspx" />
-    <Content Include="publico\ObtenerCategoria.aspx" />
-    <Content Include="publico\ObtenerClienteView.aspx" />
-    <Content Include="publico\ObtenerGastoView.aspx" />
-    <Content Include="publico\ObtenerProveedorView.aspx" />
-    <Content Include="publico\ObtenerVentaView.aspx" />
+    <Content Include="publico\ActualizarGastoVista.aspx" />
+    <Content Include="publico\EliminarAgendaVista.aspx" />
+    <Content Include="publico\EliminarApartadoVista.aspx" />
+    <Content Include="publico\EliminarCategoriaVista.aspx" />
+    <Content Include="publico\EliminarGastoVista.aspx" />
+    <Content Include="publico\EliminarProveedorVista.aspx" />
+    <Content Include="publico\EliminarVentaVista.aspx" />
+    <Content Include="publico\InsertarApartadoVista.aspx" />
+    <Content Include="publico\InsertarCategoriaVista.aspx" />
+    <Content Include="publico\InsertarClienteVista.aspx" />
+    <Content Include="publico\InsertarIngresoVista.aspx" />
+    <Content Include="publico\ObtenerAgendaVista.aspx" />
+    <Content Include="publico\ObtenerApartadoVista.aspx" />
+    <Content Include="publico\ObtenerCategoriaVista.aspx" />
+    <Content Include="publico\ObtenerClienteVista.aspx" />
+    <Content Include="publico\ObtenerGastoVista.aspx" />
+    <Content Include="publico\ObtenerProveedorVista.aspx" />
+    <Content Include="publico\ObtenerVentaVista.aspx" />
     <Content Include="packages.config" />
     <Content Include="publico\css\bootstrap.css" />
     <Content Include="publico\css\font-awesome.css" />
@@ -153,7 +156,7 @@
     <Content Include="publico\js\menu_jquery.js" />
     <Content Include="publico\js\move-top.js" />
     <Content Include="publico\js\responsiveslides.min.js" />
-    <Content Include="publico\InsertarGastoView.aspx" />
+    <Content Include="publico\InsertarGastoVista.aspx" />
     <Content Include="Site.Master" />
     <Content Include="publico\fonts\fontawesome-webfont.eot" />
     <Content Include="publico\fonts\fontawesome-webfont.ttf" />
@@ -170,142 +173,156 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="publico\InsertarVentaView.aspx" />
+    <Content Include="publico\InsertarVentaVista.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="publico\ActualizarOfertaView.aspx.cs">
-      <DependentUpon>ActualizarOfertaView.aspx</DependentUpon>
+    <Compile Include="publico\ActualizarOfertaVista.aspx.cs">
+      <DependentUpon>ActualizarOfertaVista.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="publico\ActualizarOfertaView.aspx.designer.cs">
-      <DependentUpon>ActualizarOfertaView.aspx</DependentUpon>
+    <Compile Include="publico\ActualizarOfertaVista.aspx.designer.cs">
+      <DependentUpon>ActualizarOfertaVista.aspx</DependentUpon>
     </Compile>
-    <Compile Include="publico\ActualizarUsuarioView.aspx.cs">
-      <DependentUpon>ActualizarUsuarioView.aspx</DependentUpon>
+    <Compile Include="publico\ActualizarUsuarioVista.aspx.cs">
+      <DependentUpon>ActualizarUsuarioVista.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="publico\ActualizarUsuarioView.aspx.designer.cs">
-      <DependentUpon>ActualizarUsuarioView.aspx</DependentUpon>
+    <Compile Include="publico\ActualizarUsuarioVista.aspx.designer.cs">
+      <DependentUpon>ActualizarUsuarioVista.aspx</DependentUpon>
     </Compile>
-    <Compile Include="publico\EliminarIngresosView.aspx.cs">
-      <DependentUpon>EliminarIngresosView.aspx</DependentUpon>
+    <Compile Include="publico\CatalogoVista.aspx.cs">
+      <DependentUpon>CatalogoVista.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="publico\EliminarIngresosView.aspx.designer.cs">
-      <DependentUpon>EliminarIngresosView.aspx</DependentUpon>
+    <Compile Include="publico\CatalogoVista.aspx.designer.cs">
+      <DependentUpon>CatalogoVista.aspx</DependentUpon>
     </Compile>
-    <Compile Include="publico\EliminarUsuarioView.aspx.cs">
-      <DependentUpon>EliminarUsuarioView.aspx</DependentUpon>
+    <Compile Include="publico\EliminarIngresoVista.aspx.cs">
+      <DependentUpon>EliminarIngresoVista.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="publico\EliminarUsuarioView.aspx.designer.cs">
-      <DependentUpon>EliminarUsuarioView.aspx</DependentUpon>
+    <Compile Include="publico\EliminarIngresoVista.aspx.designer.cs">
+      <DependentUpon>EliminarIngresoVista.aspx</DependentUpon>
     </Compile>
-    <Compile Include="publico\EliminarOfertaView.aspx.cs">
-      <DependentUpon>EliminarOfertaView.aspx</DependentUpon>
+    <Compile Include="publico\EliminarUsuarioVista.aspx.cs">
+      <DependentUpon>EliminarUsuarioVista.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="publico\EliminarOfertaView.aspx.designer.cs">
-      <DependentUpon>EliminarOfertaView.aspx</DependentUpon>
+    <Compile Include="publico\EliminarUsuarioVista.aspx.designer.cs">
+      <DependentUpon>EliminarUsuarioVista.aspx</DependentUpon>
     </Compile>
-    <Compile Include="publico\InsertarOfertaView.aspx.cs">
-      <DependentUpon>InsertarOfertaView.aspx</DependentUpon>
+    <Compile Include="publico\EliminarOfertaVista.aspx.cs">
+      <DependentUpon>EliminarOfertaVista.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="publico\InsertarOfertaView.aspx.designer.cs">
-      <DependentUpon>InsertarOfertaView.aspx</DependentUpon>
+    <Compile Include="publico\EliminarOfertaVista.aspx.designer.cs">
+      <DependentUpon>EliminarOfertaVista.aspx</DependentUpon>
     </Compile>
-    <Compile Include="publico\InsertarProductoView.aspx.cs">
-      <DependentUpon>InsertarProductoView.aspx</DependentUpon>
+    <Compile Include="publico\IniciarSessionVista.aspx.cs">
+      <DependentUpon>IniciarSessionVista.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="publico\InsertarProductoView.aspx.designer.cs">
-      <DependentUpon>InsertarProductoView.aspx</DependentUpon>
+    <Compile Include="publico\IniciarSessionVista.aspx.designer.cs">
+      <DependentUpon>IniciarSessionVista.aspx</DependentUpon>
     </Compile>
-    <Compile Include="publico\InsertarUsuarioView.aspx.cs">
-      <DependentUpon>InsertarUsuarioView.aspx</DependentUpon>
+    <Compile Include="publico\InsertarOfertaVista.aspx.cs">
+      <DependentUpon>InsertarOfertaVista.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="publico\InsertarUsuarioView.aspx.designer.cs">
-      <DependentUpon>InsertarUsuarioView.aspx</DependentUpon>
+    <Compile Include="publico\InsertarOfertaVista.aspx.designer.cs">
+      <DependentUpon>InsertarOfertaVista.aspx</DependentUpon>
     </Compile>
-    <Compile Include="publico\ObtenerIngresosView.aspx.cs">
-      <DependentUpon>ObtenerIngresosView.aspx</DependentUpon>
+    <Compile Include="publico\InsertarProductoVista.aspx.cs">
+      <DependentUpon>InsertarProductoVista.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="publico\ObtenerIngresosView.aspx.designer.cs">
-      <DependentUpon>ObtenerIngresosView.aspx</DependentUpon>
+    <Compile Include="publico\InsertarProductoVista.aspx.designer.cs">
+      <DependentUpon>InsertarProductoVista.aspx</DependentUpon>
     </Compile>
-    <Compile Include="publico\ObtenerUsuarioView.aspx.cs">
-      <DependentUpon>ObtenerUsuarioView.aspx</DependentUpon>
+    <Compile Include="publico\InsertarUsuarioVista.aspx.cs">
+      <DependentUpon>InsertarUsuarioVista.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="publico\ObtenerUsuarioView.aspx.designer.cs">
-      <DependentUpon>ObtenerUsuarioView.aspx</DependentUpon>
+    <Compile Include="publico\InsertarUsuarioVista.aspx.designer.cs">
+      <DependentUpon>InsertarUsuarioVista.aspx</DependentUpon>
     </Compile>
-    <Compile Include="publico\ObtenerOfertaView.aspx.cs">
-      <DependentUpon>ObtenerOfertaView.aspx</DependentUpon>
+    <Compile Include="publico\ObtenerIngresoVista.aspx.cs">
+      <DependentUpon>ObtenerIngresoVista.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="publico\ObtenerOfertaView.aspx.designer.cs">
-      <DependentUpon>ObtenerOfertaView.aspx</DependentUpon>
+    <Compile Include="publico\ObtenerIngresoVista.aspx.designer.cs">
+      <DependentUpon>ObtenerIngresoVista.aspx</DependentUpon>
     </Compile>
-    <Compile Include="publico\ActualizarApartadoView.aspx.cs">
-      <DependentUpon>ActualizarApartadoView.aspx</DependentUpon>
+    <Compile Include="publico\ObtenerUsuarioVista.aspx.cs">
+      <DependentUpon>ObtenerUsuarioVista.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="publico\ActualizarApartadoView.aspx.designer.cs">
-      <DependentUpon>ActualizarApartadoView.aspx</DependentUpon>
+    <Compile Include="publico\ObtenerUsuarioVista.aspx.designer.cs">
+      <DependentUpon>ObtenerUsuarioVista.aspx</DependentUpon>
     </Compile>
-    <Compile Include="publico\ActualizarAgendaView.aspx.cs">
-      <DependentUpon>ActualizarAgendaView.aspx</DependentUpon>
+    <Compile Include="publico\ObtenerOfertaVista.aspx.cs">
+      <DependentUpon>ObtenerOfertaVista.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="publico\ActualizarAgendaView.aspx.designer.cs">
-      <DependentUpon>ActualizarAgendaView.aspx</DependentUpon>
+    <Compile Include="publico\ObtenerOfertaVista.aspx.designer.cs">
+      <DependentUpon>ObtenerOfertaVista.aspx</DependentUpon>
     </Compile>
-    <Compile Include="publico\ActualizarCategoriaView.aspx.cs">
-      <DependentUpon>ActualizarCategoriaView.aspx</DependentUpon>
+    <Compile Include="publico\ActualizarApartadoVista.aspx.cs">
+      <DependentUpon>ActualizarApartadoVista.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="publico\ActualizarCategoriaView.aspx.designer.cs">
-      <DependentUpon>ActualizarCategoriaView.aspx</DependentUpon>
+    <Compile Include="publico\ActualizarApartadoVista.aspx.designer.cs">
+      <DependentUpon>ActualizarApartadoVista.aspx</DependentUpon>
     </Compile>
-    <Compile Include="publico\ActualizarClienteView.aspx.cs">
-      <DependentUpon>ActualizarClienteView.aspx</DependentUpon>
+    <Compile Include="publico\ActualizarAgendaVista.aspx.cs">
+      <DependentUpon>ActualizarAgendaVista.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="publico\ActualizarClienteView.aspx.designer.cs">
-      <DependentUpon>ActualizarClienteView.aspx</DependentUpon>
+    <Compile Include="publico\ActualizarAgendaVista.aspx.designer.cs">
+      <DependentUpon>ActualizarAgendaVista.aspx</DependentUpon>
     </Compile>
-    <Compile Include="publico\ActualizarIngresoView.aspx.cs">
-      <DependentUpon>ActualizarIngresoView.aspx</DependentUpon>
+    <Compile Include="publico\ActualizarCategoriaVista.aspx.cs">
+      <DependentUpon>ActualizarCategoriaVista.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="publico\ActualizarIngresoView.aspx.designer.cs">
-      <DependentUpon>ActualizarIngresoView.aspx</DependentUpon>
+    <Compile Include="publico\ActualizarCategoriaVista.aspx.designer.cs">
+      <DependentUpon>ActualizarCategoriaVista.aspx</DependentUpon>
     </Compile>
-    <Compile Include="publico\ActualizarProveedorView.aspx.cs">
-      <DependentUpon>ActualizarProveedorView.aspx</DependentUpon>
+    <Compile Include="publico\ActualizarClienteVista.aspx.cs">
+      <DependentUpon>ActualizarClienteVista.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="publico\ActualizarProveedorView.aspx.designer.cs">
-      <DependentUpon>ActualizarProveedorView.aspx</DependentUpon>
+    <Compile Include="publico\ActualizarClienteVista.aspx.designer.cs">
+      <DependentUpon>ActualizarClienteVista.aspx</DependentUpon>
     </Compile>
-    <Compile Include="publico\InsertarAgendaView.aspx.cs">
-      <DependentUpon>InsertarAgendaView.aspx</DependentUpon>
+    <Compile Include="publico\ActualizarIngresoVista.aspx.cs">
+      <DependentUpon>ActualizarIngresoVista.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="publico\InsertarAgendaView.aspx.designer.cs">
-      <DependentUpon>InsertarAgendaView.aspx</DependentUpon>
+    <Compile Include="publico\ActualizarIngresoVista.aspx.designer.cs">
+      <DependentUpon>ActualizarIngresoVista.aspx</DependentUpon>
     </Compile>
-    <Compile Include="publico\InsertarProveedorView.aspx.cs">
-      <DependentUpon>InsertarProveedorView.aspx</DependentUpon>
+    <Compile Include="publico\ActualizarProveedorVista.aspx.cs">
+      <DependentUpon>ActualizarProveedorVista.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="publico\InsertarProveedorView.aspx.designer.cs">
-      <DependentUpon>InsertarProveedorView.aspx</DependentUpon>
+    <Compile Include="publico\ActualizarProveedorVista.aspx.designer.cs">
+      <DependentUpon>ActualizarProveedorVista.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="publico\InsertarAgendaVista.aspx.cs">
+      <DependentUpon>InsertarAgendaVista.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="publico\InsertarAgendaVista.aspx.designer.cs">
+      <DependentUpon>InsertarAgendaVista.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="publico\InsertarProveedorVista.aspx.cs">
+      <DependentUpon>InsertarProveedorVista.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="publico\InsertarProveedorVista.aspx.designer.cs">
+      <DependentUpon>InsertarProveedorVista.aspx</DependentUpon>
     </Compile>
     <Compile Include="publico\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -314,139 +331,139 @@
     <Compile Include="publico\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="publico\ActualizarGastoView.aspx.cs">
-      <DependentUpon>ActualizarGastoView.aspx</DependentUpon>
+    <Compile Include="publico\ActualizarGastoVista.aspx.cs">
+      <DependentUpon>ActualizarGastoVista.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="publico\ActualizarGastoView.aspx.designer.cs">
-      <DependentUpon>ActualizarGastoView.aspx</DependentUpon>
+    <Compile Include="publico\ActualizarGastoVista.aspx.designer.cs">
+      <DependentUpon>ActualizarGastoVista.aspx</DependentUpon>
     </Compile>
-    <Compile Include="publico\EliminarAgendaView.aspx.cs">
-      <DependentUpon>EliminarAgendaView.aspx</DependentUpon>
+    <Compile Include="publico\EliminarAgendaVista.aspx.cs">
+      <DependentUpon>EliminarAgendaVista.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="publico\EliminarAgendaView.aspx.designer.cs">
-      <DependentUpon>EliminarAgendaView.aspx</DependentUpon>
+    <Compile Include="publico\EliminarAgendaVista.aspx.designer.cs">
+      <DependentUpon>EliminarAgendaVista.aspx</DependentUpon>
     </Compile>
-    <Compile Include="publico\EliminarApartadoView.aspx.cs">
-      <DependentUpon>EliminarApartadoView.aspx</DependentUpon>
+    <Compile Include="publico\EliminarApartadoVista.aspx.cs">
+      <DependentUpon>EliminarApartadoVista.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="publico\EliminarApartadoView.aspx.designer.cs">
-      <DependentUpon>EliminarApartadoView.aspx</DependentUpon>
+    <Compile Include="publico\EliminarApartadoVista.aspx.designer.cs">
+      <DependentUpon>EliminarApartadoVista.aspx</DependentUpon>
     </Compile>
-    <Compile Include="publico\EliminarCategoriaView.aspx.cs">
-      <DependentUpon>EliminarCategoriaView.aspx</DependentUpon>
+    <Compile Include="publico\EliminarCategoriaVista.aspx.cs">
+      <DependentUpon>EliminarCategoriaVista.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="publico\EliminarCategoriaView.aspx.designer.cs">
-      <DependentUpon>EliminarCategoriaView.aspx</DependentUpon>
+    <Compile Include="publico\EliminarCategoriaVista.aspx.designer.cs">
+      <DependentUpon>EliminarCategoriaVista.aspx</DependentUpon>
     </Compile>
-    <Compile Include="publico\EliminarGastoView.aspx.cs">
-      <DependentUpon>EliminarGastoView.aspx</DependentUpon>
+    <Compile Include="publico\EliminarGastoVista.aspx.cs">
+      <DependentUpon>EliminarGastoVista.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="publico\EliminarGastoView.aspx.designer.cs">
-      <DependentUpon>EliminarGastoView.aspx</DependentUpon>
+    <Compile Include="publico\EliminarGastoVista.aspx.designer.cs">
+      <DependentUpon>EliminarGastoVista.aspx</DependentUpon>
     </Compile>
-    <Compile Include="publico\EliminarProveedorView.aspx.cs">
-      <DependentUpon>EliminarProveedorView.aspx</DependentUpon>
+    <Compile Include="publico\EliminarProveedorVista.aspx.cs">
+      <DependentUpon>EliminarProveedorVista.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="publico\EliminarProveedorView.aspx.designer.cs">
-      <DependentUpon>EliminarProveedorView.aspx</DependentUpon>
+    <Compile Include="publico\EliminarProveedorVista.aspx.designer.cs">
+      <DependentUpon>EliminarProveedorVista.aspx</DependentUpon>
     </Compile>
-    <Compile Include="publico\EliminarVentaView.aspx.cs">
-      <DependentUpon>EliminarVentaView.aspx</DependentUpon>
+    <Compile Include="publico\EliminarVentaVista.aspx.cs">
+      <DependentUpon>EliminarVentaVista.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="publico\EliminarVentaView.aspx.designer.cs">
-      <DependentUpon>EliminarVentaView.aspx</DependentUpon>
+    <Compile Include="publico\EliminarVentaVista.aspx.designer.cs">
+      <DependentUpon>EliminarVentaVista.aspx</DependentUpon>
     </Compile>
-    <Compile Include="publico\InsertarApartadoView.aspx.cs">
-      <DependentUpon>InsertarApartadoView.aspx</DependentUpon>
+    <Compile Include="publico\InsertarApartadoVista.aspx.cs">
+      <DependentUpon>InsertarApartadoVista.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="publico\InsertarApartadoView.aspx.designer.cs">
-      <DependentUpon>InsertarApartadoView.aspx</DependentUpon>
+    <Compile Include="publico\InsertarApartadoVista.aspx.designer.cs">
+      <DependentUpon>InsertarApartadoVista.aspx</DependentUpon>
     </Compile>
-    <Compile Include="publico\InsertarCategoria.aspx.cs">
-      <DependentUpon>InsertarCategoria.aspx</DependentUpon>
+    <Compile Include="publico\InsertarCategoriaVista.aspx.cs">
+      <DependentUpon>InsertarCategoriaVista.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="publico\InsertarCategoria.aspx.designer.cs">
-      <DependentUpon>InsertarCategoria.aspx</DependentUpon>
+    <Compile Include="publico\InsertarCategoriaVista.aspx.designer.cs">
+      <DependentUpon>InsertarCategoriaVista.aspx</DependentUpon>
     </Compile>
-    <Compile Include="publico\InsertarClienteView.aspx.cs">
-      <DependentUpon>InsertarClienteView.aspx</DependentUpon>
+    <Compile Include="publico\InsertarClienteVista.aspx.cs">
+      <DependentUpon>InsertarClienteVista.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="publico\InsertarClienteView.aspx.designer.cs">
-      <DependentUpon>InsertarClienteView.aspx</DependentUpon>
+    <Compile Include="publico\InsertarClienteVista.aspx.designer.cs">
+      <DependentUpon>InsertarClienteVista.aspx</DependentUpon>
     </Compile>
-    <Compile Include="publico\InsertarIngresoView.aspx.cs">
-      <DependentUpon>InsertarIngresoView.aspx</DependentUpon>
+    <Compile Include="publico\InsertarIngresoVista.aspx.cs">
+      <DependentUpon>InsertarIngresoVista.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="publico\InsertarIngresoView.aspx.designer.cs">
-      <DependentUpon>InsertarIngresoView.aspx</DependentUpon>
+    <Compile Include="publico\InsertarIngresoVista.aspx.designer.cs">
+      <DependentUpon>InsertarIngresoVista.aspx</DependentUpon>
     </Compile>
-    <Compile Include="publico\ObtenerAgendaView.aspx.cs">
-      <DependentUpon>ObtenerAgendaView.aspx</DependentUpon>
+    <Compile Include="publico\ObtenerAgendaVista.aspx.cs">
+      <DependentUpon>ObtenerAgendaVista.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="publico\ObtenerAgendaView.aspx.designer.cs">
-      <DependentUpon>ObtenerAgendaView.aspx</DependentUpon>
+    <Compile Include="publico\ObtenerAgendaVista.aspx.designer.cs">
+      <DependentUpon>ObtenerAgendaVista.aspx</DependentUpon>
     </Compile>
-    <Compile Include="publico\ObtenerApartadoView.aspx.cs">
-      <DependentUpon>ObtenerApartadoView.aspx</DependentUpon>
+    <Compile Include="publico\ObtenerApartadoVista.aspx.cs">
+      <DependentUpon>ObtenerApartadoVista.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="publico\ObtenerApartadoView.aspx.designer.cs">
-      <DependentUpon>ObtenerApartadoView.aspx</DependentUpon>
+    <Compile Include="publico\ObtenerApartadoVista.aspx.designer.cs">
+      <DependentUpon>ObtenerApartadoVista.aspx</DependentUpon>
     </Compile>
-    <Compile Include="publico\ObtenerCategoria.aspx.cs">
-      <DependentUpon>ObtenerCategoria.aspx</DependentUpon>
+    <Compile Include="publico\ObtenerCategoriaVista.aspx.cs">
+      <DependentUpon>ObtenerCategoriaVista.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="publico\ObtenerCategoria.aspx.designer.cs">
-      <DependentUpon>ObtenerCategoria.aspx</DependentUpon>
+    <Compile Include="publico\ObtenerCategoriaVista.aspx.designer.cs">
+      <DependentUpon>ObtenerCategoriaVista.aspx</DependentUpon>
     </Compile>
-    <Compile Include="publico\ObtenerClienteView.aspx.cs">
-      <DependentUpon>ObtenerClienteView.aspx</DependentUpon>
+    <Compile Include="publico\ObtenerClienteVista.aspx.cs">
+      <DependentUpon>ObtenerClienteVista.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="publico\ObtenerClienteView.aspx.designer.cs">
-      <DependentUpon>ObtenerClienteView.aspx</DependentUpon>
+    <Compile Include="publico\ObtenerClienteVista.aspx.designer.cs">
+      <DependentUpon>ObtenerClienteVista.aspx</DependentUpon>
     </Compile>
-    <Compile Include="publico\ObtenerGastoView.aspx.cs">
-      <DependentUpon>ObtenerGastoView.aspx</DependentUpon>
+    <Compile Include="publico\ObtenerGastoVista.aspx.cs">
+      <DependentUpon>ObtenerGastoVista.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="publico\ObtenerGastoView.aspx.designer.cs">
-      <DependentUpon>ObtenerGastoView.aspx</DependentUpon>
+    <Compile Include="publico\ObtenerGastoVista.aspx.designer.cs">
+      <DependentUpon>ObtenerGastoVista.aspx</DependentUpon>
     </Compile>
-    <Compile Include="publico\ObtenerProveedorView.aspx.cs">
-      <DependentUpon>ObtenerProveedorView.aspx</DependentUpon>
+    <Compile Include="publico\ObtenerProveedorVista.aspx.cs">
+      <DependentUpon>ObtenerProveedorVista.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="publico\ObtenerProveedorView.aspx.designer.cs">
-      <DependentUpon>ObtenerProveedorView.aspx</DependentUpon>
+    <Compile Include="publico\ObtenerProveedorVista.aspx.designer.cs">
+      <DependentUpon>ObtenerProveedorVista.aspx</DependentUpon>
     </Compile>
-    <Compile Include="publico\ObtenerVentaView.aspx.cs">
-      <DependentUpon>ObtenerVentaView.aspx</DependentUpon>
+    <Compile Include="publico\ObtenerVentaVista.aspx.cs">
+      <DependentUpon>ObtenerVentaVista.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="publico\ObtenerVentaView.aspx.designer.cs">
-      <DependentUpon>ObtenerVentaView.aspx</DependentUpon>
+    <Compile Include="publico\ObtenerVentaVista.aspx.designer.cs">
+      <DependentUpon>ObtenerVentaVista.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="publico\InsertarGastoView.aspx.cs">
-      <DependentUpon>InsertarGastoView.aspx</DependentUpon>
+    <Compile Include="publico\InsertarGastoVista.aspx.cs">
+      <DependentUpon>InsertarGastoVista.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="publico\InsertarGastoView.aspx.designer.cs">
-      <DependentUpon>InsertarGastoView.aspx</DependentUpon>
+    <Compile Include="publico\InsertarGastoVista.aspx.designer.cs">
+      <DependentUpon>InsertarGastoVista.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -455,12 +472,12 @@
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
-    <Compile Include="publico\InsertarVentaView.aspx.cs">
-      <DependentUpon>InsertarVentaView.aspx</DependentUpon>
+    <Compile Include="publico\InsertarVentaVista.aspx.cs">
+      <DependentUpon>InsertarVentaVista.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="publico\InsertarVentaView.aspx.designer.cs">
-      <DependentUpon>InsertarVentaView.aspx</DependentUpon>
+    <Compile Include="publico\InsertarVentaVista.aspx.designer.cs">
+      <DependentUpon>InsertarVentaVista.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

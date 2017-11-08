@@ -118,6 +118,7 @@ namespace DATA
                 eActual.Id = int.Parse(currentRow["id"].ToString());
                 eActual.Fecha = currentRow["fecha"].ToString();
                 eActual.Hora = currentRow["hora"].ToString();
+                eActual.Total = float.Parse(currentRow["total"].ToString());
                 eActual.Concepto = currentRow["concepto"].ToString();
                 eActual.Usuario = currentRow["id_usuario"].ToString();
                 ingresos.AddLast(eActual);

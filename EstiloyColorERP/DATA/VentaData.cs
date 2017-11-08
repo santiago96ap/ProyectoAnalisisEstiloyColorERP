@@ -24,16 +24,43 @@ namespace DATA
 
             cmdInsertar.Parameters.Add(new SqlParameter("@fecha", venta.Fecha));
             cmdInsertar.Parameters.Add(new SqlParameter("@hora", venta.Hora));
-            cmdInsertar.Parameters.Add(new SqlParameter("@cliente", venta.Cliente));
-            cmdInsertar.Parameters.Add(new SqlParameter("@vendedor", venta.Vendedor));
-            cmdInsertar.Parameters.Add(new SqlParameter("@tipoServicio", venta.TipoServicio));
-            cmdInsertar.Parameters.Add(new SqlParameter("@articuloComprado", venta.ArticuloComprado));
+            cmdInsertar.Parameters.Add(new SqlParameter("@id_cliente", venta.Cliente));
+            cmdInsertar.Parameters.Add(new SqlParameter("@usuario", venta.Vendedor));
+            cmdInsertar.Parameters.Add(new SqlParameter("@tipo_Servicio", venta.TipoServicio));
             cmdInsertar.Parameters.Add(new SqlParameter("@subTotal", venta.SubTotal));
             cmdInsertar.Parameters.Add(new SqlParameter("@total", venta.Total));
-            cmdInsertar.Parameters.Add(new SqlParameter("@tipoPago", venta.TipoPago));
+            cmdInsertar.Parameters.Add(new SqlParameter("@tipo_Pago", venta.TipoPago));
 
             cmdInsertar.Connection.Open();
-            cmdInsertar.ExecuteNonQuery();
+            
+            if (cmdInsertar.ExecuteNonQuery() > 0)
+            {
+                cmdInsertar.Connection.Close();
+                return true;
+            }
+            else
+            {
+                cmdInsertar.Connection.Close();
+                return false;
+            }//if-else
+
+        }//insertar venta
+
+        public Boolean insertarVentaProducto(VentaProducto vp)
+        {
+            SqlConnection connection = new SqlConnection(this.stringConeccion);
+            String sqlStoreProcedure = "sp_InsertarVentaProductos";
+            SqlCommand cmdInsertar = new SqlCommand(sqlStoreProcedure, connection);
+            cmdInsertar.CommandType = System.Data.CommandType.StoredProcedure;
+            //@id_producto int, @id_categoria int, @total float, @fecha date, @hora time ,@id_cliente varchar(15)
+            cmdInsertar.Parameters.Add(new SqlParameter("@id_producto", vp.IdProduco));
+            cmdInsertar.Parameters.Add(new SqlParameter("@id_categoria", vp.IdCategoria));
+            cmdInsertar.Parameters.Add(new SqlParameter("@total", vp.Total));
+            cmdInsertar.Parameters.Add(new SqlParameter("@fecha", vp.Fecha));
+            cmdInsertar.Parameters.Add(new SqlParameter("@hora", vp.Hora));
+            cmdInsertar.Parameters.Add(new SqlParameter("@id_cliente", vp.IdCliente));
+
+            cmdInsertar.Connection.Open();
             if (cmdInsertar.ExecuteNonQuery() > 0)
             {
                 cmdInsertar.Connection.Close();
@@ -56,7 +83,7 @@ namespace DATA
 
             cmdEliminar.Parameters.Add(new SqlParameter("@id", venta.Id));
             cmdEliminar.Connection.Open();
-            cmdEliminar.ExecuteNonQuery();
+        
             if (cmdEliminar.ExecuteNonQuery() > 0)
             {
                 cmdEliminar.Connection.Close();
