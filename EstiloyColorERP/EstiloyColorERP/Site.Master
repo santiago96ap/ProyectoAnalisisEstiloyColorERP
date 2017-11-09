@@ -60,7 +60,7 @@
             <div class="w3layouts-details">
                 <ul>
                     <li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>estiloycolorcr@gmail.com</li>
-                    <li><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>(+556) 8995 6312</li>
+                    <li><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>(+506) 8995 6312</li>
                 </ul>
             </div>
             <div class="clearfix"></div>
@@ -115,17 +115,8 @@
                                             <li><a class="hvr-bounce-to-bottom" href="ObtenerClienteVista.aspx">Obtener Clientes</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contabilidad<span class="caret"></span></a>
-                                        <ul class="dropdown-menu">
-                                            <li class="dropdown-submenu">
-                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown-submenu" role="button" aria-haspopup="true" aria-expanded="false">Ingresos<span class="caret"></span></a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a class="hvr-bounce-to-bottom" href="InsertarIngresoVista.aspx">Insertar Ingreso</a></li>
-                                                    <li><a class="hvr-bounce-to-bottom" href="ActualizarIngresoVista.aspx">Actualizar Ingreso</a></li>
-                                                    <li><a class="hvr-bounce-to-bottom" href="EliminarIngresoVista.aspx">Eliminar Ingreso</a></li>
-                                                    <li><a class="hvr-bounce-to-bottom" href="ObtenerIngresoVista.aspx">Obtener Ingresos</a></li>
-                                                </ul>
-                                            </li>
+                                    <li><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Produccion<span class="caret"></span></a>
+                                        <ul class="dropdown-menu">                                            
                                             <li class="dropdown-submenu">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown-submenu" role="button" aria-haspopup="true" aria-expanded="false">Gastos<span class="caret"></span></a>
                                                 <ul class="dropdown-menu">
@@ -143,6 +134,15 @@
                                                     <li><a class="hvr-bounce-to-bottom" href="ObtenerVentaVista.aspx">Obtener Ventas</a></li>
                                                 </ul>
                                             </li>
+                                            <li class="dropdown-submenu">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown-submenu" role="button" aria-haspopup="true" aria-expanded="false">Apartados<span class="caret"></span></a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="hvr-bounce-to-bottom" href="InsertarApartadoVista.aspx">Insertar Apartado</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="ActualizarApartadoVista.aspx">Actualizar Apartado</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="EliminarApartadoVista.aspx">Eliminar Apartado</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="ObtenerApartadoVista.aspx">Obtener Apartados</a></li>
+                                                </ul>
+                                            </li>
                                         </ul>
                                     </li>
                                     <li><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Productos<span class="caret"></span></a>
@@ -156,16 +156,7 @@
                                                     <li><a class="hvr-bounce-to-bottom" href="EliminarProductoVista.aspx">Eliminar Producto</a></li>
                                                     <li><a class="hvr-bounce-to-bottom" href="ObtenerProductoVista.aspx">Obtener Inventario</a></li>
                                                 </ul>
-                                            </li>
-                                            <li class="dropdown-submenu">
-                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown-submenu" role="button" aria-haspopup="true" aria-expanded="false">Apartados<span class="caret"></span></a>
-                                                <ul class="dropdown-menu">
-                                                    <li><a class="hvr-bounce-to-bottom" href="InsertarApartadoVista.aspx">Insertar Apartado</a></li>
-                                                    <li><a class="hvr-bounce-to-bottom" href="ActualizarApartadoVista.aspx">Actualizar Apartado</a></li>
-                                                    <li><a class="hvr-bounce-to-bottom" href="EliminarApartadoVista.aspx">Eliminar Apartado</a></li>
-                                                    <li><a class="hvr-bounce-to-bottom" href="ObtenerApartadoVista.aspx">Obtener Apartados</a></li>
-                                                </ul>
-                                            </li>
+                                            </li>                                            
                                             <li class="dropdown-submenu">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown-submenu" role="button" aria-haspopup="true" aria-expanded="false">Categoría<span class="caret"></span></a>
                                                 <ul class="dropdown-menu">
@@ -334,7 +325,7 @@
                         </ul>
                     </div>
                     <div class="f-address">
-                        <p class="number">(+556) 8995 6312</p>
+                        <p class="number">(+506) 8995 6312</p>
                     </div>
                     <div class="copyright">
                         <p>
