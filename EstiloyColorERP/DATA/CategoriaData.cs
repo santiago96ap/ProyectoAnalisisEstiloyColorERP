@@ -99,7 +99,7 @@ namespace DATA {
             {
                 cmdEliminar.Connection.Close();
                 return false;
-            }//if-else
+            }
         }//eliminarCategoria
     }//class
 }//namespace

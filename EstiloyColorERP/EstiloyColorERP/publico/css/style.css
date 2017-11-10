@@ -152,11 +152,14 @@ div#divi .form-control1, div#divi1 .form-control1, div#divi2 .form-control1, div
 div#divi10 .form-dropdownlist, div#divi10 .form-control1{
     width: 20%;
 }
+div#divi11 .btn-info, div#divi11 .form-control1{
+    width: 20%;
+}
 div#divi6 .form-control1, div#divi7 .form-control1, div#divi8 .form-control1, div#divi9 .form-control1{
     width: 50%;
 }
 .table{
-    margin-left: 0px;
+    margin-left: auto;
     margin-right: auto;
 }
 .header-top-right form input[type="text"] {
@@ -714,7 +717,7 @@ ul.social-slide li i.mac{
     display: inline-block;
     width: 100%;
     }
-    div#divi7, div#divi8, div#divi9, div#divi10{
+    div#divi7, div#divi8, div#divi9, div#divi10, div#divi11{
         display: inline-block;
         width: 100%;
     }
@@ -725,6 +728,10 @@ ul.social-slide li i.mac{
         width: 50%;
     }
     div#divi10 .form-dropdownlist, div#divi10 .form-control1{
+        width: 50%;
+        margin: 15px;
+    }
+    div#divi11 .btn-info, div#divi11 .form-control1{
         width: 50%;
         margin: 15px;
     }
@@ -1646,7 +1653,7 @@ h2.typoh2{
     display: inline-block;
     width: 100%;
     }
-    div#divi7, div#divi8, div#divi9, div#divi10{
+    div#divi7, div#divi8, div#divi9, div#divi10, div#divi11{
         display: inline-block;
         width: 100%;
     }
@@ -1657,6 +1664,10 @@ h2.typoh2{
         width: 50%;
     }
     div#divi10 .form-dropdownlist, div#divi10 .form-control1{
+        width: 50%;
+        margin: 15px;
+    }
+    div#divi11 .btn-info, div#divi11 .form-control1{
         width: 50%;
         margin: 15px;
     }

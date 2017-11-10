@@ -122,11 +122,12 @@ namespace DATA
             {
                 Gasto eActual = new Gasto();
                 eActual.Id = int.Parse(currentRow["id"].ToString());
-                eActual.Fecha = currentRow["fecha"].ToString();
+                eActual.Fecha = currentRow["fecha"].ToString().Split(' ')[0];
                 eActual.Hora = currentRow["hora"].ToString();
                 eActual.Concepto = currentRow["concepto"].ToString();
                 eActual.Total = float.Parse(currentRow["total"].ToString());
                 eActual.Vendedor = currentRow["id_usuario"].ToString();
+                eActual.Servicio = currentRow["tipoServicio"].ToString();
                 gasto.AddLast(eActual);
             }//foreach
 
