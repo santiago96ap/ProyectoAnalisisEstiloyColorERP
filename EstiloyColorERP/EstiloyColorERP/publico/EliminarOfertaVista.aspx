@@ -17,7 +17,7 @@
     <br />
     <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" OnClick="btnEliminar_Click" Width="74px" />
     <br />
-    </ContentTemplate>
+    </ContentTemplate> 
 
 
 
