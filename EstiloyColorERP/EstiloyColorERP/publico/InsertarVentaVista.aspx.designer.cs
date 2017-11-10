@@ -58,22 +58,58 @@ namespace EstiloyColorERP {
         protected global::System.Web.UI.WebControls.TextBox tbHora;
         
         /// <summary>
-        /// lblArticulos control.
+        /// lbTipo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblArticulos;
+        protected global::System.Web.UI.WebControls.Label lbTipo;
         
         /// <summary>
-        /// TbCodigoProducto control.
+        /// ddTipoVenta control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TbCodigoProducto;
+        protected global::System.Web.UI.WebControls.DropDownList ddTipoVenta;
+        
+        /// <summary>
+        /// lblIndicador control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblIndicador;
+        
+        /// <summary>
+        /// tbDatos control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbDatos;
+        
+        /// <summary>
+        /// lblCantidad control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCantidad;
+        
+        /// <summary>
+        /// tbCantidad control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbCantidad;
         
         /// <summary>
         /// btnAgregar control.

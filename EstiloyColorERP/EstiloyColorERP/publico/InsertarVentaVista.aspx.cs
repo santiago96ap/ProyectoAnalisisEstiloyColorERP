@@ -16,12 +16,18 @@ namespace EstiloyColorERP
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            this.ddTipoPago.Items.Add(new ListItem("Tarjeta de débito o crédito", "tarjeta" ));
-            this.ddTipoPago.Items.Add(new ListItem("Dinero en efectivo", "efectivo" ));
+            
+                this.tbSubtotal.Enabled = false;
+                this.tbTotal.Enabled = false;
 
-            this.ddTipoServicio.Items.Add(new ListItem("Proyecto", "Proyecto"));
-            this.ddTipoServicio.Items.Add(new ListItem("Tienda", "Local"));
+            String fechaSistema = System.DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            String[] fecha = fechaSistema.ToString().Split(' ');
+            this.tbFecha.Text = fecha[0];
+            this.tbHora.Text = fecha[1];
 
+            //Establecer los campos de fecha y hora inmodificables
+            this.tbFecha.Enabled = false;
+            this.tbHora.Enabled = false;
         }//load
 
 
@@ -64,10 +70,10 @@ namespace EstiloyColorERP
 
         protected void btnAgregar_Click(object sender, EventArgs e)
         {
-            Producto p = obtenerproducto(int.Parse(TbCodigoProducto.Text));
+            Producto p = obtenerproducto(int.Parse(tbDatos.Text));
             productos.AddLast(p);
             agregarGridView();
-            this.TbCodigoProducto.Text = " ";
+            this.tbDatos.Text = " ";
             this.tbTotal.Text = sumarPrecios().ToString();
             this.tbSubtotal.Text = sumarPrecios().ToString();
         }//btnAgregar_Click
@@ -95,7 +101,7 @@ namespace EstiloyColorERP
 
         private void limpiarTexto()
         {
-            this.TbCodigoProducto.Text = " ";
+            this.tbDatos.Text = " ";
             this.tbFecha.Text = " ";
             this.tbHora.Text = " ";
             this.tbSubtotal.Text = " ";
@@ -118,6 +124,39 @@ namespace EstiloyColorERP
 
         }//insertarProductos
 
-
+        protected void ddTipoVenta_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.tbDatos.Text = ddTipoVenta.SelectedValue.ToString();
+            if (ddTipoVenta.SelectedValue.ToString().Equals("producto"))// si la venta será de productos 
+            {
+                this.lblIndicador.Text = "Código producto";
+                this.gvProductos.Visible = true;
+                this.btnAgregar.Visible = true;
+                this.tbSubtotal.Enabled = false;
+                this.tbCantidad.Visible = true;
+                this.lblCantidad.Visible = true;
+                this.tbTotal.Enabled = false;
+            }
+            else if (ddTipoVenta.SelectedValue.ToString().Equals("servicio"))
+            {
+                this.lblIndicador.Text = "Servicio";
+                this.gvProductos.Visible = false;
+                this.btnAgregar.Visible = false;
+                this.tbCantidad.Visible = false;
+                this.lblCantidad.Visible = false;
+                this.tbSubtotal.Enabled = true;
+                this.tbTotal.Enabled = true;
+            }
+            else if (ddTipoVenta.SelectedValue.ToString().Equals("otro"))
+            {
+                this.lblIndicador.Text = "Otro";
+                this.gvProductos.Visible = false;
+                this.btnAgregar.Visible = false;
+                this.tbSubtotal.Enabled = true;
+                this.tbCantidad.Visible = false;
+                this.lblCantidad.Visible = false;
+                this.tbTotal.Enabled = true;
+            }
+        }
     }//class
 }//class

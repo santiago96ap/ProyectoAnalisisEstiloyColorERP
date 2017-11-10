@@ -17,16 +17,33 @@
                         <asp:Label ID="lblHora" CssClass="col-sm-2 control-label" runat="server" Text="Hora"></asp:Label>
                         <asp:TextBox ID="tbHora" type="time" CssClass="form-control1" runat="server"></asp:TextBox>
                     </div>
-           </section>
+                <br />
+                 <br />
+                 <br />
+                    <div id="divi2">
+                        <asp:Label ID="lbTipo" CssClass="col-sm-2 control-label" runat="server" Text="Tipo de venta"></asp:Label>
+                        <br />
+                        <asp:dropdownlist ID="ddTipoVenta" CssClass="form-control1" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddTipoVenta_SelectedIndexChanged" >
+                            <asp:ListItem Value="producto">Producto</asp:ListItem>
+                            <!--<asp:ListItem Value="servicio">Servicio</asp:ListItem>-->
+                            <!--<asp:ListItem Value="otro">Otro</asp:ListItem>-->
+                        </asp:dropdownlist>
+                    </div>
+           </section>                    
+            <br />
             <br />
             <section id="formulario1">
                 <div id="divi7">
                      <br />
                      <br />
-                    <asp:Label ID="lblArticulos"  CssClass="col-sm-2 control-label" runat="server" Text="Articulo"></asp:Label>
-                    <asp:TextBox ID="TbCodigoProducto" type="number" CssClass="form-control1" runat="server"></asp:TextBox>
+                    <asp:Label ID="lblIndicador"  CssClass="col-sm-2 control-label" runat="server" Text="Articulo"></asp:Label>
+                    <asp:TextBox ID="tbDatos" CssClass="form-control1" runat="server"></asp:TextBox>
+                    <br />
+                     <br />
+                    <asp:Label ID="lblCantidad"  CssClass="col-sm-2 control-label" runat="server" Text="Cantidad"></asp:Label>
+                    <asp:TextBox ID="tbCantidad" type="number" CssClass="form-control1" runat="server" min="1"></asp:TextBox>
                         <br />
-                         <br />
+                        <br />
                     <asp:Button ID="btnAgregar" CssClass="btn btn-info" runat="server" Text="Agregar" OnClick="btnAgregar_Click" Width="193px" />
                     <br />
                     <br />
@@ -48,19 +65,25 @@
                     <br />
                     <br />
                     <asp:Label ID="lblTipoPago"  CssClass="col-sm-2 control-label" runat="server" Text="Pago"></asp:Label>
-                    <asp:dropdownlist ID="ddTipoPago" CssClass="form-control1" runat="server" ></asp:dropdownlist>
+                    <asp:dropdownlist ID="ddTipoPago" CssClass="form-control1" runat="server" >
+                        <asp:ListItem Value="efectivo">Efectivo</asp:ListItem>
+                        <asp:ListItem Value="tarjeta">Tarjeta</asp:ListItem>
+                    </asp:dropdownlist>
                     <br />
                     <br />
                     <asp:Label ID="lblSubTotal" CssClass="col-sm-2 control-label" runat="server" Text="Sub-total"></asp:Label>
-                    <asp:TextBox ID="tbSubtotal" CssClass="form-control1" runat="server" Enabled="False"></asp:TextBox>
+                    <asp:TextBox ID="tbSubtotal" CssClass="form-control1" runat="server"></asp:TextBox>
                 </div>
                 <div id="divi6">
                     <asp:Label ID="lblTipoServicio"  CssClass="col-sm-2 control-label" runat="server" Text="Servicio"></asp:Label>
-                    <asp:dropdownlist ID="ddTipoServicio" CssClass="form-control1" runat="server" ></asp:dropdownlist>
+                    <asp:dropdownlist ID="ddTipoServicio" CssClass="form-control1" runat="server" >
+                        <asp:ListItem Value="tienda">Tienda</asp:ListItem>
+                        <asp:ListItem Value="proyecto">Proyecto</asp:ListItem>
+                    </asp:dropdownlist>
                     <br />
                     <br />
                      <asp:Label ID="lblTotal" CssClass="col-sm-2 control-label" runat="server" Text="Total"></asp:Label>
-                    <asp:TextBox ID="tbTotal" CssClass="form-control1" runat="server" Enabled="False"></asp:TextBox>
+                    <asp:TextBox ID="tbTotal" CssClass="form-control1" runat="server"></asp:TextBox>
                 </div>
                     <br />
                     <br />
