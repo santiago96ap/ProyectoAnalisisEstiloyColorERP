@@ -14,7 +14,8 @@ namespace DOMAIN
         private String concepto;
         private float total;
         private String vendedor;
-        
+        private String servico;
+
         public Gasto()
         {
 
@@ -73,6 +74,19 @@ namespace DOMAIN
             set
             {
                 fecha = value;
+            }
+        }
+
+        public string Servicio
+        {
+            get
+            {
+                return servico;
+            }
+
+            set
+            {
+                servico = value;
             }
         }
 

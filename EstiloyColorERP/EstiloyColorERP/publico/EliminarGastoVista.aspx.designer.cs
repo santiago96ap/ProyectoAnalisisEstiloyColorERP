@@ -13,13 +13,40 @@ namespace EstiloyColorERP.publico {
     public partial class EliminarGastoView {
         
         /// <summary>
-        /// lblTitulo control.
+        /// myModal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTitulo;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl myModal;
+        
+        /// <summary>
+        /// btnCancelar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCancelar;
+        
+        /// <summary>
+        /// btnConfirmar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnConfirmar;
+        
+        /// <summary>
+        /// lblITitulo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblITitulo;
         
         /// <summary>
         /// tbFechaInicio control.
@@ -31,13 +58,13 @@ namespace EstiloyColorERP.publico {
         protected global::System.Web.UI.WebControls.TextBox tbFechaInicio;
         
         /// <summary>
-        /// tbFechaFin control.
+        /// tbFechaFinal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbFechaFin;
+        protected global::System.Web.UI.WebControls.TextBox tbFechaFinal;
         
         /// <summary>
         /// btnBuscar control.
@@ -49,21 +76,12 @@ namespace EstiloyColorERP.publico {
         protected global::System.Web.UI.WebControls.Button btnBuscar;
         
         /// <summary>
-        /// tbResultados control.
+        /// gvGastos control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Table tbResultados;
-        
-        /// <summary>
-        /// btnEliminar control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnEliminar;
+        protected global::System.Web.UI.WebControls.GridView gvGastos;
     }
 }

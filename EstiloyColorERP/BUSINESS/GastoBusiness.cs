@@ -40,9 +40,9 @@ namespace BUSINESS
             return this.gastoData.obtenerGasto();
         }//obtenerGasto
 
-        public LinkedList<Gasto> obtenerGastos(String fechaFin, String fechaInicio)
+        public LinkedList<Gasto> obtenerGastos(String fechaIni, String fechaFin)
         {
-            return this.gastoData.obtenerGastos(fechaFin, fechaInicio);
+            return this.gastoData.obtenerGastos(fechaIni, fechaFin);
         }//obtenerGastos
 
     }//fin de la clase
