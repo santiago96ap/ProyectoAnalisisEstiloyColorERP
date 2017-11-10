@@ -34,7 +34,7 @@ namespace EstiloyColorERP.publico
             usuarios = this.usuarioBusiness.obtenerUsuarios();
             DataTable table = new DataTable("Usarios");
 
-            table.Columns.Add(new DataColumn("ID", typeof(string)));
+            table.Columns.Add(new DataColumn("Nombre Usuario", typeof(string)));
             table.Columns.Add(new DataColumn("Nombre", typeof(string)));
             table.Columns.Add(new DataColumn("Rol", typeof(string)));
             table.Columns.Add(new DataColumn("Correo", typeof(string)));
@@ -47,7 +47,7 @@ namespace EstiloyColorERP.publico
                 {//si seleccionan todos los usuarios en el sistema
                     
 
-                    row["ID"] = usuarioActual.Id;
+                    row["Nombre Usuario"] = usuarioActual.NombreUsuario;
                     row["Nombre"] = usuarioActual.Nombre;
                     row["Rol"] = usuarioActual.Rol;
                     row["Correo"] = usuarioActual.Correo;
@@ -59,7 +59,7 @@ namespace EstiloyColorERP.publico
                 if (mostrar.Equals(usuarioActual.Rol))                        
                     {
 
-                        row["ID"] = usuarioActual.Id;
+                        row["Nombre Usuario"] = usuarioActual.NombreUsuario;
                         row["Nombre"] = usuarioActual.Nombre;
                         row["Rol"] = usuarioActual.Rol;
                         row["Correo"] = usuarioActual.Correo;

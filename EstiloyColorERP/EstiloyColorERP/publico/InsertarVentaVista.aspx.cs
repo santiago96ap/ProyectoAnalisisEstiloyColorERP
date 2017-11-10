@@ -16,9 +16,13 @@ namespace EstiloyColorERP
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
-                this.tbSubtotal.Enabled = false;
-                this.tbTotal.Enabled = false;
+            if (!IsPostBack)
+            {
+                productos = new LinkedList<Producto>();
+            }
+
+            this.tbSubtotal.Enabled = false;
+            this.tbTotal.Enabled = false;
 
             String fechaSistema = System.DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
             String[] fecha = fechaSistema.ToString().Split(' ');

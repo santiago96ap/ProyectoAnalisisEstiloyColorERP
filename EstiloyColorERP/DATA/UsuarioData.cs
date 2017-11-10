@@ -26,7 +26,7 @@ namespace DATA
             cmdInsertar.CommandType = System.Data.CommandType.StoredProcedure;
 
             cmdInsertar.Parameters.Add(new SqlParameter("@nombre", usuario.Nombre));
-            cmdInsertar.Parameters.Add(new SqlParameter("@nombre_usuario", usuario.Id));
+            cmdInsertar.Parameters.Add(new SqlParameter("@nombre_usuario", usuario.NombreUsuario));
             cmdInsertar.Parameters.Add(new SqlParameter("@apellidos", usuario.Apellido));
             cmdInsertar.Parameters.Add(new SqlParameter("@tipo_Usuario", usuario.Rol));
             cmdInsertar.Parameters.Add(new SqlParameter("@constrasenia", usuario.Contrsena));

@@ -25,8 +25,8 @@
                         <br />
                         <asp:dropdownlist ID="ddTipoVenta" CssClass="form-control1" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddTipoVenta_SelectedIndexChanged" >
                             <asp:ListItem Value="producto">Producto</asp:ListItem>
-                            <!--<asp:ListItem Value="servicio">Servicio</asp:ListItem>-->
-                            <!--<asp:ListItem Value="otro">Otro</asp:ListItem>-->
+                            <%--<!--<asp:ListItem Value="servicio">Servicio</asp:ListItem>-->
+                            <!--<asp:ListItem Value="otro">Otro</asp:ListItem>-->--%>
                         </asp:dropdownlist>
                     </div>
            </section>                    
