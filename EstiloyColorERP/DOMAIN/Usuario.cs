@@ -38,7 +38,7 @@ namespace DOMAIN
             this.telefono = telefono;
         }//constructor sobrecargado
 
-        public string Id
+        public string NombreUsuario
         {
             get
             {

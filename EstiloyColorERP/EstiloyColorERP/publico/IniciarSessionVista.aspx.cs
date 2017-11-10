@@ -18,7 +18,7 @@ namespace EstiloyColorERP.publico
             if (!Session["login"].Equals("N"))
             {
                 Session["login"] = "N";
-                Session["correo"] = "N";
+                Session["usuario"] = "N";
             }//if cerrar sesion
         }//Page_Load
 
@@ -31,7 +31,7 @@ namespace EstiloyColorERP.publico
                 if (usuarioActual.Correo == this.tbCorreo.Text && usuarioActual.Contrsena == this.tbContrasenna.Text)
                 {
                     Session["login"] = usuarioActual.Rol;
-                    Session["correo"] = usuarioActual.Correo;
+                    Session["usuario"] = usuarioActual.NombreUsuario;
                     string url = HttpContext.Current.Request.Url.AbsoluteUri.Replace(HttpContext.Current.Request.Url.AbsolutePath, "");
                     Response.BufferOutput = true;
                     Response.Redirect(url + "/publico/Default.aspx");

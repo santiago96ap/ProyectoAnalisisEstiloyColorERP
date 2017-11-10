@@ -80,7 +80,7 @@ namespace DATA
             foreach (DataRow currentRow in dataRow)
             {
                 Usuario usuarioActual = new Usuario();
-                usuarioActual.Id = currentRow["nombre_usuario"].ToString();
+                usuarioActual.NombreUsuario = currentRow["nombre_usuario"].ToString();
                 usuarioActual.Nombre = currentRow["nombre"].ToString() +" "+ currentRow["apellidos"].ToString();
                 usuarioActual.Rol = currentRow["tipo_Usuario"].ToString();
                 usuarioActual.Correo = currentRow["email"].ToString();
