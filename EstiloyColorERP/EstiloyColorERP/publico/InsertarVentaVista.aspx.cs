@@ -35,9 +35,14 @@ namespace EstiloyColorERP
         {
             float total = 0;
 
-            foreach (Producto pActual in productos)
+            foreach (Producto pActual in productos)///recorrer la lista de productos
             {
-                total += pActual.Precio;
+                for (int i = 1; i <= pActual.Cantidad; i++)///recorrer la cantidad de un producto
+                {
+                    total += pActual.Precio;
+                }
+
+                //total += pActual.Precio;
             }//foreach
 
             return total;
@@ -48,14 +53,14 @@ namespace EstiloyColorERP
             table = new DataTable("Producto");
             table.Columns.Add(new DataColumn("Código", typeof(int)));
             table.Columns.Add(new DataColumn("Nombre", typeof(string)));
-            table.Columns.Add(new DataColumn("Precio", typeof(float)));
+            table.Columns.Add(new DataColumn("Precio", typeof(string)));
             foreach (Producto p in productos)
 
             {
                 DataRow row = table.NewRow();
                 row["Código"] = p.IdProct;
                 row["Nombre"] = p.Nombre;
-                row["Precio"] = p.Precio;
+                row["Precio"] = "¢" + p.Precio;
                 table.Rows.Add(row);
 
             }//for
@@ -71,6 +76,10 @@ namespace EstiloyColorERP
         protected void btnAgregar_Click(object sender, EventArgs e)
         {
             Producto p = obtenerproducto(int.Parse(tbDatos.Text));
+
+            //agregar la cantidad de productos por la compra
+            p.Cantidad = int.Parse(tbCantidad.Text.ToString());
+
             productos.AddLast(p);
             agregarGridView();
             this.tbDatos.Text = " ";
