@@ -24,9 +24,7 @@
                         <asp:Label ID="lbTipo" CssClass="col-sm-2 control-label" runat="server" Text="Tipo de venta"></asp:Label>
                         <br />
                         <asp:dropdownlist ID="ddTipoVenta" CssClass="form-control1" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddTipoVenta_SelectedIndexChanged" >
-                            <asp:ListItem Value="producto">Producto</asp:ListItem>
-                            <%--<!--<asp:ListItem Value="servicio">Servicio</asp:ListItem>-->
-                            <!--<asp:ListItem Value="otro">Otro</asp:ListItem>-->--%>
+                            <asp:ListItem Value="producto">Producto</asp:ListItem>                            
                         </asp:dropdownlist>
                     </div>
            </section>                    
@@ -41,7 +39,7 @@
                     <br />
                      <br />
                     <asp:Label ID="lblCantidad"  CssClass="col-sm-2 control-label" runat="server" Text="Cantidad"></asp:Label>
-                    <asp:TextBox ID="tbCantidad" type="number" CssClass="form-control1" runat="server" min="1"></asp:TextBox>
+                    <asp:TextBox ID="tbCantidad" type="number" CssClass="form-control1" runat="server" min="1" Text="1"></asp:TextBox>
                         <br />
                         <br />
                     <asp:Button ID="btnAgregar" CssClass="btn btn-info" runat="server" Text="Agregar" OnClick="btnAgregar_Click" Width="193px" />
