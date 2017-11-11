@@ -1,34 +1,37 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="InsertarApartadoVista.aspx.cs" Inherits="EstiloyColorERP.publico.InsertarApartadoView" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <ContentTemplate>
+        <section id="formulario">
             <br />
             <br />
-            <asp:Label ID="lblITitulo" CssClass="col-sm-2 control-label" runat="server" Text="Insertar Apartado"></asp:Label>
+            <asp:Label ID="lblITitulo" CssClass="agileits-title" runat="server" Text="Insertar Apartado"></asp:Label>
             <br />
             <br />
             <br />
+            <div id="divi2">
             <asp:Label ID="lblCliente" CssClass="col-sm-2 control-label" runat="server" Text="Cliente"></asp:Label>
             <asp:TextBox ID="tbCliente" CssClass="form-control1" runat="server"></asp:TextBox>
             <br />
             <br />
-            <section id="formulario">
-                <div id="divi">
+                </div>
+            <section id="formulario3">
+                <div id= "divi">
                     <asp:Label ID="lblProducto" CssClass="col-sm-2 control-label" runat="server" Text="Producto"></asp:Label>
                     <asp:TextBox ID="tbProducto" CssClass="form-control1" runat="server"></asp:TextBox>
                 </div>
-                <div id="divi1">
+                <div id= "divi6">
+                <br />
+            <br />
                     <asp:Label ID="lblCategoria" CssClass="col-sm-2 control-label" runat="server" Text="Categoría"></asp:Label>
                     <asp:dropdownlist ID="ddlCategoria" CssClass="from-dropdownlist" runat="server"></asp:dropdownlist>
                 </div>
-            </section>
+                </section>
             <br />
             <br />
-            <asp:Table ID="tblProducto" CssClass="table table-hover" runat="server">
-            </asp:Table>
             <br />
             <br />
             <section id="formulario1">
-                <div id="divi2">
+                <div id="divi1">
                     <asp:Label ID="lblMonto" CssClass="col-sm-2 control-label" runat="server" Text="Monto"></asp:Label>
                     <asp:TextBox ID="tbMonto" CssClass="form-control1" runat="server"></asp:TextBox>
                 </div>
@@ -56,5 +59,6 @@
             <br />
             <br />
             <br />
+            </section>
         </ContentTemplate>
 </asp:Content>

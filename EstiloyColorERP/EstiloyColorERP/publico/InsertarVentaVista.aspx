@@ -45,7 +45,6 @@
                     <asp:Button ID="btnAgregar" CssClass="btn btn-info" runat="server" Text="Agregar" OnClick="btnAgregar_Click" Width="193px" />
                     <br />
                     <br />
-
                    <asp:GridView ID="gvProductos" CssClass="table table-hover" runat="server" RowHeaderColumn="Proveedores" DataKeyNames="Código" OnRowDeleting="DeleteRowButton_Click" Width="441px">
                     <Columns>
                         <asp:CommandField HeaderText="Acción" ShowDeleteButton="True" DeleteText="Eliminar"/>                
@@ -75,8 +74,8 @@
                 <div id="divi6">
                     <asp:Label ID="lblTipoServicio"  CssClass="col-sm-2 control-label" runat="server" Text="Servicio"></asp:Label>
                     <asp:dropdownlist ID="ddTipoServicio" CssClass="form-control1" runat="server" >
-                        <asp:ListItem Value="tienda">Tienda</asp:ListItem>
-                        <asp:ListItem Value="proyecto">Proyecto</asp:ListItem>
+                        <asp:ListItem Value="Local">Tienda</asp:ListItem>
+                        <asp:ListItem Value="Proyecto">Proyecto</asp:ListItem>
                     </asp:dropdownlist>
                     <br />
                     <br />

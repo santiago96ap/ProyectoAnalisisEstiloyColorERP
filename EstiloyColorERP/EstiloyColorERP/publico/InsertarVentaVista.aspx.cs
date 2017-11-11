@@ -44,9 +44,8 @@ namespace EstiloyColorERP
                 for (int i = 1; i <= pActual.Cantidad; i++)///recorrer la cantidad de un producto
                 {
                     total += pActual.Precio;
-                }
-
-                //total += pActual.Precio;
+                }//for i
+                
             }//foreach
 
             return total;
@@ -58,6 +57,7 @@ namespace EstiloyColorERP
             table.Columns.Add(new DataColumn("Código", typeof(int)));
             table.Columns.Add(new DataColumn("Nombre", typeof(string)));
             table.Columns.Add(new DataColumn("Precio", typeof(string)));
+            table.Columns.Add(new DataColumn("Cantidad", typeof(int)));
             foreach (Producto p in productos)
 
             {
@@ -65,6 +65,7 @@ namespace EstiloyColorERP
                 row["Código"] = p.IdProct;
                 row["Nombre"] = p.Nombre;
                 row["Precio"] = "¢" + p.Precio;
+                row["Cantidad"] = p.Cantidad;
                 table.Rows.Add(row);
 
             }//for
@@ -92,9 +93,10 @@ namespace EstiloyColorERP
         }//btnAgregar_Click
         protected void btnInsertar_Click(object sender, EventArgs e)
         {
-           
-            if(this.ventaBuisiness.insertarVenta(new Venta(tbFecha.Text, tbHora.Text, tbTelefono.Text, "u", ddTipoServicio.SelectedItem.Value,
-                float.Parse(tbSubtotal.Text), float.Parse(tbTotal.Text), ddTipoPago.SelectedItem.Value)) == true)
+            //Session["usuario"].ToString()
+            Venta venta = new Venta(tbFecha.Text, tbHora.Text, tbTelefono.Text, Session["usuario"].ToString(), ddTipoServicio.SelectedItem.Value,
+                float.Parse(tbSubtotal.Text), float.Parse(tbTotal.Text), ddTipoPago.SelectedItem.Value);            
+            if (this.ventaBuisiness.insertarVenta(venta) == true)
             {
                 insertarProductos();
                 limpiarTexto();
@@ -110,6 +112,16 @@ namespace EstiloyColorERP
 
         protected void DeleteRowButton_Click(object sender, GridViewDeleteEventArgs e)
         {
+            String llave = this.gvProductos.DataKeys[e.RowIndex].Value.ToString();
+            foreach(Producto productoActual in productos)
+            {
+                if (productoActual.IdProct == int.Parse(llave))
+                {
+                    productos.Remove(productoActual);
+                    break;
+                }
+            }
+            agregarGridView();
         }//DeleteRowButton_Click
 
         private void limpiarTexto()
@@ -120,11 +132,30 @@ namespace EstiloyColorERP
             this.tbSubtotal.Text = " ";
             this.tbTelefono.Text = " ";
             this.tbTotal.Text = " ";
+            this.tbCantidad.Text = 1+"";
+
+            this.gvProductos.DataSource = null;
+            this.gvProductos.DataBind();
         }//limpiarTexto
 
         private void insertarProductos()
         {
-            foreach (Producto p in productos)
+
+            foreach (Producto pActual in productos)///recorrer la lista de productos
+            {
+                for (int i = 1; i <= pActual.Cantidad; i++)///recorrer la cantidad de un producto
+                {
+
+                    if (this.ventaBuisiness.insertarVentaProducto(new VentaProducto(pActual.IdProct, pActual.IdCategoria,
+                    float.Parse(tbTotal.Text), tbFecha.Text, tbHora.Text, tbTelefono.Text)) == false)
+                    {
+                        ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.error('Ha ocurrido un error en la inserción de los productos')", true);
+                    }
+
+                }//for i
+
+            }//foreach
+            /**foreach (Producto p in productos)
 
             {
                 if(this.ventaBuisiness.insertarVentaProducto(new VentaProducto(p.IdProct, p.IdCategoria,
@@ -135,6 +166,7 @@ namespace EstiloyColorERP
 
             }//for
 
+    **/
         }//insertarProductos
 
         protected void ddTipoVenta_SelectedIndexChanged(object sender, EventArgs e)
@@ -171,5 +203,6 @@ namespace EstiloyColorERP
                 this.tbTotal.Enabled = true;
             }
         }
+        
     }//class
 }//class
