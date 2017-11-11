@@ -27,6 +27,7 @@
                         <Columns>
                             <asp:CommandField HeaderText="Acción" ShowDeleteButton="True"/>
                         </Columns>
+                        <HeaderStyle BackColor="#10C7BF" />
                     </asp:GridView>
                     <br />
                     <br />

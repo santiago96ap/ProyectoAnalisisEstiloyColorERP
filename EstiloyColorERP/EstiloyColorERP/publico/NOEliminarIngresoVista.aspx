@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EliminarIngresoVista.aspx.cs" Inherits="EstiloyColorERP.publico.EliminarGastoView" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="NOEliminarIngresoVista.aspx.cs" Inherits="EstiloyColorERP.publico.EliminarGastoView" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
 

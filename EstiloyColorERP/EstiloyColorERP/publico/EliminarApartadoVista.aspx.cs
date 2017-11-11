@@ -59,9 +59,11 @@ namespace EstiloyColorERP.publico
             table.Columns.Add(new DataColumn("Abono", typeof(string)));
             table.Columns.Add(new DataColumn("Fecha Inicio", typeof(string)));
             table.Columns.Add(new DataColumn("Fecha Fin", typeof(string)));
+            table.Columns.Add(new DataColumn("Estado", typeof(string)));
+            table.Columns.Add(new DataColumn("Número de factura", typeof(string)));
             foreach (Apartado apartadoActual in this.apartados)
             {
-                if (apartadoActual.IdCliente.Equals(cliente))
+                if (apartadoActual.IdCliente.Equals(cliente) && apartadoActual.Estado.Equals("activo"))
                 {
                     DataRow row = table.NewRow();
                     row["Id"] = apartadoActual.Id;
@@ -70,6 +72,8 @@ namespace EstiloyColorERP.publico
                     row["Abono"] = apartadoActual.Abono;
                     row["Fecha Inicio"] = apartadoActual.FechaInicio;
                     row["Fecha Fin"] = apartadoActual.FechaFinal;
+                    row["Estado"] = apartadoActual.Estado;
+                    row["Número de factura"] = apartadoActual.NumFactura;
                     table.Rows.Add(row);
                 }//Validar apartados del cliente indicado
             }//foreach para recorrer los clientes que estan en la DB
