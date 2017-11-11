@@ -75,7 +75,7 @@ namespace EstiloyColorERP.publico
 
         }//btnBuscar
 
-        protected void btnExcel_Click(object sender, EventArgs e)
+        protected void btnExportarExcel_Click(object sender, EventArgs e)
         {
             StringBuilder sb = new StringBuilder();
             StringWriter sw = new StringWriter(sb);
@@ -111,7 +111,7 @@ namespace EstiloyColorERP.publico
             Response.End();
         }//BTN EXCEL
 
-        protected void pdf_Click(object sender, EventArgs e)
+        protected void btnExportarPdf_Click(object sender, EventArgs e)
         {
             using (StringWriter sw = new StringWriter())
             {
