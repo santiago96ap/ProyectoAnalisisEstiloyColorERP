@@ -77,7 +77,7 @@
     <Content Include="publico\css\alertify.bootstrap.css" />
     <Content Include="publico\css\alertify.core.css" />
     <Content Include="publico\css\alertify.default.css" />
-    <Content Include="publico\EliminarIngresoVista.aspx" />
+    <Content Include="publico\NOEliminarIngresoVista.aspx" />
     <Content Include="publico\EliminarUsuarioVista.aspx" />
     <Content Include="publico\EliminarOfertaVista.aspx" />
     <Content Include="publico\images\icono-EXCEL.png" />
@@ -198,12 +198,12 @@
     <Compile Include="publico\CatalogoVista.aspx.designer.cs">
       <DependentUpon>CatalogoVista.aspx</DependentUpon>
     </Compile>
-    <Compile Include="publico\EliminarIngresoVista.aspx.cs">
-      <DependentUpon>EliminarIngresoVista.aspx</DependentUpon>
+    <Compile Include="publico\NOEliminarIngresoVista.aspx.cs">
+      <DependentUpon>NOEliminarIngresoVista.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="publico\EliminarIngresoVista.aspx.designer.cs">
-      <DependentUpon>EliminarIngresoVista.aspx</DependentUpon>
+    <Compile Include="publico\NOEliminarIngresoVista.aspx.designer.cs">
+      <DependentUpon>NOEliminarIngresoVista.aspx</DependentUpon>
     </Compile>
     <Compile Include="publico\EliminarUsuarioVista.aspx.cs">
       <DependentUpon>EliminarUsuarioVista.aspx</DependentUpon>

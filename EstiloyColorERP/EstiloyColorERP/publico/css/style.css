@@ -149,6 +149,9 @@ div#divi4 .control-label{
 div#divi .form-control1, div#divi1 .form-control1, div#divi2 .form-control1, div#divi3 .form-control1, div#divi4 .form-control1, div#divi5 .form-control1{
     width: 50%;
 }
+div#divi .form-dropdownlist{
+    width: 50%;
+}
 div#divi10 .form-dropdownlist, div#divi10 .form-control1{
     width: 20%;
 }
@@ -1392,7 +1395,7 @@ h2.typoh2{
 	-webkit-appearance: none;
 	outline:none;
 }
-.form-dropdownlist{
+form-dropdownlist{
     border: 1px solid #e0e0e0;
 	padding:5px 18px;
 	color: #616161;

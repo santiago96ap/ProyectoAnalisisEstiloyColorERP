@@ -1,6 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EliminarGastoVista.aspx.cs" Inherits="EstiloyColorERP.publico.EliminarGastoView" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    </ContentTemplate>
     <ContentTemplate>
          <div class='modal fade' id='myModal' runat="server" tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
             <div class='modal-dialog' role='document'>
@@ -32,6 +31,7 @@
                     <Columns>
                         <asp:CommandField HeaderText="Acción" ShowDeleteButton="True"/>
                     </Columns>
+                    <HeaderStyle BackColor="#10C7BF" />
                 </asp:GridView>
                 <br />
                 <br />
@@ -39,6 +39,4 @@
             </div>
         </section>
     </ContentTemplate>
-
-
 </asp:Content>

@@ -13,5 +13,5 @@ namespace EstiloyColorERP
         {
 
         }
-    }
-}
+    }//class
+}//namespace

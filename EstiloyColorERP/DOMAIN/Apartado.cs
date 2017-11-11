@@ -14,6 +14,8 @@ namespace DOMAIN
         private float abono;
         private String fechaInicio;
         private String fechaFinal;
+        private String estado;
+        private int numFactura;
 
         public Apartado()
         {
@@ -45,6 +47,32 @@ namespace DOMAIN
             this.fechaInicio = fechaInicio;
             this.fechaFinal = fechaFinal;
         }//constructor sobrecargado1
+
+        public String Estado
+        {
+            get
+            {
+                return estado;
+            }//get estado
+
+            set
+            {
+                estado = value;
+            }//set estado
+        }//Estado
+
+        public int NumFactura
+        {
+            get
+            {
+                return numFactura;
+            }//get estado
+
+            set
+            {
+                numFactura = value;
+            }//set estado
+        }//NumFactura
 
         public int Id
         {

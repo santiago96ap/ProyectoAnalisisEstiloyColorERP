@@ -68,7 +68,37 @@ namespace DATA
 
         public LinkedList<Apartado> obtenerApartados()
         {
-            return null;
+            SqlConnection connection = new SqlConnection(this.stringConeccion);
+
+            String sqlSelect = "sp_obtenerTodoApartado;";
+
+            SqlDataAdapter sqlDataAdapterApartado = new SqlDataAdapter();
+            sqlDataAdapterApartado.SelectCommand = new SqlCommand();
+            sqlDataAdapterApartado.SelectCommand.CommandText = sqlSelect;
+            sqlDataAdapterApartado.SelectCommand.Connection = connection;
+
+            DataSet dataSetApartados = new DataSet();
+            sqlDataAdapterApartado.Fill(dataSetApartados, "tb_Apartado");
+            sqlDataAdapterApartado.SelectCommand.Connection.Close();
+
+            DataRowCollection dataRow = dataSetApartados.Tables["tb_Apartado"].Rows;
+
+            LinkedList<Apartado> apartados = new LinkedList<Apartado>();
+
+            foreach (DataRow currentRow in dataRow)
+            {
+                Apartado apartadoActual = new Apartado();
+                apartadoActual.Id = int.Parse(currentRow["id"].ToString());
+                apartadoActual.IdCliente = currentRow["telf_cliente"].ToString();
+                apartadoActual.Monto = float.Parse(currentRow["monto"].ToString());
+                apartadoActual.Abono = float.Parse(currentRow["abono"].ToString());
+                apartadoActual.FechaInicio = currentRow["fecha_inicio"].ToString().Split(' ')[0];
+                apartadoActual.FechaFinal = currentRow["fecha_fin"].ToString().Split(' ')[0];
+                apartadoActual.Estado = currentRow["estado"].ToString();
+                apartadoActual.NumFactura = int.Parse(currentRow["numFactCliente"].ToString());
+                apartados.AddLast(apartadoActual);
+            }//recorrer todos los clientes que vienen de la DB
+            return apartados;
         }//obtenerApartados
 
         public Apartado obtenerApartado(Apartado apartado)
