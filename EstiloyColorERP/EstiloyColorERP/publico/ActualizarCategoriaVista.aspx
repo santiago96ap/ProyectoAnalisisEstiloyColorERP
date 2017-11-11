@@ -1,32 +1,30 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ActualizarCategoriaVista.aspx.cs" Inherits="EstiloyColorERP.publico.ActualizarCategoriaView" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ActualizarCategoriaVista.aspx.cs" Inherits="EstiloyColorERP.publico.ActualizarCategoriaVista" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <p>
+       <section id="formulario1">
+            <br />
+            <br />
+        <asp:Label ID="lblTitulo" CssClass="agileits-title" runat="server" Text="Actualizar Categoría"></asp:Label>    
+                    <br />    <div id="divi">
+            <asp:GridView ID="gvCategorias" CssClass="table table-hover" runat="server" RowHeaderColumn="Categorias" DataKeyNames="ID" OnRowDeleting="DeleteRowButton_Click" Height="312px" Width="608px">
+                <AlternatingRowStyle BackColor="#EFEFEF" />
+                <Columns>
+                    <asp:CommandField HeaderText="Acción" ShowDeleteButton="True" DeleteText="Seleccionar"/>                
+                </Columns>            
+                <HeaderStyle BackColor="#10C7BF"/>            
+            </asp:GridView>
         <br />
-    </p>
-    <p>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Actualizar Categoria</p>
-    <p>
-    </p>
-    <p>
-        <asp:Table ID="Table1" runat="server" Height="118px" Width="663px">
-        </asp:Table>
-    </p>
-    <p>
-    </p>
-    <p>
-    </p>
-    <p>
-        I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ID<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nombre<asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
-    </p>
-    <p>
-    </p>
-    <p>
-    </p>
-    <p>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button1" runat="server" Text="Actualizar" />
-    </p>
-    <p>
-    </p>
+        <asp:Label ID="Label1" CssClass="col-sm-2 control-label" runat="server" Text="ID"></asp:Label>
+        <asp:TextBox ID="tbID" CssClass="form-control1" runat="server"></asp:TextBox>
+        <br />
+        <br />
+        <asp:Label ID="lbNombre" CssClass="col-sm-2 control-label" runat="server" Text="Nombre"></asp:Label>
+        <asp:TextBox ID="tbNombre" CssClass="form-control1" runat="server"></asp:TextBox>
+        <br />
+        <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Button ID="btnActualizar" CssClass="btn btn-info" runat="server" Text="Actualizar" OnClick="btnActualizar_Click" />
+        <br />
+        <br />
+        </div>
+      </section>
 </asp:Content>

@@ -13,5 +13,25 @@ namespace EstiloyColorERP.publico
         {
 
         }
+
+        protected void gvGastos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+        protected void btnActualizar_Click1(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void DeleteRowButton_Click(object sender, GridViewDeleteEventArgs e)
+        {
+        }
+
+        protected void btnBuscar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -13,7 +13,7 @@
                 <asp:CommandField HeaderText="Acción" ShowDeleteButton="True" DeleteText="Seleccionar"/>                
             </Columns>            
             <HeaderStyle BackColor="#10C7BF"/>            
-        </asp:GridView>
+        </asp:GridView> 
     <br />
     <asp:Label ID="lbNombre" CssClass="col-sm-2 control-label" runat="server" Text="Nombre"></asp:Label>
     <asp:TextBox ID="tbNombre" CssClass="form-control1" runat="server"></asp:TextBox>

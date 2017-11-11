@@ -78,7 +78,7 @@ namespace DATA
             cmdActualizar.Parameters.Add(new SqlParameter("@concepto", gasto.Concepto));
             cmdActualizar.Parameters.Add(new SqlParameter("@total", gasto.Total));
             cmdActualizar.Parameters.Add(new SqlParameter("@id_usuario", gasto.Vendedor));
-            cmdActualizar.Connection.Open();
+            cmdActualizar.Parameters.Add(new SqlParameter("@tipoServicio", gasto.Servicio));
             if (cmdActualizar.ExecuteNonQuery() > 0)
             {
                 cmdActualizar.Connection.Close();

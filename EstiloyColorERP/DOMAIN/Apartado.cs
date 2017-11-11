@@ -47,6 +47,12 @@ namespace DOMAIN
             this.numFactura = numFactura;
         }//constructor sobrecargado1
 
+        public Apartado(int id ,float abono)
+        {
+            this.id = id;
+            this.abono = abono;
+        }//constructor sobrecargado2
+
         public String Estado
         {
             get
