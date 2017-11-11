@@ -23,18 +23,20 @@ namespace DOMAIN
             this.abono= 0;
             this.fechaInicio = "";
             this.fechaFinal = "";
+            this.numFactura = 0;
         }//constructor
 
-        public Apartado(String idCliente, float monto, float abono, String fechaInicio, String fechaFinal)
+        public Apartado(String idCliente, float monto, float abono, String fechaInicio, String fechaFinal, int numFactura)
         {
             this.idCliente = idCliente;            
             this.monto = monto;
             this.abono = abono;
             this.fechaInicio = fechaInicio;
             this.fechaFinal = fechaFinal;
+            this.numFactura = numFactura;
         }//constructor sobrecargado
 
-        public Apartado(int id, String idCliente, float monto, float abono, String fechaInicio, String fechaFinal)
+        public Apartado(int id, String idCliente, float monto, float abono, String fechaInicio, String fechaFinal, int numFactura)
         {
             this.id = id;
             this.idCliente = idCliente;
@@ -42,6 +44,7 @@ namespace DOMAIN
             this.abono = abono;
             this.fechaInicio = fechaInicio;
             this.fechaFinal = fechaFinal;
+            this.numFactura = numFactura;
         }//constructor sobrecargado1
 
         public String Estado

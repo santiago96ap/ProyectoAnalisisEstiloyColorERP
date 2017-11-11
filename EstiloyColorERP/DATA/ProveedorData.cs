@@ -95,6 +95,7 @@ namespace DATA
                 provActual.Nombre = currentRow["nombre"].ToString();
                 provActual.Telefono = currentRow["telefono"].ToString();
                 provActual.Direccion = currentRow["direccion"].ToString();
+                provActual.Web = currentRow["web"].ToString();
                 proveedor.AddLast(provActual);
             }//foreach
             return proveedor;

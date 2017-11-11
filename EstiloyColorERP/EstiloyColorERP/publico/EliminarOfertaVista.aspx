@@ -38,11 +38,5 @@
                 <br />
             </div>
         </section>
-    <br />
-    <br />
-    <asp:Table ID="tbResultados" runat="server" Width="407px">
-    </asp:Table>
-    <br />
-    <br />
     </ContentTemplate> 
 </asp:Content>

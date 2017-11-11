@@ -5,8 +5,6 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Data;
-using System.Data.SqlClient;
-using DOMAIN;
 
 namespace DATA
 {

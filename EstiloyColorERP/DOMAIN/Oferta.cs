@@ -22,6 +22,7 @@ namespace DOMAIN
             this.fechaInicio = "";
             this.fechaFinal = "";
             this.descuento = 0;
+            this.precioDescuento = 0;
         }//constructor por defecto
 
         public Oferta(String fechaInicio, String fechaFinal, float descuento, int idProducto)
@@ -32,13 +33,14 @@ namespace DOMAIN
             this.descuento = descuento;
         }//constructor sobrecargado Oferta
 
-        public Oferta(int id, String fechaInicio, String fechaFinal, float descuento, int idProducto)
+        public Oferta(int id, String fechaInicio, String fechaFinal, float descuento, int idProducto, float precioDescuento)
         {
             this.id = id;
             this.idProducto = idProducto;
             this.fechaInicio = fechaInicio;
             this.fechaFinal = fechaFinal;
             this.descuento = descuento;
+            this.precioDescuento = precioDescuento;
         }//constructor sobrecargado Oferta
 
         public int IdProducto
