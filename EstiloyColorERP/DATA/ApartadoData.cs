@@ -21,18 +21,12 @@ namespace DATA
         public Boolean insertarApartado(Apartado apartado)
         {
             SqlConnection connection = new SqlConnection(this.stringConeccion);
-            String sqlStoreProcedure = "sp_insertarCliente";
+            String sqlStoreProcedure = "sp_insertarApartado";
             SqlCommand cmdInsertar = new SqlCommand(sqlStoreProcedure, connection);
             cmdInsertar.CommandType = System.Data.CommandType.StoredProcedure;
-
-            //cmdInsertar.Parameters.Add(new SqlParameter("@telefono", cliente.Telefono));
-            //cmdInsertar.Parameters.Add(new SqlParameter("@nombre", cliente.Nombre));
-            //cmdInsertar.Parameters.Add(new SqlParameter("@apellidos", cliente.Apellidos));
-            //cmdInsertar.Parameters.Add(new SqlParameter("@direccion", cliente.Direccion));
-            //cmdInsertar.Parameters.Add(new SqlParameter("@email", cliente.Correo));
-
+            
             cmdInsertar.Connection.Open();
-            cmdInsertar.ExecuteNonQuery();
+
             if (cmdInsertar.ExecuteNonQuery() > 0)
             {
                 cmdInsertar.Connection.Close();
@@ -44,6 +38,34 @@ namespace DATA
                 return false;
             }//if-else
         }//insertarApartado
+
+        public Boolean insertarApartadoProducto(VentaProducto vp)
+        {
+            SqlConnection connection = new SqlConnection(this.stringConeccion);
+            String sqlStoreProcedure = "sp_insertarApartadoProducto";
+            SqlCommand cmdInsertar = new SqlCommand(sqlStoreProcedure, connection);
+            cmdInsertar.CommandType = System.Data.CommandType.StoredProcedure;
+            //@id_producto int, @id_categoria int, @total float, @fecha date, @hora time ,@id_cliente varchar(15)
+            cmdInsertar.Parameters.Add(new SqlParameter("@id_producto", vp.IdProduco));
+            cmdInsertar.Parameters.Add(new SqlParameter("@id_categoria", vp.IdCategoria));
+            cmdInsertar.Parameters.Add(new SqlParameter("@total", vp.Total));
+            cmdInsertar.Parameters.Add(new SqlParameter("@fecha", vp.Fecha));
+            cmdInsertar.Parameters.Add(new SqlParameter("@hora", vp.Hora));
+            cmdInsertar.Parameters.Add(new SqlParameter("@id_cliente", vp.IdCliente));
+
+            cmdInsertar.Connection.Open();
+            if (cmdInsertar.ExecuteNonQuery() > 0)
+            {
+                cmdInsertar.Connection.Close();
+                return true;
+            }
+            else
+            {
+                cmdInsertar.Connection.Close();
+                return false;
+            }//if-else
+
+        }//insertar venta
 
         public Boolean eliminarApartado(Apartado apartado)
         {

@@ -60,14 +60,14 @@ namespace DATA {
 
             String sqlSelect = "sp_obtenerTodaCategoria;";
 
-            SqlDataAdapter sqlDataAdapterClient = new SqlDataAdapter();
-            sqlDataAdapterClient.SelectCommand = new SqlCommand();
-            sqlDataAdapterClient.SelectCommand.CommandText = sqlSelect;
-            sqlDataAdapterClient.SelectCommand.Connection = connection;
+            SqlDataAdapter sqlDataAdapterCategoria = new SqlDataAdapter();
+            sqlDataAdapterCategoria.SelectCommand = new SqlCommand();
+            sqlDataAdapterCategoria.SelectCommand.CommandText = sqlSelect;
+            sqlDataAdapterCategoria.SelectCommand.Connection = connection;
 
             DataSet dataSetCategoria = new DataSet();
-            sqlDataAdapterClient.Fill(dataSetCategoria, "tb_Categoria");
-            sqlDataAdapterClient.SelectCommand.Connection.Close();
+            sqlDataAdapterCategoria.Fill(dataSetCategoria, "tb_Categoria");
+            sqlDataAdapterCategoria.SelectCommand.Connection.Close();
 
             DataRowCollection dataRow = dataSetCategoria.Tables["tb_Categoria"].Rows;
 

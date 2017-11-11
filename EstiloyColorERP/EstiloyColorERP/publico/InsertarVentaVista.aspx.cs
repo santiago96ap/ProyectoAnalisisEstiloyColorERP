@@ -155,18 +155,7 @@ namespace EstiloyColorERP
                 }//for i
 
             }//foreach
-            /**foreach (Producto p in productos)
-
-            {
-                if(this.ventaBuisiness.insertarVentaProducto(new VentaProducto(p.IdProct, p.IdCategoria,
-                    float.Parse(tbTotal.Text), tbFecha.Text, tbHora.Text, tbTelefono.Text))== false)
-                {
-                    ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.error('Ha ocurrido un error en la inserción de los productos')", true);
-                }
-
-            }//for
-
-    **/
+       
         }//insertarProductos
 
         protected void ddTipoVenta_SelectedIndexChanged(object sender, EventArgs e)

@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Estilo y Color</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="Fuel Serve Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 	    SmartPhone Compatible web template, free web designs  for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
@@ -16,13 +16,13 @@
     <link href="publico/css/alertify.bootstrap.css" rel='stylesheet' type='text/css' />
     <link href="publico/css/alertify.core.css" rel='stylesheet' type='text/css' />
     <link href="publico/css/alertify.default.css" rel='stylesheet' type='text/css' />
-    <link href="publico/css/font-awesome.css" rel="stylesheet">
+    <link href="publico/css/font-awesome.css" rel="stylesheet"/>
     <!-- font-awesome icons -->
     <!-- //Custom Theme files -->
     <!-- fonts -->
-    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
-    <link rel="shortcut icon" type="image/x-icon" href="publico/images/icono.ico">
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'/>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'/>
+    <link rel="shortcut icon" type="image/x-icon" href="publico/images/icono.ico"/>
     <!-- //fonts -->
     <!-- js -->
     <script src="js/jquery-1.11.1.min.js"> </script>
@@ -134,7 +134,7 @@
                                                     <li><a class="hvr-bounce-to-bottom" href="ObtenerVentaVista.aspx">Obtener Ventas</a></li>
                                                 </ul>
                                             </li>
-                                            <li class="dropdown-submenu">
+                                            <!--<li class="dropdown-submenu">
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown-submenu" role="button" aria-haspopup="true" aria-expanded="false">Apartados<span class="caret"></span></a>
                                                 <ul class="dropdown-menu">
                                                     <li><a class="hvr-bounce-to-bottom" href="InsertarApartadoVista.aspx">Insertar Apartado</a></li>
@@ -142,7 +142,7 @@
                                                     <li><a class="hvr-bounce-to-bottom" href="EliminarApartadoVista.aspx">Eliminar Apartado</a></li>
                                                     <li><a class="hvr-bounce-to-bottom" href="ObtenerApartadoVista.aspx">Obtener Apartados</a></li>
                                                 </ul>
-                                            </li>
+                                            </li>-->
                                         </ul>
                                     </li>
                                     <li><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Productos<span class="caret"></span></a>
@@ -314,7 +314,7 @@
                 <div class="col-md-6 footer-right">
                     <h5>Ubicación</h5>
                     <div class="footer-right-map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d580.9567222332092!2d-83.68444986856223!3d9.902558844939465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x28f9a428372f687!2sEstilo+Y+Color!5e1!3m2!1ses!2sin!4v1507156749106" width="600" height="450" frameborder="0" style="border: 0" allowfullscreen></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d580.9567222332092!2d-83.68444986856223!3d9.902558844939465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x28f9a428372f687!2sEstilo+Y+Color!5e1!3m2!1ses!2sin!4v1507156749106" width="600" height="450" style="border: 0"></iframe>
                     </div>
                 </div>
                 <div class="col-md-6 footer-left">

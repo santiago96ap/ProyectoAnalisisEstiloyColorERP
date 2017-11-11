@@ -35,11 +35,11 @@
                 <br />
                 <br />
                 <asp:Label ID="Label2" CssClass="col-sm-2 control-label" runat="server" Text="Proveedor"></asp:Label>
-                <asp:dropdownlist ID="ddlProveedor" CssClass="form-dropdownlist" runat="server"></asp:dropdownlist>
+                <asp:dropdownlist ID="ddlProveedor" CssClass="form-control1" runat="server"></asp:dropdownlist>
                 <br />
                 <br /> 
                 <asp:Label ID="Label3" CssClass="col-sm-2 control-label" runat="server" Text="Categoría"></asp:Label>
-                <asp:dropdownlist ID="ddCategoria" CssClass="form-dropdownlist" runat="server"></asp:dropdownlist>
+                <asp:dropdownlist ID="ddCategoria" CssClass="form-control1" runat="server"></asp:dropdownlist>
                 <br />
                 <br /> 
                 <asp:Button ID="btnInsertar" runat="server"  CssClass="btn btn-info" Text="Insertar" OnClick="btnInsertar_Click"  />

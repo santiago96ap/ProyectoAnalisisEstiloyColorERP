@@ -22,15 +22,12 @@
             <br />
             <br />
              <div id="divi10">
-                <asp:TextBox ID="tbFechaInicio" type="date" CssClass="form-control1" runat="server"></asp:TextBox>
-                <asp:TextBox ID="tbFechaFinal" type="date" CssClass="form-control1" runat="server"></asp:TextBox>
-                <asp:Button ID="Button1" CssClass="btn btn-info" runat="server" Text="Buscar" OnClick="btnBuscar_Click" />
-                
+                <asp:Label ID="lblProducto" CssClass="col-sm-2 control-label" runat="server" Text="Producto"></asp:Label>
                 <asp:TextBox ID="tbProducto" CssClass="form-control1" runat="server"></asp:TextBox>
-                <asp:Button ID="btnBuscar" runat="server" Text="Buscar"/> 
+                <asp:Button ID="btnBuscar" CssClass="btn btn-info" runat="server" Text="Buscar" OnClick="btnBuscar_Click" /> 
                 <br />
                 <br />
-                <asp:GridView ID="gvGastos" CssClass="table table-hover" runat="server" DataKeyNames="Id" OnRowDeleting="DeleteRowButton_Click">
+                <asp:GridView ID="gvOferta" CssClass="table table-hover" runat="server" DataKeyNames="Id" OnRowDeleting="DeleteRowButton_Click">
                     <Columns>
                         <asp:CommandField HeaderText="Acción" ShowDeleteButton="True"/>
                     </Columns>

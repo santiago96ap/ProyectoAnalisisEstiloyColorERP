@@ -13,7 +13,7 @@
                 <br />
                 <br />
                 <asp:Label ID="Label1" CssClass="col-sm-2 control-label" runat="server" Text="Buscar"></asp:Label>
-                <asp:TextBox ID="TbBuscarCodigo" type="number" CssClass="form-control1" runat="server"></asp:TextBox>
+                <asp:TextBox ID="TbBuscarCodigo" CssClass="form-control1" runat="server"></asp:TextBox>
                 <br /> 
                 <br /> 
                 <asp:Label ID="lblID" CssClass="col-sm-2 control-label" runat="server" Text="Fecha Inicio"></asp:Label>
