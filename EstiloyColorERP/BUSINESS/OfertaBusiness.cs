@@ -35,15 +35,15 @@ namespace BUSINESS
             return this.ofertaData.editarOferta(oferta);
         }//editarOferta
 
-        public Oferta obtenerOferta()
-        {
-            return this.ofertaData.obtenerOferta();
-        }//obtenerOferta
-
         public LinkedList<Oferta> obtenerOfertas()
         {
             return this.ofertaData.obtenerOfertas();
         }//obtenerOfertas
+
+        public LinkedList<Oferta> obtenerOfertaFecha(String fechaI, String fechaF)
+        {
+            return this.ofertaData.obtenerOfertaFecha(fechaI, fechaF);
+        }//obtenerOfertaFecha
 
     }//fin de clase OfertaBusiness
 }//fin de namespace
