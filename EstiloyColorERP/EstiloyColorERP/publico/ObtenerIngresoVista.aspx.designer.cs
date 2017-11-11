@@ -49,6 +49,15 @@ namespace EstiloyColorERP.publico {
         protected global::System.Web.UI.WebControls.Button btnBuscar;
         
         /// <summary>
+        /// gvIngresos control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvIngresos;
+        
+        /// <summary>
         /// btnExportarExcel control.
         /// </summary>
         /// <remarks>
@@ -65,14 +74,5 @@ namespace EstiloyColorERP.publico {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton btnExportarPdf;
-        
-        /// <summary>
-        /// gvIngresos control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvIngresos;
     }
 }

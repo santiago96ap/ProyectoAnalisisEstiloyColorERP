@@ -25,6 +25,12 @@
                 <asp:TextBox ID="tbTotal" type="number" CssClass="form-control1"  runat="server"></asp:TextBox>
                 <br />
                 <br />
+                <asp:dropdownlist ID="ddTipoGasto" CssClass="form-control1" runat="server" AutoPostBack="True">
+                    <asp:ListItem Value="gasto">Gasto</asp:ListItem>                            
+                    <asp:ListItem Value="compra">Compra</asp:ListItem>                            
+                </asp:dropdownlist>
+                <br />
+                <br />
                 <asp:Button ID="btnInsertar" runat="server"  CssClass="btn btn-info" Text="Insertar" OnClick="btnInsertar_Click"  />
                 <br />
                 <br />

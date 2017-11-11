@@ -22,6 +22,7 @@ namespace DOMAIN
             this.fechaInicio = "";
             this.fechaFinal = "";
             this.descuento = 0;
+            this.precioDescuento = 0;
         }//constructor por defecto
 
         public Oferta(String fechaInicio, String fechaFinal, float descuento, int idProducto)

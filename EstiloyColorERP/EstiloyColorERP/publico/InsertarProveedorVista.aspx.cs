@@ -18,12 +18,13 @@ namespace EstiloyColorERP.publico
         }//Page_load
         protected void btnInsertar_Click(object sender, EventArgs e)
         {
-            if (this.pb.insertarProveedor(new Proveedor(tbNombre.Text, tbTelefono.Text, TbDireccion.Text, tbEmail.Text)) == true)
+            if (this.pb.insertarProveedor(new Proveedor(tbNombre.Text, tbTelefono.Text, TbDireccion.Text, tbEmail.Text,tbPagina.Text)) == true)
             {
                 this.tbNombre.Text = " ";
                 this.tbTelefono.Text = " ";
                 this.TbDireccion.Text = " ";
                 this.tbEmail.Text = " ";
+                this.tbPagina.Text = " ";
                 ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.success('¡Los datos se han  ingresado correctamente!')", true);
             }
             else
@@ -32,6 +33,7 @@ namespace EstiloyColorERP.publico
                 this.tbTelefono.Text = " ";
                 this.TbDireccion.Text = " ";
                 this.tbEmail.Text = " ";
+                this.tbPagina.Text = " ";
                 ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.error('Error en los datos ingresados')", true);
             }//else-if
 

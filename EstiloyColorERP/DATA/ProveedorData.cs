@@ -28,6 +28,7 @@ namespace DATA
             cmdInsertar.Parameters.Add(new SqlParameter("@nombre", proveedor.Nombre));
             cmdInsertar.Parameters.Add(new SqlParameter("@telefono", proveedor.Telefono));
             cmdInsertar.Parameters.Add(new SqlParameter("@direccion", proveedor.Direccion));
+            cmdInsertar.Parameters.Add(new SqlParameter("@web", proveedor.Web));
 
             cmdInsertar.Connection.Open();
             if (cmdInsertar.ExecuteNonQuery() > 0)
@@ -95,6 +96,7 @@ namespace DATA
                 provActual.Nombre = currentRow["nombre"].ToString();
                 provActual.Telefono = currentRow["telefono"].ToString();
                 provActual.Direccion = currentRow["direccion"].ToString();
+                provActual.Web = currentRow["web"].ToString();
                 proveedor.AddLast(provActual);
             }//foreach
             return proveedor;

@@ -9,11 +9,13 @@ namespace DOMAIN {
         private String telefono;
         private String direccion;
         private String email;
+        private String web;
         public Proveedor() {
             this.nombre = "";
             this.telefono = "";
             this.direccion = "";
             this.email = "";
+            this.web = "";
         }//constructor
 
         public Proveedor(String nombre, String telefono, String direccion, String email) {
@@ -22,6 +24,16 @@ namespace DOMAIN {
             this.direccion = direccion;
             this.email = email;
         }//constructor sobrecargado 
+
+        public Proveedor(String nombre, String telefono, String direccion, String email, String web)
+        {
+            this.nombre = nombre;
+            this.telefono = telefono;
+            this.direccion = direccion;
+            this.email = email;
+            this.web = web;
+        }//constructor sobrecargado 
+
         public string Nombre {
             get {
                 return nombre;
@@ -49,6 +61,19 @@ namespace DOMAIN {
 
             set {
                 direccion = value;
+            }
+        }
+
+        public string Web
+        {
+            get
+            {
+                return web;
+            }
+
+            set
+            {
+                web = value;
             }
         }
 

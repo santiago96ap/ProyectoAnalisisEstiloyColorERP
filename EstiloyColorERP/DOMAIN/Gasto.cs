@@ -14,7 +14,7 @@ namespace DOMAIN
         private String concepto;
         private float total;
         private String vendedor;
-        private String servico;
+        private String servicio;
 
         public Gasto()
         {
@@ -24,10 +24,11 @@ namespace DOMAIN
             this.concepto = "";
             this.total = 0;
             this.vendedor = "";
+            this.servicio = "";
 
         }//constructor por defecto
 
-        public Gasto(String fecha, String hora, String concepto, float total, String vendedor, string servicio)
+        public Gasto(String fecha, String hora, String concepto, float total, String vendedor)
         {
 
             this.fecha = fecha;
@@ -35,11 +36,20 @@ namespace DOMAIN
             this.concepto = concepto;
             this.total = total;
             this.vendedor = vendedor;
-            this.servico = servicio;
-
         }//constructor sobrecargado
 
-        public Gasto(int id, String fecha, String hora, String concepto, float total, String vendedor, string servicio)
+        public Gasto(String fecha, String hora, String concepto, float total, String vendedor, String servicio)
+        {
+
+            this.fecha = fecha;
+            this.hora = hora;
+            this.concepto = concepto;
+            this.total = total;
+            this.vendedor = vendedor;
+            this.servicio = servicio;
+        }//constructor sobrecargado
+
+        public Gasto(int id, String fecha, String hora, String concepto, float total, String vendedor, String servicio)
         {
             this.id = id;
             this.fecha = fecha;
@@ -47,8 +57,7 @@ namespace DOMAIN
             this.concepto = concepto;
             this.total = total;
             this.vendedor = vendedor;
-            this.servico = servicio;
-
+            this.servicio = servicio;
         }//constructor sobrecargado
 
         //OBTENER e INSERTAR
@@ -83,12 +92,12 @@ namespace DOMAIN
         {
             get
             {
-                return servico;
+                return servicio;
             }
 
             set
             {
-                servico = value;
+                servicio = value;
             }
         }
 

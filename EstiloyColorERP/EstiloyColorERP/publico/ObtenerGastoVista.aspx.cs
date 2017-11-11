@@ -35,6 +35,7 @@ namespace EstiloyColorERP.publico
             table.Columns.Add(new DataColumn("Concepto", typeof(string)));
             table.Columns.Add(new DataColumn("Total", typeof(float)));
             table.Columns.Add(new DataColumn("Usuario", typeof(string)));
+            table.Columns.Add(new DataColumn("Tipo", typeof(string)));
             foreach (Gasto gAct in this.gastos)
             {
                 DataRow row = table.NewRow();
@@ -44,6 +45,7 @@ namespace EstiloyColorERP.publico
                 row["Concepto"] = gAct.Concepto;
                 row["Total"] = gAct.Total;
                 row["Usuario"] = gAct.Vendedor;
+                row["Tipo"] = gAct.Servicio;
                 table.Rows.Add(row);
             }//foreach para recorrer los categorias que estan en la DB
             this.gvGastos.DataSource = table;
@@ -122,5 +124,6 @@ namespace EstiloyColorERP.publico
         {
             /* Verifies that the control is rendered */
         }
+
     }//class
 }//namespace
