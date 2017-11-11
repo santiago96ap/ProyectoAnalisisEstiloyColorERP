@@ -16,8 +16,10 @@ namespace EstiloyColorERP
         private LinkedList<Producto> productos;
         protected void Page_Load(object sender, EventArgs e)
         {
-            cargarListaProducto();
-
+            if (!IsPostBack)
+            {
+                cargarListaProducto();
+            }
         }//Page_Load
 
         protected void btnInsertar_Click(object sender, EventArgs e)
@@ -54,10 +56,9 @@ namespace EstiloyColorERP
         private void cargarListaProducto()
         {
             this.productos = this.prodtBusiness.obtenerTodosProductos();
-            this.productos.Clear();
             foreach (Producto pActual in this.productos)
             {
-                this.ddProducto.Items.Add(new ListItem(pActual.IdProct + "-" + pActual.Nombre, pActual.IdProct.ToString()));
+                this.ddProducto.Items.Add(new ListItem(pActual.Nombre, pActual.IdProct.ToString()));
             }//llenar el listbox con los productos de la DB
 
         }//cargarListaProducto

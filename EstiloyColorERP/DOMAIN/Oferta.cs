@@ -12,6 +12,7 @@ namespace DOMAIN
         private String fechaInicio;
         private String fechaFinal;
         private float descuento;
+        private float precioDescuento;
 
       
         public Oferta()
@@ -102,6 +103,19 @@ namespace DOMAIN
             set
             {
                 descuento = value;
+            }
+        }
+
+        public float PrecioDescuento
+        {
+            get
+            {
+                return precioDescuento;
+            }
+
+            set
+            {
+                precioDescuento = value;
             }
         }
 

@@ -21,14 +21,12 @@
             <br />
             <br />
             <br />
-             <div id="divi11">
+             <div id="divi10">
                 <asp:Label ID="lblCliente" CssClass="col-sm-2 control-label" runat="server" Text="Cliente"></asp:Label>
                 <asp:TextBox ID="tbCliente" CssClass="form-control1" runat="server"></asp:TextBox>
                 <asp:Button ID="btnBuscar" CssClass="btn btn-info" runat="server" Text="Buscar" OnClick="btnBuscar_Click" />
                 <br />
                 <br />
-            </div>
-            <div id="divi10">
                 <asp:GridView ID="gvApartados" CssClass="table table-hover" runat="server" DataKeyNames="Id" OnRowDeleting="DeleteRowButton_Click">
                     <Columns>
                         <asp:CommandField HeaderText="Acción" ShowDeleteButton="True"/>
