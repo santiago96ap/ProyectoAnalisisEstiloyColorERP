@@ -25,7 +25,6 @@ namespace EstiloyColorERP
             if (!IsPostBack)
             {
                 ventas = new LinkedList<Venta>();
-                this.gvVentas
             }
         }//pageload
 
