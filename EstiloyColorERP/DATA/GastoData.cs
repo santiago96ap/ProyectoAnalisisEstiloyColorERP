@@ -29,6 +29,7 @@ namespace DATA
             cmdInsertar.Parameters.Add(new SqlParameter("@concepto", gasto.Concepto));
             cmdInsertar.Parameters.Add(new SqlParameter("@total", gasto.Total));
             cmdInsertar.Parameters.Add(new SqlParameter("@id_usuario", gasto.Vendedor));
+            cmdInsertar.Parameters.Add(new SqlParameter("@tipoServicio", gasto.Servicio));
 
             cmdInsertar.Connection.Open();
             if (cmdInsertar.ExecuteNonQuery() > 0)

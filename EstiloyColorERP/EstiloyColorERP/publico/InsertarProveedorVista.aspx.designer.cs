@@ -94,6 +94,24 @@ namespace EstiloyColorERP.publico {
         protected global::System.Web.UI.WebControls.TextBox TbDireccion;
         
         /// <summary>
+        /// lblPagina control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblPagina;
+        
+        /// <summary>
+        /// tbPagina control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbPagina;
+        
+        /// <summary>
         /// btnInsertar control.
         /// </summary>
         /// <remarks>

@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EstiloyColorERP {
+namespace EstiloyColorERP.publico {
     
     
-    public partial class ObtenerVentaView {
+    public partial class InventarioVista {
         
         /// <summary>
         /// lblTitulo control.
@@ -22,31 +22,13 @@ namespace EstiloyColorERP {
         protected global::System.Web.UI.WebControls.Label lblTitulo;
         
         /// <summary>
-        /// ddlProveedores control.
+        /// ddlCategorias control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlProveedores;
-        
-        /// <summary>
-        /// lblInfo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblInfo;
-        
-        /// <summary>
-        /// tbBuscar control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbBuscar;
+        protected global::System.Web.UI.WebControls.DropDownList ddlCategorias;
         
         /// <summary>
         /// btnBuscar control.
@@ -58,13 +40,13 @@ namespace EstiloyColorERP {
         protected global::System.Web.UI.WebControls.Button btnBuscar;
         
         /// <summary>
-        /// gvVentas control.
+        /// gvProductos control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvVentas;
+        protected global::System.Web.UI.WebControls.GridView gvProductos;
         
         /// <summary>
         /// btnExportarExcel control.

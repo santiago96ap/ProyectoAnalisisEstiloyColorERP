@@ -100,7 +100,7 @@ namespace DATA
         {
             SqlConnection connection = new SqlConnection(this.stringConeccion);
 
-            String sqlSelect = "sp_obtenerTodosVentas;";
+            String sqlSelect = "sp_obtenerTodoVenta;";
 
             SqlDataAdapter sqlDataAdapterClient = new SqlDataAdapter();
             sqlDataAdapterClient.SelectCommand = new SqlCommand();

@@ -77,7 +77,7 @@
     <Content Include="publico\css\alertify.bootstrap.css" />
     <Content Include="publico\css\alertify.core.css" />
     <Content Include="publico\css\alertify.default.css" />
-    <Content Include="publico\EliminarProductoVista.aspx" />
+    <Content Include="publico\InventarioVista.aspx" />
     <Content Include="publico\NOEliminarIngresoVista.aspx" />
     <Content Include="publico\EliminarUsuarioVista.aspx" />
     <Content Include="publico\EliminarOfertaVista.aspx" />
@@ -199,12 +199,12 @@
     <Compile Include="publico\CatalogoVista.aspx.designer.cs">
       <DependentUpon>CatalogoVista.aspx</DependentUpon>
     </Compile>
-    <Compile Include="publico\EliminarProductoVista.aspx.cs">
-      <DependentUpon>EliminarProductoVista.aspx</DependentUpon>
+    <Compile Include="publico\InventarioVista.aspx.cs">
+      <DependentUpon>InventarioVista.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="publico\EliminarProductoVista.aspx.designer.cs">
-      <DependentUpon>EliminarProductoVista.aspx</DependentUpon>
+    <Compile Include="publico\InventarioVista.aspx.designer.cs">
+      <DependentUpon>InventarioVista.aspx</DependentUpon>
     </Compile>
     <Compile Include="publico\NOEliminarIngresoVista.aspx.cs">
       <DependentUpon>NOEliminarIngresoVista.aspx</DependentUpon>

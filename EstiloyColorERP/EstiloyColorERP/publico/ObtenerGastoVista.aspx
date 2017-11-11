@@ -21,6 +21,10 @@
                     <br />
                     <asp:GridView ID="gvGastos" CssClass="table table-hover" runat="server" RowHeaderColumn="Gastos"></asp:GridView>
                     <br />
+                    <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="images/icono-EXCEL.png" OnClick="btnExportarExcel_Click"/>
+                    <asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="images/icono-PDF.png" OnClick="btnExportarPdf_Click"/>
+                    <br />
+                    <br />
                     <br />
                 </div>
             </section>
