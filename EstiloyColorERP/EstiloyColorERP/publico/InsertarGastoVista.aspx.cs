@@ -18,7 +18,7 @@ namespace EstiloyColorERP.publico
         }//PageLoad
         protected void btnInsertar_Click(object sender, EventArgs e)
         {
-            if ( this.gb.insertarGasto(new Gasto(tbFecha.Text, tbHora.Text, tbConcepto.Text, float.Parse(tbTotal.Text), "u")) == true)
+            if ( this.gb.insertarGasto(new Gasto(tbFecha.Text, tbHora.Text, tbConcepto.Text, float.Parse(tbTotal.Text), "u",ddTipoGasto.SelectedValue.ToString())) == true)
             {
                 tbFecha.Text = "";
                 tbHora.Text = "";
