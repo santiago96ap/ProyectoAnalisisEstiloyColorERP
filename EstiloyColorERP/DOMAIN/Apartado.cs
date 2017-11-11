@@ -48,6 +48,12 @@ namespace DOMAIN
             this.fechaFinal = fechaFinal;
         }//constructor sobrecargado1
 
+        public Apartado(int id ,float abono)
+        {
+            this.id = id;
+            this.abono = abono;
+        }//constructor sobrecargado2
+
         public String Estado
         {
             get

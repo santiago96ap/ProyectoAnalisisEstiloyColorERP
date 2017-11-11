@@ -6,7 +6,7 @@
             <br />
         <section id="formulario1">
            <div id="divi1">
-
+                
                 <asp:Label ID="Label3" CssClass="agileits-title" runat="server" Text="Actualizar Ingreso"></asp:Label>
                 <br />
                 <br />

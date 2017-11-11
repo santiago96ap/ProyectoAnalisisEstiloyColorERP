@@ -15,7 +15,7 @@
                         <br />
                         <asp:dropdownlist ID="ddlClientes" CssClass="form-dropdownlist" runat="server"></asp:dropdownlist>
                         <br />
-                        <br />
+                        <br /> 
                         <asp:Button ID="btnBuscar" CssClass="btn btn-info" runat="server" Text="Buscar" OnClick="btnBuscar_Click" />
                         <br />
                         <br />

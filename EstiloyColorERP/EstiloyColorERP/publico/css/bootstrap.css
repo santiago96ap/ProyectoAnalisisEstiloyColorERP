@@ -2260,7 +2260,7 @@ th {
 }
 .table {
   max-width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 .table > thead > tr > th,
 .table > tbody > tr > th,

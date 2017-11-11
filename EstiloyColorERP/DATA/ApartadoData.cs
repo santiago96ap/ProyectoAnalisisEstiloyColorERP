@@ -108,7 +108,24 @@ namespace DATA
 
         public Boolean actualizarApartado(Apartado apartado)
         {
-            return false;
+            SqlConnection connection = new SqlConnection(this.stringConeccion);
+            String sqlStoreProcedure = "sp_actualizarApartado";
+            SqlCommand cmdActualizar = new SqlCommand(sqlStoreProcedure, connection);
+            cmdActualizar.CommandType = System.Data.CommandType.StoredProcedure;
+            cmdActualizar.Parameters.Add(new SqlParameter("@id", apartado.Id));
+            cmdActualizar.Parameters.Add(new SqlParameter("@abono", apartado.Abono));
+
+            cmdActualizar.Connection.Open();
+            if (cmdActualizar.ExecuteNonQuery() > 0)
+            {
+                cmdActualizar.Connection.Close();
+                return true;
+            }
+            else
+            {
+                cmdActualizar.Connection.Close();
+                return false;
+            }//if-else
         }//actualizarApartado
 
     }//class

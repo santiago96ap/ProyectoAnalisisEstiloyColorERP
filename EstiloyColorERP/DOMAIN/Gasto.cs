@@ -27,7 +27,7 @@ namespace DOMAIN
 
         }//constructor por defecto
 
-        public Gasto(String fecha, String hora, String concepto, float total, String vendedor)
+        public Gasto(String fecha, String hora, String concepto, float total, String vendedor, string servicio)
         {
 
             this.fecha = fecha;
@@ -35,10 +35,11 @@ namespace DOMAIN
             this.concepto = concepto;
             this.total = total;
             this.vendedor = vendedor;
+            this.servico = servicio;
 
         }//constructor sobrecargado
 
-        public Gasto(int id, String fecha, String hora, String concepto, float total, String vendedor)
+        public Gasto(int id, String fecha, String hora, String concepto, float total, String vendedor, string servicio)
         {
             this.id = id;
             this.fecha = fecha;
@@ -46,6 +47,7 @@ namespace DOMAIN
             this.concepto = concepto;
             this.total = total;
             this.vendedor = vendedor;
+            this.servico = servicio;
 
         }//constructor sobrecargado
 
