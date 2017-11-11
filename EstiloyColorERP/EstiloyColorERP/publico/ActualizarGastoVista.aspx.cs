@@ -14,6 +14,8 @@ namespace EstiloyColorERP.publico
     {
         private GastoBusiness gastosBusiness = new GastoBusiness();
         private LinkedList<Gasto> gastos;
+
+        
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -21,6 +23,7 @@ namespace EstiloyColorERP.publico
 
         protected void cargarDatos()
         {
+            
             this.gastos = this.gastosBusiness.obtenerGastos(TbFechaInicio.Text, TbFechaFinal.Text);
             DataTable table = new DataTable("Tabla1");
             table.Columns.Add(new DataColumn("ID", typeof(int)));
@@ -56,7 +59,7 @@ namespace EstiloyColorERP.publico
         protected void DeleteRowButton_Click(object sender, GridViewDeleteEventArgs e)
         {
             int idIngreso = int.Parse(this.gvGastos.DataKeys[e.RowIndex].Value.ToString());//email (id) del proveedor por el cual se cargarán y modificarán los datos
-
+         
             this.gastosBusiness = new GastoBusiness();
             this.gastos = null;
             this.gastos = this.gastosBusiness.obtenerGastos(TbFechaInicio.Text, TbFechaFinal.Text);
@@ -78,8 +81,8 @@ namespace EstiloyColorERP.publico
                     this.tbHora.Text = gActual.Hora;
                     this.tbConcepto.Text = gActual.Concepto;
                     this.tbTotal.Text = gActual.Total + "";
-                    this.ddTipoServicio.Items.Add(new ListItem("Gasto", "gasto"));
-                    this.ddTipoServicio.Items.Add(new ListItem("Compra", "compra"));
+                   
+
                 }
             }//foreach
 
@@ -123,6 +126,8 @@ namespace EstiloyColorERP.publico
         protected void Button1_Click(object sender, EventArgs e)
         {
             cargarDatos();
+            this.ddTipoServicio.Items.Add(new ListItem("Gasto", "gasto"));
+            this.ddTipoServicio.Items.Add(new ListItem("Compra", "compra"));
 
         }
     }//class

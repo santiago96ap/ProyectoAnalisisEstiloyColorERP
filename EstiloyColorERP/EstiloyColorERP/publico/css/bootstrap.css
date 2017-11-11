@@ -116,7 +116,6 @@ select,
 textarea {
   color: inherit;
     margin-left: 26px;
-    margin-right: 0;
     margin-top: 0;
 }
 button {
@@ -3176,8 +3175,7 @@ fieldset[disabled] .btn-success.active {
   color: #fff;
   background-color: #5bc0de;
   border-color: #46b8da;
-    width: 313px;
-}
+    }
 .btn-info:hover,
 .btn-info:focus,
 .btn-info.focus,
