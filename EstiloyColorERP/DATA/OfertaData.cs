@@ -64,10 +64,29 @@ namespace DATA
 
         public Boolean editarOferta(Oferta oferta)
         {
-            /**
-             * CÓDIGO AQUÍ
-             * **/
-            return false;
+            SqlConnection connection = new SqlConnection(this.conectionString);
+            String sqlStoreProcedure = "sp_actualizarOferta";
+            SqlCommand cmdActualizar = new SqlCommand(sqlStoreProcedure, connection);
+            cmdActualizar.CommandType = System.Data.CommandType.StoredProcedure;
+            cmdActualizar.Parameters.Add(new SqlParameter("@id", oferta.Id));
+            cmdActualizar.Parameters.Add(new SqlParameter("@fecha_inicial", oferta.FechaInicio));
+            cmdActualizar.Parameters.Add(new SqlParameter("@fecha_fin", oferta.FechaFinal));
+            cmdActualizar.Parameters.Add(new SqlParameter("@descuento", oferta.Descuento));
+            cmdActualizar.Parameters.Add(new SqlParameter("@id_producto", oferta.IdProducto));
+            cmdActualizar.Parameters.Add(new SqlParameter("@nuevoPrecio", oferta.PrecioDescuento));
+
+
+            cmdActualizar.Connection.Open();
+            if (cmdActualizar.ExecuteNonQuery() > 0)
+            {
+                cmdActualizar.Connection.Close();
+                return true;
+            }
+            else
+            {
+                cmdActualizar.Connection.Close();
+                return false;
+            }
         }//editarOferta
 
         public Oferta obtenerOferta()
