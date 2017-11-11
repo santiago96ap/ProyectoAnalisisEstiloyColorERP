@@ -42,6 +42,11 @@ namespace BUSINESS
         public Boolean insertarVentaProducto(VentaProducto vp)
         {
             return this.ventaData.insertarVentaProducto(vp);
-        }
+        }//insertarVentaProducto
+
+        public LinkedList<Venta> obtenerVentasEliminar(String fechaI, String fechaF)
+        {
+            return this.ventaData.obtenerVentasEliminar(fechaI, fechaF);
+        }//obtener ventas eliminar
     }//class
 }//namespace

@@ -10,16 +10,43 @@
 namespace EstiloyColorERP {
     
     
-    public partial class EliminarAgendaView {
+    public partial class EliminarVentaView {
         
         /// <summary>
-        /// lblTituloVenta control.
+        /// myModal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTituloVenta;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl myModal;
+        
+        /// <summary>
+        /// btnCancelar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCancelar;
+        
+        /// <summary>
+        /// btnConfirmar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnConfirmar;
+        
+        /// <summary>
+        /// lblITitulo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblITitulo;
         
         /// <summary>
         /// tbDatos control.
@@ -31,31 +58,31 @@ namespace EstiloyColorERP {
         protected global::System.Web.UI.WebControls.TextBox tbDatos;
         
         /// <summary>
-        /// cbVendedor control.
+        /// rbVendedor control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox cbVendedor;
+        protected global::System.Web.UI.WebControls.RadioButton rbVendedor;
         
         /// <summary>
-        /// cbCliente control.
+        /// rbCliente control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox cbCliente;
+        protected global::System.Web.UI.WebControls.RadioButton rbCliente;
         
         /// <summary>
-        /// cbFactura control.
+        /// rbFactura control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox cbFactura;
+        protected global::System.Web.UI.WebControls.RadioButton rbFactura;
         
         /// <summary>
         /// tbFechaInicio control.
@@ -67,13 +94,13 @@ namespace EstiloyColorERP {
         protected global::System.Web.UI.WebControls.TextBox tbFechaInicio;
         
         /// <summary>
-        /// tbFechaFin control.
+        /// tbFechaFinal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbFechaFin;
+        protected global::System.Web.UI.WebControls.TextBox tbFechaFinal;
         
         /// <summary>
         /// btnBuscar control.
@@ -85,21 +112,12 @@ namespace EstiloyColorERP {
         protected global::System.Web.UI.WebControls.Button btnBuscar;
         
         /// <summary>
-        /// tbResultadosVenta control.
+        /// gvVentas control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Table tbResultadosVenta;
-        
-        /// <summary>
-        /// btnEliminarVenta control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnEliminarVenta;
+        protected global::System.Web.UI.WebControls.GridView gvVentas;
     }
 }

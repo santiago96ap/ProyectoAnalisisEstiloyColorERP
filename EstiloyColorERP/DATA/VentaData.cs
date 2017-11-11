@@ -81,7 +81,7 @@ namespace DATA
             SqlCommand cmdEliminar = new SqlCommand(sqlStoreProcedure, connection);
             cmdEliminar.CommandType = System.Data.CommandType.StoredProcedure;
 
-            cmdEliminar.Parameters.Add(new SqlParameter("@id", venta.Id));
+            cmdEliminar.Parameters.Add(new SqlParameter("@id_venta", venta.Id));
             cmdEliminar.Connection.Open();
         
             if (cmdEliminar.ExecuteNonQuery() > 0)
@@ -118,15 +118,15 @@ namespace DATA
             foreach (DataRow currentRow in dataRow)
             {
                 Venta ventaActual = new Venta();
-                ventaActual.Fecha = currentRow["fecha"].ToString();
+                ventaActual.Id = int.Parse(currentRow["id_venta"].ToString());
+                ventaActual.Fecha = currentRow["fecha"].ToString().Split(' ')[0];
                 ventaActual.Hora = currentRow["hora"].ToString();
-                ventaActual.Cliente = currentRow["cliente"].ToString();
-                ventaActual.Vendedor = currentRow["vendedor"].ToString();
-                ventaActual.TipoServicio = currentRow["tipoServicio"].ToString();
-                //ventaActual.ArticuloComprado = currentRow["articuloComprado"].ToString(); Hay que hacer una consulta de los productos relacionados con la venta
-                ventaActual.SubTotal = float.Parse(currentRow["subTotal"].ToString());
+                ventaActual.Cliente = currentRow["id_cliente"].ToString();
+                ventaActual.TipoServicio = currentRow["tipo_Servicio"].ToString();
+                ventaActual.TipoPago = currentRow["tipo_Pago"].ToString();
+                ventaActual.Vendedor = currentRow["usuario"].ToString();
+                ventaActual.SubTotal = float.Parse(currentRow["subtotal"].ToString());
                 ventaActual.Total = float.Parse(currentRow["total"].ToString());
-                ventaActual.TipoPago = currentRow["tipoPago"].ToString();
                 ventas.AddLast(ventaActual);
             }//foreach
             return ventas;
@@ -144,5 +144,45 @@ namespace DATA
             }
             return null;
         }//obtener una venta
+
+        public LinkedList<Venta> obtenerVentasEliminar(String fechaI, String fechaF)
+        {
+            SqlConnection connection = new SqlConnection(this.stringConeccion);
+
+            String sqlSelect = "sp_obtenerVentas";
+
+            SqlDataAdapter sqladapterVentas = new SqlDataAdapter();
+
+            sqladapterVentas.SelectCommand = new SqlCommand(sqlSelect, connection);
+            sqladapterVentas.SelectCommand.CommandType = System.Data.CommandType.StoredProcedure;
+            sqladapterVentas.SelectCommand.Parameters.Add(new SqlParameter("@FechaI", fechaI));
+            sqladapterVentas.SelectCommand.Parameters.Add(new SqlParameter("@FechaF", fechaF));
+
+            DataSet dataVentas = new DataSet();
+            sqladapterVentas.Fill(dataVentas, "tb_Ventas");
+            sqladapterVentas.SelectCommand.Connection.Close();
+
+            DataRowCollection dataRow = dataVentas.Tables["tb_Ventas"].Rows;
+
+
+            LinkedList<Venta> ventas = new LinkedList<Venta>();
+
+            foreach (DataRow currentRow in dataRow)
+            {
+                Venta ventaActual = new Venta();
+                ventaActual.Id = int.Parse(currentRow["id_venta"].ToString());
+                ventaActual.Fecha = currentRow["fecha"].ToString().Split(' ')[0];
+                ventaActual.Hora = currentRow["hora"].ToString();
+                ventaActual.Cliente = currentRow["id_cliente"].ToString();
+                ventaActual.TipoServicio = currentRow["tipo_Servicio"].ToString();
+                ventaActual.TipoPago = currentRow["tipo_Pago"].ToString();
+                ventaActual.Vendedor = currentRow["usuario"].ToString();
+                ventaActual.SubTotal = float.Parse(currentRow["subtotal"].ToString());
+                ventaActual.Total = float.Parse(currentRow["total"].ToString());
+                ventas.AddLast(ventaActual);
+            }//foreach
+
+            return ventas;
+        }//obtener ventas eliminar
     }//class
 }//namespace

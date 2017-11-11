@@ -24,7 +24,7 @@
              <div id="divi10">
                 <asp:Label ID="lblUsuario" CssClass="col-sm-2 control-label" runat="server" Text="Rol"></asp:Label>
                 <asp:TextBox ID="tbUsuario" CssClass="form-control1" runat="server"></asp:TextBox>
-                <asp:Button ID="btnBuscar" CssClass="btn btn-info" runat="server" Text="Buscar" OnClick="btnBuscar_Click" /> 
+                <asp:Button ID="btnBuscar" CssClass="btn btn-info" runat="server" Text="Buscar" OnClick="btnBuscar_Click"/> 
                 <br />
                 <br />
                 <asp:GridView ID="gvUsuarios" CssClass="table table-hover" runat="server" DataKeyNames="Nombre Usuario" OnRowDeleting="DeleteRowButton_Click">
