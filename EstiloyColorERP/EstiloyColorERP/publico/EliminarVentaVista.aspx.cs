@@ -123,6 +123,8 @@ namespace EstiloyColorERP
         protected void reiniciarModulo()
         {
             this.tbDatos.Text = "";
+            this.tbFechaInicio.Text = "";
+            this.tbFechaFinal.Text = "";
             this.gvVentas.DataSource = null;
             this.gvVentas.DataBind();
         }//reiniciarModulo
