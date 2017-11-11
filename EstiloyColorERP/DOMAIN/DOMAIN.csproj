@@ -77,7 +77,6 @@
   <ItemGroup>
     <Compile Include="Agenda.cs" />
     <Compile Include="Apartado.cs" />
-    <Compile Include="ApartadoProducto.cs" />
     <Compile Include="Categoria.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="Gasto.cs" />

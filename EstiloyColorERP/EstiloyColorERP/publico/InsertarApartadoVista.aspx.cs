@@ -16,7 +16,6 @@ namespace EstiloyColorERP.publico
         private ProductoBusiness productoBusiness = new ProductoBusiness();
         private CategoriaBusiness categoriaBusiness = new CategoriaBusiness();
         private ApartadoBusiness apartadoBusiness = new ApartadoBusiness();
-        private LinkedList<Categoria> categorias;        
         private static LinkedList<Producto> productos = new LinkedList<Producto>();
         private DataTable table;
 
@@ -117,43 +116,17 @@ namespace EstiloyColorERP.publico
 
         protected void btnInsertar_Click(object sender, EventArgs e)
         {
-            //Session["usuario"].ToString()
-            Apartado apartado = new Apartado(int.Parse(tbCliente.Text.ToString()),tbCliente.Text,float.Parse(tbTotal.Text.ToString()), float.Parse(tbAbono.Text.ToString()),tbFechaInicio.Text,tbFechaFin.Text);
-            if (this.apartadoBusiness.insertarApartado(apartado) == true)
-            {
-                insertarProductos();
-                limpiarTexto();
-                ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.success('¡Se ha insertado correctamente!')", true);
-            }
-            else
-            {
-                ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.error('Ha ocurrido un error!')", true);
-
-            }//else-if
+           
 
         }//btnAgregar_Click
 
         private void insertarProductos()
         {
 
-            foreach (Producto pActual in productos)///recorrer la lista de productos
-            {
-                for (int i = 1; i <= pActual.Cantidad; i++)///recorrer la cantidad de un producto
-                {
-
-                    if (this.ventaBuisiness.insertarVentaProducto(new VentaProducto(pActual.IdProct, pActual.IdCategoria,
-                    float.Parse(tbTotal.Text), tbFecha.Text, tbHora.Text, tbTelefono.Text)) == false)
-                    {
-                        ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.error('Ha ocurrido un error en la inserción de los productos')", true);
-                    }
-
-                }//for i
-
-            }//foreach
+           
 
         }//insertarProductos
 
-
-    }//DeleteRowButton_Click
+        
     }//class
 }//namespace
