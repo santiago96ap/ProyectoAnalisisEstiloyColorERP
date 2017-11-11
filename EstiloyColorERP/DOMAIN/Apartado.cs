@@ -9,7 +9,6 @@ namespace DOMAIN
     {
         private int id;
         private String idCliente;
-        private LinkedList<String> productos;
         private float monto;
         private float abono;
         private String fechaInicio;
@@ -20,28 +19,25 @@ namespace DOMAIN
         public Apartado()
         {
             this.idCliente = "";
-            this.productos = new LinkedList<String>();
             this.monto = 0;
             this.abono= 0;
             this.fechaInicio = "";
             this.fechaFinal = "";
         }//constructor
 
-        public Apartado(String idCliente, LinkedList<String> productos, float monto, float abono, String fechaInicio, String fechaFinal)
+        public Apartado(String idCliente, float monto, float abono, String fechaInicio, String fechaFinal)
         {
-            this.idCliente = idCliente;
-            this.productos = productos;
+            this.idCliente = idCliente;            
             this.monto = monto;
             this.abono = abono;
             this.fechaInicio = fechaInicio;
             this.fechaFinal = fechaFinal;
         }//constructor sobrecargado
 
-        public Apartado(int id, String idCliente, LinkedList<String> productos, float monto, float abono, String fechaInicio, String fechaFinal)
+        public Apartado(int id, String idCliente, float monto, float abono, String fechaInicio, String fechaFinal)
         {
             this.id = id;
             this.idCliente = idCliente;
-            this.productos = productos;
             this.monto = monto;
             this.abono = abono;
             this.fechaInicio = fechaInicio;
@@ -99,19 +95,7 @@ namespace DOMAIN
                 idCliente = value;
             }//set idCliente
         }//IdCliente
-
-        public LinkedList<string> Productos
-        {
-            get
-            {
-                return productos;
-            }//get productos
-
-            set
-            {
-                productos = value;
-            }//set productos
-        }//Productos
+        
 
         public float Monto
         {

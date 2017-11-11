@@ -19,6 +19,8 @@ namespace BUSINESS
             this.apartadoData = new ApartadoData(this.stringConeccion);
         }//constructor
 
+        public Boolean insertarApartadoProducto()
+
         public Boolean insertarApartado(Apartado apartado)
         {
             return this.apartadoData.insertarApartado(apartado);
