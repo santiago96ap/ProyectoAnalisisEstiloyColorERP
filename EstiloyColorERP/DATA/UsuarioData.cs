@@ -49,7 +49,23 @@ namespace DATA
 
         public Boolean eliminarUsuario(Usuario usuario)
         {
-            return false;
+            SqlConnection connection = new SqlConnection(this.stringConeccion);
+            String sqlStoreProcedure = "sp_eliminarUsuario";
+            SqlCommand cmdEliminar = new SqlCommand(sqlStoreProcedure, connection);
+            cmdEliminar.CommandType = System.Data.CommandType.StoredProcedure;
+
+            cmdEliminar.Parameters.Add(new SqlParameter("@nombre_usuario", usuario.NombreUsuario));
+            cmdEliminar.Connection.Open();
+            if (cmdEliminar.ExecuteNonQuery() > 0)
+            {
+                cmdEliminar.Connection.Close();
+                return true;
+            }
+            else
+            {
+                cmdEliminar.Connection.Close();
+                return false;
+            }//if-else
         }//eliminarUsuario
 
         public Boolean editarUsuario(Usuario usuario, Usuario nuevoUsuario)
@@ -81,7 +97,8 @@ namespace DATA
             {
                 Usuario usuarioActual = new Usuario();
                 usuarioActual.NombreUsuario = currentRow["nombre_usuario"].ToString();
-                usuarioActual.Nombre = currentRow["nombre"].ToString() +" "+ currentRow["apellidos"].ToString();
+                usuarioActual.Nombre = currentRow["nombre"].ToString();
+                usuarioActual.Apellido = currentRow["apellidos"].ToString();
                 usuarioActual.Rol = currentRow["tipo_Usuario"].ToString();
                 usuarioActual.Correo = currentRow["email"].ToString();
                 usuarioActual.Telefono = currentRow["telefono"].ToString();

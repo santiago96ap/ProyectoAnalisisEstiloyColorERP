@@ -17,6 +17,10 @@ namespace EstiloyColorERP.publico
         protected void Page_Load(object sender, EventArgs e)
         {
             this.proveedorbusiness = new ProveedorBusiness();
+            if (!IsPostBack)
+            {
+                recargarModulo();
+            }//saber si es la primera vez de la pagina
         }//Page_Load
 
         protected void DeleteRowButton_Click(object sender, GridViewDeleteEventArgs e)
@@ -46,7 +50,7 @@ namespace EstiloyColorERP.publico
             else {
                 ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.error('Se ha producido un error al procesar la solicitud')", true);
             }//saber si se elimino correctamente
-            cargarTodos();
+            recargarModulo();
         }//ConfirmarButton_Click
 
         protected void cargarTodos()
@@ -72,5 +76,12 @@ namespace EstiloyColorERP.publico
             this.gvProveedores.DataBind();
         }//cargarTodos
         
+        protected void recargarModulo()
+        {
+            this.gvProveedores.DataSource = null;
+            this.gvProveedores.DataBind();
+            cargarTodos();
+        }//recergarModulo
+
     }//class
 }//namespace
