@@ -58,6 +58,8 @@ namespace EstiloyColorERP
             table.Columns.Add(new DataColumn("Nombre", typeof(string)));
             table.Columns.Add(new DataColumn("Precio", typeof(string)));
             table.Columns.Add(new DataColumn("Cantidad", typeof(int)));
+            table.Columns.Add(new DataColumn("Descuento", typeof(string)));
+            table.Columns.Add(new DataColumn("Precio con descuento", typeof(float)));
             foreach (Producto p in productos)
 
             {
@@ -66,6 +68,9 @@ namespace EstiloyColorERP
                 row["Nombre"] = p.Nombre;
                 row["Precio"] = "¢" + p.Precio;
                 row["Cantidad"] = p.Cantidad;
+
+                row["Descuento"] = p.Descuento + "%";
+                row["Precio con descuento"] = p.PrecioDescuento;
                 table.Rows.Add(row);
 
             }//for

@@ -22,7 +22,7 @@ namespace DATA
             SqlCommand cmdInsertar = new SqlCommand(sqlStoreProcedure, connection);
             cmdInsertar.CommandType = System.Data.CommandType.StoredProcedure;
             cmdInsertar.Parameters.Add(new SqlParameter("@fecha_inicial", oferta.FechaInicio));
-            cmdInsertar.Parameters.Add(new SqlParameter("@fecha_fin", oferta.FechaInicio));
+            cmdInsertar.Parameters.Add(new SqlParameter("@fecha_fin", oferta.FechaFinal));
             cmdInsertar.Parameters.Add(new SqlParameter("@descuento", oferta.Descuento));
             cmdInsertar.Parameters.Add(new SqlParameter("@id_producto", oferta.IdProducto));
 

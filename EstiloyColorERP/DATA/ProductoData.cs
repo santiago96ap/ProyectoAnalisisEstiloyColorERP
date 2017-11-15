@@ -142,6 +142,9 @@ namespace DATA
                 pActual.IdProveedor = currentRow["id_Prov"].ToString();
                 pActual.IdCategoria = int.Parse(currentRow["id_Cat"].ToString());
 
+                pActual.Descuento = float.Parse(currentRow["descuento"].ToString());
+                pActual.PrecioDescuento = float.Parse(currentRow["precioDes"].ToString());
+
             }
             return pActual;
         }// obtenerProductoPorID

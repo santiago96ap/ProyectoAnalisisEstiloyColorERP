@@ -63,6 +63,39 @@ namespace DATA
             }
         }//eliminar venta
 
+        public LinkedList<Agenda> obtenerAgendasFecha(String fecha)
+        {
+            SqlConnection connection = new SqlConnection(this.stringConeccion);
+
+            String sqlSelect = "sp_obtenerAgendaFecha";
+
+            SqlDataAdapter sqlDataAdapterAgenda = new SqlDataAdapter();
+
+            sqlDataAdapterAgenda.SelectCommand = new SqlCommand(sqlSelect, connection);
+            sqlDataAdapterAgenda.SelectCommand.CommandType = System.Data.CommandType.StoredProcedure;
+            sqlDataAdapterAgenda.SelectCommand.Parameters.Add(new SqlParameter("@Fecha", fecha));
+
+            DataSet dataSetAgenda = new DataSet();
+            sqlDataAdapterAgenda.Fill(dataSetAgenda, "tb_Agenda");
+            sqlDataAdapterAgenda.SelectCommand.Connection.Close();
+
+            DataRowCollection dataRow = dataSetAgenda.Tables["tb_Agenda"].Rows;
+
+            LinkedList<Agenda> actividades = new LinkedList<Agenda>();
+
+            foreach (DataRow currentRow in dataRow)
+            {
+                Agenda agendaActual = new Agenda();
+                agendaActual.Fecha = currentRow["fecha"].ToString().Split(' ')[0];
+                agendaActual.Hora = currentRow["hora"].ToString();
+                agendaActual.Actividad = currentRow["actividad"].ToString();
+                agendaActual.Direccion = currentRow["direccion"].ToString();
+                agendaActual.Cliente = currentRow["id_cliente_tel"].ToString();
+                actividades.AddLast(agendaActual);
+            }//recorrer todos los clientes que vienen de la DB
+            return actividades;
+        }//obtener todas las citas de la agenda
+
         public LinkedList<Agenda> obtenerAgendas()
         {
             SqlConnection connection = new SqlConnection(this.stringConeccion);
