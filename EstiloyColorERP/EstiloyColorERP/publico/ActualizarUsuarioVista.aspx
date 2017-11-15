@@ -9,14 +9,7 @@
                 <asp:Label ID="Label3" CssClass="agileits-title" runat="server" Text="Actualizar  Usuario"></asp:Label>
                 <br />
                 <br />
-                <asp:Label ID="Label2" CssClass="col-sm-2 control-label" runat="server" Text="Usuario"></asp:Label>
-                <asp:TextBox ID="TbFechaInicio"  type="date" CssClass="form-control1" runat="server"></asp:TextBox>
-                <br />
-                <br />
-                <asp:Button ID="btnBuscar" runat="server"  CssClass="btn btn-info" Text="Buscar" OnClick="btnBuscar_Click"  />
-                <br />
-                <br />
-                    <asp:GridView ID="gvUsuarios" CssClass="table table-hover" runat="server" RowHeaderColumn="Usuarios" DataKeyNames="ID" OnRowDeleting="DeleteRowButton_Click" OnSelectedIndexChanged="gvGastos_SelectedIndexChanged">
+                    <asp:GridView ID="gvUsuarios" CssClass="table table-hover" runat="server" RowHeaderColumn="Usuarios" DataKeyNames="Usuario" OnRowDeleting="DeleteRowButton_Click" OnSelectedIndexChanged="gvGastos_SelectedIndexChanged">
                         <Columns>
                             <asp:CommandField HeaderText="Acción" ShowDeleteButton="True" DeleteText="Seleccionar"/>                
                         </Columns>            
@@ -47,11 +40,15 @@
                 <br />
                 <br />
                 <asp:Label ID="lblTotal" CssClass="col-sm-2 control-label" runat="server" Text="e-mail"></asp:Label>
-                <asp:TextBox ID="tbTotal" type="email" CssClass="form-control1"  runat="server"></asp:TextBox>
+                <asp:TextBox ID="tbEmail" type="email" CssClass="form-control1"  runat="server"></asp:TextBox>
+                <br />
+                <br />
+                <asp:Label ID="Label1" CssClass="col-sm-2 control-label" runat="server" Text="Teléfono"></asp:Label>
+                <asp:TextBox ID="tbTelefono" type="number" CssClass="form-control1"  runat="server"></asp:TextBox>
                 <br />
                 <br />
                 <asp:Label ID="Label4" CssClass="col-sm-2 control-label" runat="server" Text="Rol"></asp:Label>
-                <asp:dropdownlist ID="ddTipoServicio" CssClass="form-dropdownlist" runat="server"></asp:dropdownlist>
+                <asp:dropdownlist ID="ddTipoRol" CssClass="form-dropdownlist" runat="server"></asp:dropdownlist>
                 <br />
                 <br /> 
                 <asp:Button ID="btnActualizar" runat="server"  CssClass="btn btn-info" Text="Actualizar" OnClick="btnActualizar_Click1" />

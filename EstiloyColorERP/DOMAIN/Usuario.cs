@@ -15,6 +15,7 @@ namespace DOMAIN
         private String tipoUsuario;
         private String contrsena;
         private String telefono;
+        private String nombreUsuarioActualizar;
 
         public Usuario()
         {
@@ -25,6 +26,7 @@ namespace DOMAIN
             this.tipoUsuario = "";
             this.contrsena = "";
             this.telefono = "";
+            this.nombreUsuarioActualizar = "";
         }//constructor por defecto
 
         public Usuario(String id, String nombre, string apellido, String correo, String rol, String contrasena, String telefono)
@@ -37,6 +39,18 @@ namespace DOMAIN
             this.contrsena = contrasena;
             this.telefono = telefono;
         }//constructor sobrecargado
+
+        public Usuario(String id, String usuarioNuevo, String nombre, string apellido, String correo, String rol, String contrasena, String telefono)
+        {
+            this.nombreUsuario = id;
+            this.nombre = nombre;
+            this.apellido = apellido;
+            this.correo = correo;
+            this.tipoUsuario = rol;
+            this.contrsena = contrasena;
+            this.telefono = telefono;
+            this.nombreUsuarioActualizar = usuarioNuevo;
+        }//constructor sobrecargado para Actualizar
 
         public string NombreUsuario
         {
@@ -126,6 +140,19 @@ namespace DOMAIN
             set
             {
                 apellido = value;
+            }
+        }
+
+        public string NombreUsuarioActualizar
+        {
+            get
+            {
+                return nombreUsuarioActualizar;
+            }
+
+            set
+            {
+                nombreUsuarioActualizar = value;
             }
         }
     }//fin de clase
