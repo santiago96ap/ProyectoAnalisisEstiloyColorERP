@@ -58,24 +58,17 @@
             <section id="formulario2">
                 <div id="divi5">
                     <asp:Label ID="lblTelefono" CssClass="col-sm-2 control-label" runat="server" Text="Cliente"></asp:Label>
-                    <asp:TextBox ID="tbTelefono" CssClass="form-control1" runat="server"></asp:TextBox>
-                    <br />
-                    <br />
-                    <asp:Label ID="lblTipoPago"  CssClass="col-sm-2 control-label" runat="server" Text="Pago"></asp:Label>
-                    <asp:dropdownlist ID="ddTipoPago" CssClass="form-control1" runat="server" >
-                        <asp:ListItem Value="efectivo">Efectivo</asp:ListItem>
-                        <asp:ListItem Value="tarjeta">Tarjeta</asp:ListItem>
-                    </asp:dropdownlist>
+                    <asp:TextBox ID="tbTelefono" CssClass="form-control1" runat="server"></asp:TextBox>                    
                     <br />
                     <br />
                     <asp:Label ID="lblSubTotal" CssClass="col-sm-2 control-label" runat="server" Text="Sub-total"></asp:Label>
                     <asp:TextBox ID="tbSubtotal" CssClass="form-control1" runat="server"></asp:TextBox>
                 </div>
                 <div id="divi6">
-                    <asp:Label ID="lblTipoServicio"  CssClass="col-sm-2 control-label" runat="server" Text="Servicio"></asp:Label>
-                    <asp:dropdownlist ID="ddTipoServicio" CssClass="form-control1" runat="server" >
-                        <asp:ListItem Value="Local">Tienda</asp:ListItem>
-                        <asp:ListItem Value="Proyecto">Proyecto</asp:ListItem>
+                    <asp:Label ID="lblTipoPago"  CssClass="col-sm-2 control-label" runat="server" Text="Pago"></asp:Label>
+                    <asp:dropdownlist ID="ddTipoPago" CssClass="form-control1" runat="server" >
+                        <asp:ListItem Value="efectivo">Efectivo</asp:ListItem>
+                        <asp:ListItem Value="tarjeta">Tarjeta</asp:ListItem>
                     </asp:dropdownlist>
                     <br />
                     <br />

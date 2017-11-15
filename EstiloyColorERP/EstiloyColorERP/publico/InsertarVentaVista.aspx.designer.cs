@@ -148,24 +148,6 @@ namespace EstiloyColorERP {
         protected global::System.Web.UI.WebControls.TextBox tbTelefono;
         
         /// <summary>
-        /// lblTipoPago control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTipoPago;
-        
-        /// <summary>
-        /// ddTipoPago control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddTipoPago;
-        
-        /// <summary>
         /// lblSubTotal control.
         /// </summary>
         /// <remarks>
@@ -184,22 +166,22 @@ namespace EstiloyColorERP {
         protected global::System.Web.UI.WebControls.TextBox tbSubtotal;
         
         /// <summary>
-        /// lblTipoServicio control.
+        /// lblTipoPago control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTipoServicio;
+        protected global::System.Web.UI.WebControls.Label lblTipoPago;
         
         /// <summary>
-        /// ddTipoServicio control.
+        /// ddTipoPago control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddTipoServicio;
+        protected global::System.Web.UI.WebControls.DropDownList ddTipoPago;
         
         /// <summary>
         /// lblTotal control.
