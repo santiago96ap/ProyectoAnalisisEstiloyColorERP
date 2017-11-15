@@ -53,7 +53,23 @@ namespace DATA
 
         public Boolean eliminarProducto(Producto producto)
         {
-            return false;
+            SqlConnection connection = new SqlConnection(this.conectionString);
+            String sqlStoreProcedure = "sp_eliminarProducto";
+            SqlCommand cmdEliminar = new SqlCommand(sqlStoreProcedure, connection);
+            cmdEliminar.CommandType = System.Data.CommandType.StoredProcedure;
+
+            cmdEliminar.Parameters.Add(new SqlParameter("@id_Proct", producto.IdProct));
+            cmdEliminar.Connection.Open();
+            if (cmdEliminar.ExecuteNonQuery() > 0)
+            {
+                cmdEliminar.Connection.Close();
+                return true;
+            }
+            else
+            {
+                cmdEliminar.Connection.Close();
+                return false;
+            }
         }//eliminarProducto
 
         public LinkedList<Producto> obtenerTodosProductos()
@@ -125,6 +141,9 @@ namespace DATA
                 pActual.Cantidad = int.Parse(currentRow["precio"].ToString());
                 pActual.IdProveedor = currentRow["id_Prov"].ToString();
                 pActual.IdCategoria = int.Parse(currentRow["id_Cat"].ToString());
+
+                pActual.Descuento = float.Parse(currentRow["descuento"].ToString());
+                pActual.PrecioDescuento = float.Parse(currentRow["precioDes"].ToString());
 
             }
             return pActual;

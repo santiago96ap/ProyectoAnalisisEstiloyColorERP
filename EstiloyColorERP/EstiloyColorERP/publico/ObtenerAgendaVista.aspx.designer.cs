@@ -22,12 +22,39 @@ namespace EstiloyColorERP {
         protected global::System.Web.UI.WebControls.Label lblTitulo;
         
         /// <summary>
-        /// calendario control.
+        /// tbFecha control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar calendario;
+        protected global::System.Web.UI.WebControls.TextBox tbFecha;
+        
+        /// <summary>
+        /// gvActividades control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvActividades;
+        
+        /// <summary>
+        /// btnExportarExcel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton btnExportarExcel;
+        
+        /// <summary>
+        /// btnExportarPdf control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton btnExportarPdf;
     }
 }

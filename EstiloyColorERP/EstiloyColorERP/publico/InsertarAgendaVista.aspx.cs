@@ -48,7 +48,7 @@ namespace EstiloyColorERP
             this.clientes = this.cb.obtenerClientes();
             foreach (Cliente cActual in this.clientes)
             {
-                this.ddClientes.Items.Add(new ListItem(cActual.Nombre + cActual.Apellidos, cActual.Telefono));
+                this.ddClientes.Items.Add(new ListItem(cActual.Nombre +" " + cActual.Apellidos, cActual.Telefono));
             }//llenar el listbox con los clientes de la DB
         }//cargarListadeClientes
     }//class

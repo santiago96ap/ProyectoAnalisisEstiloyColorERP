@@ -27,6 +27,11 @@ namespace BUSINESS
             return this.agendaData.eliminarAgenda(agenda);
         }//eliminar venta
 
+        public LinkedList<Agenda> obtenerAgendasFecha(String fecha)
+        {
+            return this.agendaData.obtenerAgendasFecha(fecha);
+        }//obtener todas las citas de la agenda
+
         public LinkedList<Agenda> obtenerAgendas()
         {
             return this.agendaData.obtenerAgendas();

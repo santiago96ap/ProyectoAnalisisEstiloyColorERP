@@ -152,9 +152,9 @@
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown-submenu" role="button" aria-haspopup="true" aria-expanded="false">Inventario<span class="caret"></span></a>
                                                 <ul class="dropdown-menu">
                                                     <li><a class="hvr-bounce-to-bottom" href="InsertarProductoVista.aspx">Insertar Producto</a></li>
-                                                    <li><a class="hvr-bounce-to-bottom" href="ActualizarProductoVista.aspx">Actualizar Producto</a></li>
+                                                    <%--<li><a class="hvr-bounce-to-bottom" href="ActualizarProductoVista.aspx">Actualizar Producto</a></li>--%>
                                                     <li><a class="hvr-bounce-to-bottom" href="EliminarProductoVista.aspx">Eliminar Producto</a></li>
-                                                    <li><a class="hvr-bounce-to-bottom" href="ObtenerProductoVista.aspx">Obtener Inventario</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="InventarioVista.aspx">Obtener Inventario</a></li>
                                                 </ul>
                                             </li>                                            
                                             <li class="dropdown-submenu">
@@ -192,7 +192,7 @@
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown-submenu" role="button" aria-haspopup="true" aria-expanded="false">Usuarios<span class="caret"></span></a>
                                                 <ul class="dropdown-menu">
                                                     <li><a class="hvr-bounce-to-bottom" href="InsertarUsuarioVista.aspx">Insertar Usuario</a></li>
-                                                    <li><a class="hvr-bounce-to-bottom" href="ActualizarUsuarioVista.aspx">Actualizar Usuario</a></li>
+                                                    <%--<li><a class="hvr-bounce-to-bottom" href="ActualizarUsuarioVista.aspx">Actualizar Usuario</a></li>--%>
                                                     <li><a class="hvr-bounce-to-bottom" href="EliminarUsuarioVista.aspx">Eliminar Usuario</a></li>
                                                     <li><a class="hvr-bounce-to-bottom" href="ObtenerUsuarioVista.aspx">Obtener Usuarios</a></li>
                                                 </ul>
@@ -243,9 +243,9 @@
                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown-submenu" role="button" aria-haspopup="true" aria-expanded="false">Inventario<span class="caret"></span></a>
                                                 <ul class="dropdown-menu">
                                                     <li><a class="hvr-bounce-to-bottom" href="InsertarProductoVista.aspx">Insertar Producto</a></li>
-                                                    <li><a class="hvr-bounce-to-bottom" href="ActualizarProductoVista.aspx">Actualizar Producto</a></li>
+                                                    <%--<li><a class="hvr-bounce-to-bottom" href="ActualizarProductoVista.aspx">Actualizar Producto</a></li>--%>
                                                     <li><a class="hvr-bounce-to-bottom" href="EliminarProductoVista.aspx">Eliminar Producto</a></li>
-                                                    <li><a class="hvr-bounce-to-bottom" href="ObtenerProductosVista.aspx">Obtener Inventario</a></li>
+                                                    <li><a class="hvr-bounce-to-bottom" href="InventarioVista.aspx">Obtener Inventario</a></li>
                                                 </ul>
                                             </li>
                                             <li class="dropdown-submenu">

@@ -101,7 +101,7 @@ namespace EstiloyColorERP
 
         protected void cargarTodos()
         {
-            this.ofertas = this.ofertabusiness.obtenerOfertas();
+            this.ofertas = this.ofertabusiness.obtenerOfertaFecha(tbFechaInicio.Text, tbFechaFinal.Text);
             DataTable table = new DataTable("Ofertas");
             table.Columns.Add(new DataColumn("Id", typeof(string)));
             table.Columns.Add(new DataColumn("Fecha Inicio", typeof(string)));
@@ -109,28 +109,15 @@ namespace EstiloyColorERP
             table.Columns.Add(new DataColumn("Descuento", typeof(string)));
             table.Columns.Add(new DataColumn("Precio con descuento", typeof(string)));
 
-            String[] fechaFin = tbFechaFinal.Text.ToString().Split(' ');
-            String[] datosFecha = fechaFin[0].Split('-');
-            String fechaFinal = datosFecha[2] + '/' + datosFecha[1] + '/' + datosFecha[0];
-
-            String[] fechaIni = tbFechaInicio.Text.ToString().Split(' ');
-            String[] datosFechaI = fechaIni[0].Split('-');
-            String fechaInicial = datosFechaI[2] + '/' + datosFechaI[1] + '/' + datosFechaI[0];
-
-
             foreach (Oferta ofertaActual in this.ofertas)
             {
-
-                if (ofertaActual.FechaInicio.Equals(tbFechaInicio.Equals(fechaInicial)) || ofertaActual.FechaFinal.Equals(fechaFinal))
-                {
-                    DataRow row = table.NewRow();
-                    row["Id"] = ofertaActual.Id;
-                    row["Fecha Inicio"] = ofertaActual.FechaInicio;
-                    row["Fecha Fin"] = ofertaActual.FechaFinal;
-                    row["Descuento"] = ofertaActual.Descuento;
-                    row["Precio con descuento"] = ofertaActual.PrecioDescuento;
-                    table.Rows.Add(row);
-                }//Validar apartados del cliente indicado
+                DataRow row = table.NewRow();
+                row["Id"] = ofertaActual.Id;
+                row["Fecha Inicio"] = ofertaActual.FechaInicio;
+                row["Fecha Fin"] = ofertaActual.FechaFinal;
+                row["Descuento"] = ofertaActual.Descuento;
+                row["Precio con descuento"] = ofertaActual.PrecioDescuento;
+                table.Rows.Add(row);
             }//foreach para recorrer los clientes que estan en la DB
             this.gvOfertas.DataSource = table;
             this.gvOfertas.DataBind();

@@ -22,7 +22,7 @@ namespace DATA
             SqlCommand cmdInsertar = new SqlCommand(sqlStoreProcedure, connection);
             cmdInsertar.CommandType = System.Data.CommandType.StoredProcedure;
             cmdInsertar.Parameters.Add(new SqlParameter("@fecha_inicial", oferta.FechaInicio));
-            cmdInsertar.Parameters.Add(new SqlParameter("@fecha_fin", oferta.FechaInicio));
+            cmdInsertar.Parameters.Add(new SqlParameter("@fecha_fin", oferta.FechaFinal));
             cmdInsertar.Parameters.Add(new SqlParameter("@descuento", oferta.Descuento));
             cmdInsertar.Parameters.Add(new SqlParameter("@id_producto", oferta.IdProducto));
 
@@ -87,14 +87,6 @@ namespace DATA
             }
         }//editarOferta
 
-        public Oferta obtenerOferta()
-        {
-            /**
-             * CÓDIGO AQUÍ
-             * **/
-            return null;
-        }//obtenerOferta
-
         public LinkedList<Oferta> obtenerOfertas()
         {
             SqlConnection connection = new SqlConnection(this.conectionString);
@@ -127,6 +119,42 @@ namespace DATA
             }//foreach
             return ofertas;
         }//obtenerOfertas
+
+        public LinkedList<Oferta> obtenerOfertaFecha(String fechaI, String fechaF)
+        {
+            SqlConnection connection = new SqlConnection(this.conectionString);
+
+            String sqlSelect = "sp_obtenerOfertasPorFecha";
+
+            SqlDataAdapter sqladapterIngresos = new SqlDataAdapter();
+
+            sqladapterIngresos.SelectCommand = new SqlCommand(sqlSelect, connection);
+            sqladapterIngresos.SelectCommand.CommandType = System.Data.CommandType.StoredProcedure;
+            sqladapterIngresos.SelectCommand.Parameters.Add(new SqlParameter("@fechaI", fechaI));
+            sqladapterIngresos.SelectCommand.Parameters.Add(new SqlParameter("@fechaf", fechaF));
+
+            DataSet dataIngresos = new DataSet();
+            sqladapterIngresos.Fill(dataIngresos, "tb_Ofertas");
+            sqladapterIngresos.SelectCommand.Connection.Close();
+
+            DataRowCollection dataRow = dataIngresos.Tables["tb_Ofertas"].Rows;
+
+
+            LinkedList<Oferta> ofertas = new LinkedList<Oferta>();
+
+            foreach (DataRow currentRow in dataRow)
+            {
+                Oferta ofertaActual = new Oferta();
+                ofertaActual.Id = int.Parse(currentRow["id"].ToString());
+                ofertaActual.FechaInicio = currentRow["fecha_inicial"].ToString().Split(' ')[0];
+                ofertaActual.FechaFinal = currentRow["fecha_fin"].ToString().Split(' ')[0];
+                ofertaActual.Descuento = float.Parse(currentRow["descuento"].ToString());
+                ofertaActual.PrecioDescuento = float.Parse(currentRow["nuevoPrecio"].ToString());
+                ofertaActual.IdProducto = int.Parse(currentRow["id_producto"].ToString());
+                ofertas.AddLast(ofertaActual);
+            }//foreach
+            return ofertas;
+        }//obtenerOfertaFecha
 
     }//fin de clase ofertaData
 }//fin de namespace

@@ -16,6 +16,9 @@ namespace DOMAIN
         private String idProveedor;
         private int idCategoria;
 
+        private float descuento;
+        private float precioDescuento;
+
         public Producto(int idProct, string nombre, string descripcion, float costo, float precio, int cantidad, string idProveedor, int idCategoria)
         {
             this.idProct = idProct;
@@ -26,6 +29,9 @@ namespace DOMAIN
             this.cantidad = cantidad;
             this.idProveedor = idProveedor;
             this.idCategoria = idCategoria;
+
+            this.descuento = 0;
+            this.precioDescuento = 0;
         }//constructor
 
         public Producto()
@@ -38,6 +44,9 @@ namespace DOMAIN
             this.cantidad = 0;
             this.idProveedor = "";
             this.idCategoria = 0;
+
+            this.descuento = 0;
+            this.precioDescuento = 0;
         }//constructor default
 
 
@@ -143,6 +152,32 @@ namespace DOMAIN
             set
             {
                 idCategoria = value;
+            }
+        }
+
+        public float Descuento
+        {
+            get
+            {
+                return descuento;
+            }
+
+            set
+            {
+                descuento = value;
+            }
+        }
+
+        public float PrecioDescuento
+        {
+            get
+            {
+                return precioDescuento;
+            }
+
+            set
+            {
+                precioDescuento = value;
             }
         }
     }//class
