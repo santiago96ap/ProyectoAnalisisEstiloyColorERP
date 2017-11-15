@@ -30,9 +30,9 @@ namespace BUSINESS
             return this.usuarioData.eliminarUsuario(usuario);
         }//eliminarUsuario
 
-        public Boolean editarUsuario(Usuario usuario, Usuario nuevoUsuario)
+        public Boolean editarUsuario(Usuario usuario)
         {
-            return this.usuarioData.editarUsuario(usuario, nuevoUsuario);
+            return this.usuarioData.editarUsuario(usuario);
         }//editarusuario
 
         public LinkedList<Usuario> obtenerUsuarios()

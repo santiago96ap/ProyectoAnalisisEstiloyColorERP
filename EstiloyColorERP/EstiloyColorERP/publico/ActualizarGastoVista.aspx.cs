@@ -18,6 +18,11 @@ namespace EstiloyColorERP.publico
         
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                this.ddTipoServicio.Items.Add(new ListItem("Gasto", "gasto"));
+                this.ddTipoServicio.Items.Add(new ListItem("Compra", "compra"));
+            }
 
         }//Page_Load
 
@@ -96,11 +101,10 @@ namespace EstiloyColorERP.publico
             }
             else
             {
-                this.gastosBusiness = new GastoBusiness();
+             
 
-                Gasto gastoNuevo = new Gasto(int.Parse(tbID.Text.ToString()), tbFecha.Text.ToString(), tbHora.Text.ToString(), tbConcepto.Text.ToString(), float.Parse(tbTotal.Text.ToString()), "u", ddTipoServicio.SelectedItem.Value);
 
-                bool respuesta = this.gastosBusiness.editarGasto(gastoNuevo);
+                bool respuesta = this.gastosBusiness.editarGasto(new Gasto(int.Parse(tbID.Text.ToString()), tbFecha.Text, tbHora.Text, tbConcepto.Text, float.Parse(tbTotal.Text.ToString()), Session["usuario"].ToString(), ddTipoServicio.SelectedItem.Value));
 
                 if (respuesta)// Si se actualiza el usuario se recargan los datos y se dejan los tb en blanco
                 {
@@ -126,8 +130,7 @@ namespace EstiloyColorERP.publico
         protected void Button1_Click(object sender, EventArgs e)
         {
             cargarDatos();
-            this.ddTipoServicio.Items.Add(new ListItem("Gasto", "gasto"));
-            this.ddTipoServicio.Items.Add(new ListItem("Compra", "compra"));
+
 
         }
     }//class

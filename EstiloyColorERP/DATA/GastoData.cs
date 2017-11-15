@@ -80,6 +80,7 @@ namespace DATA
             cmdActualizar.Parameters.Add(new SqlParameter("@total", gasto.Total));
             cmdActualizar.Parameters.Add(new SqlParameter("@id_usuario", gasto.Vendedor));
             cmdActualizar.Parameters.Add(new SqlParameter("@tipoServicio", gasto.Servicio));
+            cmdActualizar.Connection.Open();
             if (cmdActualizar.ExecuteNonQuery() > 0)
             {
                 cmdActualizar.Connection.Close();

@@ -18,6 +18,7 @@ namespace DATA
             this.stringConeccion = stringConeccion;
         }//constructor
 
+
         public Boolean registrarUsuario(Usuario usuario)
         {
             SqlConnection connection = new SqlConnection(this.stringConeccion);
@@ -68,9 +69,33 @@ namespace DATA
             }//if-else
         }//eliminarUsuario
 
-        public Boolean editarUsuario(Usuario usuario, Usuario nuevoUsuario)
+        public Boolean editarUsuario(Usuario usuario)
         {
-            return false;
+            SqlConnection connection = new SqlConnection(this.stringConeccion);
+            String sqlStoreProcedure = "sp_actualizarUsuario";
+            SqlCommand cmdActualizar = new SqlCommand(sqlStoreProcedure, connection);
+            cmdActualizar.CommandType = System.Data.CommandType.StoredProcedure;
+
+            cmdActualizar.Parameters.Add(new SqlParameter("@nombre_usuarioN", usuario.NombreUsuarioActualizar));
+            cmdActualizar.Parameters.Add(new SqlParameter("@usuario", usuario.NombreUsuario));
+            cmdActualizar.Parameters.Add(new SqlParameter("@nombre", usuario.Nombre));
+            cmdActualizar.Parameters.Add(new SqlParameter("@apellidos", usuario.Apellido));
+            cmdActualizar.Parameters.Add(new SqlParameter("@tipo_Usuario", usuario.Rol));
+            cmdActualizar.Parameters.Add(new SqlParameter("@constrasenia", usuario.Contrsena));
+            cmdActualizar.Parameters.Add(new SqlParameter("@email", usuario.Correo));
+            cmdActualizar.Parameters.Add(new SqlParameter("@telefono", usuario.Telefono));
+
+            cmdActualizar.Connection.Open();
+            if (cmdActualizar.ExecuteNonQuery() > 0)
+            {
+                cmdActualizar.Connection.Close();
+                return true;
+            }
+            else
+            {
+                cmdActualizar.Connection.Close();
+                return false;
+            }//if-else
         }//editarUsuario
 
         public LinkedList<Usuario> obtenerUsuarios()
