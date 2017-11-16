@@ -99,7 +99,7 @@ namespace EstiloyColorERP
         protected void btnInsertar_Click(object sender, EventArgs e)
         {
             //Session["usuario"].ToString()
-            Venta venta = new Venta(tbFecha.Text, tbHora.Text, tbTelefono.Text, Session["usuario"].ToString(), ddTipoServicio.SelectedItem.Value,
+            Venta venta = new Venta(tbFecha.Text, tbHora.Text, tbTelefono.Text, Session["usuario"].ToString(), ddTipoVenta.SelectedItem.Value,
                 float.Parse(tbSubtotal.Text), float.Parse(tbTotal.Text), ddTipoPago.SelectedItem.Value);            
             if (this.ventaBuisiness.insertarVenta(venta) == true)
             {
