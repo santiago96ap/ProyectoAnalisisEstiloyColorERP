@@ -7,6 +7,11 @@ namespace DOMAIN
 {
     public class Usuario
     {
+
+        /// <summary>
+        /// Cualquier persona que se le de la posibilidad de ingresar de manera lícita en el sistema es un usuario o tiene un usuario ligado.
+        /// </summary>
+
         //Atributos
         private String nombreUsuario;
         private String nombre;

@@ -7,6 +7,10 @@ namespace DOMAIN
 {
     public class Gasto
     {
+        /// <summary>
+        /// Todos los egresos que tenga la empresa se le dedica el objeto gasto. Aquí se identifica todo lo que cause salida de dinero a la empresa.
+        /// </summary>
+
         //Atributos
         private int id;
         private String fecha;

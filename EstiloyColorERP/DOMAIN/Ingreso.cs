@@ -7,6 +7,10 @@ namespace DOMAIN
 {
     public class Ingreso
     {
+
+        /// <summary>
+        /// Se registra o se establece como cualquier motivo que permite adquirir dinero por parte de la empresa.
+        /// </summary>
         private int id;
         private String fecha;
         private String hora;

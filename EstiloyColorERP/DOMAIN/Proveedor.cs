@@ -5,6 +5,12 @@ using System.Web;
 
 namespace DOMAIN {
     public class Proveedor {
+
+        /// <summary>
+        /// Un proveedor es una entidad por la cual se tiene acceso a un producto determinado. Estas en muchos casos se lleva una relación
+        /// comercial por medio de correo o página web y por ello se le dá énfasis a estos 2 atributos.
+        /// </summary>
+
         private String nombre;
         private String telefono;
         private String direccion;

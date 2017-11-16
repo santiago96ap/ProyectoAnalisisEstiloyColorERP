@@ -7,6 +7,10 @@ namespace DOMAIN
 {
     public class Apartado
     {
+        /// <summary>
+        /// La clase apartado funciona para los productos o ventas que se hagan por pagos en un rango de tiempo definido el cual tiene el cliente
+        /// para realizar el pago de la venta y así obtener el o los productos apartados
+        /// </summary>
         private int id;
         private String idCliente;
         private float monto;

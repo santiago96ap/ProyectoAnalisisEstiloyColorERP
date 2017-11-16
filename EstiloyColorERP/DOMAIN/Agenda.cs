@@ -7,6 +7,10 @@ namespace DOMAIN
 {
     public class Agenda
     {
+        /// <summary>
+        /// La clase Agenda viene a representar las actividades que se pueden realizar en una fecha y hora establecidos
+        /// Esto porque se brinda el servicio de diseño de interiores a domicilio.
+        /// </summary>
         private String fecha;
         private String hora;
         private String actividad;

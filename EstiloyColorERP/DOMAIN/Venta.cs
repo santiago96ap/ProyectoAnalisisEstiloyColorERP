@@ -7,6 +7,11 @@ namespace DOMAIN
 {
     public class Venta
     {
+
+        /// <summary>
+        /// La venta es la acción principal del sistema. Esta maneja productos que adquiere un cliente en una fecha determinada y se le cobra un total.
+        /// </summary>
+
         private int id;
         private String fecha;
         private String hora;

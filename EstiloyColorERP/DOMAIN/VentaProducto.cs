@@ -7,6 +7,11 @@ namespace DOMAIN
 {
     public class VentaProducto
     {
+
+        /// <summary>
+        /// Esta clase representa a todos los productos que tiene relacionada una venta.
+        /// </summary>
+
         private int idProduco;
         private int idCategoria;
         private float total;

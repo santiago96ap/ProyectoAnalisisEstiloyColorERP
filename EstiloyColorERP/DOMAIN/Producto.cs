@@ -7,6 +7,11 @@ namespace DOMAIN
 {
     public class Producto
     {
+        /// <summary>
+        /// La clase producto representa a todos los elementos existentes en el inventario por parte de la empresa los mismos se pueden adquirir
+        /// por clientes al realizar una compra(Venta)
+        /// </summary>
+
         private int idProct;
         private String nombre;
         private String descripcion;

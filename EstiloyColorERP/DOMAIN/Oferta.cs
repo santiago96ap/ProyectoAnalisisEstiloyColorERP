@@ -7,13 +7,17 @@ namespace DOMAIN
 {
     public class Oferta
     {
+        /// <summary>
+        /// Las ofertas son un descuento que posee un producto por un tiempo determinado por el usuario que cree la misma.
+        /// No pueden existir 2 ofertas en el mismo tiempo asignadas al mismo producto
+        /// </summary>
+
         private int idProducto;
         private int id;
         private String fechaInicio;
         private String fechaFinal;
         private float descuento;
         private float precioDescuento;
-
       
         public Oferta()
         {

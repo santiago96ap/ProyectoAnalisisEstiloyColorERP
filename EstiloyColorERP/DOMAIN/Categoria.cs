@@ -6,6 +6,10 @@ using System.Web;
 namespace DOMAIN {
     public class Categoria {
 
+        /// <summary>
+        /// Cada producto tiene asociada una categoría para su mejor acomodo y obtencioón cuando se consulte por los mismos.
+        /// </summary>
+
         private int codigo;
         private String nombre;
 

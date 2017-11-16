@@ -7,6 +7,9 @@ namespace DOMAIN
 {
     public class Cliente
     {
+        /// <summary>
+        /// La clase más importante del sistema. Representa a los clientes físicos de la empresa, se identifícan por el número de télefono
+        /// </summary>
 
         private String id;
         private String nombre;
