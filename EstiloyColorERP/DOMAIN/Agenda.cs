@@ -13,6 +13,8 @@ namespace DOMAIN
         /// </summary>
         private String fecha;
         private String hora;
+        private String fechaN;
+        private String horaN;
         private String actividad;
         private String direccion;
         private String cliente;
@@ -32,6 +34,28 @@ namespace DOMAIN
             this.actividad = actividad;
             this.direccion = direccion;
             this.cliente = cliente;
+        }//constructor sobrecargado
+
+
+        /// <summary>
+        /// Este constructor se utiliza cuando se va actualizar una actividad en la agenda
+        /// </summary>
+        /// <param name="fechaN"></param>
+        /// <param name="horaN"></param>
+        /// <param name="fecha"></param>
+        /// <param name="hora"></param>
+        /// <param name="actividad"></param>
+        /// <param name="direccion"></param>
+        /// <param name="cliente"></param>
+        public Agenda(String fechaN, String horaN, String fecha, String hora, String actividad, String direccion, String cliente)
+        {
+            this.fecha = fecha;
+            this.hora = hora;
+            this.actividad = actividad;
+            this.direccion = direccion;
+            this.cliente = cliente;
+            this.fechaN = fechaN;
+            this.horaN = horaN;
         }//constructor sobrecargado
         public string Fecha
         {
@@ -98,6 +122,30 @@ namespace DOMAIN
             }//set cliente
         }//set y get cliente
 
-       
+        public string FechaN
+        {
+            get
+            {
+                return fechaN;
+            }
+
+            set
+            {
+                fechaN = value;
+            }
+        }
+
+        public string HoraN
+        {
+            get
+            {
+                return horaN;
+            }
+
+            set
+            {
+                horaN = value;
+            }
+        }
     }//class
 }//namespace
