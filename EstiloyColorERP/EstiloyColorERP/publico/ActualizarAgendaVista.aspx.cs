@@ -14,30 +14,35 @@ namespace EstiloyColorERP
     {
         private AgendaBusiness agendaBusiness = new AgendaBusiness();
         private LinkedList<Agenda> actividades;
-
-
+        private static String horaActividad;
+        private static String fechaActividad;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
+                this.tbFecha.Enabled = false;
+                this.tbHora.Enabled = false;
             }//!IsPostBack
 
         }//Page_Load
 
+
+        /// <summary>
+        /// El siguiente metodo carga los datos que se traen de la base de datos en un GridView
+        /// </summary>
         protected void cargarDatos()
         {
 
             this.actividades = this.agendaBusiness.obtenerAgendasFecha(TbFechaInicio.Text);
             DataTable table = new DataTable("Agenda");
             table.Columns.Add(new DataColumn("Fecha y Hora", typeof(string)));
-            table.Columns.Add(new DataColumn("Hora", typeof(string)));
             table.Columns.Add(new DataColumn("Actividad", typeof(string)));
-            table.Columns.Add(new DataColumn("Dirección", typeof(float)));
+            table.Columns.Add(new DataColumn("Dirección", typeof(string)));
             table.Columns.Add(new DataColumn("Cliente", typeof(string)));
             foreach (var item in actividades)
             {
                 DataRow row = table.NewRow();
-                row["Fecha"] = item.Fecha + ","+ item.Hora;
+                row["Fecha y Hora"] = item.Fecha + ","+ item.Hora;
                 row["Actividad"] = item.Actividad;
                 row["Dirección"] = item.Direccion;
                 row["Cliente"] = item.Cliente;
@@ -46,24 +51,34 @@ namespace EstiloyColorERP
             gvGastos.DataSource = table;
             gvGastos.DataBind();
 
-            this.tbFecha.Text = "";
+
             this.tbHora.Text = "";
             this.tbActividad.Text = "";
             this.tbDireccion.Text = "";
             this.tbCliente.Text = "";
         }//cargarDatos
 
+        /// <summary>
+        /// El siguiente método realiza la acción de seleccionar cuando se escoge una fila del GridView
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void DeleteRowButton_Click(object sender, GridViewDeleteEventArgs e)
         {
-            String fechaActividad = this.gvGastos.DataKeys[e.RowIndex].Value.ToString();//email (id) del proveedor por el cual se cargarán y modificarán los datos
+
+            String [] fechaHora = this.gvGastos.DataKeys[e.RowIndex].Value.ToString().Split(',');//id de la actividad por el cual se cargarán y modificarán los datos
+
+
+            fechaActividad = fechaHora[0].ToString();
+            horaActividad = fechaHora[1].ToString();
 
             this.agendaBusiness = new AgendaBusiness();
             this.actividades = null;
             this.actividades = this.agendaBusiness.obtenerAgendasFecha(TbFechaInicio.Text);
 
-            foreach (Agenda gActual in this.actividades) //buscar los datos del proveedor seleccionado y mostrarlos en los campos de texto
+            foreach (Agenda gActual in this.actividades) //buscar los datos seleccionados y mostrarlos en los campos de texto
             {
-                if (gActual.Fecha == fechaActividad)//se buscan los datos
+                if (gActual.Fecha .Equals(fechaActividad) && gActual.Hora.Equals(horaActividad))//se buscan los datos
                 {
                     //se desgrana la fecha para luego darle formato
                     String[] fecha = gActual.Fecha.ToString().Split(' ');//se obtiene la fecha
@@ -92,7 +107,8 @@ namespace EstiloyColorERP
             else
             {
                 
-                bool respuesta = this.agendaBusiness.actualizarAgenda(new Agenda());
+                bool respuesta = this.agendaBusiness.actualizarAgenda(
+                    new Agenda(fechaActividad, horaActividad, tbFecha.Text, tbHora.Text,tbActividad.Text, tbDireccion.Text, tbCliente.Text));
 
                 if (respuesta)// Si se actualiza el usuario se recargan los datos y se dejan los tb en blanco
                 {
@@ -112,12 +128,17 @@ namespace EstiloyColorERP
 
             }//else - no hay datos en blanco
 
-        }
+        }// btnActualizar_Click
 
+        /// <summary>
+        /// En este metodo lo que hará es cuando se selecciona una fecha para poder mandar el dato para poder cargar el GridView
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void Button1_Click(object sender, EventArgs e)
         {
             cargarDatos();
-        }
+        }//Button1_Click
 
     }//class
 }//namespace

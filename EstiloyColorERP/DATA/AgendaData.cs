@@ -135,7 +135,29 @@ namespace DATA
 
         public Boolean actualizarAgenda(Agenda agenda)
         {
-            return false;
+            SqlConnection connection = new SqlConnection(this.stringConeccion);
+            String sqlStoreProcedure = "sp_actualizarAgenda";
+            SqlCommand cmdActualizar = new SqlCommand(sqlStoreProcedure, connection);
+            cmdActualizar.CommandType = System.Data.CommandType.StoredProcedure;
+            cmdActualizar.Parameters.Add(new SqlParameter("@fechaN", agenda.FechaN));
+            cmdActualizar.Parameters.Add(new SqlParameter("@fecha", agenda.Fecha));
+            cmdActualizar.Parameters.Add(new SqlParameter("@horaN", agenda.HoraN));
+            cmdActualizar.Parameters.Add(new SqlParameter("@hora", agenda.Hora));
+            cmdActualizar.Parameters.Add(new SqlParameter("@actividad", agenda.Actividad));
+            cmdActualizar.Parameters.Add(new SqlParameter("@direccion", agenda.Direccion));
+            cmdActualizar.Parameters.Add(new SqlParameter("@id_cliente_tel", agenda.Cliente));
+
+            cmdActualizar.Connection.Open();
+            if (cmdActualizar.ExecuteNonQuery() > 0)
+            {
+                cmdActualizar.Connection.Close();
+                return true;
+            }
+            else
+            {
+                cmdActualizar.Connection.Close();
+                return false;
+            }//if-else
         }//actualizar una cita en la agenda
     }//class
 }//namespace

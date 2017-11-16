@@ -16,7 +16,7 @@
                 <asp:Button ID="Button1" runat="server"  CssClass="btn btn-info" Text="Buscar" OnClick="Button1_Click" />
                 <br />
                 <br />
-                    <asp:GridView ID="gvGastos" CssClass="table table-hover" runat="server" RowHeaderColumn="Agenda" DataKeyNames="Fecha" OnRowDeleting="DeleteRowButton_Click">
+                    <asp:GridView ID="gvGastos" CssClass="table table-hover" runat="server" RowHeaderColumn="Agenda" DataKeyNames="Fecha y Hora" OnRowDeleting="DeleteRowButton_Click">
                         <Columns>
                             <asp:CommandField HeaderText="Acción" ShowDeleteButton="True" DeleteText="Seleccionar"/>                
                         </Columns>            
@@ -31,7 +31,7 @@
             
             <div id="divi">
                 <asp:Label ID="lblID" CssClass="col-sm-2 control-label" runat="server" Text="Fecha"></asp:Label>
-                <asp:TextBox ID="tbFecha" type="date" CssClass="form-control1" runat="server" required=""></asp:TextBox>
+                <asp:TextBox ID="tbFecha" type="date" CssClass="form-control1" runat="server" ></asp:TextBox>
                 <br />
                 <br />
                 <asp:Label ID="lblNombre" CssClass="col-sm-2 control-label" runat="server" Text="Hora"></asp:Label>
@@ -39,15 +39,15 @@
                 <br />
                 <br />
                 <asp:Label ID="LblDescripcion" CssClass="col-sm-2 control-label" runat="server" Text="Actividad"></asp:Label>
-                <asp:TextBox ID="tbActividad" type="text" CssClass="form-control1" runat="server" required=""></asp:TextBox>
+                <asp:TextBox ID="tbActividad" type="text" CssClass="form-control1" runat="server"></asp:TextBox>
                 <br />
                 <br />
                  <asp:Label ID="Label4" CssClass="col-sm-2 control-label" runat="server" Text="Dirección"></asp:Label>
-                <asp:TextBox ID="tbDireccion" type="text" CssClass="form-control1"  runat="server" required=""></asp:TextBox>
+                <asp:TextBox ID="tbDireccion" type="text" CssClass="form-control1"  runat="server"></asp:TextBox>
                 <br />
                 <br />
                 <asp:Label ID="Label5" CssClass="col-sm-2 control-label" runat="server" Text="Cliente"></asp:Label>
-                 <asp:TextBox ID="tbCliente" type="text" CssClass="form-control1"  runat="server" required=""></asp:TextBox>
+                 <asp:TextBox ID="tbCliente" type="text" CssClass="form-control1"  runat="server" ></asp:TextBox>
                 <br />
                 <br /> 
                 <asp:Button ID="btnActualizar" runat="server"  CssClass="btn btn-info" Text="Actualizar" OnClick="btnActualizar_Click1" />
