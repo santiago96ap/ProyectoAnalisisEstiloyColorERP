@@ -40,24 +40,6 @@ namespace EstiloyColorERP {
         protected global::System.Web.UI.WebControls.TextBox TbFechaInicio;
         
         /// <summary>
-        /// Label1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
-        
-        /// <summary>
-        /// TbFechaFinal control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TbFechaFinal;
-        
-        /// <summary>
         /// Button1 control.
         /// </summary>
         /// <remarks>
@@ -85,24 +67,6 @@ namespace EstiloyColorERP {
         protected global::System.Web.UI.WebControls.Label lblID;
         
         /// <summary>
-        /// tbID control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbID;
-        
-        /// <summary>
-        /// lblFecha control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFecha;
-        
-        /// <summary>
         /// tbFecha control.
         /// </summary>
         /// <remarks>
@@ -112,13 +76,13 @@ namespace EstiloyColorERP {
         protected global::System.Web.UI.WebControls.TextBox tbFecha;
         
         /// <summary>
-        /// lblHora control.
+        /// lblNombre control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblHora;
+        protected global::System.Web.UI.WebControls.Label lblNombre;
         
         /// <summary>
         /// tbHora control.
@@ -130,40 +94,22 @@ namespace EstiloyColorERP {
         protected global::System.Web.UI.WebControls.TextBox tbHora;
         
         /// <summary>
-        /// LblConcepto control.
+        /// LblDescripcion control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblConcepto;
+        protected global::System.Web.UI.WebControls.Label LblDescripcion;
         
         /// <summary>
-        /// tbConcepto control.
+        /// tbActividad control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbConcepto;
-        
-        /// <summary>
-        /// lblTotal control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTotal;
-        
-        /// <summary>
-        /// tbTotal control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbTotal;
+        protected global::System.Web.UI.WebControls.TextBox tbActividad;
         
         /// <summary>
         /// Label4 control.
@@ -175,13 +121,31 @@ namespace EstiloyColorERP {
         protected global::System.Web.UI.WebControls.Label Label4;
         
         /// <summary>
-        /// ddTipoServicio control.
+        /// tbDireccion control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddTipoServicio;
+        protected global::System.Web.UI.WebControls.TextBox tbDireccion;
+        
+        /// <summary>
+        /// Label5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label5;
+        
+        /// <summary>
+        /// tbCliente control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbCliente;
         
         /// <summary>
         /// btnActualizar control.
