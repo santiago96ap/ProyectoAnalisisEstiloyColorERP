@@ -10,7 +10,7 @@ using BUSINESS;
 namespace EstiloyColorERP{
     public partial class InsertarCliente : System.Web.UI.Page{
 
-        private ClienteBusiness clienteBusiness;
+        private ClienteBusiness clienteBusiness;//Instacia de las
         protected void Page_Load(object sender, EventArgs e){
 
         }//Carga el modulo de insertar
