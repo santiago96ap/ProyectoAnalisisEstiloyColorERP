@@ -11,14 +11,18 @@ namespace DATA
     public class UsuarioData
     {
 
-        private String stringConeccion;
+        private String stringConeccion;//Este va hacer el String de conexión de la BD
 
         public UsuarioData(String stringConeccion)
         {
             this.stringConeccion = stringConeccion;
         }//constructor
 
-
+        /// <summary>
+        /// Este método hará una inserción a la BD
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// <returns>Boolean</returns>
         public Boolean registrarUsuario(Usuario usuario)
         {
             SqlConnection connection = new SqlConnection(this.stringConeccion);
@@ -48,6 +52,12 @@ namespace DATA
 
         }//registrarUsuario
 
+
+        /// <summary>
+        /// Este método eliminará un usuario
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// <returns>Boolean</returns>
         public Boolean eliminarUsuario(Usuario usuario)
         {
             SqlConnection connection = new SqlConnection(this.stringConeccion);
@@ -69,6 +79,11 @@ namespace DATA
             }//if-else
         }//eliminarUsuario
 
+        /// <summary>
+        /// Este método actualizará la información de un usuario
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// <returns>Boolean</returns>
         public Boolean editarUsuario(Usuario usuario)
         {
             SqlConnection connection = new SqlConnection(this.stringConeccion);
@@ -98,6 +113,11 @@ namespace DATA
             }//if-else
         }//editarUsuario
 
+
+        /// <summary>
+        /// Obtiene todos los usuarios de la BD
+        /// </summary>
+        /// <returns> LinkedList<Usuario></returns>
         public LinkedList<Usuario> obtenerUsuarios()
         {
 
