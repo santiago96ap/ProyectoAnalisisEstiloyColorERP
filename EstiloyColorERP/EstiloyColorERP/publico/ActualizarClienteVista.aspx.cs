@@ -24,6 +24,12 @@ namespace EstiloyColorERP{
             deshabilitarModulo();
         }//cargar el modulo de actualizar
 
+        /// <summary>
+        /// Este método busca la información del cliente y la muestra en el gridview
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+
         protected void btnBuscar_Click(object sender, EventArgs e){
             if (!String.IsNullOrWhiteSpace(this.tbBuscar.Text)){
                 foreach (Cliente clienteActual in this.clientes){
@@ -55,6 +61,12 @@ namespace EstiloyColorERP{
             }//opciones de busqueda
         }//btnBuscar_Click
 
+        /// <summary>
+        /// Este método actualiza los datos necesarios que se encuentran en el formulario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+
         protected void btnInsertar_Click(object sender, EventArgs e){
             if (!String.IsNullOrWhiteSpace(this.tbBuscar.Text)){
                 this.clienteV = this.tbBuscar.Text;
@@ -84,6 +96,11 @@ namespace EstiloyColorERP{
             }//if validacion
         }//btnInsertar_Click
 
+
+        /// <summary>
+        /// Este método habilita los campos de texto para que puedan ser editables
+        /// </summary>
+
         protected void habilitarModulo(){
             this.tbNombre.Enabled = true;
             this.tbApellidos.Enabled = true;
@@ -93,6 +110,10 @@ namespace EstiloyColorERP{
             this.btnInsertar.Enabled = true;
         }//habilitarModulo
 
+
+        /// <summary>
+        /// Este método desabilita los campos de texto para que no puedan ser editados
+        /// </summary>
         protected void deshabilitarModulo()
         {
             this.tbNombre.Enabled = false;
@@ -104,6 +125,9 @@ namespace EstiloyColorERP{
             this.clienteV = "";
         }//deshabilitarModulo
 
+        /// <summary>
+        /// Cargan los clientes en lo que es el componente gráfico
+        /// </summary>
         protected void cargarClientes(){
             this.clientes = this.clienteBusiness.obtenerClientes();
             this.ddlClientes.Items.Clear();

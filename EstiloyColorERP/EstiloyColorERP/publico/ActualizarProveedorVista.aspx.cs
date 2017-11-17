@@ -15,7 +15,6 @@ namespace EstiloyColorERP.publico
         
         private ProveedorBusiness proveedorBusiness;
         private LinkedList<Proveedor> proveedores;
-//        private String clienteV;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack){
@@ -23,6 +22,11 @@ namespace EstiloyColorERP.publico
                }//if para ver si es la primera vez que se carga el modulo
             }//pageload
 
+        /// <summary>
+        /// Este método actualizará la información del formulario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btnActualizar_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrWhiteSpace(this.tbNombre.Text) || String.IsNullOrWhiteSpace(this.tbDireccion.Text) || String.IsNullOrWhiteSpace(this.tbTelefono.Text) || String.IsNullOrWhiteSpace(this.tbDireccion.Text) || String.IsNullOrWhiteSpace(this.tbEmail.Text))
@@ -57,6 +61,9 @@ namespace EstiloyColorERP.publico
 
         }//btnActualizar
 
+        /// <summary>
+        /// Este método cargará la información en el GridView
+        /// </summary>
         protected void cargarInformacion()
         {
             this.proveedorBusiness = new ProveedorBusiness();
@@ -86,6 +93,12 @@ namespace EstiloyColorERP.publico
             this.gvProveedores.DataBind();
         }//cargarInformacion
 
+
+        /// <summary>
+        /// Este método realizará la acción de seleccionar una fila del GridView y cargarlos en el formulario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void DeleteRowButton_Click(object sender, GridViewDeleteEventArgs e)
         {
             String email = this.gvProveedores.DataKeys[e.RowIndex].Value.ToString();//email (id) del proveedor por el cual se cargarán y modificarán los datos

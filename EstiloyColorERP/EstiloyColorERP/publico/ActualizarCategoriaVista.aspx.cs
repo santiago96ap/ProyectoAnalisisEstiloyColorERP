@@ -23,6 +23,10 @@ namespace EstiloyColorERP.publico
 
         }//Page_Load
 
+
+        /// <summary>
+        /// Este método cargará la información pertinente en el GridView
+        /// </summary>
         protected void cargarInformacion()
         {
             this.categoriaBusiness = new CategoriaBusiness();
@@ -48,6 +52,12 @@ namespace EstiloyColorERP.publico
             this.gvCategorias.DataBind();
         }//cargarInformacion
 
+
+        /// <summary>
+        /// Este método actualizará los datos que se encuentrán el formulario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btnActualizar_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrWhiteSpace(this.tbNombre.Text))
@@ -80,6 +90,12 @@ namespace EstiloyColorERP.publico
 
         }//btnActualizar_Click
 
+
+        /// <summary>
+        /// Este método realiza la acción de seleccionar la información de una fila de GridView y lo muentra en el formulario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void DeleteRowButton_Click(object sender, GridViewDeleteEventArgs e)
         {
             int ID = int.Parse(this.gvCategorias.DataKeys[e.RowIndex].Value.ToString());//(id) de la  categoria por el cual se cargarán y modificarán los datos

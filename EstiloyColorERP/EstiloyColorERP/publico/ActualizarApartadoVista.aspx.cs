@@ -19,6 +19,10 @@ namespace EstiloyColorERP
 
         }//page_load
 
+        /// <summary>
+        /// Este métdodo es para cargar la información necesaria del apartado de un cliente 
+        /// </summary>
+
         protected void cargarInformacion()
         {
             this.apartadoBusiness = new ApartadoBusiness();
@@ -58,7 +62,11 @@ namespace EstiloyColorERP
             this.gvCategorias.DataBind();
         }//cargarInformacion
 
-
+        /// <summary>
+        /// Este método realizará la acción de seleccionar la fila del GridView 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void DeleteRowButton_Click(object sender, GridViewDeleteEventArgs e)
         {
             int ID = int.Parse(this.gvCategorias.DataKeys[e.RowIndex].Value.ToString());//(id) del apartado por el cual se cargarán y modificarán los datos
@@ -84,6 +92,11 @@ namespace EstiloyColorERP
 
         }
 
+        /// <summary>
+        /// Este método  realizará la actualización de los datos que estpan en el formulario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btnActualizar_Click1(object sender, EventArgs e)
         {
             if (String.IsNullOrWhiteSpace(this.tbCliente.Text))
@@ -118,6 +131,11 @@ namespace EstiloyColorERP
 
         }
 
+        /// <summary>
+        /// Realiza acción de cargar la info en el gridView
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
             cargarInformacion();

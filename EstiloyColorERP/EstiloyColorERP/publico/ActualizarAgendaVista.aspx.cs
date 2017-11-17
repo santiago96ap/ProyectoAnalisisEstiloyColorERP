@@ -12,10 +12,11 @@ namespace EstiloyColorERP
 {
     public partial class ActualizarAgendaView : System.Web.UI.Page
     {
+
         private AgendaBusiness agendaBusiness = new AgendaBusiness();
         private LinkedList<Agenda> actividades;
-        private static String horaActividad;
-        private static String fechaActividad;
+        private static String horaActividad;//Este es String es para seleccionar la hora de Actividad de la tabla
+        private static String fechaActividad;//Este es String es para seleccionar la fecha de Actividad de la tabla
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -98,10 +99,16 @@ namespace EstiloyColorERP
 
         }//btnAccion
 
+        /// <summary>
+        /// Este método es para actualizar los datos que tienen en la vista
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+
         protected void btnActualizar_Click1(object sender, EventArgs e)
         {
             if (String.IsNullOrWhiteSpace(this.tbActividad.Text) || String.IsNullOrWhiteSpace(this.tbFecha.Text) || String.IsNullOrWhiteSpace(this.tbCliente.Text) || String.IsNullOrWhiteSpace(this.tbHora.Text))
-            {//si existe un tb en blanco se indica al usuario y no se aplica ningún cambio
+            {//si existe un tb en blanco se indica la agenda y no se aplica ningún cambio
                 ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.error('Error en los datos ingresados')", true);
             }
             else
@@ -110,7 +117,7 @@ namespace EstiloyColorERP
                 bool respuesta = this.agendaBusiness.actualizarAgenda(
                     new Agenda(fechaActividad, horaActividad, tbFecha.Text, tbHora.Text,tbActividad.Text, tbDireccion.Text, tbCliente.Text));
 
-                if (respuesta)// Si se actualiza el usuario se recargan los datos y se dejan los tb en blanco
+                if (respuesta)// Si se actualiza el agenda se recargan los datos y se dejan los tb en blanco
                 {
                     ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.success('Se actualizó exitosamente')", true);
                     //dejar los campos de texto en blanco

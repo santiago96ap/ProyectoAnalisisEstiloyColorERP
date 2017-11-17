@@ -16,6 +16,11 @@ namespace EstiloyColorERP.publico
         private LinkedList<Gasto> gastos;
 
         
+        /// <summary>
+        /// en su primera vez cargará los items necesarios de los dropdown list
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -26,6 +31,9 @@ namespace EstiloyColorERP.publico
 
         }//Page_Load
 
+        /// <summary>
+        /// Este método cargará los datos de los gastos según las fechas suministradas
+        /// </summary>
         protected void cargarDatos()
         {
             
@@ -61,6 +69,11 @@ namespace EstiloyColorERP.publico
             this.tbTotal.Text = "";
         }//cargarDatos
 
+        /// <summary>
+        /// Este método relaizará la selección de una fila del GridView
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void DeleteRowButton_Click(object sender, GridViewDeleteEventArgs e)
         {
             int idIngreso = int.Parse(this.gvGastos.DataKeys[e.RowIndex].Value.ToString());//email (id) del proveedor por el cual se cargarán y modificarán los datos
@@ -86,13 +99,16 @@ namespace EstiloyColorERP.publico
                     this.tbHora.Text = gActual.Hora;
                     this.tbConcepto.Text = gActual.Concepto;
                     this.tbTotal.Text = gActual.Total + "";
-                   
-
                 }
             }//foreach
 
         }//btnAccion
 
+        /// <summary>
+        /// Este método actualizará los datos del gasto que vienen del formulario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btnActualizar_Click1(object sender, EventArgs e)
         {
             if (String.IsNullOrWhiteSpace(this.tbID.Text) || String.IsNullOrWhiteSpace(this.tbFecha.Text) || String.IsNullOrWhiteSpace(this.tbConcepto.Text) || String.IsNullOrWhiteSpace(this.tbTotal.Text))
@@ -102,8 +118,6 @@ namespace EstiloyColorERP.publico
             else
             {
              
-
-
                 bool respuesta = this.gastosBusiness.editarGasto(new Gasto(int.Parse(tbID.Text.ToString()), tbFecha.Text, tbHora.Text, tbConcepto.Text, float.Parse(tbTotal.Text.ToString()), Session["usuario"].ToString(), ddTipoServicio.SelectedItem.Value));
 
                 if (respuesta)// Si se actualiza el usuario se recargan los datos y se dejan los tb en blanco
@@ -125,13 +139,17 @@ namespace EstiloyColorERP.publico
 
             }//else - no hay datos en blanco
 
-        }
+        }//btnActualizar_Click1
 
+
+        /// <summary>
+        /// Este método realizará la acción de obtener los datos de fila y cargararlos en el formulario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void Button1_Click(object sender, EventArgs e)
         {
             cargarDatos();
-
-
-        }
+        }//Button1_Click
     }//class
 }//namespace

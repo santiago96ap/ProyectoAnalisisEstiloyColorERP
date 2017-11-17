@@ -24,12 +24,20 @@ namespace EstiloyColorERP.publico
 
         }//GridView1_SelectedIndexChanged
 
+        /// <summary>
+        /// Este método cargará la información en  el formulario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void Button1_Click(object sender, EventArgs e)
         {
             cargarDatos();
 
         }//Button1_Click
 
+        /// <summary>
+        /// Carga los datos en el GridView
+        /// </summary>
         protected void cargarDatos()
         {
             this.ingresos = this.ib.obtenerIngreso(TbFechaInicio.Text, TbFechaFinal.Text);
@@ -62,15 +70,20 @@ namespace EstiloyColorERP.publico
             this.tbTotal.Text = "";
         }//cargarDatos
 
+        /// <summary>
+        /// Este método realizará la selección  de una fila para cargarla en el formulario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void DeleteRowButton_Click(object sender, GridViewDeleteEventArgs e)
         {
-            int idIngreso = int.Parse(this.gvIngresos.DataKeys[e.RowIndex].Value.ToString());//email (id) del proveedor por el cual se cargarán y modificarán los datos
+            int idIngreso = int.Parse(this.gvIngresos.DataKeys[e.RowIndex].Value.ToString());//(id)  el cual se cargarán y modificarán los datos
             
             this.ib = new IngresoBusiness();
             this.ingresos = null;
             this.ingresos = this.ib.obtenerIngreso(TbFechaInicio.Text, TbFechaFinal.Text);
 
-            foreach (Ingreso ingresoActual in this.ingresos) //buscar los datos del proveedor seleccionado y mostrarlos en los campos de texto
+            foreach (Ingreso ingresoActual in this.ingresos) //buscar los datos seleccionados y mostrarlos en los campos de texto
             {
                 if (ingresoActual.Id == idIngreso)//se buscan los datos
                 {
@@ -82,7 +95,7 @@ namespace EstiloyColorERP.publico
 
                     //se llenan los campos para la posterior edición
                     this.tbID.Text = idIngreso + "";
-                    this.tbID.Enabled = false;//no se puede modificar el ID del ingreso
+                    this.tbID.Enabled = false;//no se puede modificar el ID
                     this.tbFecha.Text = fechaLista.ToString();
                     this.tbHora.Text = ingresoActual.Hora;
                     this.tbConcepto.Text = ingresoActual.Concepto;
@@ -91,6 +104,12 @@ namespace EstiloyColorERP.publico
             }//foreach
 
         }//btnAccion
+
+        /// <summary>
+        /// Este método actualizará la información que se encuentra en el formulario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         protected void btnActualizar_Click(object sender, EventArgs e)
         {

@@ -14,12 +14,14 @@ namespace EstiloyColorERP
     {
         private OfertaBusiness ofertaBusiness;
         private LinkedList<Oferta> ofertas;
-        protected void Page_Load(object sender, EventArgs e)
-        {
-        }//pageload
+        protected void Page_Load(object sender, EventArgs e){}//pageload
 
         protected void gvGastos_SelectedIndexChanged(object sender, EventArgs e){}
 
+
+        /// <summary>
+        /// Este método cargará la información en el GridView
+        /// </summary>
         protected void cargarDatos()
         {
             ofertaBusiness = new OfertaBusiness();
@@ -56,6 +58,11 @@ namespace EstiloyColorERP
             this.TbProducto.Text = "";
         }//cargarDatos
 
+        /// <summary>
+        /// Este método actualizará la información de lo que se encuentra en el formulario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btnActualizar_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrWhiteSpace(this.tbID.Text) || String.IsNullOrWhiteSpace(this.tbFechaI.Text) || String.IsNullOrWhiteSpace(this.tbIDProducto.Text) || String.IsNullOrWhiteSpace(this.tbFechaF.Text))
@@ -90,12 +97,24 @@ namespace EstiloyColorERP
 
             }//else - no hay datos en blanco
 
-        }
+        }//btnActualizar_Click
 
+
+        /// <summary>
+        /// Este método llama al metdod cargarDatos()
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void Button1_Click(object sender, EventArgs e)
         {
             cargarDatos();
-        }
+        }//Button1_Click
+
+        /// <summary>
+        /// Este método realiza la acción de seleciionar una fila del GridView para mostrarlo en el formulario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void DeleteRowButton_Click(object sender, GridViewDeleteEventArgs e)
         {
             int idIngreso = int.Parse(this.gvOfertas.DataKeys[e.RowIndex].Value.ToString());//email (id) del proveedor por el cual se cargarán y modificarán los datos
@@ -104,7 +123,7 @@ namespace EstiloyColorERP
             this.ofertas = null;
             this.ofertas = this.ofertaBusiness.obtenerOfertas();
 
-            foreach (Oferta gActual in this.ofertas) //buscar los datos del proveedor seleccionado y mostrarlos en los campos de texto
+            foreach (Oferta gActual in this.ofertas) //buscar los datos seleccionados y mostrarlos en los campos de texto
             {
                 if (gActual.Id == idIngreso)//se buscan los datos
                 {
@@ -125,7 +144,7 @@ namespace EstiloyColorERP
 
                     //se llenan los campos para la posterior edición
                     this.tbID.Text = idIngreso + "";
-                    this.tbID.Enabled = false;//no se puede modificar el ID del ingreso
+                    this.tbID.Enabled = false;//no se puede modificar el ID
                     this.tbFechaI.Text = fechaLista.ToString();
                     this.tbFechaF.Text = fechaListaF.ToString();
                     this.tbIDProducto.Text = gActual.IdProducto.ToString();

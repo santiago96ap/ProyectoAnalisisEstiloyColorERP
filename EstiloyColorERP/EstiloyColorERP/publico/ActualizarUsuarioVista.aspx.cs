@@ -24,6 +24,10 @@ namespace EstiloyColorERP.publico
                 this.ddTipoRol.Items.Add(new ListItem("Vendedor", "vendedor"));
             }
         }//Page_Load
+
+        /// <summary>
+        /// Este método cargará la información en el GridView
+        /// </summary>
         protected void cargarInformacion()
         {
             this.usuarioBusiness = new UsuarioBusiness();
@@ -65,6 +69,11 @@ namespace EstiloyColorERP.publico
         }
 
 
+        /// <summary>
+        /// Este método actualizará la información que se encuentra en el formulario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btnActualizar_Click1(object sender, EventArgs e)
         {
 
@@ -102,15 +111,20 @@ namespace EstiloyColorERP.publico
 
         }
 
+        /// <summary>
+        /// Este método realizará la acción de seleccionar una fila del GridView
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void DeleteRowButton_Click(object sender, GridViewDeleteEventArgs e)
         {
-            usuarioSeleccionado = this.gvUsuarios.DataKeys[e.RowIndex].Value.ToString();//email (id) del proveedor por el cual se cargarán y modificarán los datos
+            usuarioSeleccionado = this.gvUsuarios.DataKeys[e.RowIndex].Value.ToString();//(id) por el cual se cargarán y modificarán los datos
             this.tbUsuario.Text = usuarioSeleccionado;
             tbUsuario.Enabled = false;
             this.lblID.Text = usuarioSeleccionado;
             this.usuarioBusiness = new UsuarioBusiness();
             this.usuarios = this.usuarioBusiness.obtenerUsuarios();
-            foreach (Usuario usuaririoActual in this.usuarios) //buscar los datos del proveedor seleccionado y mostrarlos en los campos de texto
+            foreach (Usuario usuaririoActual in this.usuarios) //buscar los datos  y mostrarlos en los campos de texto
             {
                 if (usuaririoActual.NombreUsuario.Equals(usuarioSeleccionado))//se buscan los datos
                 {
