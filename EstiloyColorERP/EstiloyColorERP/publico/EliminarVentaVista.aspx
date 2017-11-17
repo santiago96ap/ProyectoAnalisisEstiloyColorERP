@@ -35,7 +35,7 @@
                  <br />
                 <asp:GridView ID="gvVentas" CssClass="table table-hover" runat="server" DataKeyNames="Id" OnRowDeleting="DeleteRowButton_Click">
                     <Columns>
-                        <asp:CommandField HeaderText="Acción" ShowDeleteButton="True"/>
+                        <asp:CommandField HeaderText="Acción" DeleteText="Eliminar" ShowDeleteButton="True"/>
                     </Columns>
                     <HeaderStyle BackColor="#10C7BF" />
                 </asp:GridView>
