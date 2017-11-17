@@ -77,31 +77,31 @@
 		<div class="arrival-grids wthree-grids">			 
 			 <ul id="flexiselDemo1">
 				 <li>
-					 <a href="single.html"><img src="images/s1.jpg" alt=""/>
+					 <a href="CatagoloVista.aspx"><img src="images/s1.jpg" alt=""/>
 					 </a>
 				 </li>
 				 <li>
-					 <a href="single.html"><img src="images/s2.jpg" alt=""/>
+					 <a href="CatagoloVista.aspx"><img src="images/s2.jpg" alt=""/>
 					 </a>
 				 </li>
 				 <li>
-					 <a href="single.html"><img src="images/s3.jpg" alt=""/>
+					 <a href="CatagoloVista.aspx"><img src="images/s3.jpg" alt=""/>
 					 </a>
 				 </li>
 				 <li>
-					 <a href="single.html"><img src="images/s4.jpg" alt=""/>
+					 <a href="CatagoloVista.aspx"><img src="images/s4.jpg" alt=""/>
 					 </a>
 				 </li>
 				 <li>
-					 <a href="single.html"><img src="images/s5.jpg" alt=""/>
+					 <a href="CatagoloVista.aspx"><img src="images/s5.jpg" alt=""/>
 					 </a>
 				 </li>
 				 <li>
-					 <a href="single.html"><img src="images/s6.jpg" alt=""/>
+					 <a href="CatagoloVista.aspx"><img src="images/s6.jpg" alt=""/>
 					 </a>
 				 </li>
                  <li>
-					 <a href="single.html"><img src="images/s7.jpg" alt=""/>
+					 <a href="CatagoloVista.aspx"><img src="images/s7.jpg" alt=""/>
 					 </a>
 				 </li>
 				</ul>
