@@ -15,20 +15,22 @@ namespace EstiloyColorERP.publico
         private UsuarioBusiness ub = new UsuarioBusiness();
         protected void Page_Load(object sender, EventArgs e)
         {
-            this.ddTipoUsuario.Items.Add(new ListItem("Administrador", "administrador"));
-            this.ddTipoUsuario.Items.Add(new ListItem("Vendedor", "vendedor"));
-
+            if (!IsPostBack)
+            {
+                this.ddTipoUsuario.Items.Add(new ListItem("Administrador", "administrador"));
+                this.ddTipoUsuario.Items.Add(new ListItem("Vendedor", "vendedor"));
+            }//if para ver si es la primera vez que se carga el modula
         }//pageload
         protected void btnInsertar_Click(object sender, EventArgs e)
         {
             if (this.ub.registrarUsuario(new Usuario(tbUsuario.Text, tbNombreP.Text, tbApellidos.Text, tbEmail.Text, ddTipoUsuario.SelectedItem.Value, tbPass.Text, tbTelefono.Text)) == true)
             {
-                tbUsuario.Text = " ";
-                tbNombreP.Text = " ";
-                tbApellidos.Text = " ";
-                tbEmail.Text = " ";
-                tbPass.Text = " ";
-                tbTelefono.Text = " ";
+                tbUsuario.Text = "";
+                tbNombreP.Text = "";
+                tbApellidos.Text = "";
+                tbEmail.Text = "";
+                tbPass.Text = "";
+                tbTelefono.Text = "";
                 ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.success('¡Se ha insertado correctamente!')", true);
             }
             else

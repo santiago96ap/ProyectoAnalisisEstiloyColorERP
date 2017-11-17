@@ -167,6 +167,8 @@
     <Content Include="publico\fonts\FontAwesome.otf" />
     <Content Include="publico\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="publico\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="Properties\PublishProfiles\d.pubxml" />
+    <None Include="Properties\PublishProfiles\EstiloyColor.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -188,7 +190,6 @@
     </Compile>
     <Compile Include="publico\ActualizarUsuarioVista.aspx.cs">
       <DependentUpon>ActualizarUsuarioVista.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="publico\ActualizarUsuarioVista.aspx.designer.cs">
       <DependentUpon>ActualizarUsuarioVista.aspx</DependentUpon>
@@ -328,7 +329,6 @@
     </Compile>
     <Compile Include="publico\InsertarAgendaVista.aspx.cs">
       <DependentUpon>InsertarAgendaVista.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="publico\InsertarAgendaVista.aspx.designer.cs">
       <DependentUpon>InsertarAgendaVista.aspx</DependentUpon>
@@ -426,7 +426,6 @@
     </Compile>
     <Compile Include="publico\ObtenerAgendaVista.aspx.cs">
       <DependentUpon>ObtenerAgendaVista.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="publico\ObtenerAgendaVista.aspx.designer.cs">
       <DependentUpon>ObtenerAgendaVista.aspx</DependentUpon>
@@ -490,7 +489,6 @@
     </Compile>
     <Compile Include="publico\InsertarVentaVista.aspx.cs">
       <DependentUpon>InsertarVentaVista.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="publico\InsertarVentaVista.aspx.designer.cs">
       <DependentUpon>InsertarVentaVista.aspx</DependentUpon>

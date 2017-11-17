@@ -25,7 +25,7 @@
                 <div id="divi10">
                     <asp:GridView ID="gvActividades" CssClass="table table-hover" runat="server" DataKeyNames="Fecha y Hora" OnRowDeleting="DeleteRowButton_Click">
                         <Columns>
-                            <asp:CommandField HeaderText="Acción" ShowDeleteButton="True"/>
+                            <asp:CommandField HeaderText="Acción" DeleteText="Eliminar" ShowDeleteButton="True"/>
                         </Columns>
                         <HeaderStyle BackColor="#10C7BF" />
                     </asp:GridView>
