@@ -198,6 +198,7 @@
                                                 </ul>
                                             </li>
                                              <li><a class="hvr-bounce-to-bottom" href="ObtenerProveedorVista.aspx">Manual de Usuario</a></li>
+                                             <li><a class="hvr-bounce-to-bottom" href="ObtenerProveedorVista.aspx">Manual de Técnico</a></li>
                                         </ul>
                                     </li>
                                 <%}
