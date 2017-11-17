@@ -9,12 +9,17 @@ using DOMAIN;
 namespace DATA{
     public class ClienteData{
 
-        private String stringConeccion;
+        private String stringConeccion;//Esre será eL String de conexión
 
         public ClienteData(string stringConeccion){
             this.stringConeccion = stringConeccion;
         }//constructor
 
+        /// <summary>
+        /// Este metodo insertrá un nuevo cliente en la BD
+        /// </summary>
+        /// <param name="cliente"></param>
+        /// <returns>Boolena</returns>
         public Boolean insertarCliente(Cliente cliente){
             SqlConnection connection = new SqlConnection(this.stringConeccion);
             String sqlStoreProcedure = "sp_insertarCliente";
@@ -40,6 +45,12 @@ namespace DATA{
             }//if-else
         }//insertarCliente
 
+        /// <summary>
+        /// Este metodo actualizará  la información de cliente
+        /// </summary>
+        /// <param name="cliente"></param>
+        /// <param name="clienteV"></param>
+        /// <returns></returns>
         public Boolean actualizarCliente(Cliente cliente, String clienteV){
             SqlConnection connection = new SqlConnection(this.stringConeccion);
             String sqlStoreProcedure = "sp_actualizarCliente";
@@ -67,6 +78,10 @@ namespace DATA{
 
         }//actualizarCliente
 
+        /// <summary>
+        /// Este metodo obtendrá  todos los clientes en el sistema
+        /// </summary>
+        /// <returns>LinkedList<Cliente></returns>
         public LinkedList<Cliente> obtenerClientes(){
             SqlConnection connection = new SqlConnection(this.stringConeccion);
 
@@ -97,6 +112,11 @@ namespace DATA{
             return clientes;
         }//obtenerClientes
 
+        /// <summary>
+        /// Este metodo obtendrá un único cliente
+        /// </summary>
+        /// <param name="cliente"></param>
+        /// <returns>Cliente</returns>
         public Cliente obtenerCliente(Cliente cliente){
             LinkedList<Cliente> clientes = obtenerClientes();
             foreach (Cliente clienteActual in clientes){

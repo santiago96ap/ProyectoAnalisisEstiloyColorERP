@@ -10,12 +10,18 @@ namespace DATA
 {
     public class IngresoData
     {
-        private String conectionString;
+        private String conectionString;//Este será el String de conexión de la BD
         public IngresoData(String conectionString)
         {
             this.conectionString = conectionString;
         }//constructor
 
+
+        /// <summary>
+        /// Esye método insertrá un nuevo ingreso en la BD
+        /// </summary>
+        /// <param name="ingreso"></param>
+        /// <returns>Boolean</returns>
         public Boolean insertarIngreso(Ingreso ingreso)
         {
             SqlConnection connection = new SqlConnection(this.conectionString);
@@ -42,6 +48,12 @@ namespace DATA
 
         }//insertarIngreso
 
+
+        /// <summary>
+        /// Este método actualizará la información de un ingreso del sistema
+        /// </summary>
+        /// <param name="ingreso"></param>
+        /// <returns>Boolean</returns>
         public Boolean actualizarIngreso(Ingreso ingreso)
         {
             SqlConnection connection = new SqlConnection(this.conectionString);
@@ -69,6 +81,12 @@ namespace DATA
             }
         }//actualiazarIngreso
 
+
+        /// <summary>
+        /// Este método eliminará un ingreso que se encuentra en la BD
+        /// </summary>
+        /// <param name="ingreso"></param>
+        /// <returns></returns>
         public Boolean eliminarIngreso(Ingreso ingreso)
         {
             SqlConnection connection = new SqlConnection(this.conectionString);
@@ -90,6 +108,13 @@ namespace DATA
             }
         }//eliminarIngreso
 
+
+        /// <summary>
+        /// Este método se obtendrá los ingresos por medio de fechas selecciondas
+        /// </summary>
+        /// <param name="fechaI"></param>
+        /// <param name="fechaF"></param>
+        /// <returns>LinkedList<Ingreso></returns>
         public LinkedList<Ingreso> obtenerIngreso(String fechaI, String fechaF)
         {
             SqlConnection connection = new SqlConnection(this.conectionString);

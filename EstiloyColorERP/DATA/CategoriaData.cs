@@ -8,12 +8,18 @@ using DOMAIN;
 
 namespace DATA {
     public class CategoriaData {
-        private String conectionString;
+        private String conectionString;//Este será el String de conexión
 
         public CategoriaData(String stringConection) {
             this.conectionString = stringConection;
         }//constructor
 
+
+        /// <summary>
+        /// Este metodo insertará una Categoría nueva en la BD
+        /// </summary>
+        /// <param name="categoria"></param>
+        /// <returns>Boolean</returns>
         public Boolean insertarCategoria(Categoria categoria) {
             SqlConnection connection = new SqlConnection(this.conectionString);
             String sqlStoreProcedure = "sp_insertarCategoria";
@@ -34,6 +40,12 @@ namespace DATA {
             }//if-else
         }//insertarCategoria
 
+
+        /// <summary>
+        /// Este método actualizrá una categoría ya existente
+        /// </summary>
+        /// <param name="categoria"></param>
+        /// <returns>Boolean</returns>
         public Boolean actualizarCategoria(Categoria categoria) {
             SqlConnection connection = new SqlConnection(this.conectionString);
             String sqlStoreProcedure = "sp_actualizarCategoria";
@@ -55,6 +67,10 @@ namespace DATA {
             }//if-else
         }//actualizarCategoria
 
+        /// <summary>
+        /// Este método obtendrá todas las categorías existentes
+        /// </summary>
+        /// <returns></returns>
         public LinkedList<Categoria> obtenerCategorias() {
             SqlConnection connection = new SqlConnection(this.conectionString);
 
@@ -82,6 +98,12 @@ namespace DATA {
             }//foreach
             return categorias;
         }//obtenerCategorias
+
+        /// <summary>
+        /// Este metodo eliminará una categoría existente de la BD
+        /// </summary>
+        /// <param name="categoria"></param>
+        /// <returns>Booleam</returns>
         public Boolean eliminarCategoria(Categoria categoria) {
             SqlConnection connection = new SqlConnection(this.conectionString);
             String sqlStoreProcedure = "sp_eliminarCategoria";

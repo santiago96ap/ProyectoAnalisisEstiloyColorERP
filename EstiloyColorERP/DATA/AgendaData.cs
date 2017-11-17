@@ -10,12 +10,17 @@ namespace DATA
 {
     public class AgendaData
     {
-        private String stringConeccion;
+        private String stringConeccion;//Este será el String de conexión hacia la BD 
         public AgendaData(string stringConeccion)
         {
             this.stringConeccion = stringConeccion;
         }//constructor
 
+        /// <summary>
+        /// Este  metodo lo que realiza es insertar una actividad en la agenda
+        /// </summary>
+        /// <param name="agenda"></param>
+        /// <returns>Boolean</returns>
         public Boolean insertarAgenda(Agenda agenda)
         {
             SqlConnection connection = new SqlConnection(this.stringConeccion);
@@ -41,6 +46,11 @@ namespace DATA
             }//if-else
         }//insertar agenda
 
+        /// <summary>
+        /// Este metodo lo que realiza es eliminar una actividad en la agenda
+        /// </summary>
+        /// <param name="agenda"></param>
+        /// <returns>Boolean</returns>
         public Boolean eliminarAgenda(Agenda agenda)
         {
             SqlConnection connection = new SqlConnection(this.stringConeccion);
@@ -63,6 +73,12 @@ namespace DATA
             }
         }//eliminar venta
 
+
+        /// <summary>
+        /// Este metodo realiza una busqueda que de las actividades que se encuentran en la fecha solicitada
+        /// </summary>
+        /// <param name="fecha"></param>
+        /// <returns>LinkedList<Agenda></returns>
         public LinkedList<Agenda> obtenerAgendasFecha(String fecha)
         {
             SqlConnection connection = new SqlConnection(this.stringConeccion);
@@ -95,6 +111,13 @@ namespace DATA
             }//recorrer todos los clientes que vienen de la DB
             return actividades;
         }//obtener todas las citas de la agenda
+
+
+
+        /// <summary>
+        /// Este metodo lo que realiza es obtener todas actividades sin importar alguna fecho o un parametro
+        /// </summary>
+        /// <returns>LinkedList<Agenda></returns>
 
         public LinkedList<Agenda> obtenerAgendas()
         {
@@ -133,6 +156,12 @@ namespace DATA
             return null;
         }//obtener una cita en la agenda
 
+
+        /// <summary>
+        /// Este metodo lo que realiza es actulizar una actividad que tengan en la fecho y hora puesta
+        /// </summary>
+        /// <param name="agenda"></param>
+        /// <returns></returns>
         public Boolean actualizarAgenda(Agenda agenda)
         {
             SqlConnection connection = new SqlConnection(this.stringConeccion);

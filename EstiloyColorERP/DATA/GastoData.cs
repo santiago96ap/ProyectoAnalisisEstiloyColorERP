@@ -10,13 +10,19 @@ namespace DATA
 {
     public class GastoData
     {
-        private String conectionString;
+        private String conectionString;//Este será el String de conexión de la BD
 
         public GastoData(String stringConection)
         {
             this.conectionString = stringConection;
         }//constructor
 
+
+        /// <summary>
+        /// Este método insertrá un nuevo gasto en la BD
+        /// </summary>
+        /// <param name="gasto"></param>
+        /// <returns>Boolean</returns>
         public Boolean insertarGasto(Gasto gasto)//, Vendedor venedor
         {
             SqlConnection connection = new SqlConnection(this.conectionString);
@@ -45,6 +51,13 @@ namespace DATA
 
         }//insertarGasto
 
+
+        /// <summary>
+        /// Este méttodo eleminará un gasto del sistema
+        /// 
+        /// </summary>
+        /// <param name="gasto"></param>
+        /// <returns>Boolean</returns>
         public Boolean eliminarGasto(Gasto gasto)
         {
             SqlConnection connection = new SqlConnection(this.conectionString);
@@ -67,6 +80,12 @@ namespace DATA
 
         }//eliminarGasto
 
+
+        /// <summary>
+        /// Este métdo actulizará la información de un gasto en especifíco
+        /// </summary>
+        /// <param name="gasto"></param>
+        /// <returns></returns>
         public Boolean editarGasto(Gasto gasto)
         {
             SqlConnection connection = new SqlConnection(this.conectionString);
@@ -98,6 +117,12 @@ namespace DATA
             return null;
         }//obtenerGasto
 
+        /// <summary>
+        /// Este método obtendrá los gastos en un rango de fecha seleccionadas
+        /// </summary>
+        /// <param name="fechaI"></param>
+        /// <param name="fechaF"></param>
+        /// <returns>LinkedList<Gasto></returns>
         public LinkedList<Gasto> obtenerGastos(String fechaI, String fechaF)
         {
             SqlConnection connection = new SqlConnection(this.conectionString);

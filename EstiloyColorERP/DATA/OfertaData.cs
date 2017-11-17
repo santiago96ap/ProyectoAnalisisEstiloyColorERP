@@ -10,12 +10,18 @@ namespace DATA
 {
     public class OfertaData
     {
-        private String conectionString;
+        private String conectionString;// Este será el String de conexión de la BD
         public OfertaData(string conectionString)
         {
             this.conectionString = conectionString;
         }//constructor
 
+
+        /// <summary>
+        /// Este método insertará la relación de oferta con sus productos
+        /// </summary>
+        /// <param name="oferta"></param>
+        /// <returns>Boolean</returns>
         public Boolean insertarOfertaProducto(Oferta oferta) {
             SqlConnection connection = new SqlConnection(this.conectionString);
             String sqlStoreProcedure = "sp_insertarOferta";
@@ -39,6 +45,12 @@ namespace DATA
             }//if-else
         }//insertarOfertaProducto
 
+
+        /// <summary>
+        /// Este método eliminará las ofertas que estén el sistema
+        /// </summary>
+        /// <param name="oferta"></param>
+        /// <returns></returns>
         public Boolean eliminarOferta(Oferta oferta)
         {
             SqlConnection connection = new SqlConnection(this.conectionString);
@@ -60,6 +72,12 @@ namespace DATA
             }
         }//eliminarOferta
 
+
+        /// <summary>
+        /// Este método acyualizará la información de una oferta
+        /// </summary>
+        /// <param name="oferta"></param>
+        /// <returns></returns>
         public Boolean editarOferta(Oferta oferta)
         {
             SqlConnection connection = new SqlConnection(this.conectionString);
@@ -87,6 +105,11 @@ namespace DATA
             }
         }//editarOferta
 
+
+        /// <summary>
+        /// Este mpetodo obtendrá todas las ofertas
+        /// </summary>
+        /// <returns>inkedList<Oferta></returns>
         public LinkedList<Oferta> obtenerOfertas()
         {
             SqlConnection connection = new SqlConnection(this.conectionString);
@@ -120,6 +143,12 @@ namespace DATA
             return ofertas;
         }//obtenerOfertas
 
+        /// <summary>
+        /// Este método obtendrá las ofertas por medio de un rango de fechas
+        /// </summary>
+        /// <param name="fechaI"></param>
+        /// <param name="fechaF"></param>
+        /// <returns>LinkedList<Oferta></returns>
         public LinkedList<Oferta> obtenerOfertaFecha(String fechaI, String fechaF)
         {
             SqlConnection connection = new SqlConnection(this.conectionString);

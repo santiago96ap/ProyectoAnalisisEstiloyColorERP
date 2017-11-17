@@ -11,13 +11,19 @@ namespace DATA
     public class ApartadoData
     {
 
-        private String stringConeccion;
+        private String stringConeccion;//Este será el String de conexion a la BD
 
         public ApartadoData(string stringConeccion)
         {
             this.stringConeccion = stringConeccion;
         }//constructor
 
+
+        /// <summary>
+        /// Este metodo lo que realizará es insertar un apartado a la BD
+        /// </summary>
+        /// <param name="apartado"></param>
+        /// <returns>Boolean</returns>
         public Boolean insertarApartado(Apartado apartado)
         {
             SqlConnection connection = new SqlConnection(this.stringConeccion);
@@ -39,6 +45,11 @@ namespace DATA
             }//if-else
         }//insertarApartado
 
+        /// <summary>
+        /// Este realizará una inserción a la realción de esa tabla
+        /// </summary>
+        /// <param name="vp"></param>
+        /// <returns>Boolean</returns>
         public Boolean insertarApartadoProducto(VentaProducto vp)
         {
             SqlConnection connection = new SqlConnection(this.stringConeccion);
@@ -67,6 +78,12 @@ namespace DATA
 
         }//insertar venta
 
+        /// <summary>
+        /// Este metodo lo que realizará es eliminar un apatado de un cliente
+        /// </summary>
+        /// <param name="apartado"></param>
+        /// <returns>Boolean</returns>
+
         public Boolean eliminarApartado(Apartado apartado)
         {
             SqlConnection connection = new SqlConnection(this.stringConeccion);
@@ -88,6 +105,11 @@ namespace DATA
             }
         }//eliminarApartado
 
+
+        /// <summary>
+        /// Este método obtendrá todos los apartados que se encuentran en la BD
+        /// </summary>
+        /// <returns></returns>
         public LinkedList<Apartado> obtenerApartados()
         {
             SqlConnection connection = new SqlConnection(this.stringConeccion);
@@ -128,6 +150,11 @@ namespace DATA
             return null;
         }//obtenerApartado
 
+        /// <summary>
+        /// Este metrodo lo que realizrá es un abono de un apartado de cliente
+        /// </summary>
+        /// <param name="apartado"></param>
+        /// <returns></returns>
         public Boolean actualizarApartado(Apartado apartado)
         {
             SqlConnection connection = new SqlConnection(this.stringConeccion);
