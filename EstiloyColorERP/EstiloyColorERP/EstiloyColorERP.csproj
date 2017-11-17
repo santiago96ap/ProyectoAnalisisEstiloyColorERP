@@ -72,6 +72,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="publico\ActualizarOfertaVista.aspx" />
+    <Content Include="publico\ActualizarProductVista.aspx" />
     <Content Include="publico\ActualizarUsuarioVista.aspx" />
     <Content Include="publico\CatalogoVista.aspx" />
     <Content Include="publico\css\alertify.bootstrap.css" />
@@ -187,8 +188,16 @@
     <Compile Include="publico\ActualizarOfertaVista.aspx.designer.cs">
       <DependentUpon>ActualizarOfertaVista.aspx</DependentUpon>
     </Compile>
+    <Compile Include="publico\ActualizarProductVista.aspx.cs">
+      <DependentUpon>ActualizarProductVista.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="publico\ActualizarProductVista.aspx.designer.cs">
+      <DependentUpon>ActualizarProductVista.aspx</DependentUpon>
+    </Compile>
     <Compile Include="publico\ActualizarUsuarioVista.aspx.cs">
       <DependentUpon>ActualizarUsuarioVista.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="publico\ActualizarUsuarioVista.aspx.designer.cs">
       <DependentUpon>ActualizarUsuarioVista.aspx</DependentUpon>
@@ -321,6 +330,7 @@
     </Compile>
     <Compile Include="publico\InsertarAgendaVista.aspx.cs">
       <DependentUpon>InsertarAgendaVista.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="publico\InsertarAgendaVista.aspx.designer.cs">
       <DependentUpon>InsertarAgendaVista.aspx</DependentUpon>
@@ -418,6 +428,7 @@
     </Compile>
     <Compile Include="publico\ObtenerAgendaVista.aspx.cs">
       <DependentUpon>ObtenerAgendaVista.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="publico\ObtenerAgendaVista.aspx.designer.cs">
       <DependentUpon>ObtenerAgendaVista.aspx</DependentUpon>
@@ -481,6 +492,7 @@
     </Compile>
     <Compile Include="publico\InsertarVentaVista.aspx.cs">
       <DependentUpon>InsertarVentaVista.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="publico\InsertarVentaVista.aspx.designer.cs">
       <DependentUpon>InsertarVentaVista.aspx</DependentUpon>

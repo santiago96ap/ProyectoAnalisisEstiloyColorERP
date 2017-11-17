@@ -48,6 +48,31 @@ namespace DATA
 
         public Boolean actualizarProducto(Producto producto)
         {
+            //@id_Proct int ,@nombre varchar(30),@descripcion varchar(200),@costo float,@precio float,@cantidad int
+
+            SqlConnection connection = new SqlConnection(this.conectionString);
+            String sqlStoreProcedure = "sp_actualizarProducto";
+            SqlCommand cmdActualizar = new SqlCommand(sqlStoreProcedure, connection);
+            cmdActualizar.CommandType = System.Data.CommandType.StoredProcedure;
+
+            cmdActualizar.Parameters.Add(new SqlParameter("@id_Proct", producto.IdProct));
+            cmdActualizar.Parameters.Add(new SqlParameter("@nombre", producto.Nombre));
+            cmdActualizar.Parameters.Add(new SqlParameter("@descripcion", producto.Descripcion));
+            cmdActualizar.Parameters.Add(new SqlParameter("@costo", producto.Costo));
+            cmdActualizar.Parameters.Add(new SqlParameter("@precio", producto.Precio));
+            cmdActualizar.Parameters.Add(new SqlParameter("@cantidad", producto.Cantidad));
+
+            cmdActualizar.Connection.Open();
+            if (cmdActualizar.ExecuteNonQuery() > 0)
+            {
+                cmdActualizar.Connection.Close();
+                return true;
+            }
+            else
+            {
+                cmdActualizar.Connection.Close();
+                return false;
+            }//if-else
             return false;
         }//actualizarProducto
 
