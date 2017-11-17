@@ -19,7 +19,7 @@ namespace EstiloyColorERP{
             if (this.ddlClientes != null){
                 if (!IsPostBack){
                     cargarClientes();
-                }//if para ver si es la primera vez que se carga el modula
+                }//if para ver si es la primera vez que se carga el modulo
             }//if para ver si el listbox esta vacio
             deshabilitarModulo();
         }//cargar el modulo de actualizar
