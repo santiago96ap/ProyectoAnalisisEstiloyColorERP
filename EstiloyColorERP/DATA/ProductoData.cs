@@ -73,7 +73,6 @@ namespace DATA
                 cmdActualizar.Connection.Close();
                 return false;
             }//if-else
-            return false;
         }//actualizarProducto
 
         public Boolean eliminarProducto(Producto producto)
