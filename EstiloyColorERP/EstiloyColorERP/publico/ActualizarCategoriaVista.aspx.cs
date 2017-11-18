@@ -62,7 +62,7 @@ namespace EstiloyColorERP.publico
         {
             if (String.IsNullOrWhiteSpace(this.tbNombre.Text))
             {//si existe un tb en blanco se indica al usuario y no se aplica ningún cambio
-                ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.error('Error en los datos ingresados')", true);
+                ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.error('Error, campos en blanco')", true);
             }
             else
             {
@@ -109,6 +109,8 @@ namespace EstiloyColorERP.publico
             {
                 if (cActual.Codigo==ID)//se buscan los datos
                 {
+                    this.tbNombre.Enabled = true;
+                    this.btnActualizar.Enabled = true;
                     this.tbNombre.Text = cActual.Nombre;
                     this.tbID.Text = cActual.Codigo.ToString();
                 }//If
