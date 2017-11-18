@@ -10,11 +10,16 @@ using BUSINESS;
 namespace EstiloyColorERP{
     public partial class InsertarCliente : System.Web.UI.Page{
 
-        private ClienteBusiness clienteBusiness;//Instacia de las
+        private ClienteBusiness clienteBusiness;//Instacia de la clase clienteBusiness
         protected void Page_Load(object sender, EventArgs e){
 
         }//Carga el modulo de insertar
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btnInsertar_Click(object sender, EventArgs e){
             if (!String.IsNullOrWhiteSpace(this.tbNombre.Text) || !String.IsNullOrWhiteSpace(this.tbApellidos.Text) || !String.IsNullOrWhiteSpace(this.tbTelefono.Text) || !String.IsNullOrWhiteSpace(this.tbDireccion.Text) || !String.IsNullOrWhiteSpace(this.tbCorreo.Text)){
                 this.clienteBusiness = new ClienteBusiness();
