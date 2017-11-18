@@ -10,7 +10,7 @@
                 <br />
                 <section id="formulario">
                     <div id="divi">
-                        <asp:TextBox ID="tbBuscar" CssClass="form-control1" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="tbBuscar" CssClass="form-control1" runat="server" type="number" min="1"></asp:TextBox>
                         <br />
                         <br />
                         <asp:dropdownlist ID="ddlClientes" CssClass="form-dropdownlist" runat="server"></asp:dropdownlist>
@@ -30,7 +30,7 @@
                         <br />
                         <br />
                         <asp:Label ID="lblTelefono" CssClass="col-sm-2 control-label" runat="server" Text="Teléfono"></asp:Label>
-                        <asp:TextBox ID="tbTelefono" CssClass="form-control1" runat="server" Enabled="false"></asp:TextBox>
+                        <asp:TextBox ID="tbTelefono" CssClass="form-control1" runat="server" Enabled="false" type="number" min="1"></asp:TextBox>
                         <br />
                         <br />
                         <asp:Label ID="lblDireccion" CssClass="col-sm-2 control-label" runat="server" Text="Dirección"></asp:Label>
@@ -38,7 +38,7 @@
                         <br />
                         <br />
                         <asp:Label ID="lblCorreo" CssClass="col-sm-2 control-label" runat="server" Text="Correo"></asp:Label>
-                        <asp:TextBox ID="tbCorreo" CssClass="form-control1" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="tbCorreo" CssClass="form-control1" runat="server" type="email"></asp:TextBox>
                     </div>
                 </section>
                 <br />

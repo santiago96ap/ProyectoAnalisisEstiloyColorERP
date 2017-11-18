@@ -19,9 +19,9 @@ namespace EstiloyColorERP{
             if (this.ddlClientes != null){
                 if (!IsPostBack){
                     cargarClientes();
+                    deshabilitarModulo();
                 }//if para ver si es la primera vez que se carga el modulo
             }//if para ver si el listbox esta vacio
-            deshabilitarModulo();
         }//cargar el modulo de actualizar
 
         /// <summary>
@@ -42,7 +42,15 @@ namespace EstiloyColorERP{
                         this.clienteV = this.tbBuscar.Text;
                     }//if para ver si se encontro el cliente
                 }//buscar el cliente a actualizar
-                habilitarModulo();
+                if (String.IsNullOrWhiteSpace(this.tbNombre.Text))
+                {
+                    ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.error('El cliente no existe en el sistema')", true);
+                }
+                else
+                {
+                    habilitarModulo();
+                }//validar si se encontro el cliente
+                
             }
             else if (!this.ddlClientes.SelectedItem.Text.Equals("---Clientes---")){
                 foreach (Cliente clienteActual in this.clientes){
@@ -74,7 +82,7 @@ namespace EstiloyColorERP{
             else if (!this.ddlClientes.SelectedItem.Text.Equals("---Clientes---")){
                         this.clienteV = this.ddlClientes.SelectedItem.Value;
             }//if recuperar el cliente viejo
-            if (!String.IsNullOrWhiteSpace(this.tbNombre.Text) || !String.IsNullOrWhiteSpace(this.tbApellidos.Text) || !String.IsNullOrWhiteSpace(this.tbTelefono.Text) || !String.IsNullOrWhiteSpace(this.tbDireccion.Text) || !String.IsNullOrWhiteSpace(this.tbCorreo.Text)){
+            if (!String.IsNullOrWhiteSpace(this.tbNombre.Text) && !String.IsNullOrWhiteSpace(this.tbApellidos.Text) && !String.IsNullOrWhiteSpace(this.tbTelefono.Text) && !String.IsNullOrWhiteSpace(this.tbDireccion.Text) && !String.IsNullOrWhiteSpace(this.tbCorreo.Text)){
                 Cliente cliente = new Cliente(this.tbNombre.Text, this.tbApellidos.Text, this.tbTelefono.Text, this.tbDireccion.Text, this.tbCorreo.Text);
                 if (this.clienteBusiness.actualizarCliente(cliente, this.clienteV)){
                     this.tbNombre.Text = "";
@@ -86,13 +94,14 @@ namespace EstiloyColorERP{
                     this.ddlClientes.SelectedIndex = 0;
                     deshabilitarModulo();
                     cargarClientes();
+                    deshabilitarModulo();
                     ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.success('El cliente se actualizó exitosamente')", true);
                 }
                 else{
-                    ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.error('Se ha producido un error al procesar la solicitud')", true);
+                    ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.error('Error en los datos ingresados')", true);
                 }//if si se actualizo correctamente
             } else {
-                ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.error('Error en los datos ingresados')", true);
+                ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.error('Error, campos en blanco')", true);
             }//if validacion
         }//btnInsertar_Click
 
@@ -104,7 +113,7 @@ namespace EstiloyColorERP{
         protected void habilitarModulo(){
             this.tbNombre.Enabled = true;
             this.tbApellidos.Enabled = true;
-            this.tbTelefono.Enabled = true;
+            this.tbTelefono.Enabled = false;
             this.tbDireccion.Enabled = true;
             this.tbCorreo.Enabled = true;
             this.btnInsertar.Enabled = true;
