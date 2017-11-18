@@ -47,7 +47,7 @@
                 <br />
                 <br />
                 <asp:Label ID="Label5" CssClass="col-sm-2 control-label" runat="server" Text="Cliente"></asp:Label>
-                 <asp:TextBox ID="tbCliente" type="text" CssClass="form-control1"  runat="server" ></asp:TextBox>
+                 <asp:TextBox ID="tbCliente" type="number" CssClass="form-control1" min="0" Text="1" runat="server"></asp:TextBox>
                 <br />
                 <br /> 
                 <asp:Button ID="btnActualizar" runat="server"  CssClass="btn btn-info" Text="Actualizar" OnClick="btnActualizar_Click1" />

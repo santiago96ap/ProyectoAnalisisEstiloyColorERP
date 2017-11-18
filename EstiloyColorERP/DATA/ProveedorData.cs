@@ -10,13 +10,18 @@ namespace DATA
 {
     public class ProveedorData
     {
-        private String stringConnection;
+        private String stringConnection;//Este será el String de conexión a la BD
 
         public ProveedorData(String stringConection)
         {
             this.stringConnection = stringConection;
         }//constructor
 
+        /// <summary>
+        /// Este método insertará un proveedor en la BD
+        /// </summary>
+        /// <param name="proveedor"></param>
+        /// <returns></returns>
         public Boolean insertarProveedor(Proveedor proveedor)
         {
             SqlConnection connection = new SqlConnection(this.stringConnection);
@@ -44,6 +49,12 @@ namespace DATA
 
         }//insertarProveedor
 
+
+        /// <summary>
+        /// Este método se actualizará los proveedores
+        /// </summary>
+        /// <param name="proveedor"></param>
+        /// <returns>Boolean</returns>
         public Boolean actualizarProveedor(Proveedor proveedor)
         {
             SqlConnection connection = new SqlConnection(this.stringConnection);
@@ -70,6 +81,10 @@ namespace DATA
 
         }//actualizarProveedor
 
+        /// <summary>
+        /// Este método obtendrá los proveedores
+        /// </summary>
+        /// <returns></returns>
         public LinkedList<Proveedor> obtenerProveedores()
         {
             SqlConnection connection = new SqlConnection(this.stringConnection);
@@ -102,6 +117,12 @@ namespace DATA
             return proveedor;
         }//obtenerProveedores
 
+
+        /// <summary>
+        /// Obtendrá solo un unico proveedor
+        /// </summary>
+        /// <param name="proveedor"></param>
+        /// <returns> Proveedor</returns>
         public Proveedor obtenerProveedor(Proveedor proveedor)
         {
             LinkedList<Proveedor> proveedores = obtenerProveedores();
@@ -115,6 +136,11 @@ namespace DATA
             return null;
         }//obtenerCliente
 
+        /// <summary>
+        /// Este metdo eliminará el proveedor
+        /// </summary>
+        /// <param name="proveedor"></param>
+        /// <returns></returns>
         public Boolean eliminarProveedor(Proveedor proveedor)
         {
             SqlConnection connection = new SqlConnection(this.stringConnection);
@@ -135,5 +161,5 @@ namespace DATA
                 return false;
             }//if-else
         }//eliminarProveedor
-    }//clase
-}
+    }//class
+}//namespce

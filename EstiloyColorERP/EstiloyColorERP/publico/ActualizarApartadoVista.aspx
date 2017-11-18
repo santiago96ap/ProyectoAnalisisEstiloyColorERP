@@ -26,21 +26,21 @@
                     <br /> 
                     <br />
                     <asp:Label ID="Label1" CssClass="col-sm-2 control-label" runat="server" Text="ID:"></asp:Label>
-                    <asp:TextBox ID="tbID" CssClass="form-control1" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="tbID" CssClass="form-control1" runat="server" Enabled="false"></asp:TextBox>
                     <br /> 
                     <br />
                     <asp:Label ID="lblAbono" CssClass="col-sm-2 control-label" runat="server" Text="Abono:"></asp:Label>
-                    <asp:TextBox ID="tbAbono" CssClass="form-control1" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="tbAbono" CssClass="form-control1" type="number" runat="server" Enabled="false"></asp:TextBox>
                 </div>
                 <div id="divi1">
                     <asp:Label ID="lblSaldo" CssClass="col-sm-2 control-label" runat="server" Text="Saldo:"></asp:Label>
-                    <asp:TextBox ID="tbSaldo" CssClass="form-control1" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="tbSaldo" CssClass="form-control1" type="number" min="1" Text="1" runat="server" Enabled="false"></asp:TextBox>
                 </div>
                    <br />
                   <br />
                   <br />
                     <br />
-                <asp:Button ID="btnActualizar" CssClass="btn btn-info" runat="server" Text="Abonar" OnClick="btnActualizar_Click1" />
+                <asp:Button ID="btnActualizar" CssClass="btn btn-info" runat="server" Text="Abonar" OnClick="btnActualizar_Click1" Enabled="false"/>
             </section>
             <br />
             <br />

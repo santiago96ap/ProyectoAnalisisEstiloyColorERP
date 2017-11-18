@@ -10,12 +10,17 @@ namespace DATA
 {
     public class VentaData
     {
-        private String stringConeccion;
+        private String stringConeccion;//Este será el String de conexion de la Bd
         public VentaData(string stringConeccion)
         {
             this.stringConeccion = stringConeccion;
         }//constructor
 
+        /// <summary>
+        /// Este método insertrá una venta a la BD
+        /// </summary>
+        /// <param name="venta"></param>
+        /// <returns></returns>
         public Boolean insertarVenta(Venta venta){
             SqlConnection connection = new SqlConnection(this.stringConeccion);
             String sqlStoreProcedure = "sp_insertarVenta";
@@ -46,6 +51,11 @@ namespace DATA
 
         }//insertar venta
 
+        /// <summary>
+        /// Este método insertrá una Venta con sus productos correspondientes en la BD
+        /// </summary>
+        /// <param name="vp"></param>
+        /// <returns>Boolean</returns>
         public Boolean insertarVentaProducto(VentaProducto vp)
         {
             SqlConnection connection = new SqlConnection(this.stringConeccion);
@@ -74,6 +84,11 @@ namespace DATA
 
         }//insertar venta
 
+        /// <summary>
+        /// Este eliminará una venta del sustema
+        /// </summary>
+        /// <param name="venta"></param>
+        /// <returns>Boolean</returns>
         public Boolean eliminarVenta(Venta venta)
         {
             SqlConnection connection = new SqlConnection(this.stringConeccion);
@@ -96,6 +111,11 @@ namespace DATA
             }//if-else
         }//eliminar venta
 
+
+        /// <summary>
+        /// Este método obtendrá todas las ventas del sistema
+        /// </summary>
+        /// <returns>LinkedList<Venta></returns>
         public LinkedList<Venta> obtenerVentas()
         {
             SqlConnection connection = new SqlConnection(this.stringConeccion);
@@ -132,6 +152,11 @@ namespace DATA
             return ventas;
         }//obtener todas las ventas
 
+        /// <summary>
+        /// Obtendrá una unica venta que será por el id
+        /// </summary>
+        /// <param name="venta"></param>
+        /// <returns></returns>
         public Venta obtenerVenta(Venta venta)
         {
             LinkedList<Venta> ventas = obtenerVentas();
@@ -145,6 +170,13 @@ namespace DATA
             return null;
         }//obtener una venta
 
+
+        /// <summary>
+        /// obtendrá las ventas por medio de fechas para que se puedan elimnar
+        /// </summary>
+        /// <param name="fechaI"></param>
+        /// <param name="fechaF"></param>
+        /// <returns></returns>
         public LinkedList<Venta> obtenerVentasEliminar(String fechaI, String fechaF)
         {
             SqlConnection connection = new SqlConnection(this.stringConeccion);

@@ -17,7 +17,11 @@ namespace DATA
             this.conectionString = conectionString;
         }//constructor
 
-
+        /// <summary>
+        /// Este método lo que hará es insertar un nuevo producto en la BD
+        /// </summary>
+        /// <param name="producto"></param>
+        /// <returns>Boolean</returns>
         public Boolean insertarProducto(Producto producto)
         {
             SqlConnection connection = new SqlConnection(this.conectionString);
@@ -46,6 +50,12 @@ namespace DATA
             }//if-else
         }//insertarProducto
 
+
+        /// <summary>
+        /// Este método lo que hará es actualizar un producto
+        /// </summary>
+        /// <param name="producto"></param>
+        /// <returns></returns>
         public Boolean actualizarProducto(Producto producto)
         {
             //@id_Proct int ,@nombre varchar(30),@descripcion varchar(200),@costo float,@precio float,@cantidad int
@@ -73,9 +83,13 @@ namespace DATA
                 cmdActualizar.Connection.Close();
                 return false;
             }//if-else
-            return false;
         }//actualizarProducto
 
+        /// <summary>
+        /// Este métdodo lo que hará es eliminar un prodcuto
+        /// </summary>
+        /// <param name="producto"></param>
+        /// <returns></returns>
         public Boolean eliminarProducto(Producto producto)
         {
             SqlConnection connection = new SqlConnection(this.conectionString);
@@ -97,6 +111,10 @@ namespace DATA
             }
         }//eliminarProducto
 
+        /// <summary>
+        /// Este método lo que hará es obtener todos los productos
+        /// </summary>
+        /// <returns>LinkedList<Producto></returns>
         public LinkedList<Producto> obtenerTodosProductos()
         {
             SqlConnection connection = new SqlConnection(this.conectionString);
@@ -138,6 +156,12 @@ namespace DATA
             return null;
         }//obtenerProductoPorCategoria
 
+
+        /// <summary>
+        /// Este método obtiene un prodcuto por su ID
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Producto</returns>
         public Producto obtenerProductoPorID(int id)
         {
             SqlConnection connection = new SqlConnection(this.conectionString);

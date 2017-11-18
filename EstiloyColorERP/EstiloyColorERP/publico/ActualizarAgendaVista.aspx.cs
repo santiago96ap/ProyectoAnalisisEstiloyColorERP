@@ -14,7 +14,9 @@ namespace EstiloyColorERP
     {
 
         private AgendaBusiness agendaBusiness = new AgendaBusiness();
+        private ClienteBusiness clienteBusiness = new ClienteBusiness();
         private LinkedList<Agenda> actividades;
+        private LinkedList<Cliente> clientes;
         private static String horaActividad;//Este es String es para seleccionar la hora de Actividad de la tabla
         private static String fechaActividad;//Este es String es para seleccionar la fecha de Actividad de la tabla
         protected void Page_Load(object sender, EventArgs e)
@@ -107,32 +109,46 @@ namespace EstiloyColorERP
 
         protected void btnActualizar_Click1(object sender, EventArgs e)
         {
+            this.clientes = this.clienteBusiness.obtenerClientes();
+            bool flag = false;
             if (String.IsNullOrWhiteSpace(this.tbActividad.Text) || String.IsNullOrWhiteSpace(this.tbFecha.Text) || String.IsNullOrWhiteSpace(this.tbCliente.Text) || String.IsNullOrWhiteSpace(this.tbHora.Text))
             {//si existe un tb en blanco se indica la agenda y no se aplica ningún cambio
-                ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.error('Error en los datos ingresados')", true);
+                ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.error('Error, campos en blanco')", true);
             }
             else
             {
-                
-                bool respuesta = this.agendaBusiness.actualizarAgenda(
-                    new Agenda(fechaActividad, horaActividad, tbFecha.Text, tbHora.Text,tbActividad.Text, tbDireccion.Text, tbCliente.Text));
-
-                if (respuesta)// Si se actualiza el agenda se recargan los datos y se dejan los tb en blanco
+                foreach (Cliente clienteActual in this.clientes)
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.success('Se actualizó exitosamente')", true);
-                    //dejar los campos de texto en blanco
-                    this.tbFecha.Text = "";
-                    this.tbHora.Text = "";
-                    this.tbDireccion.Text = "";
-                    this.tbActividad.Text = "";
-                    this.tbCliente.Text = "";
-                    cargarDatos();
-                }//if
+                    if (clienteActual.Telefono.Equals(this.tbCliente.Text))
+                    {
+                        flag = true;
+                    }//if para validar que el cliente ingresado exista
+                }//For para recorrer los clientes que estan en el sistema
+                if (flag)
+                {
+                    bool respuesta = this.agendaBusiness.actualizarAgenda(
+                    new Agenda(fechaActividad, horaActividad, tbFecha.Text, tbHora.Text, tbActividad.Text, tbDireccion.Text, tbCliente.Text));
+
+                    if (respuesta)// Si se actualiza el agenda se recargan los datos y se dejan los tb en blanco
+                    {
+                        ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.success('Se actualizó exitosamente')", true);
+                        //dejar los campos de texto en blanco
+                        this.tbFecha.Text = "";
+                        this.tbHora.Text = "";
+                        this.tbDireccion.Text = "";
+                        this.tbActividad.Text = "";
+                        this.tbCliente.Text = "";
+                        cargarDatos();
+                    }//if
+                    else
+                    {
+                        ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.error('Se ha producido un error al procesar la solicitud')", true);
+                    }//else
+                }
                 else
                 {
-                    ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.error('Se ha producido un error al procesar la solicitud')", true);
-                }//else
-
+                    ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.error('El cliente ingresado no existe')", true);
+                }//if-else para identificar si se encontro el cliente
             }//else - no hay datos en blanco
 
         }// btnActualizar_Click
