@@ -52,8 +52,8 @@ namespace EstiloyColorERP.publico
             {
                 DataRow row = table.NewRow();
                 row["ID"] = item.Id;
-                row["Fecha"] = item.Fecha;
-                row["Hora"] = item.Hora;
+                row["Fecha"] = item.Fecha.Split(' ')[0].ToString();
+                row["Hora"] = item.Hora.Split('.')[0].ToString();
                 row["Concepto"] = item.Concepto;
                 row["Monto"] = item.Total;
                 row["Usuario"] = item.Usuario;
@@ -93,13 +93,23 @@ namespace EstiloyColorERP.publico
 
                     String fechaLista = datos[2] + '-' + datos[1] + '-' + datos[0];// la fecha se debe acomodar a un formato nuevo para mostrarse
 
+                    String[] hora = ingresoActual.Hora.ToString().Split('.');//se obtiene la hora
+                    String horaC = hora[0];// Se almacena lo deseado
+                    String[] horaCa = horaC.Split(':');
+                    String horaLista = horaCa[0] + ":" + horaCa[1];
+
                     //se llenan los campos para la posterior edición
                     this.tbID.Text = idIngreso + "";
                     this.tbID.Enabled = false;//no se puede modificar el ID
                     this.tbFecha.Text = fechaLista.ToString();
-                    this.tbHora.Text = ingresoActual.Hora;
+                    this.tbHora.Text = horaLista.ToString();
                     this.tbConcepto.Text = ingresoActual.Concepto;
                     this.tbTotal.Text = ingresoActual.Total+"";
+                    this.tbFecha.Enabled = true;
+                    this.tbHora.Enabled = true;
+                    this.tbConcepto.Enabled = true;
+                    this.tbTotal.Enabled = true;
+                    this.btnActualizar.Enabled = true;
                 }
             }//foreach
 
@@ -113,9 +123,9 @@ namespace EstiloyColorERP.publico
 
         protected void btnActualizar_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrWhiteSpace(this.tbID.Text) || String.IsNullOrWhiteSpace(this.tbFecha.Text) || String.IsNullOrWhiteSpace(this.tbConcepto.Text) || String.IsNullOrWhiteSpace(this.tbTotal.Text))
+            if (String.IsNullOrWhiteSpace(this.tbID.Text) || String.IsNullOrWhiteSpace(this.tbFecha.Text) || String.IsNullOrWhiteSpace(this.tbHora.Text) || String.IsNullOrWhiteSpace(this.tbConcepto.Text) || String.IsNullOrWhiteSpace(this.tbTotal.Text))
             {//si existe un tb en blanco se indica al usuario y no se aplica ningún cambio
-                ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.error('Error en los datos ingresados')", true);
+                ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.error('Error, campos en blanco')", true);
             }
             else
             {
@@ -135,6 +145,11 @@ namespace EstiloyColorERP.publico
                     this.tbHora.Text = "";
                     this.tbConcepto.Text = "";
                     this.tbTotal.Text = "";
+                    this.tbFecha.Enabled = false;
+                    this.tbHora.Enabled = false;
+                    this.tbConcepto.Enabled = false;
+                    this.tbTotal.Enabled = false;
+                    this.btnActualizar.Enabled = false;
                     cargarDatos();                    
                 }//if
                 else

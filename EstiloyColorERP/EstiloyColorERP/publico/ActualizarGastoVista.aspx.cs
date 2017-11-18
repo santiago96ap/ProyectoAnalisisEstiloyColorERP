@@ -62,7 +62,7 @@ namespace EstiloyColorERP.publico
             gvGastos.DataBind();
 
             this.tbID.Text = "";
-            this.tbID.Text = "";//no se puede modificar el ID del ingreso
+            this.tbID.Enabled = false;//no se puede modificar el ID del ingreso
             this.tbFecha.Text = "";
             this.tbHora.Text = "";
             this.tbConcepto.Text = "";
