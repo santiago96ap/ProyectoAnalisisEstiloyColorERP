@@ -113,7 +113,7 @@ namespace EstiloyColorERP
             bool flag = false;
             if (String.IsNullOrWhiteSpace(this.tbActividad.Text) || String.IsNullOrWhiteSpace(this.tbFecha.Text) || String.IsNullOrWhiteSpace(this.tbCliente.Text) || String.IsNullOrWhiteSpace(this.tbHora.Text))
             {//si existe un tb en blanco se indica la agenda y no se aplica ningún cambio
-                ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.error('Error en los datos ingresados')", true);
+                ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.error('Error, campos en blanco')", true);
             }
             else
             {
