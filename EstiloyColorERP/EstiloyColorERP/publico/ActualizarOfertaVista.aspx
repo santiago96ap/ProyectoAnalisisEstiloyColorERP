@@ -11,7 +11,7 @@
                 <br />
                 <br />
                 <asp:Label ID="Label2" CssClass="col-sm-2 control-label" runat="server" Text="Producto"></asp:Label>
-                <asp:TextBox ID="TbProducto"  type="text" CssClass="form-control1" runat="server"></asp:TextBox>
+                <asp:TextBox ID="TbProducto" CssClass="form-control1" runat="server" type="number" min="1"></asp:TextBox>
                 <br />
                 <br />
                 <asp:Button ID="Button1" runat="server"  CssClass="btn btn-info" Text="Buscar" OnClick="Button1_Click" />
@@ -32,30 +32,30 @@
             
             <div id="divi">
                 <asp:Label ID="lblID" CssClass="col-sm-2 control-label" runat="server" Text="ID"></asp:Label>
-                <asp:TextBox ID="tbID" CssClass="form-control1"  runat="server"></asp:TextBox>
+                <asp:TextBox ID="tbID" CssClass="form-control1"  runat="server" Enabled="false"></asp:TextBox>
                 <br />
                 <br />
                 <asp:Label ID="lblFecha" CssClass="col-sm-2 control-label" runat="server" Text="Fecha Inicio"></asp:Label>
-                <asp:TextBox ID="tbFechaI"  type="date" CssClass="form-control1" runat="server"></asp:TextBox>
+                <asp:TextBox ID="tbFechaI"  type="date" CssClass="form-control1" runat="server" Enabled="false"></asp:TextBox>
                 <br />
                 <br />
                 <asp:Label ID="Label1" CssClass="col-sm-2 control-label" runat="server" Text="Fecha final"></asp:Label>
-                <asp:TextBox ID="tbFechaF"  type="date" CssClass="form-control1" runat="server"></asp:TextBox>
+                <asp:TextBox ID="tbFechaF"  type="date" CssClass="form-control1" runat="server" Enabled="false"></asp:TextBox>
                 <br />
                 <br />
                 <asp:Label ID="lblHora" CssClass="col-sm-2 control-label" runat="server" Text="Descuento"></asp:Label>
-                <asp:TextBox ID="tbDescuento" type="number" CssClass="form-control1" runat="server"></asp:TextBox>
+                <asp:TextBox ID="tbDescuento" CssClass="form-control1" runat="server" type="number" min="1" Enabled="false"></asp:TextBox>
                 <br />
                 <br />            
                 <asp:Label ID="LblConcepto" CssClass="col-sm-2 control-label" runat="server" Text="Precio"></asp:Label>
-                <asp:TextBox ID="tbPrecio" CssClass="form-control1" runat="server"></asp:TextBox>
+                <asp:TextBox ID="tbPrecio" CssClass="form-control1" runat="server" Enabled="false"></asp:TextBox>
                 <br />
                 <br />
                  <asp:Label ID="Label4" CssClass="col-sm-2 control-label" runat="server" Text="Producto"></asp:Label>
-                <asp:TextBox ID="tbIDProducto" CssClass="form-control1" runat="server"></asp:TextBox>
+                <asp:TextBox ID="tbIDProducto" CssClass="form-control1" runat="server" type="number" min="1" Enabled="false"></asp:TextBox>
                 <br />
                 <br />
-                <asp:Button ID="btnActualizar" runat="server"  CssClass="btn btn-info" Text="Actualizar" OnClick="btnActualizar_Click"/>
+                <asp:Button ID="btnActualizar" runat="server"  CssClass="btn btn-info" Text="Actualizar" OnClick="btnActualizar_Click" Enabled="false"/>
                 <br />
                 <br />
                 </div>

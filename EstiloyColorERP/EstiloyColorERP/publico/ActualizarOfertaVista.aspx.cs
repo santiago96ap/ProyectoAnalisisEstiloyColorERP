@@ -35,16 +35,19 @@ namespace EstiloyColorERP
             table.Columns.Add(new DataColumn("ID Producto", typeof(int)));
             table.Columns.Add(new DataColumn("Nuevo Precio", typeof(float)));
  
-            foreach (var item in ofertas)
+            foreach (Oferta ofertaActual in ofertas)
             {
-                DataRow row = table.NewRow();
-                row["ID"] = item.Id;
-                row["Fecha Inicio"] = item.FechaInicio;
-                row["Fecha final"] = item.FechaFinal;
-                row["Descuento"] = item.Descuento;
-                row["ID Producto"] = item.IdProducto;
-                row["Nuevo Precio"] = item.PrecioDescuento;
-                table.Rows.Add(row);
+                if (ofertaActual.IdProducto == int.Parse(this.TbProducto.Text))
+                {
+                    DataRow row = table.NewRow();
+                    row["ID"] = ofertaActual.Id;
+                    row["Fecha Inicio"] = ofertaActual.FechaInicio;
+                    row["Fecha final"] = ofertaActual.FechaFinal;
+                    row["Descuento"] = ofertaActual.Descuento;
+                    row["ID Producto"] = ofertaActual.IdProducto;
+                    row["Nuevo Precio"] = ofertaActual.PrecioDescuento;
+                    table.Rows.Add(row);
+                }
             }//foreach
             gvOfertas.DataSource = table;
             gvOfertas.DataBind();
@@ -53,9 +56,15 @@ namespace EstiloyColorERP
             this.tbID.Enabled = false;//no se puede modificar el ID del ingreso
             this.tbFechaI.Text = "";
             this.tbFechaF.Text = "";
+            this.tbDescuento.Text = "";
             this.tbIDProducto.Text = "";
             this.tbPrecio.Text = "";
-            this.TbProducto.Text = "";
+            this.tbFechaI.Enabled = false;
+            this.tbFechaF.Enabled = false;
+            this.tbDescuento.Enabled = false;
+            this.tbIDProducto.Enabled = false;
+            this.tbPrecio.Enabled = false;
+
         }//cargarDatos
 
         /// <summary>
@@ -67,7 +76,7 @@ namespace EstiloyColorERP
         {
             if (String.IsNullOrWhiteSpace(this.tbID.Text) || String.IsNullOrWhiteSpace(this.tbFechaI.Text) || String.IsNullOrWhiteSpace(this.tbIDProducto.Text) || String.IsNullOrWhiteSpace(this.tbFechaF.Text))
             {//si existe un tb en blanco se indica al usuario y no se aplica ningún cambio
-                ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.error('Error en los datos ingresados')", true);
+                ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.error('Error, campos en blanco')", true);
             }
             else
             {
@@ -86,9 +95,15 @@ namespace EstiloyColorERP
                     this.tbFechaI.Text = "";
                     this.tbFechaF.Text = "";
                     this.tbIDProducto.Text = "";
+                    this.tbDescuento.Text = "";
                     this.tbPrecio.Text = "";
                     this.TbProducto.Text = "";
-                    cargarDatos();
+                    this.gvOfertas.DataBind();
+                    this.tbFechaI.Enabled = false;
+                    this.tbFechaF.Enabled = false;
+                    this.tbDescuento.Enabled = false;
+                    this.tbIDProducto.Enabled = false;
+                    this.tbPrecio.Enabled = false;
                 }//if
                 else
                 {
@@ -107,7 +122,24 @@ namespace EstiloyColorERP
         /// <param name="e"></param>
         protected void Button1_Click(object sender, EventArgs e)
         {
-            cargarDatos();
+            bool flag = false;
+            ProductoBusiness productoBusiness = new ProductoBusiness();
+            LinkedList<Producto> productos = productoBusiness.obtenerTodosProductos();
+            foreach(Producto productoActual in productos)
+            {
+                if (productoActual.IdProct == int.Parse(this.TbProducto.Text))
+                {
+                    flag = true;
+                }//saber si existe el producto
+            }//recorrer los productos para validar
+            if (flag)
+            {
+                cargarDatos();
+            }
+            else
+            {
+                ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.error('El producto ingresado no se encuentra en el sistema')", true);
+            }//si se encontro el producto
         }//Button1_Click
 
         /// <summary>
@@ -131,15 +163,47 @@ namespace EstiloyColorERP
                     String[] fechaI = gActual.FechaInicio.ToString().Split(' ');//se obtiene la fecha
                     String[] datos = fechaI[0].ToString().Split('/');//se obtneien las partes de la fecha día, mes, año
 
-                    String fechaLista = datos[2] + '-' + datos[1] + '-' + datos[0];// la fecha se debe acomodar a un formato nuevo para mostrarse
+                    String fechaLista = "";
+                    if (int.Parse(datos[0]) < 10 && int.Parse(datos[1]) < 10)
+                    {
+                        fechaLista = datos[2] + '-' + '0' + datos[1] + '-' + '0' + datos[0];// la fecha se debe acomodar a un formato nuevo para mostrarse
+                    }
+                    else if (int.Parse(datos[0]) < 10)
+                    {
+                        fechaLista = datos[2] + '-' + datos[1] + '-' + '0' + datos[0];// la fecha se debe acomodar a un formato nuevo para mostrarse
+                    }
+                    else if (int.Parse(datos[1]) < 10)
+                    {
+                        fechaLista = datos[2] + '-' + '0' + datos[1] + '-' + datos[0];// la fecha se debe acomodar a un formato nuevo para mostrarse
+                    }
+                    else
+                    {
+                        fechaLista = datos[2] + '-' + datos[1] + '-' + datos[0];// la fecha se debe acomodar a un formato nuevo para mostrarse
+                    }//if-else
 
 
 
                     //se desgrana la fecha para luego darle formato
-                    String[] fechaF = gActual.FechaInicio.ToString().Split(' ');//se obtiene la fecha
+                    String[] fechaF = gActual.FechaFinal.ToString().Split(' ');//se obtiene la fecha
                     String[] datoF= fechaF[0].ToString().Split('/');//se obtneien las partes de la fecha día, mes, año
 
-                    String fechaListaF = datoF[2] + '-' + datoF[1] + '-' + datoF[0];// la fecha se debe acomodar a un formato nuevo para mostrarse
+                    String fechaListaF = "";
+                    if (int.Parse(datos[0]) < 10 && int.Parse(datos[1]) < 10)
+                    {
+                        fechaListaF = datos[2] + '-' + '0' + datos[1] + '-' + '0' + datos[0];// la fecha se debe acomodar a un formato nuevo para mostrarse
+                    }
+                    else if (int.Parse(datos[0]) < 10)
+                    {
+                        fechaListaF = datos[2] + '-' + datos[1] + '-' + '0' + datos[0];// la fecha se debe acomodar a un formato nuevo para mostrarse
+                    }
+                    else if (int.Parse(datos[1]) < 10)
+                    {
+                        fechaListaF = datos[2] + '-' + '0' + datos[1] + '-' + datos[0];// la fecha se debe acomodar a un formato nuevo para mostrarse
+                    }
+                    else
+                    {
+                        fechaListaF = datos[2] + '-' + datos[1] + '-' + datos[0];// la fecha se debe acomodar a un formato nuevo para mostrarse
+                    }//if-else
 
 
                     //se llenan los campos para la posterior edición
@@ -150,7 +214,11 @@ namespace EstiloyColorERP
                     this.tbIDProducto.Text = gActual.IdProducto.ToString();
                     this.tbDescuento.Text = gActual.Descuento.ToString();
                     this.tbPrecio.Text = gActual.PrecioDescuento.ToString();
-
+                    this.tbFechaI.Enabled = true;
+                    this.tbFechaF.Enabled = true;
+                    this.tbDescuento.Enabled = true;
+                    this.tbIDProducto.Enabled = true;
+                    this.btnActualizar.Enabled = true;
 
                 }
             }//foreach

@@ -90,8 +90,23 @@ namespace EstiloyColorERP.publico
                     //se desgrana la fecha para luego darle formato
                     String[] fecha = ingresoActual.Fecha.ToString().Split(' ');//se obtiene la fecha
                     String[] datos = fecha[0].ToString().Split('/');//se obtneien las partes de la fecha día, mes, año
-
-                    String fechaLista = datos[2] + '-' + datos[1] + '-' + datos[0];// la fecha se debe acomodar a un formato nuevo para mostrarse
+                    String fechaLista = "";
+                    if (int.Parse(datos[0]) < 10 && int.Parse(datos[1]) < 10)
+                    {
+                        fechaLista = datos[2] + '-' + '0' + datos[1] + '-' + '0' + datos[0];// la fecha se debe acomodar a un formato nuevo para mostrarse
+                    }
+                    else if (int.Parse(datos[0]) < 10)
+                    {
+                        fechaLista = datos[2] + '-' + datos[1] + '-' + '0' + datos[0];// la fecha se debe acomodar a un formato nuevo para mostrarse
+                    }
+                    else if (int.Parse(datos[1]) < 10)
+                    {
+                        fechaLista = datos[2] + '-' + '0' + datos[1] + '-' + datos[0];// la fecha se debe acomodar a un formato nuevo para mostrarse
+                    }
+                    else
+                    {
+                        fechaLista = datos[2] + '-' + datos[1] + '-' + datos[0];// la fecha se debe acomodar a un formato nuevo para mostrarse
+                    }//if-else
 
                     String[] hora = ingresoActual.Hora.ToString().Split('.');//se obtiene la hora
                     String horaC = hora[0];// Se almacena lo deseado
