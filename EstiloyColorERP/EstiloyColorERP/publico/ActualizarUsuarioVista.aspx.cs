@@ -77,9 +77,9 @@ namespace EstiloyColorERP.publico
         protected void btnActualizar_Click1(object sender, EventArgs e)
         {
 
-            if (String.IsNullOrWhiteSpace(this.tbNombre.Text) || String.IsNullOrWhiteSpace(this.tbEmail.Text) || String.IsNullOrWhiteSpace(this.tbApellidos.Text) || String.IsNullOrWhiteSpace(this.tbPass.Text) || String.IsNullOrWhiteSpace(this.tbUsuario.Text))
+            if (String.IsNullOrWhiteSpace(this.tbNombre.Text) || String.IsNullOrWhiteSpace(this.tbEmail.Text) || String.IsNullOrWhiteSpace(this.tbApellidos.Text) || String.IsNullOrWhiteSpace(this.tbPass.Text) || String.IsNullOrWhiteSpace(this.tbUsuario.Text) || String.IsNullOrWhiteSpace(this.tbTelefono.Text))
             {//si existe un tb en blanco se indica al usuario y no se aplica ningún cambio
-                ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.error('Error en los datos ingresados')", true);
+                ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.error('Error, campos en blanco')", true);
             }
             else
             {
@@ -93,12 +93,12 @@ namespace EstiloyColorERP.publico
                 {
                     ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.success('El usuario se actualizó exitosamente')", true);
                     //dejar los campos de texto en blanco
-                    this.tbUsuario.Text = " ";
-                    this.tbNombre.Text = " ";
-                    this.tbApellidos.Text = " ";
+                    this.tbUsuario.Text = "";
+                    this.tbNombre.Text = "";
+                    this.tbApellidos.Text = "";
                     this.tbPass.Text = "";
-                    this.tbTelefono.Text = " ";
-                    this.tbEmail.Text = " ";
+                    this.tbTelefono.Text = "";
+                    this.tbEmail.Text = "";
 
                     cargarInformacion();//recargar el gridview
                 }//if
@@ -120,8 +120,6 @@ namespace EstiloyColorERP.publico
         {
             usuarioSeleccionado = this.gvUsuarios.DataKeys[e.RowIndex].Value.ToString();//(id) por el cual se cargarán y modificarán los datos
             this.tbUsuario.Text = usuarioSeleccionado;
-            tbUsuario.Enabled = false;
-            this.lblID.Text = usuarioSeleccionado;
             this.usuarioBusiness = new UsuarioBusiness();
             this.usuarios = this.usuarioBusiness.obtenerUsuarios();
             foreach (Usuario usuaririoActual in this.usuarios) //buscar los datos  y mostrarlos en los campos de texto
@@ -133,6 +131,13 @@ namespace EstiloyColorERP.publico
                     this.tbPass.Text = usuaririoActual.Contrsena;
                     this.tbApellidos.Text = usuaririoActual.Apellido;
                     this.tbEmail.Text = usuaririoActual.Correo;
+                    this.tbNombre.Enabled = true;
+                    this.tbTelefono.Enabled = true;
+                    this.tbPass.Enabled = true;
+                    this.tbApellidos.Enabled = true;
+                    this.tbEmail.Enabled = true;
+                    this.ddTipoRol.Enabled = true;
+                    this.btnActualizar.Enabled = true;
                 }//if 
             }//foreach
 
