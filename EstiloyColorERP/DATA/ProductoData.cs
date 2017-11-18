@@ -33,7 +33,7 @@ namespace DATA
             cmdInsertar.Parameters.Add(new SqlParameter("@descripcion", producto.Descripcion));
             cmdInsertar.Parameters.Add(new SqlParameter("@costo", producto.Costo));
             cmdInsertar.Parameters.Add(new SqlParameter("@precio", producto.Precio));
-            cmdInsertar.Parameters.Add(new SqlParameter("@cantidad", producto.Cantidad));
+            cmdInsertar.Parameters.Add(new SqlParameter("@cantidad", producto.Cantidad));                        
             cmdInsertar.Parameters.Add(new SqlParameter("@id_Prov", producto.IdProveedor));
             cmdInsertar.Parameters.Add(new SqlParameter("@id_Cat", producto.IdCategoria));
 
