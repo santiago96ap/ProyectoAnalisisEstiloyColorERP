@@ -36,7 +36,7 @@ namespace EstiloyColorERP.publico
         /// </summary>
         protected void cargarDatos()
         {
-            
+            this.gastosBusiness = new GastoBusiness();
             this.gastos = this.gastosBusiness.obtenerGastos(TbFechaInicio.Text, TbFechaFinal.Text);
             DataTable table = new DataTable("Tabla1");
             table.Columns.Add(new DataColumn("ID", typeof(int)));
@@ -62,7 +62,7 @@ namespace EstiloyColorERP.publico
             gvGastos.DataBind();
 
             this.tbID.Text = "";
-            this.tbID.Enabled = false;//no se puede modificar el ID del ingreso
+            this.tbID.Text = "";//no se puede modificar el ID del ingreso
             this.tbFecha.Text = "";
             this.tbHora.Text = "";
             this.tbConcepto.Text = "";
@@ -99,6 +99,12 @@ namespace EstiloyColorERP.publico
                     this.tbHora.Text = gActual.Hora;
                     this.tbConcepto.Text = gActual.Concepto;
                     this.tbTotal.Text = gActual.Total + "";
+                    this.tbFecha.Enabled = true;
+                    this.tbHora.Enabled = true;
+                    this.tbConcepto.Enabled = true;
+                    this.tbTotal.Enabled = true;
+                    this.ddTipoServicio.Enabled = true;
+                    this.btnActualizar.Enabled = true;
                 }
             }//foreach
 
@@ -111,13 +117,13 @@ namespace EstiloyColorERP.publico
         /// <param name="e"></param>
         protected void btnActualizar_Click1(object sender, EventArgs e)
         {
-            if (String.IsNullOrWhiteSpace(this.tbID.Text) || String.IsNullOrWhiteSpace(this.tbFecha.Text) || String.IsNullOrWhiteSpace(this.tbConcepto.Text) || String.IsNullOrWhiteSpace(this.tbTotal.Text))
+            if (String.IsNullOrWhiteSpace(this.tbID.Text) || String.IsNullOrWhiteSpace(this.tbFecha.Text) || String.IsNullOrWhiteSpace(this.tbHora.Text) || String.IsNullOrWhiteSpace(this.tbConcepto.Text) || String.IsNullOrWhiteSpace(this.tbTotal.Text))
             {//si existe un tb en blanco se indica al usuario y no se aplica ningún cambio
-                ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.error('Error en los datos ingresados')", true);
+                ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.error('Error, campos en blanco')", true);
             }
             else
             {
-             
+                this.gastosBusiness = new GastoBusiness();
                 bool respuesta = this.gastosBusiness.editarGasto(new Gasto(int.Parse(tbID.Text.ToString()), tbFecha.Text, tbHora.Text, tbConcepto.Text, float.Parse(tbTotal.Text.ToString()), Session["usuario"].ToString(), ddTipoServicio.SelectedItem.Value));
 
                 if (respuesta)// Si se actualiza el usuario se recargan los datos y se dejan los tb en blanco
@@ -130,6 +136,12 @@ namespace EstiloyColorERP.publico
                     this.tbHora.Text = "";
                     this.tbConcepto.Text = "";
                     this.tbTotal.Text = "";
+                    this.tbFecha.Enabled = false;
+                    this.tbHora.Enabled = false;
+                    this.tbConcepto.Enabled = false;
+                    this.tbTotal.Enabled = false;
+                    this.ddTipoServicio.Enabled = false;
+                    this.btnActualizar.Enabled = false;
                     cargarDatos();
                 }//if
                 else
