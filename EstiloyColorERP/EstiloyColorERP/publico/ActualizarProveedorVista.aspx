@@ -16,22 +16,22 @@
         </asp:GridView> 
     <br />
     <asp:Label ID="lbNombre" CssClass="col-sm-2 control-label" runat="server" Text="Nombre"></asp:Label>
-    <asp:TextBox ID="tbNombre" CssClass="form-control1" runat="server"></asp:TextBox>
+    <asp:TextBox ID="tbNombre" CssClass="form-control1" runat="server" Enabled="false"></asp:TextBox>
     <br />
     <br />
     <asp:Label ID="lbDireccion" CssClass="col-sm-2 control-label" runat="server" Text="Direccion"></asp:Label>
-    <asp:TextBox ID="tbDireccion" CssClass="form-control1" runat="server"></asp:TextBox>
+    <asp:TextBox ID="tbDireccion" CssClass="form-control1" runat="server" Enabled="false"></asp:TextBox>
     <br />
     <br />
     <asp:Label ID="lbEmail" CssClass="col-sm-2 control-label" runat="server" Text="Email"></asp:Label>
-    <asp:TextBox ID="tbEmail" CssClass="form-control1" runat="server"></asp:TextBox>
+    <asp:TextBox ID="tbEmail" CssClass="form-control1" runat="server" Enabled="false"></asp:TextBox>
     <br />
     <br />
     <asp:Label ID="lbTelefono" CssClass="col-sm-2 control-label" runat="server" Text="Telefono"></asp:Label>
-    <asp:TextBox ID="tbTelefono" CssClass="form-control1" runat="server"></asp:TextBox>
+    <asp:TextBox ID="tbTelefono" CssClass="form-control1" runat="server" type="number" min="1" Enabled="false"></asp:TextBox>
     <br />
     <br />
-    <asp:Button ID="btnActualizar" CssClass="btn btn-info" runat="server" Text="Actualizar" OnClick="btnActualizar_Click" />
+    <asp:Button ID="btnActualizar" CssClass="btn btn-info" runat="server" Text="Actualizar" OnClick="btnActualizar_Click" Enabled="false"/>
     <br />
     <br />
     </div>

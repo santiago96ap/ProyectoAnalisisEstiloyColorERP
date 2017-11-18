@@ -29,9 +29,9 @@ namespace EstiloyColorERP.publico
         /// <param name="e"></param>
         protected void btnActualizar_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrWhiteSpace(this.tbNombre.Text) || String.IsNullOrWhiteSpace(this.tbDireccion.Text) || String.IsNullOrWhiteSpace(this.tbTelefono.Text) || String.IsNullOrWhiteSpace(this.tbDireccion.Text) || String.IsNullOrWhiteSpace(this.tbEmail.Text))
+            if (String.IsNullOrWhiteSpace(this.tbNombre.Text) || String.IsNullOrWhiteSpace(this.tbTelefono.Text) || String.IsNullOrWhiteSpace(this.tbDireccion.Text) || String.IsNullOrWhiteSpace(this.tbEmail.Text))
             {//si existe un tb en blanco se indica al usuario y no se aplica ningún cambio
-                ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.error('Error en los datos ingresados')", true);
+                ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.error('Error, campos en blanco')", true);
             }
             else
             {   
@@ -115,6 +115,9 @@ namespace EstiloyColorERP.publico
                     this.tbNombre.Text = proveedorActual.Nombre;
                     this.tbTelefono.Text = proveedorActual.Telefono;
                     this.tbDireccion.Text = proveedorActual.Direccion;
+                    this.tbNombre.Enabled = true;
+                    this.tbTelefono.Enabled = true;
+                    this.tbDireccion.Enabled = true;
                 }
             }//foreach
 
