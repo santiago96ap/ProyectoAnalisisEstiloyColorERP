@@ -9,7 +9,7 @@
                 <br />
                 <br />
                 <asp:Label ID="lblCorreo" CssClass="col-sm-2 control-label" runat="server" Text="Correo"></asp:Label>
-                <asp:TextBox ID="tbCorreo" CssClass="form-control1" runat="server"></asp:TextBox>
+                <asp:TextBox ID="tbCorreo" CssClass="form-control1" runat="server" type="email"></asp:TextBox>
                 <br />
                 <br />
                 <asp:Label ID="lblContrasenna" CssClass="col-sm-2 control-label" runat="server" Text="Contraseña"></asp:Label>

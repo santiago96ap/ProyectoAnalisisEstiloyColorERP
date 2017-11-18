@@ -13,7 +13,7 @@
                 <br />
                 <br />
                 <asp:Label ID="lblNombre" CssClass="col-sm-2 control-label" runat="server" Text="Hora"></asp:Label>
-                <asp:TextBox ID="tbHora" type="time" CssClass="form-control1" runat="server"></asp:TextBox>
+                <asp:TextBox ID="tbHora" type="time" CssClass="form-control1" runat="server" required=""></asp:TextBox>
                 <br />
                 <br />
                 <asp:Label ID="LblDescripcion" CssClass="col-sm-2 control-label" runat="server" Text="Actividad"></asp:Label>

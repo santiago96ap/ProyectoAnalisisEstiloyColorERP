@@ -66,7 +66,7 @@ namespace EstiloyColorERP
             {
                 if (this.rbCliente.Checked)
                 {
-                    if (ventaActual.Cliente.Equals(this.tbDatos.Text))
+                    if (ventaActual.Cliente.Equals(this.tbDatosNum.Text))
                     {
                         DataRow row = table.NewRow();
                         row["Id"] = ventaActual.Id;
@@ -83,7 +83,7 @@ namespace EstiloyColorERP
                 }
                 else if (this.rbFactura.Checked)
                 {
-                    if (ventaActual.Id == int.Parse(this.tbDatos.Text))
+                    if (ventaActual.Id == int.Parse(this.tbDatosNum.Text))
                     {
                         DataRow row = table.NewRow();
                         row["Id"] = ventaActual.Id;
@@ -133,5 +133,29 @@ namespace EstiloyColorERP
         {
             cargarTodos(this.tbDatos.Text);
         }//btnBuscar_Click
+
+        protected void rbVendedor_CheckedChanged(object sender, EventArgs e)
+        {
+            this.tbDatosNum.Visible = false;
+            this.tbDatosNum.Text = "1";
+            this.tbDatos.Visible = true;
+            this.tbDatos.Text = "";
+        }
+
+        protected void rbCliente_CheckedChanged(object sender, EventArgs e)
+        {
+            this.tbDatosNum.Visible = true;
+            this.tbDatosNum.Text = "1";
+            this.tbDatos.Visible = false;
+            this.tbDatos.Text = "";
+        }
+
+        protected void rbFactura_CheckedChanged(object sender, EventArgs e)
+        {
+            this.tbDatosNum.Visible = true;
+            this.tbDatosNum.Text = "1";
+            this.tbDatos.Visible = false;
+            this.tbDatos.Text = "";
+        }
     }//class
 }//namespace

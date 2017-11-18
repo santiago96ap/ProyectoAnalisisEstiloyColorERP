@@ -79,14 +79,13 @@ namespace EstiloyColorERP.publico
 
         protected void reiniciarModulo()
         {
-            this.tbUsuario.Text = "";
             this.gvUsuarios.DataSource = null;
             this.gvUsuarios.DataBind();
         }//reiniciarModulo
 
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
-            cargarTodos(this.tbUsuario.Text);
+            cargarTodos(this.ddRol.SelectedValue.ToString());
         }//btnBuscar_Click
     }//class
 }//namespace

@@ -23,7 +23,10 @@
             <br />
              <div id="divi10">
                 <asp:Label ID="lblUsuario" CssClass="col-sm-2 control-label" runat="server" Text="Rol"></asp:Label>
-                <asp:TextBox ID="tbUsuario" CssClass="form-control1" runat="server"></asp:TextBox>
+                    <asp:dropdownlist ID="ddRol" CssClass="form-control1" runat="server" >
+                        <asp:ListItem Value="vendedor">Vendedor</asp:ListItem>
+                        <asp:ListItem Value="administrador">Administrador</asp:ListItem>
+                    </asp:dropdownlist>
                 <asp:Button ID="btnBuscar" CssClass="btn btn-info" runat="server" Text="Buscar" OnClick="btnBuscar_Click"/> 
                 <br />
                 <br />

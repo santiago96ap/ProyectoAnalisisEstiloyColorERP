@@ -49,6 +49,15 @@ namespace EstiloyColorERP {
         protected global::System.Web.UI.WebControls.Label lblITitulo;
         
         /// <summary>
+        /// tbDatosNum control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox tbDatosNum;
+        
+        /// <summary>
         /// tbDatos control.
         /// </summary>
         /// <remarks>

@@ -22,10 +22,11 @@
             <br />
             <br />
              <div id="divi10">
-                <asp:TextBox ID="tbDatos" CssClass="form-control1" runat="server"></asp:TextBox>
-                <asp:RadioButton ID="rbVendedor" runat="server" Text="Vendedor" GroupName="Opcion" Checked="true"/>
-                <asp:RadioButton ID="rbCliente" runat="server" Text="Telefono de cliente" GroupName="Opcion"/>
-                <asp:RadioButton ID="rbFactura" runat="server" Text="Factura" GroupName="Opcion"/>
+                <asp:TextBox ID="tbDatosNum" CssClass="form-control1" runat="server" type="number" min="1" Text="1" Visible="false"></asp:TextBox>
+                 <asp:TextBox ID="tbDatos" CssClass="form-control1" runat="server"></asp:TextBox>
+                <asp:RadioButton ID="rbVendedor" runat="server" Text="Vendedor" GroupName="Opcion" Checked="true" AutoPostBack="True" OnCheckedChanged="rbVendedor_CheckedChanged"/>
+                <asp:RadioButton ID="rbCliente" runat="server" Text="Telefono de cliente" GroupName="Opcion" AutoPostBack="True" OnCheckedChanged="rbCliente_CheckedChanged"/>
+                <asp:RadioButton ID="rbFactura" runat="server" Text="Factura" GroupName="Opcion" AutoPostBack="True" OnCheckedChanged="rbFactura_CheckedChanged"/>
                 <br />
                 <br />
                 <asp:TextBox ID="tbFechaInicio" type="date" CssClass="form-control1" runat="server"></asp:TextBox>

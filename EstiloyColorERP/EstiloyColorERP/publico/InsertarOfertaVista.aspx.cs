@@ -24,31 +24,15 @@ namespace EstiloyColorERP
 
         protected void btnInsertar_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrWhiteSpace(this.TbBuscarCodigo.Text))
+            if (this.ofertaBusiness.insertarOfertaProducto(new Oferta(tbFechaI.Text, tbFechaF.Text, float.Parse(tbDescuento.Text), int.Parse(ddProducto.SelectedItem.Value)))== true)
             {
-                if (this.ofertaBusiness.insertarOfertaProducto(new Oferta(tbFechaI.Text, tbFechaF.Text, float.Parse(tbDescuento.Text), int.Parse(ddProducto.SelectedItem.Value)))== true)
-                {
-                    ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.success('¡Se ha insertado con éxito!')", true);
-                }
-                else
-                {
-                    ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.error('¡Ha ocurrido un error!')", true);
-
-                }//if-else
+                ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.success('¡Se ha insertado con éxito!')", true);
             }
             else
             {
-                if (this.ofertaBusiness.insertarOfertaProducto(new Oferta(tbFechaI.Text, tbFechaF.Text, float.Parse(tbDescuento.Text), int.Parse(TbBuscarCodigo.Text))) == true)
-                {
-                    ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.success('¡Se ha insertado con éxito!')", true);
-                }
-                else
-                {
-                    ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.error('¡Ha ocurrido un error!')", true);
-
-                }//if-else
-
-            }//else-if NULL Opción
+                ClientScript.RegisterStartupScript(this.GetType(), "alertify", "alertify.error('¡Ha ocurrido un error!')", true);
+            }//if-else
+            
             
        }//btnInsertar_Click
 

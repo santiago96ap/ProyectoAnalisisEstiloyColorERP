@@ -11,7 +11,7 @@
                 <br />
                 <br />
                 <asp:Label ID="lblID" CssClass="col-sm-2 control-label" runat="server" Text="Código"></asp:Label>
-                <asp:TextBox ID="tbCodigo" type="number" CssClass="form-control1" runat="server" required=""></asp:TextBox>
+                <asp:TextBox ID="tbCodigo" type="number" min="1" Text="1" CssClass="form-control1" runat="server" required=""></asp:TextBox>
                 <br />
                 <br />
                 <asp:Label ID="lblNombre" CssClass="col-sm-2 control-label" runat="server" Text="Nombre"></asp:Label>
@@ -23,15 +23,15 @@
                 <br />
                 <br />
                  <asp:Label ID="Label4" CssClass="col-sm-2 control-label" runat="server" Text="Costo"></asp:Label>
-                <asp:TextBox ID="tbCosto" type="number" CssClass="form-control1"  runat="server" required=""></asp:TextBox>
+                <asp:TextBox ID="tbCosto" type="number" min="1" Text="1" CssClass="form-control1"  runat="server" required=""></asp:TextBox>
                 <br />
                 <br />
                 <asp:Label ID="lblPrecio" CssClass="col-sm-2 control-label" runat="server" Text="Precio"></asp:Label>
-                <asp:TextBox ID="tbPrecio" type="number" CssClass="form-control1"  runat="server" required=""></asp:TextBox>
+                <asp:TextBox ID="tbPrecio" type="number" min="1" Text="1" CssClass="form-control1"  runat="server" required=""></asp:TextBox>
                 <br />
                 <br />
                 <asp:Label ID="Label1" CssClass="col-sm-2 control-label" runat="server" Text="Cantidad"></asp:Label>
-                <asp:TextBox ID="tbCant" type="number" CssClass="form-control1"  runat="server" required=""></asp:TextBox>
+                <asp:TextBox ID="tbCant" type="number" min="1" Text="1" CssClass="form-control1"  runat="server" required=""></asp:TextBox>
                 <br />
                 <br />
                 <asp:Label ID="Label2" CssClass="col-sm-2 control-label" runat="server" Text="Proveedor"></asp:Label>

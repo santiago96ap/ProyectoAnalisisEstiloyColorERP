@@ -23,7 +23,7 @@
             <br />
              <div id="divi10">
                 <asp:Label ID="lblProducto" CssClass="col-sm-2 control-label" runat="server" Text="Producto"></asp:Label>
-                <asp:TextBox ID="tbProducto" CssClass="form-control1" runat="server"></asp:TextBox>
+                <asp:TextBox ID="tbProducto" CssClass="form-control1" runat="server" type="number" min ="0" Text="0"></asp:TextBox>
                 <asp:Button ID="btnBuscar" CssClass="btn btn-info" runat="server" Text="Buscar" OnClick="btnBuscar_Click" /> 
                 <br />
                 <br />
