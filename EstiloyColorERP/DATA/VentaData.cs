@@ -30,11 +30,11 @@ namespace DATA
             cmdInsertar.Parameters.Add(new SqlParameter("@fecha", venta.Fecha));
             cmdInsertar.Parameters.Add(new SqlParameter("@hora", venta.Hora));
             cmdInsertar.Parameters.Add(new SqlParameter("@id_cliente", venta.Cliente));
-            cmdInsertar.Parameters.Add(new SqlParameter("@usuario", venta.Vendedor));
             cmdInsertar.Parameters.Add(new SqlParameter("@tipo_Servicio", venta.TipoServicio));
+            cmdInsertar.Parameters.Add(new SqlParameter("@tipo_Pago", venta.TipoPago));
+            cmdInsertar.Parameters.Add(new SqlParameter("@usuario", venta.Vendedor));
             cmdInsertar.Parameters.Add(new SqlParameter("@subTotal", venta.SubTotal));
             cmdInsertar.Parameters.Add(new SqlParameter("@total", venta.Total));
-            cmdInsertar.Parameters.Add(new SqlParameter("@tipo_Pago", venta.TipoPago));
 
             cmdInsertar.Connection.Open();
             
