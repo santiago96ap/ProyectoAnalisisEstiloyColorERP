@@ -5,7 +5,7 @@
     <br />
         <section id="formulario">
             <div id="divi">
-                <asp:Label ID="lblTitulo" CssClass="agileits-title" runat="server" Text=" Sesión"></asp:Label>
+                <asp:Label ID="lblTitulo" CssClass="agileits-title" runat="server" Text="Iniciar Sesión"></asp:Label>
                 <br />
                 <br />
                 <asp:Label ID="lblCorreo" CssClass="col-sm-2 control-label" runat="server" Text="Correo"></asp:Label>
